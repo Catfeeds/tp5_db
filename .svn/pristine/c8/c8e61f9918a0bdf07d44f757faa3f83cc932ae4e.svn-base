@@ -1,0 +1,62 @@
+#banners{
+    width:365px;
+    height:365px;
+
+    position:relative;
+}
+#banners .pics{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+#banners .pics ul li{
+    position:absolute;
+    display:none;
+}
+#banners .tabs{
+    width:148px;
+    height:20px;
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    margin-left:-70px;
+}
+#banners .tabs ul li{
+    width:18px;
+    height:18px;
+    background:#666;
+    border-radius:100%;
+    float:left;
+    margin:1px 3px;
+    color:#fff;
+    text-align:center;
+    line-height:18px;
+    font-family:'Microsoft yahei';
+    font-size:12px;
+    cursor:pointer;
+}
+#banners .tabs ul li.ons{
+    background:#f60;
+}
+#banners .btns{
+    display:none;
+}
+#banners .btns div{
+    width:30px;
+    height:60px;
+    background:rgba(0,0,0,0.3);
+    text-align:center;
+    line-height:60px;
+    color:#fff;
+    font-size:24px;
+    position:absolute;
+    top:50%;
+    margin-top:-30px;
+    cursor:pointer;
+}
+#leftBtns{
+    left:0;
+}
+#rightBtns{
+    right:0;
+}

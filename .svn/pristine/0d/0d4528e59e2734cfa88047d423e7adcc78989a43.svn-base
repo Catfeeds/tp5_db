@@ -1,0 +1,175 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/static/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="/static/lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/lib/Hui-iconfont/1.0.8/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="/static/lib/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>留言列表</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 留言列表管理 <span
+        class="c-gray en">&gt;</span> 留言列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
+                                              href="javascript:location.replace(location.href);" title="刷新"><i
+        class="Hui-iconfont">&#xe68f;</i></a></nav>
+
+<div class="page-container">
+    <form action="{:url('')}">
+    <div class="text-c">
+        <button onclick="removeIframe()" class="btn btn-primary radius">关闭选项卡</button>
+        <span class="select-box inline">
+
+		</span> 日期范围：
+        <input type="text" id="logmin" value="{$Think.get.beginTime}" name="beginTime"
+               class="input-text Wdate" style="width:120px;">
+        -
+        <input type="text" id="logmax" value="{$Think.get.endTime}" name="endTime"
+               class="input-text Wdate" style="width:120px;">
+        <input type="text" name="search" placeholder=" 资讯名称" style="width:250px" value="{$Think.get.search??''}" class="input-text">
+        <button  class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜留言</button>
+    </div>
+ </form>
+
+        <table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="80">ID</th>
+                <th>留言地址</th>
+                <th>留言姓名</th>
+                <th>留言手机</th>
+                <th>留言手机</th>
+                <th>留言内容</th>
+
+
+                <th width="120">更新时间</th>
+
+
+
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="lists" id="list" }
+            <tr class="text-c">
+                <td><input type="checkbox" value="{$list.id}" name=""></td>
+                <td>{$list.id}</td>
+                <td class="text-l"><u style="cursor:pointer" class="text-primary"
+                                      onClick="" title="查看">{$list.address}</u></td>
+                <td class="text-l">{$list.name}</td>
+                <td class="text-l">{$list.phone}</td>
+                <td class="text-l">{$list.email}</td>
+                <td class="text-l">{$list.content}</td>
+
+                <td>{$list.addtime|date="Y-m-d H:i:s",###}</td>
+
+
+            </tr>
+           {/volist}
+            </tbody>
+        </table>
+        <div id="laypage"></div>
+    </div>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/static/lib/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/static/layui/css/layui.css">
+<script type="text/javascript" src="/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/static/layui/layui.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/static/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/static/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="/static/js/public.js"></script>
+<script type="text/javascript">
+    layui.use(['layer','laypage'],function () {
+        var layer=layui.layer,
+            laypage = layui.laypage;
+        //执行一个laypage实例
+        laypage.render({
+            elem: 'laypage' //注意，这里的 test1 是 ID，不用加 # 号
+            , count: {$lists->total()} //数据总数，从服务端得到
+            , limit: {$lists->listrows()}
+            , curr: function () { //通过url获取当前页，也可以同上（pages）方式获取
+                var page = location.search.match(/page=(\d+)/);
+                return page ? page[1] : 1;
+            }()
+            ,theme:'#5a98de'
+            , jump: function (obj, first) {
+                if (!first) { //一定要加此判断，否则初始时会无限刷新
+                    location.href = '{:url()}?page=' + obj.curr;
+                }
+            }
+        });
+    });
+    //日期选择框获取焦点
+    document.querySelector('#logmin').addEventListener('focus', function () {
+        WdatePicker({maxDate: '%y-%M-%d'});
+    });
+    document.querySelector('#logmax').addEventListener('focus', function () {
+        WdatePicker({maxDate: '%y-%M-%d'});
+    });
+
+    //    批量删除
+    function datadel() {
+        var id = '';
+        $('input[type="checkbox"]').each(function () {
+            if (this.checked == true && this.getAttribute('data-id') > 0) {
+                id += this.getAttribute('data-id') + ',';
+            }
+        });
+        id = id.substr(0, id.length - 1);
+        if (id.length <= 0) {
+            layer.alert('请在要删除的行多选框打钩');
+            return;
+        }
+        layer.confirm('您确定要删除所选择的内容吗？', function (index) {
+            var r = doPost('{:url("del")}', {id: id});
+            if (r.code == 0) {
+                $('input[type="checkbox"]').each(function () {
+                    if (this.checked == true && this.getAttribute('data-id') > 0) {
+                        $(this).parent().parent().remove();
+                    }
+                });
+            } else {
+                layer.alert(r.msg);
+            }
+            layer.close(index);
+        });
+    }
+
+    /*新闻-删除*/
+    function article_del(obj, id) {
+        layer.confirm('确认要删除吗？', function (index) {
+           var r = doPost('{:url("del")}',{id:id});
+           layer.close(index);
+           if(r.code == 0){
+               $(obj).parent().parent().remove();
+           }else{
+               layer.alert(r.msg||Error);
+           }
+           layer.close(index);
+        });
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们-联系方式</title>
+    <link rel="stylesheet" href="/static/index/base/css/style.css">
+    <link rel="stylesheet" href="/static/index/base/css/header.css">
+    <link rel="stylesheet" href="/static/index/base/css/footer.css">
+
+
+
+    <link rel="stylesheet" href="/static/index/css/contact.css">
+    <link rel="stylesheet" href="/static/index/css/list-left.css">
+
+    <script src="/static/index/base/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/index/base/js/header.js"></script>
+    <script src="/static/index/js/banner.js"></script>
+    <script src="/static/index/js/new-banner.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=XRbazP2nTFzQ0FTWafGNqiZvzRG9GQhj"></script>
+</head>
+<body>
+<header>
+
+    <div class="header-bj">
+
+        <div class="header-top">
+            <p>杭州富阳福根蛇业有限公司</p>
+            <!--<div class="weixin">-->
+            <!--<p>微信公众号</p>-->
+            <!--<div class="img"><img src="/static/index/base/image/weixin.jpg" alt=""></div>-->
+            <!--</div>-->
+            <div class="tel">
+                <p>资讯电话</p>
+                <div class="telS">
+                    0571-58977199<br/>
+                    183-2918-0888
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!--   分割线  -->
+    <div class="clear"></div>
+    <div class="header-content">
+        <div class="w1024">
+            <div class="logo">
+                <img src="/static/index/base/image/logo.png">
+            </div>
+            <!-- 分割线  -->
+            <nav class="right">
+                <ul>
+                    <li><a href="{:url('index/index')}">首页</a></li>
+                    <li><a href="{:url('index/about')}">关于我们</a></li>
+                    <li><a href="{:url('index/productlist')}">产品中心</a></li>
+                    <li><a href="{:url('index/newslist')}">新闻资讯</a></li>
+                    <li><a href="{:url('index/contact')}" class="active">联系我们</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+</header><!-- JS 外部加载通用头显示  -->
+<!--  stop  -->
+<div class="clear"></div>
+
+<!--banner start   -->
+
+<div class="banner">
+    <div class="w1024">
+
+        <div class="content-banner">
+            <img src="/static/index/image/contact-banner.jpg">
+        </div>
+
+
+    </div>
+
+</div>
+<!-- stop -->
+<div class="clear"></div>
+<!--  关于我们  start -->
+<div class="about">
+    <div class="w1024">
+        <div class="about-list">
+            <p class="list-title">
+                联系我们
+            </p>
+            <ul>
+                <li><a href="{:url('index/contact')}" class="onRed">联系方式</a></li>
+                <li><a href="{:url('index/contactMessage')}">在线留言</a></li>
+            </ul>
+
+        </div>
+        <!--  分割线  -->
+        <div class="about-content">
+            <div class="content-title">
+                <p>
+                    <span class="title">联系方式</span>
+                    <span class="text">当前位置：<a href="index.html">首页</a> > <a>联系方式</a></span>
+                </p>
+            </div>
+            <!--   分割线 -->
+            <div class="contact-main">
+                  <div class="sitemap">
+                      <!--百度地图容器-->
+                      <div style="width:698px;height:298px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+                      <p style="color:red;font-weight:600">地图生成工具基于百度地图JS api v2.0版本开发，使用请申请密匙。
+                          <a href="https://developer.baidu.com/map/index.php?title=jspopular/guide/introduction" style="color:#2f83c7" target="_blank">了解如何申请密匙</a>
+                          <a href="https://lbsyun.baidu.com/apiconsole/key?application=key" style="color:#2f83c7" target="_blank">申请密匙</a>
+                      </p>
+                  </div>
+                  <!-- 分割线 -->
+                  <p>电话： 0571-58977199</p>
+                  <p>邮箱：fugensy@163.com</p>
+                  <p>网址：https://www.fugensy.com/</p>
+                  <p>地址：杭州富阳区新登镇双溪村</p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--  通用尾 foot  -->
+<div class="foot">
+    <div class="w1024">
+        <div class="foot-list">
+            <dl class="nav">
+                <dt>
+                <p>关于我们</p></dt>
+                <dd><a href="{:url('index/about')}">公司简介</a></dd>
+                <dd><a href="{:url('index/aboutCulture')}">企业文化</a></dd>
+                <dd><a href="{:url('index/aboutFuture')}">企业未来</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>产品中心</p></dt>
+                <dd><a href="https://www.fugensy.com/index/index/productlist.html?cid=29">蛇酒</a></dd>
+                <dd><a href="https://www.fugensy.com/index/index/productlist.html?cid=30">蛇油</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>企业动态</p></dt>
+                <dd><a href="{:url('index/newsCompany')}">公司新闻</a></dd>
+                <dd><a href="{:url('index/newsTrade')}">行业新闻</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>联系我们</p></dt>
+                <dd><a href="{:url('index/contact')}">联系方式</a></dd>
+                <dd><a href="{:url('index/contactMessage')}">在线留言</a></dd>
+            </dl>
+        </div>
+        <div class="foot-tel">
+            <div class="img"> <img src="/static/index/base/image/tel-foot.png"></div>
+            <div class="time">
+                <p class="title"> 客服中心热线</p>
+                <p> 全国互动热线： 0571-58977199</p>
+                <p> 服务时间：早上：8:00 --- 晚上：22:00</p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--  结尾 footer -->
+<div class="footer">
+    <div class="w1024">
+        <P>版权所有 杭州富阳福根蛇业有限公司 浙ICP备17043650号</P>
+        <P>网址 ：<a href="https://www.fugensy.com/">https://www.fugensy.com/</a></P>
+    </div>
+</div>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){
+        map = new BMap.Map("map");
+        map.centerAndZoom(new BMap.Point(119.937466,30.06761),14);
+    }
+    function setMapEvent(){
+        map.enableScrollWheelZoom();
+        map.enableKeyboard();
+        map.enableDragging();
+        map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+        target.addEventListener("click",function(){
+            target.openInfoWindow(window);
+        });
+    }
+    function addMapOverlay(){
+        var markers = [
+            {content:"杭州富阳区新登镇双溪村",title:"杭州富阳福根蛇业有限公司",imageOffset: {width:-46,height:-21},position:{lat:30.071022,lng:119.920807}}
+        ];
+        for(var index = 0; index < markers.length; index++ ){
+            var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+            var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+                imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+            })});
+            var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+            var opts = {
+                width: 200,
+                title: markers[index].title,
+                enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+            marker.setLabel(label);
+            addClickHandler(marker,infoWindow);
+            map.addOverlay(marker);
+        };
+    }
+    //向地图添加控件
+    function addMapControl(){
+        var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        scaleControl.setUnit(BMAP_UNIT_METRIC);
+        map.addControl(scaleControl);
+        var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:0});
+        map.addControl(navControl);
+        var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+        map.addControl(overviewControl);
+    }
+    var map;
+    initMap();
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/static/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="/static/lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/lib/Hui-iconfont/1.0.8/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/layui/css/layui.css"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="/static/lib/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>资讯列表</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 资讯管理 <span
+        class="c-gray en">&gt;</span> 资讯列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
+                                              href="javascript:location.replace(location.href);" title="刷新"><i
+        class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <form action="">
+        <div class="text-c">
+
+            <input type="text" name="seach" placeholder=" 资讯名称" value="{$seach}" style="width:250px" class="input-text">
+            <button name="" id="" class="btn btn-success" type="submit" onclick="seach()"><i class="Hui-iconfont">&#xe665;</i>
+                搜产品
+            </button>
+        </div>
+    </form>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"><span class="l"><a href="javascript:;" onclick="datadel()"
+                                                               class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a
+            class="btn btn-primary radius" data-title="添加资讯" data-href="{:url('addedit')}" onclick="Hui_admin_tab(this)"
+            href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加产品</a></span> <span
+            class="r">共有数据：<strong>54</strong> 条</span></div>
+    <div class="mt-20">
+        <table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="80">ID</th>
+                <th>标题</th>
+                <th width="80">分类</th>
+
+                <th width="120">更新时间</th>
+
+                <th width="120">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="lists" id="list"}
+            <tr class="text-c">
+                <td><input type="checkbox" data-id="{$list.id}" value="" name=""></td>
+                <td>{$list.id}</td>
+                <td class="text-l"><u style="cursor:pointer" class="text-primary"
+                                      onClick="article_edit('查看','article-zhang.html','10001')"
+                                      title="查看">{$list.title}</u></td>
+                <td>{$list.className}</td>
+                <td>{$list.addtime|date="Y-m-d H:i:s",###}</td>
+
+
+                <td class="f-14 td-manage"><a
+                        style="text-decoration:none" class="ml-5"
+                        onClick="article_edit('{$list.id}','article-add.html','10001')" href="javascript:;"
+                        title="编辑"><i
+                        class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5"
+                                                                 onClick="article_del(this,'{$list.id}')"
+                                                                 href="javascript:;"
+                                                                 title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                </td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+        <div id="laypage"></div>
+    </div>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/static/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/static/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/static/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/static/layui/layui.js"></script>
+<script type="text/javascript" src="/static/js/public.js"></script>
+<script type="text/javascript">
+    layui.use(['laypage'], function () {
+        var laypage = layui.laypage;
+        //执行一个laypage实例
+        laypage.render({
+            elem: 'laypage' //注意，这里的 test1 是 ID，不用加 # 号
+            ,theme:'#5a98de'
+            , count: {$lists->total()} //数据总数，从服务端得到
+            , limit: {$lists->listrows()}
+            , curr: function () { //通过url获取当前页，也可以同上（pages）方式获取
+                var page = location.search.match(/page=(\d+)/);
+                return page ? page[1] : 1;
+            }(), jump: function (obj, first) {
+                if (!first) { //一定要加此判断，否则初始时会无限刷新
+                    location.href = '{:url()}?page=' + obj.curr;
+                }
+            }
+        });
+    });
+    //批量删除
+    //    批量删除
+    function datadel() {
+        var id = '';
+        $('input[type="checkbox"]').each(function () {
+            if (this.checked == true && this.getAttribute('data-id') > 0) {
+                id += this.getAttribute('data-id') + ',';
+            }
+        });
+        id = id.substr(0, id.length - 1);
+        if (id.length <= 0) {
+            layer.alert('请在要删除的行多选框打钩');
+            return;
+        }
+        layer.confirm('您确定要删除所选择的内容吗？', function (index) {
+            var r = doPost('{:url("goodsdel")}', {id: id});
+            if (r.code == 0) {
+                $('input[type="checkbox"]').each(function () {
+                    if (this.checked == true && this.getAttribute('data-id') > 0) {
+                        $(this).parent().parent().remove();
+                    }
+                });
+            } else {
+                layer.alert(r.msg);
+            }
+            layer.close(index);
+        });
+    }
+
+    //跳页
+    $('.laypage_btn').on('click', function () {
+        var page = $('input[type="number"]').val();
+        location.href = '{:url()}?page=' + page;
+    });
+
+    //搜索
+    function seach() {
+        var data = $(this).parent().parent().serialize();
+        location.href = '{:url("")}?' + data;
+    }
+
+    /*资讯-添加*/
+    function article_add(title, url, w, h) {
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+
+    /*资讯-编辑*/
+    function article_edit(id) {
+        location.href = '{:url("addedit")}?id=' + id;
+    }
+
+    /*资讯-删除*/
+    function article_del(obj, id) {
+
+        layer.confirm('确认要删除吗？', function (index) {
+            var r = doPost('{:url("goodsdel")}', {id: id});
+            if (r.code == 0) {
+
+                setTimeout(function () {
+
+                    $(obj).parent().parent().remove();
+                    $('.window input').val('');
+                    layer.close(index);
+                }, 1000);
+            } else {
+                layer.alert(r.msg || Error);
+            }
+
+        });
+    }
+
+</script>
+</body>
+</html>

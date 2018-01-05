@@ -1,0 +1,3912 @@
+---------------------------------------------------------------
+[ 2017-09-05T09:00:20+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/
+[ info ] demo.com/index.php/admin/login/ [运行时间：0.078792s][吞吐率：12.69req/s] [内存消耗：1,125.55kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'E',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:01:30+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.047603s][吞吐率：21.01req/s] [内存消耗：1,442.73kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:01:38+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.039260s][吞吐率：25.47req/s] [内存消耗：1,323.63kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573290',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:02:40+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.053220s][吞吐率：18.79req/s] [内存消耗：1,443.49kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573299',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:03:19+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.034140s][吞吐率：29.29req/s] [内存消耗：1,323.63kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573361',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:05:20+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/log1
+[ info ] demo.com/index.php/admin/log1 [运行时间：0.053868s][吞吐率：18.56req/s] [内存消耗：1,127.63kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'log1',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:06:07+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/log1
+[ info ] demo.com/index.php/admin/log1 [运行时间：0.038085s][吞吐率：26.26req/s] [内存消耗：1,168.17kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'log1',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:07:45+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index1
+[ info ] demo.com/index.php/admin/login/index1 [运行时间：0.051254s][吞吐率：19.51req/s] [内存消耗：1,348.14kb] [文件加载：46]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->_empty[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:07:45+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/index.php/admin/error/index.html.html
+[ info ] demo.com/index.php/index.php/admin/error/index.html.html [运行时间：0.030298s][吞吐率：33.01req/s] [内存消耗：1,126.08kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'PATH_INFO',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:08:04+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error/index.html.html
+[ info ] demo.com/index.php/admin/error/index.html.html [运行时间：0.035138s][吞吐率：28.46req/s] [内存消耗：1,185.67kb] [文件加载：44]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => 'index.html',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]Cannot redeclare class app\index\controller\Error[D:\WWW\thinkphp5\application\admin\controller\Error.php:22]
+---------------------------------------------------------------
+[ 2017-09-05T09:08:59+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error/index.html.html
+[ info ] demo.com/index.php/admin/error/index.html.html [运行时间：0.044611s][吞吐率：22.42req/s] [内存消耗：1,346.52kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => 'index.html',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:09:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error/index.html
+[ info ] demo.com/index.php/admin/error/index.html [运行时间：0.035269s][吞吐率：28.35req/s] [内存消耗：1,438.48kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:09:43+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/dffdf
+[ info ] demo.com/index.php/admin/dffdf [运行时间：0.038341s][吞吐率：26.08req/s] [内存消耗：1,345.87kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dffdf',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:D:\WWW\thinkphp5\public/../application/admin\view\dffdf\index.html[D:\WWW\thinkphp5\thinkphp\library\think\view\driver\Think.php:80]
+---------------------------------------------------------------
+[ 2017-09-05T09:10:07+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error
+[ info ] demo.com/index.php/admin/error [运行时间：0.051713s][吞吐率：19.34req/s] [内存消耗：1,323.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:10:14+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] demo.com/ [运行时间：0.038612s][吞吐率：25.90req/s] [内存消耗：1,323.94kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:13:45+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/
+[ info ] demo.com/index.php/admin/index/ [运行时间：0.041693s][吞吐率：23.98req/s] [内存消耗：1,126.05kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'E',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:13:50+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.046580s][吞吐率：21.47req/s] [内存消耗：1,460.27kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:13:50+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.046105s][吞吐率：21.69req/s] [内存消耗：1,346.51kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504573399',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:16:15+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.046262s][吞吐率：21.62req/s] [内存消耗：1,324.17kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574031',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:16:15+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.047536s][吞吐率：21.04req/s] [内存消耗：1,347.07kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574031',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:17:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.037305s][吞吐率：26.81req/s] [内存消耗：1,324.17kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574176',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:17:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.049568s][吞吐率：20.17req/s] [内存消耗：1,447.48kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574176',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:17:05+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picture-list.html
+[ info ] demo.com/index.php/admin/index/picture-list.html [运行时间：0.041264s][吞吐率：24.23req/s] [内存消耗：1,347.09kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picture-list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574222',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:17:13+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/charts-1.html
+[ info ] demo.com/index.php/admin/index/charts-1.html [运行时间：0.041639s][吞吐率：24.02req/s] [内存消耗：1,347.10kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'charts-1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574222',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:20:58+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.047500s][吞吐率：21.05req/s] [内存消耗：1,324.80kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574222',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:20:58+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.041109s][吞吐率：24.33req/s] [内存消耗：1,324.87kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574222',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:21:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picture-list.html
+[ info ] demo.com/index.php/admin/index/picture-list.html [运行时间：0.040993s][吞吐率：24.39req/s] [内存消耗：1,347.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picture-list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574459',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:21:19+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picture-list.html
+[ info ] demo.com/index.php/admin/index/picture-list.html [运行时间：0.035999s][吞吐率：27.78req/s] [内存消耗：1,347.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picture-list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574459',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:22:22+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.047824s][吞吐率：20.91req/s] [内存消耗：1,461.85kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574459',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:22:22+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.046051s][吞吐率：21.72req/s] [内存消耗：1,325.23kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574459',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:22:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.058097s][吞吐率：17.21req/s] [内存消耗：1,494.59kb] [文件加载：50]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574543',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '(', expecting ',' or ';'[D:\WWW\thinkphp5\runtime\temp\22654b64c22d0b3b01cb8725c6d3814d.php:29]
+---------------------------------------------------------------
+[ 2017-09-05T09:36:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.061415s][吞吐率：16.28req/s] [内存消耗：1,324.79kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574543',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:36:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.041151s][吞吐率：24.30req/s] [内存消耗：1,324.87kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504574543',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:36:29+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.046421s][吞吐率：21.54req/s] [内存消耗：1,498.81kb] [文件加载：50]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575388',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '(', expecting ',' or ';'[D:\WWW\thinkphp5\runtime\temp\22654b64c22d0b3b01cb8725c6d3814d.php:107]
+---------------------------------------------------------------
+[ 2017-09-05T09:38:29+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.044498s][吞吐率：22.47req/s] [内存消耗：1,324.79kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575388',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:38:29+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.041389s][吞吐率：24.16req/s] [内存消耗：1,324.87kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575388',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:38:30+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.047076s][吞吐率：21.24req/s] [内存消耗：1,498.83kb] [文件加载：50]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575510',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected '(', expecting ',' or ';'[D:\WWW\thinkphp5\runtime\temp\22654b64c22d0b3b01cb8725c6d3814d.php:107]
+---------------------------------------------------------------
+[ 2017-09-05T09:38:46+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.035879s][吞吐率：27.87req/s] [内存消耗：1,324.79kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575510',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:38:46+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.048776s][吞吐率：20.50req/s] [内存消耗：1,324.87kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575510',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:38:48+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.043830s][吞吐率：22.82req/s] [内存消耗：1,457.55kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575527',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:40:09+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.039563s][吞吐率：25.28req/s] [内存消耗：1,324.79kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575527',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:40:09+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.045841s][吞吐率：21.81req/s] [内存消耗：1,324.87kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575527',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:40:12+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.046334s][吞吐率：21.58req/s] [内存消耗：1,457.68kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575610',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:40:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/product-brand.html
+[ info ] demo.com/index.php/admin/index/product-brand.html [运行时间：0.047952s][吞吐率：20.85req/s] [内存消耗：1,347.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'product-brand',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575610',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:40:33+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/member-list.html
+[ info ] demo.com/index.php/admin/index/member-list.html [运行时间：0.055169s][吞吐率：18.13req/s] [内存消耗：1,347.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'member-list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575610',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:40:59+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.038734s][吞吐率：25.82req/s] [内存消耗：1,324.79kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575610',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:40:59+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.040486s][吞吐率：24.70req/s] [内存消耗：1,324.87kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575610',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:41:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/article-list.html
+[ info ] demo.com/index.php/admin/index/article-list.html [运行时间：0.041063s][吞吐率：24.35req/s] [内存消耗：1,347.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'article-list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:41:19+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/article-list.html
+[ info ] demo.com/index.php/admin/index/article-list.html [运行时间：0.040475s][吞吐率：24.71req/s] [内存消耗：1,347.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'article-list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:41:22+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.041940s][吞吐率：23.84req/s] [内存消耗：1,324.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:42:00+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picture-add.html
+[ info ] demo.com/index.php/admin/index/picture-add.html [运行时间：0.044370s][吞吐率：22.54req/s] [内存消耗：1,347.77kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picture-add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/picturelist.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:42:11+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picture-show.html
+[ info ] demo.com/index.php/admin/index/picture-show.html [运行时间：0.041605s][吞吐率：24.04req/s] [内存消耗：1,347.72kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picture-show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/picturelist.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:43:17+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.033136s][吞吐率：30.18req/s] [内存消耗：1,324.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:43:22+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/article-list.html
+[ info ] demo.com/index.php/admin/index/article-list.html [运行时间：0.031125s][吞吐率：32.13req/s] [内存消耗：1,347.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'article-list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:43:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.028107s][吞吐率：35.58req/s] [内存消耗：1,324.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:43:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/product-brand.html
+[ info ] demo.com/index.php/admin/index/product-brand.html [运行时间：0.038439s][吞吐率：26.02req/s] [内存消耗：1,347.66kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'product-brand',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:43:27+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/product-category.html
+[ info ] demo.com/index.php/admin/index/product-category.html [运行时间：0.034815s][吞吐率：28.72req/s] [内存消耗：1,347.57kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'product-category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:43:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.047779s][吞吐率：20.93req/s] [内存消耗：1,324.79kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:43:29+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.045242s][吞吐率：22.10req/s] [内存消耗：1,324.87kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575660',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/db
+[ info ] demo.com/index.php/db [运行时间：0.350972s][吞吐率：2.85req/s] [内存消耗：1,532.41kb] [文件加载：49]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'controller',
+  'controller' => 'db/index/index',
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\db\controller\Index->index[ D:\WWW\thinkphp5\application\db\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/db\view\index\index.html [ array (
+  0 => 'lists',
+  1 => 'seach',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014385s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT TABLE_NAME,TABLE_COMMENT FROM information_schema.TABLES WHERE table_schema='snake' [ RunTime:0.034609s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_archives' AND table_schema='snake' [ RunTime:0.021335s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_articleinfo' AND table_schema='snake' [ RunTime:0.018128s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_category' AND table_schema='snake' [ RunTime:0.020213s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_chatgroup' AND table_schema='snake' [ RunTime:0.019615s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_chatlog' AND table_schema='snake' [ RunTime:0.017515s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_chatuser' AND table_schema='snake' [ RunTime:0.017674s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_demo' AND table_schema='snake' [ RunTime:0.018871s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_groupdetail' AND table_schema='snake' [ RunTime:0.017328s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_node' AND table_schema='snake' [ RunTime:0.018992s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_role' AND table_schema='snake' [ RunTime:0.017195s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_rule' AND table_schema='snake' [ RunTime:0.017756s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_user' AND table_schema='snake' [ RunTime:0.017783s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_work' AND table_schema='snake' [ RunTime:0.017923s ]
+---------------------------------------------------------------
+[ 2017-09-05T10:34:56+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/db
+[ info ] demo.com/index.php/db [运行时间：0.342079s][吞吐率：2.92req/s] [内存消耗：1,532.70kb] [文件加载：49]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'controller',
+  'controller' => 'db/index/index',
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\db\controller\Index->index[ D:\WWW\thinkphp5\application\db\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/db\view\index\index.html [ array (
+  0 => 'lists',
+  1 => 'seach',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001226s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT TABLE_NAME,TABLE_COMMENT FROM information_schema.TABLES WHERE table_schema='snake' [ RunTime:0.002281s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_archives' AND table_schema='snake' [ RunTime:0.021554s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_articleinfo' AND table_schema='snake' [ RunTime:0.024927s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_category' AND table_schema='snake' [ RunTime:0.022910s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_chatgroup' AND table_schema='snake' [ RunTime:0.022018s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_chatlog' AND table_schema='snake' [ RunTime:0.020159s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_chatuser' AND table_schema='snake' [ RunTime:0.023463s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_demo' AND table_schema='snake' [ RunTime:0.019521s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_groupdetail' AND table_schema='snake' [ RunTime:0.024440s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_node' AND table_schema='snake' [ RunTime:0.021880s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_role' AND table_schema='snake' [ RunTime:0.019241s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_rule' AND table_schema='snake' [ RunTime:0.021512s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_user' AND table_schema='snake' [ RunTime:0.025075s ]
+[ sql ] [ SQL ] SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name='snake_work' AND table_schema='snake' [ RunTime:0.018676s ]
+---------------------------------------------------------------
+[ 2017-09-05T10:35:10+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error
+[ info ] demo.com/index.php/admin/error [运行时间：0.033925s][吞吐率：29.48req/s] [内存消耗：1,323.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:35:16+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] demo.com/ [运行时间：0.029303s][吞吐率：34.13req/s] [内存消耗：1,323.94kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:35:51+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error
+[ info ] demo.com/index.php/admin/error [运行时间：0.038707s][吞吐率：25.84req/s] [内存消耗：1,438.70kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:35:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] demo.com/admin/login/index [运行时间：0.033900s][吞吐率：29.50req/s] [内存消耗：1,324.24kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  '//admin/login/index' => '',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:36:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] demo.com/admin/login/index [运行时间：0.037279s][吞吐率：26.82req/s] [内存消耗：1,324.43kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  '//admin/login/index' => '',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:36:11+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error
+[ info ] demo.com/index.php/admin/error [运行时间：0.038104s][吞吐率：26.24req/s] [内存消耗：1,438.77kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:36:44+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error
+[ info ] demo.com/index.php/admin/error [运行时间：0.042131s][吞吐率：23.74req/s] [内存消耗：1,487.49kb] [文件加载：48]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:36:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error/index.html
+[ info ] demo.com/index.php/admin/error/index.html [运行时间：0.039852s][吞吐率：25.09req/s] [内存消耗：1,371.96kb] [文件加载：46]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:36:54+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error/index.html
+[ info ] demo.com/index.php/admin/error/index.html [运行时间：0.029291s][吞吐率：34.14req/s] [内存消耗：1,372.08kb] [文件加载：46]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:37:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error/index.html
+[ info ] demo.com/index.php/admin/error/index.html [运行时间：0.044709s][吞吐率：22.37req/s] [内存消耗：1,439.35kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:37:31+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] demo.com/admin/login/index [运行时间：0.027037s][吞吐率：36.99req/s] [内存消耗：1,324.36kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  '//admin/login/index' => '',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:37:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index
+[ info ] demo.com/admin/login/index [运行时间：0.034416s][吞吐率：29.06req/s] [内存消耗：1,324.57kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  '//admin/login/index' => '',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:37:46+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error/index.html
+[ info ] demo.com/index.php/admin/error/index.html [运行时间：0.036755s][吞吐率：27.21req/s] [内存消耗：1,439.25kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:37:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.027585s][吞吐率：36.25req/s] [内存消耗：1,324.33kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504575809',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:38:01+08:00 ] 127.0.0.1 127.0.0.1 POST /index.php/admin/login/index.html
+[ info ] demo.com/index.php/admin/login/index.html [运行时间：0.033469s][吞吐率：29.88req/s] [内存消耗：1,324.66kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504579070',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://demo.com',
+  'cache-control' => 'max-age=0',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:38:02+08:00 ] 127.0.0.1 127.0.0.1 POST /index.php/admin/login/index.html
+[ info ] demo.com/index.php/admin/login/index.html [运行时间：0.030280s][吞吐率：33.02req/s] [内存消耗：1,324.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504579082',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://demo.com',
+  'cache-control' => 'max-age=0',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:38:03+08:00 ] 127.0.0.1 127.0.0.1 POST /index.php/admin/login/index.html
+[ info ] demo.com/index.php/admin/login/index.html [运行时间：0.033700s][吞吐率：29.67req/s] [内存消耗：1,324.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504579083',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://demo.com',
+  'cache-control' => 'max-age=0',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:50:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify
+[ info ] demo.com/index.php/admin/login/verify [运行时间：0.063106s][吞吐率：15.85req/s] [内存消耗：1,370.81kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504579084',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:52:28+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/
+[ info ] demo.com/index.php/admin/login/ [运行时间：0.026462s][吞吐率：37.79req/s] [内存消耗：1,126.22kb] [文件加载：40]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'E',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504579084; PHPSESSID=andj3hum3a0vu6bntgn974mv13',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:52:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.039200s][吞吐率：25.51req/s] [内存消耗：1,445.67kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504579084; PHPSESSID=andj3hum3a0vu6bntgn974mv13',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:52:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify
+[ info ] demo.com/index.php/admin/login/verify [运行时间：0.037762s][吞吐率：26.48req/s] [内存消耗：1,371.57kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504579084; PHPSESSID=andj3hum3a0vu6bntgn974mv13',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:54:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.033126s][吞吐率：30.19req/s] [内存消耗：1,446.06kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504579958',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:54:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify
+[ info ] demo.com/index.php/admin/login/verify [运行时间：0.040120s][吞吐率：24.93req/s] [内存消耗：1,371.58kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504579958',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:54:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.044491s][吞吐率：22.48req/s] [内存消耗：1,446.06kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580055',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:54:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify
+[ info ] demo.com/index.php/admin/login/verify [运行时间：0.041349s][吞吐率：24.18req/s] [内存消耗：1,371.57kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580055',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:55:41+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.049288s][吞吐率：20.29req/s] [内存消耗：1,446.12kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580090',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:55:41+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify
+[ info ] demo.com/index.php/admin/login/verify [运行时间：0.057358s][吞吐率：17.43req/s] [内存消耗：1,371.57kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580090',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:55:51+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.034512s][吞吐率：28.98req/s] [内存消耗：1,446.06kb] [文件加载：47]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580142',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:55:51+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify
+[ info ] demo.com/index.php/admin/login/verify [运行时间：0.048794s][吞吐率：20.49req/s] [内存消耗：1,371.57kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580142',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:57:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.056777s][吞吐率：17.61req/s] [内存消耗：1,494.67kb] [文件加载：48]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:57:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify
+[ info ] demo.com/index.php/admin/login/verify [运行时间：0.048915s][吞吐率：20.44req/s] [内存消耗：1,371.59kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580151',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:57:40+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.030740s][吞吐率：32.53req/s] [内存消耗：1,371.69kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580260',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:57:41+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.030169s][吞吐率：33.15req/s] [内存消耗：1,371.65kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580260',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:57:41+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.029616s][吞吐率：33.77req/s] [内存消耗：1,371.65kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580260',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:57:42+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.032415s][吞吐率：30.85req/s] [内存消耗：1,371.66kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580260',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:57:50+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.028695s][吞吐率：34.85req/s] [内存消耗：1,371.66kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580260',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:57:52+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.032811s][吞吐率：30.48req/s] [内存消耗：1,371.66kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580260',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:06+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.041086s][吞吐率：24.34req/s] [内存消耗：1,374.63kb] [文件加载：46]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580260',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:06+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify
+[ info ] demo.com/index.php/admin/login/verify [运行时间：0.049163s][吞吐率：20.34req/s] [内存消耗：1,371.82kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580260',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:09+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.029302s][吞吐率：34.13req/s] [内存消耗：1,371.96kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:10+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.026925s][吞吐率：37.14req/s] [内存消耗：1,371.96kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:11+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.031267s][吞吐率：31.98req/s] [内存消耗：1,371.97kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:12+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.026921s][吞吐率：37.15req/s] [内存消耗：1,371.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:12+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.028446s][吞吐率：35.15req/s] [内存消耗：1,371.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:13+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.025587s][吞吐率：39.08req/s] [内存消耗：1,371.96kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.031766s][吞吐率：31.48req/s] [内存消耗：1,371.97kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:23+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.029253s][吞吐率：34.18req/s] [内存消耗：1,371.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.026382s][吞吐率：37.90req/s] [内存消耗：1,371.97kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:25+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.027605s][吞吐率：36.23req/s] [内存消耗：1,371.96kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T10:59:59+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.040552s][吞吐率：24.66req/s] [内存消耗：1,371.98kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T11:00:00+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify.html
+[ info ] demo.com/index.php/admin/login/verify.html [运行时间：0.027738s][吞吐率：36.05req/s] [内存消耗：1,371.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T11:00:21+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error/index.html
+[ info ] demo.com/index.php/admin/error/index.html [运行时间：0.031498s][吞吐率：31.75req/s] [内存消耗：1,323.55kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T11:00:23+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/index
+[ info ] demo.com/index.php/admin/login/index [运行时间：0.029599s][吞吐率：33.78req/s] [内存消耗：1,374.81kb] [文件加载：46]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/error/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T11:00:23+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/login/verify
+[ info ] demo.com/index.php/admin/login/verify [运行时间：0.040128s][吞吐率：24.92req/s] [内存消耗：1,371.81kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580347',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/login/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ D:\WWW\thinkphp5\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T11:00:33+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/error/index.html
+[ info ] demo.com/index.php/admin/error/index.html [运行时间：0.030254s][吞吐率：33.05req/s] [内存消耗：1,323.55kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'error',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580425',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Error->index[ D:\WWW\thinkphp5\application\admin\controller\Error.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\error\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T11:00:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/index
+[ info ] demo.com/index.php/admin/index/index [运行时间：0.026689s][吞吐率：37.47req/s] [内存消耗：1,324.57kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580425',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T11:00:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/welcome.html
+[ info ] demo.com/index.php/admin/index/welcome.html [运行时间：0.036378s][吞吐率：27.49req/s] [内存消耗：1,324.97kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=green; AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580425',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\welcome.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T11:00:54+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.030791s][吞吐率：32.48req/s] [内存消耗：1,325.13kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=yellow; AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580438',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-09-05T11:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/admin/index/picturelist.html
+[ info ] demo.com/index.php/admin/index/picturelist.html [运行时间：0.036723s][吞吐率：27.23req/s] [内存消耗：1,325.13kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'picturelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Huiskin=yellow; AJSTAT_ok_times=2; pgv_pvi=4821452800; PHPSESSID=andj3hum3a0vu6bntgn974mv13; Hm_lvt_080836300300be57b7f34f4b3e97d911=1504573290; Hm_lpvt_080836300300be57b7f34f4b3e97d911=1504580438',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://demo.com/index.php/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'demo.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->picturelist[ D:\WWW\thinkphp5\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\WWW\thinkphp5\public/../application/admin\view\index\picture-list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

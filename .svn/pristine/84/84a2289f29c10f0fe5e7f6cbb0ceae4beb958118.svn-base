@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品中心-蝮蛇</title>
+    <link rel="stylesheet" href="/static/index/base/css/style.css">
+    <link rel="stylesheet" href="/static/index/base/css/header.css">
+    <link rel="stylesheet" href="/static/index/base/css/footer.css">
+
+
+    <link rel="stylesheet" href="/static/index/css/snake.css">
+
+    <script src="/static/index/base/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/index/base/js/header.js"></script>
+
+
+
+</head>
+<body>
+<header>
+
+    <div class="header-bj">
+
+        <div class="header-top">
+            <p>杭州富阳福根蛇业有限公司</p>
+            <!--<div class="weixin">-->
+            <!--<p>微信公众号</p>-->
+            <!--<div class="img"><img src="/static/index/base/image/weixin.jpg" alt=""></div>-->
+            <!--</div>-->
+            <div class="tel">
+                <p>资讯电话</p>
+                <div class="telS">
+                    0571-58977199<br/>
+                    183-2918-0888
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!--   分割线  -->
+    <div class="clear"></div>
+    <div class="header-content">
+        <div class="w1024">
+            <div class="logo">
+                <a href="https://www.fugensy.com/"><img src="/static/index/base/image/logo.png"></a>
+            </div>
+            <!-- 分割线  -->
+            <nav class="right">
+                <ul>
+                    <li><a href="{:url('index/index')}">首页</a></li>
+                    <li><a href="{:url('index/about')}">关于我们</a></li>
+                    <li><a href="{:url('index/productlist')}" class="active">产品中心</a></li>
+                    <li><a href="{:url('index/newslist')}">新闻资讯</a></li>
+                    <li><a href="{:url('index/contact')}">联系我们</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+</header><!-- JS 外部加载通用头显示  -->
+<!--  stop  -->
+<div class="clear"></div>
+
+<!--banner start   -->
+
+<div class="banner">
+    <div class="w1024">
+        <div class="snake-banner">
+            <img src="/static/index/image/product-banner.jpg">
+        </div>
+    </div>
+
+</div>
+<!-- 蝮蛇   start -->
+<div class="snake-content">
+    <div class="snake-title">您当前的位置：<a href="https://www.fugensy.com/">首页</a> > <a> 蝮蛇</a></div>
+    <div class="snake-details">
+        <div class="snake-details-title">
+            <h2> 蝮蛇</h2>
+            <p>日期： <span>2017-09-25</span> 来源：<span>本站</span> 编辑人员：<span>admin</span></p>
+        </div>
+        <div class="snake-details-text">
+            <img src="/static/index/snake/snake-adder01.jpg">
+            <p>蝮蛇（Agkistrodon halys），指蝮亚科的蛇，是成员繁多的蛇科，有神秘莫测的巨蝮属、诡异狠毒的响尾蛇属、狰狞凶险的矛头蝮属、华丽优雅的竹叶青属、妖娆美艳的棕榈蝮属、美轮美奂的铠甲蝮属、外表独特的尖吻蝮属、小巧玲珑的亚洲蝮属，等等等等，均为爬行纲，蝰科，蝮亚科。在我国各地，分布的多为亚洲蝮属，中国境内所指的蝮蛇多为短尾蝮（一种常见的蝮蛇）。蝮蛇的学名“Agkistrodon”源自希腊语，当中“Ancistro”意思是“钩”，而“odon”则代表“牙”，两者合指蝮蛇最为人所知的钩形毒牙。除食用外，有很高的医药价值。它种源易得，养殖方法不难，是群众致富的一项新型养殖业。全国除广东、海南、广西外、均有分布。头略呈三角形，体粗短，尾短，全背呈暗褐色，体侧各有深褐色圆形斑纹一行。有较强耐寒性。多栖息于平原、丘陵地带、树丛、田边和路旁扥发、等接近水源 的地方。</p>
+            <h3>形态特征:</h3>
+            <p>蝮蛇体长60～70厘米，头略呈三角形，颈细，具颊窝，头颈区分明显，背面浅褐色到红褐色，头背有一深色“∧“形斑，正脊有两行深棕色圆斑，彼此交错排列略并列，背鳞外侧及腹鳞间有1行黑褐色不规则粗点，略呈星状；腹面灰白，密布棕褐色或黑褐色细点。鼻间鳞宽短，排成⊥形；眶前鳞2，眶后鳞2（3），眶璨来新月形，颞鳞2+4（3）；上唇鳞2-1-4（2-1-3、3-1-4）式。背鳞21（23）-21-17（15）行，中段最外行平滑或均具棱；腹鳞137-173，肛鳞完整；尾下鳞29-54对，少数为单行。头背具对称的大鳞片，眼前有颊窝，体背有两纵行圆斑。</p>
+            <p>体色变化大，头体背部由灰褐色而至土红色，头部在眼后到口角有黑色带，其上缘有一黄白色细纹；体背交互排列有黑褐圆斑；腹面灰白到灰黑褐色，有不规则黑点；尾尖黑色。</p>
+            <h3>生活习性:</h3>
+            <p>捕食鼠、蛙、小型蜥蜴、鸟、昆虫等。蝮蛇的繁殖、取食、活动等都受温度的制约，低于10℃时蝮蛇几乎不捕食；5℃以下进入冬眠；20℃～25℃为捕食高峰；30℃以上的进蛇洞栖息，一般不捕食。夜间活动频繁，春暖之后陆续出势寻找食物。</p>
+        </div>
+
+    </div>
+
+</div>
+<!--  通用尾 foot  -->
+<div class="foot">
+    <div class="w1024">
+        <div class="foot-list">
+            <dl class="nav">
+                <dt>
+                <p>关于我们</p></dt>
+                <dd><a href="{:url('index/about')}">公司简介</a></dd>
+                <dd><a href="{:url('index/aboutCulture')}">企业文化</a></dd>
+                <dd><a href="{:url('index/aboutFuture')}">企业未来</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>产品中心</p></dt>
+                <dd><a href="https://www.fugensy.com/index/index/productlist.html?cid=29">蛇酒</a></dd>
+                <dd><a href="https://www.fugensy.com/index/index/productlist.html?cid=30">蛇油</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>企业动态</p></dt>
+                <dd><a href="{:url('index/newsCompany')}">公司新闻</a></dd>
+                <dd><a href="{:url('index/newsTrade')}">行业新闻</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>联系我们</p></dt>
+                <dd><a href="{:url('index/contact')}">联系方式</a></dd>
+                <dd><a href="{:url('index/contactMessage')}">在线留言</a></dd>
+            </dl>
+        </div>
+        <div class="foot-tel">
+            <div class="img"> <img src="/static/index/base/image/tel-foot.png"></div>
+            <div class="time">
+                <p class="title"> 客服中心热线</p>
+                <p> 全国互动热线： 0571-58977199</p>
+                <p> 服务时间：早上：8:00 --- 晚上：22:00</p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--  结尾 footer -->
+<div class="footer">
+    <div class="w1024">
+        <P>版权所有 杭州富阳福根蛇业有限公司 浙ICP备17043650号</P>
+        <P>网址 ：<a href="https://www.fugensy.com/">https://www.fugensy.com/</a></P>
+    </div>
+</div>
+
+</body>
+</html>

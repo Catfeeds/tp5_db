@@ -1,0 +1,84 @@
+/**
+ * Created by zhang on 17/9/16.
+ */
+window.onload = function () {
+    $(function(){
+
+    var $tabLi = $('#banner .tab li');
+    var $picUl = $('#banner .pic ul');
+    var $banner = $('#banner');
+    var $btn = $('#banner .btn');
+    var $btnDiv = $('#banner .btn div');
+    var imgWidth = $('#banner .pic li').width();
+    var index = 0;
+    var nowTime = new Date();
+
+    $tabLi.click(function(){
+        index = $(this).index();
+        $(this).addClass('on').siblings().removeClass('on');
+        $picUl.animate({
+            marginLeft : -imgWidth*(index+1) + 'px'
+        },300);
+    });
+
+    $banner.hover(function(){
+        $btn.show();
+        clearInterval(timer);
+    },function(){
+        $btn.hide();
+        timer = setInterval(function(){
+            index ++;
+            fn();
+        },5000);
+    });
+
+    $btnDiv.hover(function(){
+        $(this).addClass('hover');
+    },function(){
+        $(this).removeClass('hover');
+    }).click(function(){
+        if ( new Date() - nowTime > 350 )
+        {
+            nowTime = new Date();
+            var i = $(this).index();
+            i?index++:index--;
+            fn();
+        }
+    }).mousedown(function(){
+        return false;
+    });
+
+    var timer = setInterval(function(){
+        index ++;
+        fn();
+    },5000);
+
+    function fn(){
+        var liIndex = index;
+        if ( liIndex >= $tabLi.length )
+        {
+            liIndex = 0;
+        }
+        else if ( liIndex < 0 )
+        {
+            liIndex = $tabLi.length-1;
+        }
+        $tabLi.eq(liIndex).addClass('on').siblings().removeClass('on');
+        $picUl.animate({
+            marginLeft : -imgWidth*(index+1) + 'px'
+        },300,function(){
+            if ( index == $tabLi.length )
+            {
+                $picUl.css('marginLeft' , -imgWidth+'px');
+                index = 0;
+            }
+            else if ( index < 0 )
+            {
+                $picUl.css('marginLeft' , -imgWidth*($tabLi.length)+'px');
+                index = $tabLi.length-1;
+            }
+        });
+    }
+
+})
+};

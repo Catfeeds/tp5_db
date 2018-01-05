@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们-企业未来</title>
+    <link rel="stylesheet" href="/static/index/base/css/style.css">
+    <link rel="stylesheet" href="/static/index/base/css/header.css">
+    <link rel="stylesheet" href="/static/index/base/css/footer.css">
+
+
+    <link rel="stylesheet" href="/static/index/css/about.css">
+    <link rel="stylesheet" href="/static/index/css/list-left.css">
+
+
+    <script src="/static/index/base/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/index/base/js/header.js"></script>
+
+
+</head>
+<body>
+<header>
+
+    <div class="header-bj">
+
+        <div class="header-top">
+            <p>杭州富阳福根蛇业有限公司</p>
+            <!--<div class="weixin">-->
+            <!--<p>微信公众号</p>-->
+            <!--<div class="img"><img src="/static/index/base/image/weixin.jpg" alt=""></div>-->
+            <!--</div>-->
+            <div class="tel">
+                <p>资讯电话</p>
+                <div class="telS">
+                    0571-58977199<br/>
+                    183-2918-0888
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!--   分割线  -->
+    <div class="clear"></div>
+    <div class="header-content">
+        <div class="w1024">
+            <div class="logo">
+                <img src="/static/index/base/image/logo.png">
+            </div>
+            <!-- 分割线  -->
+            <nav class="right">
+                <ul>
+                    <li><a href="{:url('index/index')}">首页</a></li>
+                    <li><a href="{:url('index/about')}" class="active">关于我们</a></li>
+                    <li><a href="{:url('index/productlist')}">产品中心</a></li>
+                    <li><a href="{:url('index/newslist')}">新闻资讯</a></li>
+                    <li><a href="{:url('index/contact')}">联系我们</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+</header><!-- JS 外部加载通用头显示  -->
+<!--  stop  -->
+<div class="clear"></div>
+
+<!--banner start   -->
+
+<div class="banner">
+    <div class="w1024">
+        <div id="banner">
+
+            <div class="about-banner">
+                <img src="/static/index/image/about-banner.jpg">
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+<!-- stop -->
+<div class="clear"></div>
+<!--  关于我们  start -->
+<div class="about">
+    <div class="w1024">
+        <div class="about-list">
+            <p class="list-title">
+                关于我们
+            </p>
+            <ul>
+                <li><a href="{:url('index/about')}">公司简介</a></li>
+                <li><a href="{:url('index/aboutCulture')}">企业文化</a></li>
+                <li><a href="{:url('index/aboutFuture')}" class="onRed">企业未来</a></li>
+            </ul>
+
+        </div>
+        <!--  分割线  -->
+        <div class="about-content">
+            <div class="content-title">
+                <p>
+                    <span class="title">企业未来</span>
+                    <span class="text">当前位置：<a href="https://www.fugensy.com/">首页</a> > <a>企业未来</a></span>
+                </p>
+            </div>
+            <!--   分割线 -->
+            <div class="about-main">
+                <h1>带领中国蛇业走向世界</h1>
+                <img src="/static/index/image/about.jpg">
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--  通用尾 foot  -->
+<div class="foot">
+    <div class="w1024">
+        <div class="foot-list">
+            <dl class="nav">
+                <dt>
+                <p>关于我们</p></dt>
+                <dd><a href="{:url('index/about')}">公司简介</a></dd>
+                <dd><a href="{:url('index/aboutCulture')}">企业文化</a></dd>
+                <dd><a href="{:url('index/aboutFuture')}">企业未来</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>产品中心</p></dt>
+                <dd><a href="https://www.fugensy.com/index/index/productlist.html?cid=29">蛇酒</a></dd>
+                <dd><a href="https://www.fugensy.com/index/index/productlist.html?cid=30">蛇油</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>企业动态</p></dt>
+                <dd><a href="{:url('index/newsCompany')}">公司新闻</a></dd>
+                <dd><a href="{:url('index/newsTrade')}">行业新闻</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>联系我们</p></dt>
+                <dd><a href="{:url('index/contact')}">联系方式</a></dd>
+                <dd><a href="{:url('index/contactMessage')}">在线留言</a></dd>
+            </dl>
+        </div>
+        <div class="foot-tel">
+            <div class="img"> <img src="/static/index/base/image/tel-foot.png"></div>
+            <div class="time">
+                <p class="title"> 客服中心热线</p>
+                <p> 全国互动热线： 0571-58977199</p>
+                <p> 服务时间：早上：8:00 --- 晚上：22:00</p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--  结尾 footer -->
+<div class="footer">
+    <div class="w1024">
+        <P>版权所有 杭州富阳福根蛇业有限公司 浙ICP备17043650号</P>
+        <P>网址 ：<a href="https://www.fugensy.com/">https://www.fugensy.com/</a></P>
+    </div>
+</div>
+</body>
+</html>

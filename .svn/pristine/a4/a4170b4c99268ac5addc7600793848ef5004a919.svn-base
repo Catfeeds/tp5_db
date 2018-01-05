@@ -1,0 +1,88 @@
+<?php
+
+namespace app\db\controller;
+
+use app\model\Demo;
+use function MongoDB\BSON\toJSON;
+use think\Controller;
+use think\View;
+use think\Db;
+
+class Index extends Controller
+{
+    /***
+     * 空操作方法
+     * @param $name
+     * @return mixed
+     */
+    public function _empty($name)
+    {
+        $this->index();
+
+    }
+
+    public function index()
+    {
+        //判断是否调试模式
+        if (config('app_debug') == false) {
+
+            return '该功能只能调试模式下，开发人员使用';;
+        }
+        //要查询的数据库
+        $dbname = config('database');
+        $dbname = $dbname['database'];
+
+        $seach = input('seach');
+
+
+        if ($seach) {
+            $where = " AND (`TABLE_NAME` LIKE  '%" . $seach . "%'" . ' OR `TABLE_COMMENT` LIKE ' . "'%" . $seach . "%')";
+        }
+
+
+        $tables = Db::query('SELECT TABLE_NAME,TABLE_COMMENT FROM information_schema.TABLES WHERE table_schema=' . '\'' . $dbname . '\'' . (isset($where) ? $where : ''));
+        $txt    = '';
+        foreach ($tables as $key => &$value) {
+            // $txt .= '*```(' . $value['TABLE_NAME'] . ')  注释(' . $value['TABLE_COMMENT'] . ')' . "\r\n";
+
+            $arr            = Db::query('SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name=' . '\'' . $value['TABLE_NAME'] . '\' AND table_schema=' . '\'' . $dbname . '\'');
+            $value['field'] = $arr;
+            //            foreach ($arr as $v) {
+//                $txt .= '                                      ' . $v['COLUMN_NAME'] . '(' . $v['COLUMN_TYPE'] . ')      默认值:' . $v['COLUMN_DEFAULT'] . '   注释:' . $v['COLUMN_COMMENT'] . "\r\n";
+//            }
+            // dump(M()->query(''));
+            //$tablesmsg = M()->query('show columns from '.$value['Tables_in_zichan']);
+            // dump($tablesmsg);
+            // $txt .= '*******************************************************************************' . "\r\n";
+        }
+        $view        = new View();
+        $view->lists = $tables;
+        $view->seach = $seach;
+        return $view->fetch();
+
+    }
+
+    public function testHttp()
+    {
+
+        return $this->fetch();
+    }
+
+    public function getcallbackdata()
+    {
+        $data = input('request.');
+        switch ($data['type']) {
+            case 'GET':
+                $r = doPost($data['url'], $data,[],'GET');
+                break;
+            case 'POST':
+                $r = doPost($data['url'], $data,[],'POST');
+                break;
+        }
+
+        echo '<pre>';
+        var_dump($r);
+        echo '<pre>';
+    }
+
+}

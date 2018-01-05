@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品中心-五步蛇</title>
+    <link rel="stylesheet" href="/static/index/base/css/style.css">
+    <link rel="stylesheet" href="/static/index/base/css/header.css">
+    <link rel="stylesheet" href="/static/index/base/css/footer.css">
+
+    <link rel="stylesheet" href="/static/index/css/snake.css">
+
+
+    <script src="/static/index/base/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/index/base/js/header.js"></script>
+
+
+
+</head>
+<body>
+<header>
+
+    <div class="header-bj">
+
+        <div class="header-top">
+            <p>杭州富阳福根蛇业有限公司</p>
+            <!--<div class="weixin">-->
+            <!--<p>微信公众号</p>-->
+            <!--<div class="img"><img src="/static/index/base/image/weixin.jpg" alt=""></div>-->
+            <!--</div>-->
+            <div class="tel">
+                <p>资讯电话</p>
+                <div class="telS">
+                    0571-58977199<br/>
+                    183-2918-0888
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!--   分割线  -->
+    <div class="clear"></div>
+    <div class="header-content">
+        <div class="w1024">
+            <div class="logo">
+                <a href="https://www.fugensy.com/"><img src="/static/index/base/image/logo.png"></a>
+            </div>
+            <!-- 分割线  -->
+            <nav class="right">
+                <ul>
+                    <li><a href="{:url('index/index')}">首页</a></li>
+                    <li><a href="{:url('index/about')}">关于我们</a></li>
+                    <li><a href="{:url('index/productlist')}" class="active">产品中心</a></li>
+                    <li><a href="{:url('index/newslist')}">新闻资讯</a></li>
+                    <li><a href="{:url('index/contact')}">联系我们</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+</header><!-- JS 外部加载通用头显示  -->
+<!--  stop  -->
+<div class="clear"></div>
+
+<!--banner start   -->
+
+<div class="banner">
+    <div class="w1024">
+         <div class="snake-banner">
+             <img src="/static/index/image/product-banner.jpg">
+         </div>
+    </div>
+
+</div>
+<!-- stop -->
+<div class="clear"></div>
+<!-- 五步蛇   start -->
+<div class="snake-content">
+    <div class="snake-title">您当前的位置：<a href="https://www.fugensy.com/">首页</a> > <a>五步蛇</a></div>
+    <div class="snake-details">
+        <div class="snake-details-title">
+            <h2>五步蛇</h2>
+            <p>日期： <span>2017-09-25</span> 来源：<span>本站</span> 编辑人员：<span>admin</span></p>
+        </div>
+        <div class="snake-details-text">
+
+            <p>尖吻蝮（学名：Deinagkistrodon）是蛇亚目蝰蛇科蝮亚科下的一个有毒单型蛇，属下尖吻蝮的幼蛇只有尖吻蝮（D.acutus）一个品种。尖吻蝮又称百步蛇、五步蛇、七步蛇、蕲蛇、山谷虌、百花蛇、中华蝮等，是亚洲地区内相当著名的蛇种</p>
+            <img src="/static/index/snake/snake-vipe01.jpg">
+            <h3>形态特征:</h3>
+            <p>尖吻蝮全长120—150厘米，大者可达200厘米以上。头大呈三角形，与颈部可明显区分，有长管牙。吻端由鼻间鳞与吻鳞尖出形成一上翘的突起；鼻孔与眼之闻有一椭圆形颊窝，它是热测位器。背鳞具强棱21（23）—21（23）17（19）行。腹鳞157—171。尾下鳞52—60，前段约20枚定为单行或杂以个别成对的，尾后段为双行，末端鳞片角质化程度较高，形成一尖出硬物，称“佛指甲”。</p>
+                <p>生活时背面棕黑色，头侧土黄色，二色截然分明，体背棕褐色或稍带绿色，其上具灰白色大方形斑块17—19个，尾部3—5个，此斑由左右两侧大三角斑在背正中合拢形成，偶尔也有交错摆列的，斑块边缘色深，腹面乳白色，咽喉部有排列不规则的小黑点，腹部中央和两侧有大黑斑。</p>
+            <h3>生活习性:</h3>
+            <p>尖吻蝮栖息地：尖吻蝮主要栖息在海拔400—700米的常绿和落叶混交林中，夏季喜欢在山坞的水沟一带活动，对生境条件的要求是阴凉通风有树有水，也在茶园、农田、柴堆内活动，能上树，也能进入人房。冬季多在树根形成的天然洞或旧鼠洞中越冬。</p>
+            <p>尖吻蝮活动：尖吻蝮年活动周期自惊蜇至大雪约为9个月，影响活动的主要因子是温度、湿度及食物。气温20—30℃时，活动最频繁，气温高达35—38℃时，多向水边集中。在夜间用松把照明较为敏感并对火把有攻击反应，用手电筒照时几乎无明显趋温倾向</p>
+            <p>尖吻蝮食物：剖胃发现有社鼠、犬足鼠、黄鼬及棘胸蛙。尖吻蝮在山坞的分布，和棘胸蛙的分布、数量有关系。剖胃亦见有黄胸鼠，说明尖吻蝮进入人房。另见有吞食后排出的鸟羽，经鉴定为绿啄木鸟。在蛇池中投饲青蛙及小白鼠，并曾见幼蛇捕捉直翅目昆虫灶马为食。</p>
+            <p>尖吻蝮繁殖：雌蛇尾基部的臭腺分泌物有特殊臭味，能引诱雄蛇。交配前有追偶现象，交配时相互缠绕。卵多产在天然洞穴中，洞道浅短干燥。在一梯田所见之洞口为10公分，洞道仅有25公分。产卵数目多少不等，年轻母蛇产卵早但数量少，年老母蛇产卵迟但数量多，一般为12—18枚，1982年8月28日曾见一蛇产出42枚卵。卵白色，长圆形，卵壳软，触之如纸。卵重16—18克，大小为42—45×25—30毫米。卵产出时多竖成圆圈状，粘在一起，通常1—3天产完。约24天孵出幼蛇，出壳时体长19公分。10天后开始第一次脱皮，49天后第二次脱皮。</p>
+            <p>尖吻蝮冬眠：冬眠期自大雪至翌年惊蛰约为3个月，越冬洞穴较深，蛇多时大小蛇在一起，有时也和蝮蛇混居在同一洞中。当气温为8℃时与蛇体表温度相等，当气温高于8℃时蛇体表温度始终比气温略低1℃，当气温低于8℃时蛇体表温度则较气温略高于1℃，蛇体表温度为11℃以上时能咬人。人工饲养的幼蛇，当气温低于17℃时。盘瞳不动，在12℃时用镊子触动出现张口咬人状态。</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!--  通用尾 foot  -->
+<div class="foot">
+    <div class="w1024">
+        <div class="foot-list">
+            <dl class="nav">
+                <dt>
+                <p>关于我们</p></dt>
+                <dd><a href="{:url('index/about')}">公司简介</a></dd>
+                <dd><a href="{:url('index/aboutCulture')}">企业文化</a></dd>
+                <dd><a href="{:url('index/aboutFuture')}">企业未来</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>产品中心</p></dt>
+                <dd><a href="https://www.fugensy.com/index/index/productlist.html?cid=29">蛇酒</a></dd>
+                <dd><a href="https://www.fugensy.com/index/index/productlist.html?cid=30">蛇油</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>企业动态</p></dt>
+                <dd><a href="{:url('index/newsCompany')}">公司新闻</a></dd>
+                <dd><a href="{:url('index/newsTrade')}">行业新闻</a></dd>
+            </dl>
+            <!--  分割线 -->
+            <dl class="nav">
+                <dt>
+                <p>联系我们</p></dt>
+                <dd><a href="{:url('index/contact')}">联系方式</a></dd>
+                <dd><a href="{:url('index/contactMessage')}">在线留言</a></dd>
+            </dl>
+        </div>
+        <div class="foot-tel">
+            <div class="img"> <img src="/static/index/base/image/tel-foot.png"></div>
+            <div class="time">
+                <p class="title"> 客服中心热线</p>
+                <p> 全国互动热线： 0571-58977199</p>
+                <p> 服务时间：早上：8:00 --- 晚上：22:00</p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--  结尾 footer -->
+<div class="footer">
+    <div class="w1024">
+        <P>版权所有 杭州富阳福根蛇业有限公司 浙ICP备17043650号</P>
+        <P>网址 ：<a href="https://www.fugensy.com/">https://www.fugensy.com/</a></P>
+    </div>
+</div>
+
+</body>
+</html>

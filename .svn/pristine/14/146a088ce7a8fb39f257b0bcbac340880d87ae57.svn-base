@@ -1,0 +1,461 @@
+[ 2017-09-04T13:54:40+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T13:54:40+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T13:54:40+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T13:54:40+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T13:54:40+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T13:54:40+08:00 ][ error ] [1]Call to undefined function Workerman\Lib\pcntl_signal()[D:\WWW\thinkphp5\vendor\workerman\workerman\Lib\Timer.php:57]
+[ 2017-09-04T13:56:29+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T13:56:29+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T13:56:29+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T13:56:29+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T13:56:29+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:04:52+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:04:52+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:04:52+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:04:52+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:04:52+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:08:50+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:08:50+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:08:50+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:08:50+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:08:50+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:08:55+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:08:55+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004770s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T14:08:55+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.009906s ]
+[ 2017-09-04T14:08:55+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('') [ RunTime:0.004508s ]
+[ 2017-09-04T14:11:27+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:11:27+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:11:27+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:11:27+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:11:27+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:11:32+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:11:32+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.005620s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T14:11:32+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.015732s ]
+[ 2017-09-04T14:11:32+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('') [ RunTime:0.000298s ]
+[ 2017-09-04T14:15:48+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:15:48+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:15:48+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:15:48+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:15:48+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:15:52+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:15:52+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004115s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T14:15:52+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.011222s ]
+[ 2017-09-04T14:15:52+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('') [ RunTime:0.000398s ]
+[ 2017-09-04T14:17:14+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:17:14+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:17:14+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:17:14+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:17:14+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:17:17+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:17:17+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.005881s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T14:17:17+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.012118s ]
+[ 2017-09-04T14:17:17+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.001073s ]
+[ 2017-09-04T14:18:31+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:18:31+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:18:31+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:18:31+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:18:31+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:18:38+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:18:38+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.007185s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T14:18:38+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.010669s ]
+[ 2017-09-04T14:18:38+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000558s ]
+[ 2017-09-04T14:21:47+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:21:47+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:21:47+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:21:47+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:21:47+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:21:50+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:21:50+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.005881s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T14:21:50+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.010207s ]
+[ 2017-09-04T14:21:50+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000323s ]
+[ 2017-09-04T14:21:56+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000377s ]
+[ 2017-09-04T14:26:46+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:26:46+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:26:46+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:26:46+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:26:46+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:26:50+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:26:50+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.005286s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T14:26:50+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.012486s ]
+[ 2017-09-04T14:26:50+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000516s ]
+[ 2017-09-04T14:28:15+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000487s ]
+[ 2017-09-04T14:46:10+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:46:10+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:46:10+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => 'start',
+  ),
+)
+[ 2017-09-04T14:46:10+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:46:10+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:46:16+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:54:01+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:54:01+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:54:01+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:54:01+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:54:01+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:54:06+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:54:06+08:00 ][ error ] [1]Cannot use object of type Workerman\Worker as array[D:\WWW\thinkphp5\application\push\controller\Worker.php:37]
+[ 2017-09-04T14:55:25+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:55:25+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:55:25+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:55:25+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:55:25+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:55:28+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:55:28+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004760s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T14:55:28+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.012246s ]
+[ 2017-09-04T14:55:28+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000590s ]
+[ 2017-09-04T14:56:36+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T14:56:36+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T14:56:36+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T14:56:36+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T14:56:36+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T14:56:48+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T14:56:48+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004819s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T14:56:48+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.010456s ]
+[ 2017-09-04T14:56:48+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000326s ]
+[ 2017-09-04T14:58:09+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000544s ]
+[ 2017-09-04T15:03:58+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T15:03:58+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T15:03:58+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T15:03:58+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T15:03:58+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T15:08:08+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T15:08:08+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T15:08:08+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T15:08:08+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T15:08:08+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T15:08:15+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T15:08:15+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.005725s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T15:08:15+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.011439s ]
+[ 2017-09-04T15:08:15+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000516s ]
+[ 2017-09-04T15:08:29+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000434s ]
+[ 2017-09-04T15:10:43+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T15:10:43+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T15:10:43+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T15:10:43+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T15:10:43+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T15:10:47+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T15:10:47+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004988s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T15:10:47+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.012552s ]
+[ 2017-09-04T15:10:47+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000326s ]
+[ 2017-09-04T15:10:49+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000415s ]
+[ 2017-09-04T15:11:15+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000459s ]
+[ 2017-09-04T15:11:18+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000376s ]
+[ 2017-09-04T15:19:22+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.001124s ]
+[ 2017-09-04T15:19:24+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000374s ]
+[ 2017-09-04T15:35:20+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000600s ]
+[ 2017-09-04T15:35:23+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000427s ]
+[ 2017-09-04T15:39:26+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000481s ]
+[ 2017-09-04T15:39:28+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000442s ]
+[ 2017-09-04T15:40:05+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000492s ]
+[ 2017-09-04T15:40:07+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000608s ]
+[ 2017-09-04T15:40:35+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000498s ]
+[ 2017-09-04T15:40:38+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000384s ]
+[ 2017-09-04T15:41:04+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000369s ]
+[ 2017-09-04T15:41:07+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000356s ]
+[ 2017-09-04T15:46:10+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T15:46:10+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T15:46:10+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T15:46:10+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T15:46:10+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T15:46:13+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T15:46:13+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.006677s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T15:46:13+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.011077s ]
+[ 2017-09-04T15:46:13+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000369s ]
+[ 2017-09-04T15:46:15+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000402s ]
+[ 2017-09-04T15:49:00+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T15:49:00+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T15:49:00+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T15:49:00+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T15:49:00+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T15:49:04+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T15:49:04+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.008479s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T15:49:04+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.010849s ]
+[ 2017-09-04T15:49:04+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000448s ]
+[ 2017-09-04T15:49:06+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000388s ]
+[ 2017-09-04T15:49:55+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000517s ]
+[ 2017-09-04T15:49:57+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000387s ]
+[ 2017-09-04T15:50:06+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000410s ]
+[ 2017-09-04T15:52:05+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T15:52:05+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T15:52:05+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T15:52:05+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T15:52:05+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T15:52:10+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T15:52:10+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004829s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T15:52:10+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.009028s ]
+[ 2017-09-04T15:52:10+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000308s ]
+[ 2017-09-04T15:52:12+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000343s ]
+[ 2017-09-04T15:52:22+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000487s ]
+[ 2017-09-04T15:54:03+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000382s ]
+[ 2017-09-04T15:54:05+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000313s ]
+[ 2017-09-04T15:54:22+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.001240s ]
+[ 2017-09-04T15:54:41+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000361s ]
+[ 2017-09-04T15:54:55+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000630s ]
+[ 2017-09-04T15:55:04+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000498s ]
+[ 2017-09-04T15:56:42+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000474s ]
+[ 2017-09-04T15:56:55+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000478s ]
+[ 2017-09-04T15:57:06+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000423s ]
+[ 2017-09-04T16:00:24+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T16:00:24+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T16:00:24+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T16:00:24+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T16:00:24+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T16:00:29+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T16:00:29+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.003874s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T16:00:29+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.010862s ]
+[ 2017-09-04T16:00:29+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000318s ]
+[ 2017-09-04T16:00:32+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000336s ]
+[ 2017-09-04T16:00:43+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000387s ]
+[ 2017-09-04T16:00:45+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000339s ]
+[ 2017-09-04T16:02:01+08:00 ][ info ] [ LANG ] D:\WWW\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+[ 2017-09-04T16:02:01+08:00 ][ info ] [ BIND ] 'push/Worker'
+[ 2017-09-04T16:02:01+08:00 ][ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'push',
+    1 => 'Worker',
+    2 => NULL,
+  ),
+)
+[ 2017-09-04T16:02:01+08:00 ][ info ] [ HEADER ] array (
+)
+[ 2017-09-04T16:02:01+08:00 ][ info ] [ PARAM ] array (
+)
+[ 2017-09-04T16:02:05+08:00 ][ info ] [ DB ] INIT mysql
+[ 2017-09-04T16:02:05+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.004910s ] mysql:dbname=snake;host=127.0.0.1;charset=utf8
+[ 2017-09-04T16:02:05+08:00 ][ sql ] [ SQL ] SHOW COLUMNS FROM `snake_work` [ RunTime:0.009999s ]
+[ 2017-09-04T16:02:05+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000313s ]
+[ 2017-09-04T16:02:07+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000351s ]
+[ 2017-09-04T16:02:30+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('连接成功') [ RunTime:0.000433s ]
+[ 2017-09-04T16:02:31+08:00 ][ sql ] [ SQL ] INSERT INTO `snake_work` (`msg`) VALUES ('收到信息') [ RunTime:0.000328s ]

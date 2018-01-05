@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP反序列化工具</title>
+</head>
+<link rel="stylesheet" href="/static/layui/css/layui.css">
+<script src="/static/layui/layui.js"></script>
+<style>
+    .inbox{
+        margin: 10px auto;
+        width: 80%;
+        height: 200px;
+        border: 1px solid #1f6377;
+        border-radius:5px;
+        /*overflow-x: scroll;*/
+        overflow-y: scroll;
+        text-align: left;
+        text-indent: 5px;
+        line-height: 15px;
+        padding: 5px;
+        color: #000;
+    }
+    .bgbox{
+        width: 80%;
+        margin: 5px auto;
+        height: 800px;
+        text-align: center;
+    }
+    body{
+        background: #fff;
+    }
+</style>
+<body>
+ <div class="bgbox">
+ <div class="inbox" contenteditable="true" title="请输入要反序列化的字符">
+
+ </div>
+     <form action="" class="llayui-form layui-form-pane"></form>
+     <!--<select name="type" lay-verify="" style="height: 38px;vertical-align: middle">-->
+         <!--<option value="1">JSON->Array</option>-->
+         <!--<option value="2">反序列化->Array</option>-->
+
+     <!--</select>-->
+
+     <input type="radio" value="1" name="type" id="ja"> <label for="ja">JSON->Array</label>
+     <input type="radio" value="2" name="type" id="fa" checked> <label for="fa">反序列化->Array</label>
+     <span class="layui-btn layui-btn-success" style="margin: 10px auto" id="search">提交</span>
+     <span class="layui-btn layui-btn-danger" style="margin: 10px auto" id="clear">清空</span>
+     </form>
+     <!--返回结果-->
+     <h3>返回结果：</h3>
+  <div class="inbox" style="text-align: left;height: 500px;" id="ret">
+
+  </div>
+ </div>
+ <script>
+     layui.config({
+         base:'/static/layui/lay/modules/'
+     }).use(['layer','form'],function () {
+         var $ = layui.jquery;
+         $.extend({
+             layer:layui.layer,
+             from :layui.form
+         });
+         $('#search').on('click',function () {
+
+             var txt = $('.inbox')[0].textContent;
+             txt = txt.trim();
+             if(txt.length == 0 ){
+                 $.layer.alert('要处理的字符不能为空!',{icon:2});
+                 return ;
+             }
+             $.layer.load();
+             $('#ret')[0].innerHTML= '';
+//             var type= $('select[name="type"]').val();
+             var type= $('input[type="radio"]:checked').val();
+             var data = {txt:txt,type:type};
+             $.ajax({
+                 url:'postData',
+                 type:'POST',
+                 dataType:'json',
+                 data:data,
+                 success:function (r) {
+                     closeAll();
+                     if(typeof r.code == undefined){
+                         $.layer.alert('解析错误',{icon:2});
+                     }
+                     if(r.code==0){
+                         $('#ret')[0].innerHTML= r.data;
+                     }
+                 },
+                 error:function () {
+                    closeAll();
+                 }
+             })
+         });
+         function closeAll() {
+            $.layer.closeAll();
+         }
+         //清空按钮
+         $('#clear').on('click',function () {
+             $('.inbox')[0].textContent = '';
+         });
+         //加载完成获取焦点
+         $(function () {
+             //console.log($('div[contenteditable]'));
+            $('div[contenteditable]')[0].focus();
+         })
+     })
+ </script>
+</body>
+</html>

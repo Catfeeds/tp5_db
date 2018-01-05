@@ -1,0 +1,70 @@
+.about-banner { height: 200px; background: #000; overflow: hidden;}
+.about { padding-top: 20px; background: #fff; overflow: hidden; padding-bottom: 30px;}
+.about-list {width: 285px; overflow: hidden; text-align: center;  float: left;}
+.about-list p {
+    width: 285px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    color: #fff;
+    background: #005fb7;
+
+}
+.about-list ul {
+    overflow: hidden;
+    background: #e8e8e8;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+.about-list ul li{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+.about-list ul li a{
+  color: #000;
+}
+.about-list ul li a.onRed { color: red;}
+
+
+.about-content { width: 700px;
+    overflow: hidden;
+    float: right;
+}
+.content-title {
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+    padding: 0 10px;
+
+
+}
+.content-title p span.title{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    float: left;
+    font-size: 24px;
+}
+.content-title p span.text {
+    display: block;
+    padding-top: 20px;
+    line-height: 25px;
+    float: right;
+
+}
+
+.about-main {
+    padding: 20px 0px;
+    overflow: hidden;
+}
+.about-main h1{
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+}
+.about-main p{
+   padding: 5px 15px;
+   line-height: 25px;
+    text-indent: 2em;
+    font-size: 16px;
+}

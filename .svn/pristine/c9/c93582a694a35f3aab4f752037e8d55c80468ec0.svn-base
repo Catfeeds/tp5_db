@@ -1,0 +1,57 @@
+.news-banner { height: 200px; background: #000; overflow: hidden;}
+
+
+
+.news-list {width: 710px; overflow: hidden; float: right;}
+.img-news { height: 150px; overflow: hidden; border-bottom: 1px solid #ccc; padding-top: 20px !important;}
+.img-news .img { width: 200px; height: 130px; float: left; background: #000;}
+.new-cent { width: 490px; float: right;}
+.new-cent h2{ height: 40px; line-height: 40px; font-size: 18px;}
+.new-cent .news-time{ height: 20px; line-height: 20px; padding-top: 10px; color: #bcbcbc;}
+.new-cent .news-text{ line-height: 20px; height: 60px; overflow: hidden; color: #898989;}
+
+.news-list ul{
+    float: left;
+    padding-left: 30%;
+    padding-top: 30px;
+
+
+}
+.news-list ul li{
+     float: left;
+    padding: 0 5px;
+}
+.news-list ul li a {
+    padding: 5px 10px;
+   display: block;
+}
+.news-list ul li a:hover {
+    background: #000;
+    color: #fff;
+
+}
+.news-list ul li a.on {
+    background: #000;
+    color: #fff;
+}
+
+
+
+
+/*   新闻详情页   */
+.details-news { overflow: hidden;padding-bottom: 30px;}
+.details-news h2{ height: 50px; line-height:50px; text-align: center;}
+.details-news p.time { float: right; height: 30px; line-height: 30px; padding-right: 30px; }
+.img-text { padding: 10px 0;}
+.img-text .imgs  {height: 200px; background: #000; margin-bottom: 10px;}
+.img-text p {  padding: 5px 0; line-height: 20px; text-indent: 2em;}
+.details-news p.page { height: 30px; line-height: 30px;}
+.details-news p.next { height: 30px; line-height: 30px;}
+.details-news p.page span {color: #f00;}
+.details-news p.next span { color: #f00;}
+
+
+
+
+
+

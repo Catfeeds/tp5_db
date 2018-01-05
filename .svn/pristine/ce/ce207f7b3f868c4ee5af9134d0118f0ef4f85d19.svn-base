@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>数据表结构</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    {load href="/static/js/clipboard.min.js"}
+    {load href="/static/js/vue.min.js"}
+
+
+    <style type="text/css">
+        ul {
+            margin-left: 100px;
+
+            margin: 20px;
+
+        }
+
+        ul li {
+            border-bottom: 1px dashed #0d0d0d;
+            padding: 10px;
+        }
+        [type="1"]{
+            cursor:pointer;
+        }
+        .seach{
+            width: 80%;
+            border:1px solid #f0ad4e;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .seach input{
+            width: 200px;
+        }
+        form{
+            padding: 0;
+            margin: 0;
+        }
+        button{
+            margin-top: 10px;
+        }
+        #windows{
+            width: 100%;
+
+
+            overflow-y: scroll;
+            background: #b6b7b8;
+            position: fixed;
+            display: none;
+            padding: 15px;
+        }
+        #windows ul li:hover{
+            background: #fff;
+        }
+        select{
+            height: 35px;
+            text-indent: 10px;
+            width: 150px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div class="seach">
+
+    <form action="">
+        <input type="text" class="weui-input" name="seach" placeholder="表名/字段名/注释" value="{$seach}">
+        <select name="type" >
+            <option value="1">查询表名和注释</option>
+            <option value="2">查询字段</option>
+        </select>
+        <button class="weui-btn weui-btn_primary">搜索</button>
+    </form>
+</div>
+{foreach name="lists" item="list"}
+
+
+    <ul>
+        <li><span type="1" style="font-size: 14px;font-weight: 700">{$list.TABLE_NAME}</span> 注释：{$list.TABLE_COMMENT}
+        </li>
+        {foreach name="list.field" item="field" key="k"}
+
+            <li><span type="1"
+                      style="color:#0D8BBD;cursor:pointer">{$field.COLUMN_NAME}</span><span style="color:royalblue">（{$field.COLUMN_TYPE}）</span><span
+                    style="color:#f0c040">默认值：{$field.COLUMN_DEFAULT}</span>
+                <span style="color:grey">注释：{$field.COLUMN_COMMENT}</span>
+            </li>
+
+
+        {/foreach}
+
+    </ul>
+{/foreach}
+
+
+
+{include file="Public/jqery-weiui"/}
+<!--选择弹框-->
+
+<div id="windows">
+
+    <ul>
+          <li v-for="item in list">
+             表名：<span>{{item.TABLE_NAME}}</span> 注释{{item.TABLE_COMMENT}}
+          </li>
+    </ul>
+</div>
+
+<script>
+    window.onload = function () {
+        var $data = new Vue({
+            el:'#windows',
+            data:{
+                list:[]
+            }
+        });
+        var Span = document.querySelectorAll('li span');
+        for (var k in Span) {
+            if (typeof (Span[k].getAttribute) == 'function') {
+                var type = Span[k].getAttribute('type');
+                if (type == 1) {
+
+                    Span[k].addEventListener('mouseover', function () {
+
+                        var txt = this.innerText;
+                        // console.log(txt);
+                        var clipboard = new Clipboard(this, {
+                            text: function () {
+                                return txt;
+                            }
+                        });
+                        $.toast.prototype.defaults.duration = 500;
+                        clipboard.on('success', function (e) {
+                            $.toast('复制成功');
+                            console.log(e);
+                        });
+
+                        clipboard.on('error', function (e) {
+                            $.alert('复制失败');
+                            console.log(e);
+                        });
+                    })
+
+                }
+            }
+
+        }
+
+        //注册输入框值变化事件
+        $(':input[name="seach"]').on('keyup',function (event) {
+            var e = event || window.event;
+            var offset = $(this).offset();
+            console.log(offset);
+
+            var type = $(':input[name="type"]').val();
+            var data = {search:this.value};
+            if(data.search.length > 0){
+                data.type = type;
+                $.get('getData',data,function (r) {
+                    console.log(r);
+                    if(r.code == 0){
+                        $data.list = r.data;
+                        $('#windows').show();
+                        $('#windows').css({'top':offset.top+31,'height':$(window).height()-offset.top-31});
+
+                        //注册键盘事件
+                        $(document).on('click','#windows li',function (e) {
+                            console.log(this);
+                            var txt = $(this).find('span').html()
+                            $(':input[name="seach"]').val(txt);
+                            $('#windows').hide();
+                        })
+                    }
+                });
+
+            }else{
+                $('#windows').hide();
+                $data.list = [];
+                return false;
+            }
+        })
+
+    }
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.content-banner { height: 200px; background: #000; overflow: hidden;}
+
+
+
+.about-content { width: 700px;
+    overflow: hidden;
+    float: right;
+}
+.content-title {
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+    padding: 0 10px;
+}
+.content-title p span.title{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    float: left;
+    font-size: 24px;
+}
+.content-title p span.text {
+    display: block;
+    padding-top: 20px;
+    line-height: 25px;
+    float: right;
+
+}
+.contact-main {
+    padding: 20px 0px;
+    overflow: hidden;
+}
+
+/*  联系方式  */
+.contact-main .sitemap {
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+}
+.contact-main p {
+    line-height: 50px;
+    font-size: 18px;
+}
+
+
+/* 在线留言  */
+.message { padding: 20px; }
+.message ul li {
+    padding: 10px 0;
+}
+.message ul li label {  line-height: 30px; position: relative; width: 50px; display: inline-block}
+.message ul li input {
+     line-height: 30px;
+    width: 70%;
+    text-indent: 10px;
+}
+.message ul li label.top {position: absolute;}
+.message ul li textarea { margin-left: 55px; border: 1px solid #ccc; width: 70%; padding: 10px 0; text-indent: 10px;}
+.message button { width:110px; height: 35px; margin-left: 55px;font-size: 18px; border-radius: 5px; border: 0;
+    background: #005fb7;
+    color: #ffffff;
+    cursor: pointer;
+}
+.message button:hover {background: #00488b;}

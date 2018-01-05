@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>接口端测试：</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    {load href="/static/js/clipboard.min.js"}
+    {load href="/static/lib/jquery/1.9.1/jquery.min.js"}
+    <link rel="stylesheet" href="/static/jqeryweiui/css/jquery-weui.css">
+    <script src="/static/jqeryweiui/js/jquery-weui.js"></script>
+
+
+    <style type="text/css">
+        ul {
+            margin-left: 100px;
+
+            margin: 20px;
+
+        }
+
+        ul li {
+            border-bottom: 1px dashed #0d0d0d;
+            padding: 10px;
+        }
+
+        [type="1"] {
+            cursor: pointer;
+        }
+
+        .seach {
+            width: 80%;
+            border: 1px solid #f0ad4e;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+
+
+        form {
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div class="seach">
+
+
+    <select name="type" id="">
+        <option value="1">GET</option>
+        <option value="2">POST</option>
+    </select>
+
+    <input type="text" style="width: 100%"  name="url" placeholder="提交地址" value="">
+    <form action="" id="param">
+        <table>
+
+            <tr>
+                <th>参数名称</th>
+                <th>参数值</th>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="key[]" placeholder="参数名"></td>
+                <td><input type="text" name="value[]" placeholder="参数值"></td>
+            </tr>
+
+        </table>
+    </form>
+    <button type="button" class="weui-btn weui-btn_primary">提交</button>
+
+</div>
+<h3>请求结果</h3>
+<div id="content">
+
+</div>
+
+
+<script>
+    window.onload = function () {
+        //注册添加输入框事件
+        $(document).on('keydown', 'input[name="value[]"]', function (e) {
+
+            if (9 == e.keyCode) {
+                //如果按下Tab键执行添加一行参数框操作
+                var Object = $(this).parent().parent().parent();
+                var html = '<tr><td><input type="text" name="key[]" placeholder="参数名"></td><td><input type="text" name="value[]" placeholder="参数值"></td></tr>';
+                $(Object).append(html);
+                return false;
+            }
+        });
+        //提交按钮
+        $('button:contains("提交")').on('click', function () {
+            var This = this;
+            This.innerText = '正在请求数据....';
+            var type = $(':input[name="type"]').val() == 1 ? 'GET' : 'POST';
+            var keyArr = $(':input[name="key[]"]');
+            var valueArr = $(':input[name="value[]"]');
+            var data = {};
+            $(keyArr).each(function (key, value) {
+
+                data[value.value] = valueArr[key].value;
+
+            });
+            $('#content').html('');
+            data.type = type;
+            data.url = $('input[name="url"]').val();
+            $.post('getCallbackData', data, function (r, status) {
+                This.innerText = '提交';
+                $('#content').html(r);
+                console.log(r);
+            });
+            return false;
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

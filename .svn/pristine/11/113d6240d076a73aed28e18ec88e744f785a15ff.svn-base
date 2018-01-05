@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>数据表结构</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    {load href="/static/js/clipboard.min.js"}
+
+
+    <style type="text/css">
+        ul {
+            margin-left: 100px;
+
+            margin: 20px;
+
+        }
+
+        ul li {
+            border-bottom: 1px dashed #0d0d0d;
+            padding: 10px;
+        }
+        [type="1"]{
+            cursor:pointer;
+        }
+        .seach{
+            width: 80%;
+            border:1px solid #f0ad4e;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .seach input{
+            width: 200px;
+        }
+        form{
+            padding: 0;
+            margin: 0;
+        }
+        button{
+            margin-top: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div class="seach">
+
+    <form action="">
+        <input type="text" class="weui-input" name="seach" placeholder="表名/字段名/注释" value="{$seach}">
+        <button class="weui-btn weui-btn_primary">搜索</button>
+    </form>
+</div>
+{foreach name="lists" item="list"}
+
+
+    <ul>
+        <li><span type="1" style="font-size: 14px;font-weight: 700">{$list.TABLE_NAME}</span> 注释：{$list.TABLE_COMMENT}
+        </li>
+        {foreach name="list.field" item="field" key="k"}
+
+            <li><span type="1"
+                      style="color:#0D8BBD;cursor:pointer">{$field.COLUMN_NAME}</span><span style="color:royalblue">（{$field.COLUMN_TYPE}）</span><span
+                    style="color:#f0c040">默认值：{$field.COLUMN_DEFAULT}</span>
+                <span style="color:grey">注释：{$field.COLUMN_COMMENT}</span>
+            </li>
+
+
+        {/foreach}
+
+    </ul>
+{/foreach}
+
+
+
+{include file="Public/jqery-weiui"/}
+
+<script>
+    window.onload = function () {
+
+        var Span = document.querySelectorAll('li span');
+        for (var k in Span) {
+            if (typeof (Span[k].getAttribute) == 'function') {
+                var type = Span[k].getAttribute('type');
+                if (type == 1) {
+
+                    Span[k].addEventListener('mouseover', function () {
+
+                        var txt = this.innerText;
+                        // console.log(txt);
+                        var clipboard = new Clipboard(this, {
+                            text: function () {
+                                return txt;
+                            }
+                        });
+                        $.toast.prototype.defaults.duration = 500;
+                        clipboard.on('success', function (e) {
+                            $.toast('复制成功');
+                            console.log(e);
+                        });
+
+                        clipboard.on('error', function (e) {
+                            $.alert('复制失败');
+                            console.log(e);
+                        });
+                    })
+
+                }
+            }
+
+        }
+
+    }
+
+
+</script>
+
+
+</body>
+
+</html>

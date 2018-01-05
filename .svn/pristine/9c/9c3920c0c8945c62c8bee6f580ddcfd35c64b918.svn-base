@@ -1,0 +1,80 @@
+.foot {
+
+    background: #005fb7;
+    overflow: hidden;
+
+    color: #fff;
+    padding: 36px 0;
+}
+.foot-list  {
+    width: 650px;
+    overflow: hidden;
+    float: left;
+}
+.foot-list dl.nav {
+    width: 150px;
+    float: left;
+}
+.foot-list dl.nav dt {
+    width: 150px;
+    padding-bottom: 5px;
+    line-height: 25px;
+}
+.foot-list dl.nav dt p {
+    border-left: 3px solid #fff;
+    padding-left: 10px;
+    font-size: 18px;
+
+}
+.foot-list dl.nav dd {
+    padding-left: 13px;
+    line-height: 25px;
+    color: #c4c4c4;
+}
+.foot-list dl.nav dd a{
+    color: #c4c4c4;
+}
+.foot-list dl.nav dd a:hover{
+    color: red;
+}
+
+.foot-tel {
+    width: 350px;
+    float: left;
+    overflow: hidden;
+}
+.foot-tel .img {
+    width: 60px;
+    float: left;
+    padding-top: 8px;
+}
+.foot-tel .img img {
+    width: 50px;
+}
+.foot-tel .time {
+    width: 290px;
+    overflow: hidden;
+    float: left;
+}
+.foot-tel .time p{
+   line-height: 25px;
+}
+.foot-tel .time p.title {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.footer {
+    font-size: 14px;
+    background: #00488b;
+    overflow: hidden;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+.footer p{
+   line-height: 30px;
+}
+.footer p a {
+    color: #fff;
+}

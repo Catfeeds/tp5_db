@@ -1,0 +1,1026 @@
+/**
+ * Created by Administrator on 2017/01/03 0003.
+ */
+
+
+//var service = 'HTTPS://' + window.location.host + '/';
+var service = 'https://' + window.location.host + '/';
+
+var alertTitlt = '温馨提示：';
+var _error = '错误提示';
+var _success = '温馨提示';
+var _wang = '警告提示';
+var Error = '服务器繁忙，请稍后再试！';
+
+/***
+ * 设置cookie值
+ * @param key
+ * @param value
+ * @param expireDays
+ */
+function setCookie(key, value, expireDays) {
+    var expireDate = new Date();
+    expireDate.setDate(expireDate.getDate() + expireDays);
+    document.cookie = key + '=' + escape(value) + ';expires=' + expireDate.toGMTString() + ';path=/';
+}
+
+/***
+ * 获取cookie值
+ * @param key
+ * @returns {string}
+ */
+function getCookie(key) {
+    if (document.cookie.length > 0) {
+        var start = document.cookie.indexOf(key + '=');
+        if (start != -1) {
+            start = start + key.length + 1;
+            var end = document.cookie.indexOf(';', start);
+            if (end == -1)
+                end = document.cookie.length;
+
+            var value = unescape(document.cookie.substring(start, end));
+            return value;
+        }
+    }
+
+    return '';
+}
+
+/**
+ * Post同步提交数据
+ * @param $url
+ * @param $data
+ * @param isReturn
+ * @returns {*}
+ */
+var loading = function (msg) {
+    var html = '<div id="loadingToast" style="display: block!important;">\n <div class="weui-mask_transparent"></div>\n<div class="weui-mask_transparent"></div>\n<div class="weui-toast"> <i class="weui-loading weui-icon_toast"></i> <p class="weui-toast__content">' + (msg ? msg : '数据加载中') + '</p> </div> </div>';
+    //alert(1);
+    $('body').append(html);
+}
+
+var loadingClose = function () {
+    $('#loadingToast').remove();
+}
+
+var doPost = function ($url, $data, $fn) {
+    if (typeof(layer) == 'object') {
+        loadType = 4;
+    }
+    var index;
+    var res = {};
+    $.ajax({
+        url: service + $url,
+        type: 'POST',
+        async: $fn ? true : false,
+        beforeSend: function () {
+            //console.log(typeof($.showLoading) == 'function');
+            if (typeof ($.showLoading) == 'function') {
+                $.showLoading('正在加载...');
+
+            } else {
+                loading('正在加载...');
+
+
+            }
+            if (loadType == 4) {
+                index = layer.load();
+            }
+
+        },
+        data: $data,
+        success: function ($result) {
+            // console.log($result);
+            $result = $result ? $result : {code: 1, msg: Error};
+            setTimeout(function () {
+
+                if (typeof ($.showLoading) == 'function') {
+                    $.hideLoading();
+
+                } else {
+                    loadingClose();
+
+                }
+                if (loadType == 4) {
+                    layer.close(index);
+                }
+            }, 500);
+
+            if (typeof ($fn) == 'function') {
+                $fn($result);
+            }
+            try {
+                res = $result;
+                switch ($result.code) {
+                    case 1:
+                        break;
+                    case 306:
+                        setTimeout(function () {
+                            window.top.location.href = service + '/admin/Public/login';
+                        }, 3000);
+                        break;
+                    case 307:
+                        setTimeout(function () {
+                            window.top.location.href = service + '/admin/Public/login';
+                        }, 3000);
+                        break;
+                }
+
+            } catch (e) {
+                console.log(e);
+            }
+
+        },
+        error: function (xhr, b, c) {
+            console.log(xhr);
+            res.code = xhr.status;
+            res.data = xhr.responseText;
+            if (typeof($fn) == 'function') {
+
+                $fn(res);
+            }
+            if (typeof ($.showLoading) == 'function') {
+                $.hideLoading();
+
+            } else {
+                loadingClose();
+
+            }
+            if (typeof (layer) == 'object') {
+                layer.close(index);
+
+            }
+        }
+    });
+
+
+    return res ? res : {code: 1};
+}
+var doGet = function ($url, $data) {
+    var res = {};
+    $.ajax({
+        url: service + $url,
+        type: 'GET',
+        async: false,
+        beforeSend: function () {
+            if (typeof ($.showLoading) == 'function') {
+                $.showLoading('正在加载...');
+
+            } else {
+                loading('正在加载...');
+
+
+            }
+        },
+        data: $data,
+        success: function ($result) {
+            console.log($result);
+            try {
+                res = $result;
+                switch ($result.code) {
+                    case 1:
+                        break;
+                    case 306:
+                        setTimeout(function () {
+                            window.top.location.href = service + '/admin/Public/login';
+                        }, 3000);
+                        break;
+                    case 307:
+                        setTimeout(function () {
+                            window.top.location.href = service + '/admin/Public/login';
+                        }, 3000);
+                        break;
+                }
+
+            } catch (e) {
+                console.log(e);
+            }
+
+        },
+        error: function (xhr, b, c) {
+            console.log(xhr);
+            res.code = xhr.status;
+            res.data = xhr.responseText;
+            // if (typeof (layer) == 'object') {
+            //     layer.close(index);
+            //
+            // }
+        }
+    });
+    if (typeof ($.showLoading) == 'function') {
+        $.hideLoading();
+
+    } else {
+        loadingClose();
+
+    }
+    return res ? res : {code: 1};
+}
+//确认操作
+var alert_swal = function ($msg, $fn, $data) {
+
+    swal({
+            title: _wang,
+            text: $msg,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "确定",
+            cancelButtonText: "取消",
+            closeOnConfirm: false,
+            closeOnCancel: true
+        }, $fn
+    );
+}//确认操作
+var isConfirm = function ($msg, $fn, $data) {
+    var option = $data;
+
+    swal({
+            title: _wang,
+            text: $msg,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "确定",
+            cancelButtonText: "取消",
+            closeOnConfirm: true,
+            closeOnCancel: true
+        }, function (bool) {
+            console.log(bool);
+            if (bool) {
+                $fn(option);
+            } else {
+                sweetAlert(_success, '用户取消了操作', 'success');
+            }
+        }
+    );
+}
+
+//是否存在指定函数
+function isExitsFunction(funcName) {
+    try {
+        if (typeof(eval(funcName)) == "function") {
+            return true;
+        }
+    } catch (e) {
+    }
+    return false;
+}
+
+//是否存在指定变量
+function isExitsVariable(variableName) {
+    try {
+        if (typeof(variableName) == "undefined") {
+            //alert("value is undefined");
+            return false;
+        } else {
+            //alert("value is true");
+            return true;
+        }
+    } catch (e) {
+    }
+    return false;
+}
+
+var public = {};
+
+/**
+ * 验证指定字段的长度
+ * @param $data
+ * @returns {boolean}
+ */
+
+function verifyleng() {
+    this.verifydata = [
+        ['title', 38, '标题字数超个了38个字符(中文2个字符)', ''],
+        ['author', 20, '作者字数超个了20个字符(中文2个字符)', ''],
+        ['describe', 100, '简介字数超个了100个字符(中文2个字符)', 'editEducation'],
+        ['describe', 220, '梦想调查表简介字数超个了200个字符(中文2个字符)', 'addeditSurvery'],
+        ['ticket_name', 10, '票券名称字数超个了10个字符(中文2个字符)', ''],
+        ['train_name', 20, '列车名称字数超个了20个字符(中文2个字符)', 'addeditTrain'],
+        ['activity_name', 38, '活动名称字数超个了38个字符(中文2个字符)', ''],
+        ['content', 60, '列车介绍字数超个了60个字符(中文2个字符)', 'addeditTrain'],
+        //  ['account',3,'账户介绍字数超个了38个字符','']
+    ];
+    var type = typeof($data);
+    //取字符长度，中文2个字符
+    this.getStringLen = function (Str) {
+        var i, len, code;
+        if (Str == null || Str == "") return 0;
+        len = Str.length;
+        for (i = 0; i < Str.length; i++) {
+            code = Str.charCodeAt(i);
+            if (code > 255) {
+                len++;
+            }
+        }
+
+        return len;
+    };
+    this.res = function ($url, $arr) {
+
+
+        for ($k in this.verifydata) {
+
+
+            //判断有无url限定
+            console.log(this.getStringLen($arr[1]) + $arr[0] + ":" + $arr[1]);
+            if (this.verifydata[$k][3] == '') {
+                if ($arr[0] == this.verifydata[$k][0]) {
+                    if (this.getStringLen($arr[1]) > this.verifydata[$k][1]) {
+                        return this.verifydata[$k][2];
+                    }
+                }
+            } else {
+                //有url限定
+                if ($url == this.verifydata[$k][3]) {
+                    if ($arr[0] == this.verifydata[$k][0]) {
+                        if (this.getStringLen($arr[1]) > this.verifydata[$k][1]) {
+                            return this.verifydata[$k][2];
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    this.r = function (url, $data) {
+        var type = typeof ($data);
+
+        switch (type) {
+            case 'string':
+                var temp = $data.split('&');
+                for (var $key in temp) {
+                    var arr = temp[$key].split('=');
+                    var r = this.res(url, arr);
+                    if (r)
+                        return r;
+
+                }
+                break;
+            case 'object':
+                for (var $key in $data) {
+                    var arr = [$key, $data[$key]];
+                    var r = this.res(url, arr);
+                    if (r)
+                        return r;
+                }
+            //console.log($key);
+            //console.log($data[$key]);
+
+        }
+
+        return false;
+    }
+}
+
+
+function parse_url() { //定义函数
+//匹配get参数
+//     var url = "http://127.0.0.1/e/action/ShowInfo.php?classid=9&id=2";//定义变量
+    var url = window.location.href;
+    var pattern = /(\w+)=(\w+)/ig;//定义正则表达式
+    var parames = {};//定义数组
+    url.replace(pattern, function (a, b, c) {
+        parames[b] = c;
+    });
+    /*这是最关键的.当replace匹配到classid=9时.那么就用执行function(a,b,c);其中a的值为:classid=9,b的值为classid,c的值为9;(这是反向引用.因为在定义 正则表达式的时候有两个子匹配.)然后将数组的key为classid的值赋为9;然后完成.再继续匹配到id=2;此时执行function(a,b,c);其中a的值为:id=2,b的值为id,c的值为2;然后将数组的key为id的值赋为2.*/
+    return parames;//返回这个数组.
+}
+
+/*
+ * 获取页面中表单的数据
+ *
+ * @return {{}}
+ */
+
+function formtoobj() {
+    var from = $(':input');
+
+    var data = {};
+    from.each(function (k, v) {
+
+//                  console.log(this);
+        data[this.name] = this.value ? this.value : '';
+    });
+    return data;
+}
+
+function verify(This) {
+
+    try {
+        var type = $(This).data('type');
+        var length = eval($(This).data('length'));
+
+        if (type !== '') {
+            switch (type) {
+                case 'string':
+                    if (length) {
+                        if ($(This).val().length >= length[0] && $(This).val().length <= length[1]) {
+                            $(This).css({'color': 'green'});
+                            return true;
+                        } else {
+                            $(This).css({'color': 'red'});
+                            return false;
+                        }
+                    }
+                    if ($(This).val() === '') {
+                        $(This).css({'color': 'red'});
+                        return false;
+                    }
+                case 'number':
+                    var match = new RegExp('^[0-9]{1,11}(.[0-9]{1,2})?$');
+                    //  $(This).val()
+                    if (match.test($(This).val())) {
+                        $(This).css({'border': '2px solid green'});
+                        return true;
+                    } else {
+                        $(This).css({'border': '2px solid red'});
+                        return false;
+                    }
+
+            }
+        }
+
+        return true;
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+//验证表单
+/***
+ *
+ * @param This  整个表单|单个表单
+ * @param type 0 输入时验证1 提交时验证
+ * @returns {boolean}
+ * @constructor
+ */
+var Tangverify = function (This, type) {
+    var error;
+    type = type == 0 ? 0 : 1;
+    if (type == 1) {
+
+        $(This).find(':input').each(function () {
+            var s = this.getAttribute('Tangverify');
+            if (s) {
+                if (error = v(s, this.value)) {
+                    $(this).prev().css({'color': 'red'});
+                    return false;
+                } else {
+                    $(this).prev().css({'color': '#fff'});
+                }
+            }
+
+
+        });
+    } else {
+        var s = This.getAttribute('Tangverify');
+
+        if (s) {
+            error = v(s, This.value)
+            if (error) {
+                $(This).prev().css({'color': 'red'});
+                return false;
+            } else {
+                $(This).prev().css({'color': '#fff'});
+            }
+        }
+    }
+    // console.log(error);
+    if (error) {
+        //$.toast(error, 'cancel');
+        //sweetAlert(_error, error, 'error');
+        return false;
+    }
+    //console.log(1);
+    return true;
+
+    function v(verify, s) {
+
+        switch (verify) {
+            case 'number':
+                var $reg = new RegExp('^[0-9]+$');
+                // console.log($(this).val());
+                if (!$reg.test(s)) {
+                    error = '数字类型格式不正确';
+                    if (type == 1)
+                        $.alert(error, '错误');
+                    return error;
+
+
+                }
+
+                break;
+            case 'phone':
+                var $reg = new RegExp('^1[34578][0-9]{9}$');
+                // console.log($(this).val());
+                if (!$reg.test(s)) {
+                    error = '手机格式不正确';
+                    if (type == 1) {
+
+                        $.alert(error, '错误');
+                        return error;
+                    }
+
+
+                }
+
+                break;
+            case 'float':
+                var $reg = new RegExp('^\d+.?\d{2}');
+                if (!$reg.test(s)) {
+                    error = '小数类型格式不正确';
+                    if (type == 1)
+                        $.alert(error, '错误');
+                    return error;
+
+                }
+
+                break;
+            case 'length':
+                if (s.length < 6) {
+                    error = '输入格式长度不能低于6位';
+                    if (type == 1) {
+
+                        $.alert(error, '错误');
+                        return error;
+                    }
+                }
+                break;
+            case 'identity':
+                // console.log($(this).val());
+                var $reg = new RegExp('\\d{17}[0-9a-z]$');
+                if (!$reg.test(s) || s.length > 18) {
+                    error = '身份证格式不正确';
+                    if (type == 1)
+                        $.alert(error, '错误');
+                    return error;
+
+                }
+                break;
+            case 'must':
+                if (s.replace(/(^\s*)|(\s*$)/g, "") == '') {
+                    error = '该字段必须填写';
+                    if (type == 1) {
+                        $.alert(error, '错误');
+                        return error;
+                    }
+                }
+                break;
+            case 'password':
+                var $reg = new RegExp('(?=.*[0-9])(?=.*[a-zA-Z]).{6,16}');
+                if (!$reg.test(s)) {
+                    error = '密码字符必须是6-16位数字和字母组合';
+                    if (type == 1)
+                        $.alert(error, '错误');
+                    return error;
+
+                }
+                break;
+            case 'email':
+                var $reg = new RegExp('[/^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$/');
+                if (!$reg.test(s)) {
+                    error = '邮箱格式不正确';
+                    if (type == 1)
+                        $.alert(error, '错误');
+                    return error;
+
+                }
+                break;
+            case 'required':
+                // var $reg = new RegExp('/\S/');
+                // if ($reg.test(s)) {
+                if (s == '') {
+
+                    error = '必填项不能为空';
+                    if (type == 1) {
+
+                        $.alert(error, '错误');
+                        return error;
+
+                    }
+                }
+                break;
+            case 'nickname':
+                // var $reg = new RegExp('/\S/');
+                // if ($reg.test(s)) {
+                if (s == '' || s.length < 2) {
+
+                    error = '姓名不能少于2个字符';
+                    if (type == 1) {
+
+                        $.alert(error, '错误');
+                        return error;
+
+                    }
+                }
+                break;
+            case 'url':
+                var $reg = new RegExp('/(^#)|(^http(s*):\\/\\/[^\\s]+\\.[^\\s]+)/');
+                if (!$reg.test(s)) {
+                    error = '链接格式不正确';
+                    if (type == 1)
+                        $.alert(error, '错误');
+                    return error;
+
+                }
+                break;
+            case 'date':
+                var $reg = new RegExp('/^(\\d{4})[-\\/](\\d{1}|0\\d{1}|1[0-2])([-\\/](\\d{1}|0\\d{1}|[1-2][0-9]|3[0-1]))*$/');
+                if (!$reg.test(s)) {
+                    error = '链接格式不正确';
+                    if (type == 1)
+                        $.alert(error, '错误');
+                    return error;
+
+                }
+                break;
+            case 'code':
+
+                if (s.length != 4) {
+                    error = '验证码格式不正确';
+                    if (type == 1)
+                        $.alert(error, '错误');
+                    return error;
+
+                }
+                break;
+
+        }
+        return error;
+    }
+
+
+}
+
+/*
+ * ajax上传文件
+ * @param $id inputid
+ * @param $fu  回调方法
+ *
+ */
+function uplodFiles($inputid, $fun, $url) {
+
+    this.id = $inputid;
+    this.size = 2097152;
+    this.callback = function (r) {
+        $fun(r);
+    };
+
+    //判断传来的是对象还是字符
+    if (typeof ($inputid) == 'string') {
+        $file = $('#' + this.id)[0].files[0];
+
+    } else {
+        $file = $($inputid)[0].files[0];
+    }
+    var $data = new FormData();
+    $data.append('file', $file);
+    var xhrOnProgress=function(fun) {
+
+        xhrOnProgress.onprogress = fun; //绑定监听
+        //使用闭包实现监听绑
+        return function() {
+            //通过$.ajaxSettings.xhr();获得XMLHttpRequest对象
+            var xhr = $.ajaxSettings.xhr();
+            //判断监听函数是否为函数
+            if (typeof xhrOnProgress.onprogress !== 'function')
+                return xhr;
+            //如果有监听函数并且xhr对象支持绑定时就把监听函数绑定上去
+            if (xhrOnProgress.onprogress && xhr.upload) {
+                xhr.upload.onprogress = xhrOnProgress.onprogress;
+            }
+            return xhr;
+        }
+
+    };
+    //$data.append('MAX_FILE_SIZE', this.size);//设置文件
+    $.ajax({
+        url: service + ($url ? $url : 'uploadPicture'),
+        type: 'POST',
+        cache: false,
+
+        beforeSend: function () {
+            $('.progress').show();
+            if (typeof(layer) == "object") {
+
+                index = layer.load();
+            }
+        },
+        xhr:xhrOnProgress(function(e){
+            var object = $('.progress');
+
+            var percent=(e.loaded / e.total)*100;//计算百分比
+
+
+
+            percent = parseInt(percent);
+            if(percent >= 100){
+                $(object).hide();
+            }
+            $(object).find('progress').attr('value',percent);
+            $(object).find('h3').html('已完成:'+percent+'%');
+            console.log(percent);
+        }),
+        data: $data,
+        processData: false,
+        contentType: false,
+        dataType: 'json'
+    }).done(function (data) {
+        // console.log(data);
+        layer.closeAll();
+        $fun(data);
+
+
+    }).fail(function (data) {
+        var r = {};
+        r.return = data;
+        r.code = 1;
+        $fun(r);
+        layer.closeAll();
+    });
+
+
+}
+
+
+//验证方法
+var verReg = function () {
+    //判断输入内容是否为空
+    function IsNull() {
+        var str = document.getElementById('str').value.trim();
+        if (str.length == 0) {
+            alert('对不起，文本框不能为空或者为空格!');//请将“文本框”改成你需要验证的属性名称!
+        }
+    }
+
+//判断日期类型是否为YYYY-MM-DD格式的类型
+    function IsDate() {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            var reg = /^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})$/;
+            var r = str.match(reg);
+            if (r == null)
+                alert('对不起，您输入的日期格式不正确!'); //请将“日期”改成你需要验证的属性名称!
+        }
+    }
+
+//判断日期类型是否为YYYY-MM-DD hh:mm:ss格式的类型
+    function IsDateTime() {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            var reg = /^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2}) (\d{1,2}):(\d{1,2}):(\d{1,2})$/;
+            var r = str.match(reg);
+            if (r == null)
+                alert('对不起，您输入的日期格式不正确!'); //请将“日期”改成你需要验证的属性名称!
+        }
+    }
+
+//判断日期类型是否为hh:mm:ss格式的类型
+    function IsTime() {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            reg = /^((20|21|22|23|[0-1]\d)\:[0-5][0-9])(\:[0-5][0-9])?$/
+            if (!reg.test(str)) {
+                alert("对不起，您输入的日期格式不正确!");//请将“日期”改成你需要验证的属性名称!
+            }
+        }
+    }
+
+//判断输入的字符是否为英文字母
+    function IsLetter() {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            reg = /^[a-zA-Z]+$/;
+            if (!reg.test(str)) {
+                alert("对不起，您输入的英文字母类型格式不正确!");//请将“英文字母类型”改成你需要验证的属性名称!
+            }
+        }
+    }
+
+//判断输入的字符是否为整数
+    this.IsInteger = function () {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            reg = /^[-+]?\d*$/;
+            if (!reg.test(str)) {
+                sweetAlert(alertTitlt, "对不起，您输入的整数类型格式不正确!", 'error');//请将“整数类型”要换成你要验证的那个属性名称！
+            }
+        }
+    }
+
+//判断输入的字符是否为双精度
+    this.IsInteger = function (val) {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            reg = /^[-\+]?\d+(\.\d+)?$/;
+            if (!reg.test(str)) {
+                sweetAlert(alertTitlt, "对不起，您输入的双精度类型格式不正确!", 'error');//请将“双精度类型”要换成你要验证的那个属性名称！
+            }
+        }
+    }
+
+
+//判断输入的字符是否为:a-z,A-Z,0-9
+    this.isstring = function () {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            reg = /^[a-zA-Z0-9_]+$/;
+            if (!reg.test(str)) {
+                sweetAlert(alertTitlt, "对不起，您输入的字符串类型格式不正确!", 'error');//请将“字符串类型”要换成你要验证的那个属性名称！
+            }
+        }
+    }
+
+//判断输入的字符是否为中文
+    this.isChina = function () {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            reg = /^[\u0391-\uFFE5]+$/;
+            if (!reg.test(str)) {
+                sweetAlert(alertTitlt, "对不起，您输入的字符串类型格式不正确!", 'error');//请将“字符串类型”要换成你要验证的那个属性名称！
+            }
+        }
+    }
+
+//判断输入的EMAIL格式是否正确
+    this.isMail = function () {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if (!reg.test(str)) {
+                alert("对不起，您输入的字符串类型格式不正确!");//请将“字符串类型”要换成你要验证的那个属性名称！
+            }
+        }
+    }
+
+//判断输入的邮编(只能为六位)是否正确
+    this.isZip = function () {
+        var str = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            reg = /^\d{6}$/;
+            if (!reg.test(str)) {
+                alert("对不起，您输入的字符串类型格式不正确!");//请将“字符串类型”要换成你要验证的那个属性名称！
+            }
+        }
+    }
+
+//判断输入的数字不大于某个特定的数字
+    this.MaxValue = function () {
+        var val = document.getElementById('str').value.trim();
+        if (str.length != 0) {
+            reg = /^[-+]?\d*$/;
+            if (!reg.test(str)) {//判断是否为数字类型
+                if (val > parseInt('123')) //“123”为自己设定的最大值
+                {
+                    alert('对不起，您输入的数字超出范围');//请将“数字”改成你要验证的那个属性名称！
+                }
+            }
+        }
+    }
+
+}
+
+/**
+ * 将表单数据转成object
+ */
+function formTo() {
+    this.r = function ($obj) {
+        var data = {};
+        var $key;
+        if ($obj) {
+            for (var $k in $obj) {
+                //判断是否是数组
+
+                if ($obj[$k]['name'].indexOf('[]') != -1) {
+
+                    var key = $obj[$k]['name'].substring(0, $obj[$k]['name'].length - 2);
+                    if (key == $key) {
+                        data[$key][i] = $obj[$k]['value'];
+                        i++;
+                    } else {
+                        $key = key;
+                        data[$key] = {};
+                        var i = 0;
+                        data[$key][i] = $obj[$k]['value'];
+                        i++;
+                    }
+
+                } else {
+
+                    data[$obj[$k]['name']] = $obj[$k]['value'];
+                }
+            }
+        }
+        return data;
+    }
+}
+
+//对字数限制提示
+/**
+ *
+ * @param content 输入的字符
+ * @param leng  字数长度
+ * @param txt   在指定的标签的文本
+ * @param dom    元素名默认lable
+ */
+function fontmsg(content, leng, obj) {
+    var o = new verifyleng();
+    var $dom;
+    var $dom = obj;
+    var txt = '';
+    if (typeof(obj.dom) != undefined) {
+        $(obj.dom).each(function () {
+            if (this.innerText.indexOf(obj.txt) != -1) {
+                txt = obj.txt;
+                $dom = this;
+            }
+        })
+    }
+
+    var lenth = leng - o.getStringLen(content);
+
+    if (lenth >= 0) {
+
+        $($dom).html(txt + '  <span style="color:green" data-y="true">您还可以输入：' + lenth + '个字');
+    } else {
+        // sweetAlert(alertTitlt, '您输入的字数超过了限制', 'error');
+
+        $($dom).html(txt + ' <span style="color:red" data-y="false">您输入的字数超过限制');
+
+    }
+}
+
+//表单验证
+
+$(document).on('keyup', 'input', function () {
+    var This = this;
+
+    // console.log(  $(this).next()[0].tagName);
+    //数组第一个参数为验证的长度
+    var op = $(This).data('v');
+    if ($(This).next().length == 0) {
+        //$(This).after('<label></label>');
+    }
+    op = eval(op);
+
+    if (op) {
+        fontmsg(this.value, op[0], $(This).next());
+    }
+
+});
+$(document).on('blur', 'input', function () {
+    var $y = $(this).next().find('span').data('y');
+    if ($y) {
+
+        $(this).next().find('span').html('');
+    }
+});
+
+$(document).on('keyup', 'textarea', function () {
+    var This = this;
+
+
+    //数组第一个参数为验证的长度
+    var op = $(This).data('v');
+    op = eval(op);
+    console.log(op);
+    if (op) {
+        fontmsg(this.value, op[0], $(This).next());
+    }
+})
+$(document).on('blur', 'textarea', function () {
+    var $y = $(this).next().find('span').data('y');
+    if ($y) {
+        $(this).next().find('span').html('');
+    }
+});
+
+function veriyfMoney(This) {
+
+    if (parseInt(This.value) > parseInt($('.lineHeight').html())) {
+        sweetAlert(_error, '超出选择范围', 'error');
+        This.value = This.value.substring(0, This.value.length - 1);
+    }
+}
+
+//通用提交
+var publicPost = function ($url, $form) {
+    doPost($url, $($form).serialize(), function (r) {
+        if (r.code == 0) {
+            $.toast(r.msg);
+            setTimeout(function () {
+                location.reload(true);
+            }, 1500);
+        } else {
+            $.alert(r.msg || Error);
+            // $.toast(r.msg || Error, 'cancel');
+        }
+    })
+    // sweetAlert(r.code == 0 ? _success : _error, r.msg, (r.code == 0 ? 'success' : 'error'));
+
+}
+
+
+

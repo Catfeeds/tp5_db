@@ -1,0 +1,70 @@
+header { width: 100%;height: 125px;}
+.header-bj { width: 100%; height: 35px;  line-height: 35px; margin: 0 auto; background: #000; color: #fff;}
+.header-top { width: 1024px; height: 35px;  line-height: 35px; margin: 0 auto; background: #000; color: #fff;}
+.header-top p { float: left; text-align: left;
+    width:780px;}
+
+.header-top .weixin { float: left; width: 120px;  height: auto; position: relative; cursor:pointer;}
+.header-top .weixin p {
+    width: 100px;
+    height: 35px;
+    text-align: right;
+    padding-right: 20px;
+    background: url("../image/weixin-xtb.png") right center no-repeat;
+}
+
+.header-top .weixin .img {
+    display: none;
+    position: absolute;
+    top: 35px;
+    z-index:99;
+}
+.header-top .weixin .img img{ width: 100px; border: 1px solid #ccc; border-top: none}
+
+.header-top .tel {float: right; position: relative; cursor:pointer; width: 120px; height: auto;}
+.header-top .tel p {
+    width: 100px;
+    height: 35px;
+    text-align: right;
+    padding-right: 20px;
+    background: url("../image/tel-xtb.png") right center no-repeat;
+}
+.telS {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    line-height: 25px;
+    overflow: hidden;
+    background:#005fb7;
+    width: 150px;
+    z-index:99;
+    padding: 10px;
+    text-align: center;
+
+}
+
+/*  logo nav */
+.header-content { height: 90px; margin: 0 auto;background: #fff;}
+
+.logo { width: 330px; float: left; padding-top: 15px;}
+.logo img{ height: 60px;}
+nav { width: 600px; font-size: 16px;}
+nav ul li { float: left; width: 120px; height: 87px; line-height: 87px; text-align: center; position: relative;}
+nav ul li a { color: #333333;}
+nav ul li a:hover { font-weight: bold; color: #00457a;}
+nav ul li a.active { background: #00488b; color: #fff!important; padding: 10px 20px; border-radius: 3px; font-weight: bold; }
+
+nav ul li dl.nav-list{
+    display: none;
+    background: #005DA4;
+    position: absolute;
+    top:70px;
+    color:#fff;
+    width: 130px;
+    padding: 15px 0;
+    left: -5px;
+}
+.nav-list a { color: #fff; font-weight: normal;}
+.nav-list dd { height: 35px; line-height: 35px; padding: 0 15px }
+.nav-list dd:hover{background: #00457a;}

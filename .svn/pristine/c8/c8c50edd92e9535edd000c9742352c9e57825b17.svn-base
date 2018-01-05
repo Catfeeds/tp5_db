@@ -1,0 +1,59 @@
+/**
+ * Created by zhang on 17/9/16.
+ */
+
+    $(function(){
+    var $tabLis = $('#banners .tabs li');
+    var $picLis = $('#banners .pics li');
+    var $btns = $('#banners .btns');
+    var $btnDivs = $('#banners .btns div');
+    var $banners = $('#banners');
+    var index= 0;
+    var timers;
+
+    $tabLis.hover(function(){
+        index = $(this).index();
+        fn();
+    });
+
+    $banners.hover(function(){
+        $btns.show();
+        clearInterval(timers);
+    },function(){
+        $btns.hide();
+        auto();
+    });
+
+    $btnDivs.click(function(){
+        var i = $(this).index();
+        if ( i )
+        {
+            index ++;
+            index %= $tabLis.length;
+        }
+        else
+        {
+            index --;
+            if(index<0)index = $tabLis.length-1;
+        }
+        fn();
+    }).mousedown(function(){
+        return false;
+    });
+
+    auto();
+    function auto(){
+        timers = setInterval(function(){
+            index ++;
+            index %= $tabLis.length;
+            fn();
+        },5000);
+    }
+    function fn(){
+        $tabLis.eq(index).addClass('ons').siblings().removeClass('ons');
+        $picLis.eq(index).stop(true).fadeIn().siblings().stop(true).fadeOut();
+    }
+})
+
+
+

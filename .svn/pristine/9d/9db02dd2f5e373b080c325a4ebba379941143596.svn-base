@@ -1,0 +1,89 @@
+.product-banner { height:200px; background: #000; overflow: hidden;}
+
+
+
+.product-list {width: 720px; overflow: hidden; float: right;}
+.product-list a {color: #333;}
+.product-list .img-text {
+    width: 330px;
+    overflow: hidden;
+    background: #f1f1f1;
+    float: left;
+    margin:0 15px 30px 15px;
+    padding: 0 0 20px 0;
+}
+.img-text .img{
+    width: 330px;
+    height: 200px;
+    background: #000;
+}
+.img-text .img img{
+    width: 330px;
+    height: 200px;
+
+
+}
+.product-list .img-text p {
+    text-indent: 0em;
+    text-align: center;
+    font-size: 16px;
+
+}
+.product-list .img-text p.title {
+    line-height: 30px;
+    padding-top:20px;
+    padding-bottom: 0;
+
+}
+.product-list .img-text p.titleF {
+    line-height: 30px;
+    padding-bottom: 20px;
+    padding-top: 0;
+}
+
+
+.product-list ul{
+    float: left;
+    padding-left: 30%;
+    padding-top: 30px;
+
+
+}
+.product-list ul li{
+     float: left;
+    padding: 0 5px;
+}
+.product-list ul li a {
+    padding: 5px 10px;
+   display: block;
+}
+.product-list ul li a:hover {
+    background: #000;
+    color: #fff;
+
+}
+.product-list ul li a.on {
+    background: #000;
+    color: #fff;
+}
+
+
+
+
+/*   新闻详情页   */
+.details-news { overflow: hidden;padding-bottom: 30px;}
+.details-news h2{ height: 50px; line-height:50px; text-align: center;}
+.details-news p.time { float: right; height: 30px; line-height: 30px; padding-right: 30px; }
+.img-text { padding: 10px 0;}
+.img-text .imgs  {height: 200px; background: #000; margin-bottom: 10px;}
+.img-text p {  padding: 5px 0; line-height: 20px; text-indent: 2em;}
+.details-news p.page { height: 30px; line-height: 30px;}
+.details-news p.next { height: 30px; line-height: 30px;}
+.details-news p.page span {color: #f00;}
+.details-news p.next span { color: #f00;}
+
+
+
+
+
+

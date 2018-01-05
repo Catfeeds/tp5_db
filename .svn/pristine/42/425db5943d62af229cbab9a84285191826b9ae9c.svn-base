@@ -1,0 +1,13 @@
+.snake-banner { height: 200px; overflow: hidden;}
+.snake-content { width: 1024px; margin: 0 auto; overflow: hidden; }
+.snake-title { height: 50px; line-height: 50px; border-bottom: 1px solid #000000; padding-top: 20px; font-size: 16px; }
+.snake-details {overflow: hidden; padding: 20px 0;}
+.snake-details-title { text-align: center; overflow: hidden;  border-bottom: 1px dashed #000000; padding-bottom: 10px; }
+.snake-details-title h2{  line-height: 50px;}
+.snake-details-title p { line-height: 30px; font-size: 15px;}
+.snake-details-title p span{ padding-right: 20px;}
+
+.snake-details-text { padding: 20px 10px;}
+.snake-details-text p{ padding: 5px 0; line-height: 25px; text-indent: 2em;}
+.snake-details-text h3 { padding-top: 20px; font-weight: bold; color: #00488b;}
+.snake-details-text img { width: 1000px; padding: 12px; }

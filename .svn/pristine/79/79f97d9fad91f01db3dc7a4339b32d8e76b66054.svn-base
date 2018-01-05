@@ -1,0 +1,12 @@
+
+
+$(function(){
+    $('.tel').mouseover(function(){
+        $('.telS').show();
+
+    });
+    $('.tel').mouseout(function(){
+        $('.telS').hide();
+
+    });
+});
