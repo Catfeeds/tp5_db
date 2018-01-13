@@ -18,16 +18,19 @@ return [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
-    'db'=>'@db/index/index',
-    'getData'=>'@db/index/getData',
-    'http'=>'@db/index/testHttp',
-    'getcallbackdata'=>'@db/index/getcallbackdata',
-    'postData'=>'@db/index/postData',
-    'xlh'=>'@db/index/getSerialize',
-    'demo'=>'@db/demo/index',
-    'demo1'=>'@db/demo/asyncRequest',
-    'demo3'=>'@db/demo/demo3',
-    'welcome'=>'@admin/index/welcome'
+    //'db'=>'@db/index/index',
+    //'getData'=>'@db/index/getData',
+    //'http'=>'@db/index/testHttp',
+    //'getcallbackdata'=>'@db/index/getcallbackdata',
+    //'postData'=>'@db/index/postData',
+    //'xlh'=>'@db/index/getSerialize',
+    //'vue'=>'@db/test/index',
+    ////'getlist'=>'@db/test/getlist',
+    ////'getlist/:p'=>'@db/test/getlist',
+    //'demo'=>'@db/demo/index',
+    //'demo1'=>'@db/demo/asyncRequest',
+    //'demo3'=>'@db/demo/demo3',
+    //'welcome'=>'@admin/index/welcome'
 
 
 ];
