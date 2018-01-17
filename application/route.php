@@ -23,7 +23,7 @@ return [
     //'http'=>'@db/index/testHttp',
     //'getcallbackdata'=>'@db/index/getcallbackdata',
     //'postData'=>'@db/index/postData',
-    //'xlh'=>'@db/index/getSerialize',
+    'xlh'=>'@db/index/getSerialize',
     //'vue'=>'@db/test/index',
     ////'getlist'=>'@db/test/getlist',
     ////'getlist/:p'=>'@db/test/getlist',
