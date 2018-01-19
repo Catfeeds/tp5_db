@@ -17,4 +17,10 @@ class User extends Model
         $list  = DB::table('ebh_users')->field('uid,username')->limit($page,$limit)->select();
         return $list;
     }
+
+    public function ajaxlist($page,$limit=10)
+    {
+        $list = DB::table('ebh_users')->limit($page,$limit)->select();
+        return $list;
+    }
 }

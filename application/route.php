@@ -24,6 +24,7 @@ return [
     //'getcallbackdata'=>'@db/index/getcallbackdata',
     //'postData'=>'@db/index/postData',
     'xlh'=>'@db/index/getSerialize',
+    'test'=>'@db/test/testlist',
     //'vue'=>'@db/test/index',
     ////'getlist'=>'@db/test/getlist',
     ////'getlist/:p'=>'@db/test/getlist',
