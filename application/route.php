@@ -23,8 +23,9 @@ return [
     //'http'=>'@db/index/testHttp',
     //'getcallbackdata'=>'@db/index/getcallbackdata',
     //'postData'=>'@db/index/postData',
+    '/'=>'@db/test/testlist',//默认
     'xlh'=>'@db/index/getSerialize',
-    'test'=>'@db/test/testlist',
+    'redis'=>'@db/test/redis'
     //'vue'=>'@db/test/index',
     ////'getlist'=>'@db/test/getlist',
     ////'getlist/:p'=>'@db/test/getlist',

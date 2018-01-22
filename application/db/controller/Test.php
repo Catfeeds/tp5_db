@@ -10,14 +10,16 @@
 namespace app\db\controller;
 use think\Controller;
 use app\db\model\User;
+use app\api\controller\CacheRedis;
 
 class Test extends Controller
 {
-    //protected $user;
-    //public function __construct()
-    //{
-    //    $this->user = new User();
-    //}
+    protected $user;
+    public function __construct()
+    {
+        parent::__construct();
+        $this->user = new User();
+    }
     public function index()
     {
         return $this->fetch('test/index');
@@ -51,6 +53,18 @@ class Test extends Controller
         $user =  new User();
         $list = $user->ajaxlist($page,$limit);
         echo json_encode($list);
+    }
+    //redis测试hash类型使用
+    public function redis()
+    {
+        $options = array(
+            'host'       => '192.168.0.24',
+            'port'       => 6379
+        );
+        $redis = new CacheRedis($options);
+        $arr = array('id'=>1,'score'=>98);
+        $redis->hset('study','zhangsan',$arr);
+        return ($redis->hget('study','zhangsan'));
     }
 
 

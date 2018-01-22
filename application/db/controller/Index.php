@@ -131,8 +131,7 @@ class Index extends Controller
      * @User:gl
      */
     public function getSerialize(){
-       // dump(json_encode(['a'=>'我是好人啊']));
-        return $this->fetch();
+        return $this->fetch('index/getserialize');
     }
 
     /**

@@ -9,7 +9,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     {load href="/static/js/clipboard.min.js"}
     {load href="/static/js/vue.min.js"}
-
+    {load file="__STATIC__/layui/layui.all.js"}
+    {load file="__STATIC__/layui/css/layui.css"}
+    {load file="__STATIC__/js/jquery-3.2.1.min.js"}
 
     <style type="text/css">
         ul {
@@ -109,6 +111,11 @@
 </div>
 
 <script>
+
+//    $(document).ready(function () {
+//        window.layer.load();
+//    });
+
     window.onload = function () {
         var $data = new Vue({
             el:'#windows',
@@ -152,14 +159,14 @@
         $(':input[name="seach"]').on('keyup',function (event) {
             var e = event || window.event;
             var offset = $(this).offset();
-            console.log(offset);
+//            console.log(offset);
 
             var type = $(':input[name="type"]').val();
             var data = {search:this.value};
             if(data.search.length > 0){
                 data.type = type;
                 $.get('getData',data,function (r) {
-                    console.log(r);
+//                    console.log(r);
                     if(r.code == 0){
                         $data.list = r.data;
                         $('#windows').show();
@@ -167,7 +174,7 @@
 
                         //注册键盘事件
                         $(document).on('click','#windows li',function (e) {
-                            console.log(this);
+//                            console.log(this);
                             var txt = $(this).find('span').html()
                             $(':input[name="seach"]').val(txt);
                             $('#windows').hide();
