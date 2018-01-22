@@ -12,7 +12,7 @@
 // [ 应用入口文件 ]
 
 // 定义应用目录
-
+//测试
 define('APP_PATH', __DIR__ . '/../application/');
 define('APP_DEBUG',true);
 // 加载框架引导文件

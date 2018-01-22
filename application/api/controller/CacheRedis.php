@@ -16,7 +16,6 @@ class CacheRedis extends Redis
     public function __construct($options)
     {
         parent::__construct($options);
-
     }
 
     //定义redis缓存hset方法
