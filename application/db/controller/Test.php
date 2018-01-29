@@ -41,13 +41,18 @@ class Test extends Controller
     //分页数据模板
     public function  pageindex()
     {
+        $count = $this->user->userconut();
+        $list = $this->user->ajaxlist(0,10);
+        $list = json_encode($list);
+        $this->assign('count',$count);
+        $this->assign('list',$list);
         return $this->fetch('test/pageindex');
     }
     //ajax请求数据
     public function ajaxpage()
     {
-        $page = $this->input->get('page');
-        $limit = $this->input->get('limit');
+        $page = $this->input->get('pagenum');
+        $limit = $this->input->get('pagelimit');
         $limit = $limit ? $limit : 10;
         $page = $page ? ($page-1)*$limit : 0;
         $user =  new User();

@@ -12,7 +12,11 @@
     {load file="__STATIC__/layui/layui.all.js"}
     {load file="__STATIC__/layui/css/layui.css"}
     {load file="__STATIC__/js/jquery-3.2.1.min.js"}
-
+    <!--<script>-->
+            <!--$(document).ready(function () {-->
+               <!--layer.load();-->
+            <!--});-->
+    <!--</script>-->
     <style type="text/css">
         ul {
             margin-left: 100px;
@@ -68,7 +72,6 @@
 
 <body>
 <div class="seach">
-
     <form action="">
         <input type="text" class="weui-input" name="seach" placeholder="表名/字段名/注释" value="{$seach}">
         <select name="type" >

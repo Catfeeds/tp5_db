@@ -11,84 +11,86 @@
     {load file="__STATIC__/js/jquery-3.2.1.min.js"}
 </head>
 <body>
-<div style="margin-bottom: 5px;">
-    <!-- 示例-970 -->
-    <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="3820120620"></ins>
-</div>
-<div class="layui-btn-group demoTable">
-    <button class="layui-btn" data-type="getCheckData">获取选中行数据</button>
-    <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>
-    <button class="layui-btn" data-type="isAll">验证是否全选</button>
-</div>
-<table class="layui-table" lay-data="{width: 892, height:332, url:'/demo/table/user/', page:true, id:'idTest'}" lay-filter="demo">
-    <thead>
-    <tr>
-        <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
-        <th lay-data="{field:'id', width:80, sort: true, fixed: true}">ID</th>
-        <th lay-data="{field:'username', width:80}">用户名</th>
-        <th lay-data="{field:'sex', width:80, sort: true}">性别</th>
-        <th lay-data="{field:'city', width:80}">城市</th>
-        <th lay-data="{field:'sign', width:160}">签名</th>
-        <th lay-data="{field:'experience', width:80, sort: true}">积分</th>
+<div id="pTable" style="width: 1200px;">
+    <table class="layui-table" id="layui_table_id" lay-filter="test">
+    </table>
+    <div id="laypage"></div>
 
-        <th lay-data="{field:'classify', width:80}">职业</th>
-        <th lay-data="{field:'wealth', width:135, sort: true}">财富</th>
-        <th lay-data="{field:'score', width:80, sort: true, fixed: 'right'}">评分</th>
-        <th lay-data="{fixed: 'right', width:178, align:'center', toolbar: '#barDemo'}"></th>
-    </tr>
-    </thead>
-</table>
-
-<script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-</script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+</div>
 <script>
-    layui.use('table', function(){
-        var table = layui.table;
-        //监听表格复选框选择
-        table.on('checkbox(demo)', function(obj){
-            console.log(obj)
-        });
-        //监听工具条
-        table.on('tool(demo)', function(obj){
-            var data = obj.data;
-            if(obj.event === 'detail'){
-                layer.msg('ID：'+ data.id + ' 的查看操作');
-            } else if(obj.event === 'del'){
-                layer.confirm('真的删除行么', function(index){
-                    obj.del();
-                    layer.close(index);
-                });
-            } else if(obj.event === 'edit'){
-                layer.alert('编辑行：<br>'+ JSON.stringify(data))
-            }
-        });
+    var limitcount = 10;
+    var curnum = 1;
+    //列表查询方法
+    function productsearch(productGroupId,start,limitsize) {
+        layui.use(['table','laypage','laydate'], function(){
+            var table = layui.table,
+                laydate=layui.laydate,
+                laypage = layui.laypage;
+            table.render({
+                elem: '#layui_table_id'
+                , url: "{:url('test/ajaxpage')}"
+                , where:{pagename:start,pagelimit:limitsize} //传参*/
+                , cols: [[
+                    {field: 'uid', title: 'ID', width: '170', sort: true}
+                    , {field: 'username', title: '名称', width: '450'}
+                    , {field: 'password', title: '状态', width: '100'}
+                    , {field: 'realname', title: '生效时间', width: '120', sort: true}
+                    , {field: 'lastloginip', title: '失效时间', width: '120', sort: true}
+                    , {field: 'ppassword', title: '成本', width: '100', sort: true}
+                    , {field: 'poperation', title: '操作', width: '100',fixed: 'right', toolbar: '#barDemo'}
+                ]]
+                , page: false
+                , height: 430
+                ,done: function({data:{$list},count:{$count}}, curr, count){
+                    //如果是异步请求数据方式，res即为你接口返回的信息。
+                    //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                    laypage.render({
+                        elem:'laypage'
+                        ,count:count
+                        ,curr:curnum
+                        ,limit:limitcount
+                        ,layout: ['prev', 'page', 'next', 'skip','count','limit']
+                        ,jump:function (obj,first) {
+                            if(!first){
+                                curnum = obj.curr;
+                                limitcount = obj.limit;
+                                //console.log("curnum"+curnum);
+                                //console.log("limitcount"+limitcount);
+                                //layer.msg(curnum+"-"+limitcount);
+                                productsearch(productGroupId,curnum,limitcount);
+                            }
+                        }
+                    })
+                }
+            })
 
-        var $ = layui.$, active = {
-            getCheckData: function(){ //获取选中数据
-                var checkStatus = table.checkStatus('idTest')
-                    ,data = checkStatus.data;
-                layer.alert(JSON.stringify(data));
-            }
-            ,getCheckLength: function(){ //获取选中数目
-                var checkStatus = table.checkStatus('idTest')
-                    ,data = checkStatus.data;
-                layer.msg('选中了：'+ data.length + ' 个');
-            }
-            ,isAll: function(){ //验证是否全选
-                var checkStatus = table.checkStatus('idTest');
-                layer.msg(checkStatus.isAll ? '全选': '未全选')
-            }
-        };
+            //监听工具条
+            table.on('tool(test)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+                var data = obj.data //获得当前行数据
+                    ,layEvent = obj.event; //获得 lay-event 对应的值
+                if(layEvent === 'detail'){
+                    viewLableInfo(data.attrId);
+                    layer.msg(data.attrId);
+                } else if(layEvent === 'del'){
+                    layer.msg('删除');
+                } else if(layEvent === 'edit'){
+                    layer.msg('编辑操作');
+                }
+            });
+            //常规用法
+            laydate.render({
+                elem: '#createDate'
+            });
+            //常规用法
+            laydate.render({
+                elem: '#processingTime'
+            });
 
-        $('.demoTable .layui-btn').on('click', function(){
-            var type = $(this).data('type');
-            active[type] ? active[type].call(this) : '';
         });
-    });
+    }
+    var pId = '${pGBean.pgId }';
+    productsearch(pId, curnum, limitcount);
+
 </script>
 
 </body>
