@@ -12,24 +12,24 @@
     <legend>工具列表</legend>
 </fieldset>
 <div>
-<ul class="layui-nav">
-    <li class="layui-nav-item"><a href="{:url('index/index')}"  target="_blank">数据库查询</a></li>
-    <li class="layui-nav-item"><a href="{:url('index/getSerialize')}" target="_blank">序列化工具</a></li>
-    <li class="layui-nav-item"><a href="{:url('test/pageindex')}"  target="_blank">数据分页</a></li>
-    <li class="layui-nav-item"><a href="{:url('test/index')}" target="_blank">Vue加载</a></li>
-    <li class="layui-nav-item"><a href="{:url('test/redis')}" target="_blank">redis测试</a></li>
-    <li class="layui-nav-item"><a href="javascript:void(0)"  target="_blank">未完待尽</a></li>
-</ul>
+    <ul class="layui-nav">
+        <li class="layui-nav-item"><a href="{:url('index/index')}" target="_blank">数据库查询</a></li>
+        <li class="layui-nav-item"><a href="{:url('index/getSerialize')}" target="_blank">序列化工具</a></li>
+        <li class="layui-nav-item"><a href="{:url('test/pageindex')}" target="_blank">数据分页</a></li>
+        <li class="layui-nav-item"><a href="{:url('test/index')}" target="_blank">Vue加载</a></li>
+        <li class="layui-nav-item"><a href="{:url('test/redis')}" target="_blank">redis测试</a></li>
+        <li class="layui-nav-item"><a href="javascript:void(0)" target="_blank">未完待尽</a></li>
+    </ul>
 </div>
 
 </body>
 <script>
     //加载页面时初始化
-//window.onload = function(){
-//    parent.window.layer.closeAll();
-//}
-//打开加载模态框
-    var openModel  = function () {
+    //window.onload = function(){
+    //    parent.window.layer.closeAll();
+    //}
+    //打开加载模态框
+    var openModel = function () {
         layer.load(1);
     }
 </script>

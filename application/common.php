@@ -13,7 +13,6 @@
 // 检测输入的验证码是否正确，$code为用户输入的验证码字符串，$id多个验证码标识
 
 
-
 define('ROW', 10);
 /**
  * Created by PhpStorm.
@@ -27,7 +26,7 @@ define('ROW', 10);
 function getIPLoc_sina($queryIP)
 {
     $url = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip=' . $queryIP;
-    $ch  = curl_init($url);
+    $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_ENCODING, 'utf8');
     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 获取数据返回
@@ -35,15 +34,16 @@ function getIPLoc_sina($queryIP)
     $location = json_decode($location);
     curl_close($ch);
     $loc = "";
-    if($location === FALSE)
+    if ($location === FALSE)
         return "";
-    if(empty($location->desc)) {
+    if (empty($location->desc)) {
         $loc = $location->province . $location->city . $location->district . $location->isp;
     } else {
         $loc = $location->desc;
     }
     return $loc;
 }
+
 /***
  * 生成随机字符串
  * @param int $length
@@ -55,21 +55,21 @@ function getRandStr($length = 8, $UID)
     if ($code_arr) {
         return $code_arr['Code'];
     }
-// 密码字符集，可任意添加你需要的字符
-    $chars    = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    // 密码字符集，可任意添加你需要的字符
+    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     $password = '';
     for ($i = 0; $i < $length; $i++) {
-// 这里提供两种字符获取方式
-// 第一种是使用 substr 截取$chars中的任意一位字符；
-// 第二种是取字符数组 $chars 的任意元素
-// $password .= substr($chars, mt_rand(0, strlen($chars) – 1), 1);
+        // 这里提供两种字符获取方式
+        // 第一种是使用 substr 截取$chars中的任意一位字符；
+        // 第二种是取字符数组 $chars 的任意元素
+        // $password .= substr($chars, mt_rand(0, strlen($chars) – 1), 1);
         $password .= $chars[mt_rand(0, strlen($chars) - 1)];
 
     }
-    $password  = THINK_START_TIME . $password;
-    $C         = new \Home\Model\CodeModel();
-    $c         = [];
-    $c['UID']  = $UID;
+    $password = THINK_START_TIME . $password;
+    $C = new \Home\Model\CodeModel();
+    $c = [];
+    $c['UID'] = $UID;
     $c['Code'] = $password;
     $C->addedit($c);
     return $password;
@@ -99,11 +99,11 @@ function dblog($msg = '', $url = false)
  * @return array|bool
  */
 
-define('NOW_TIME',$_SERVER['REQUEST_TIME']);
+define('NOW_TIME', $_SERVER['REQUEST_TIME']);
 function toClass($classify_o, $id = 'id', $pname = 'pid', $pid = 0)
 {
-    $num             = 0;
-    $classify        = [];
+    $num = 0;
+    $classify = [];
     $classify_o_copy = $classify_o;
     foreach ($classify_o as $k => $v) {
         if ($v[$pname] == $pid) {
@@ -135,7 +135,7 @@ function toClass($classify_o, $id = 'id', $pname = 'pid', $pid = 0)
 function sendMessage($phone, $content, $template)
 {
 
-    $uid     = 'yiyunhao';//ftds
+    $uid = 'yiyunhao';//ftds
     $content = urlencode($content);
 
     $pwd = 'e76309e0c6ff4dd045589a2891a790e9';//e76309e0c6ff4dd045589a2891a790e9 ..2347a648f7d0d1329c5bd793a3c12384
@@ -166,14 +166,14 @@ function doGet($url)
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_HEADER, 0);
-//执行并获取HTML文档内容
+    //执行并获取HTML文档内容
     $output = curl_exec($ch);
 
 
-//释放curl句柄
+    //释放curl句柄
     curl_close($ch);
 
-//打印获得的数据
+    //打印获得的数据
     return $output;
 }
 
@@ -247,7 +247,7 @@ function doPost($url, $body = [], $header = array(), $type = "POST")
     curl_setopt($ch, CURLOPT_ENCODING, 'gzip');
     curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0)'); // 模拟用户使用的浏览器
     //5.抓取URL并把它传递给浏览器
-    $res    = curl_exec($ch);
+    $res = curl_exec($ch);
     $encode = mb_detect_encoding($res, array("ASCII", 'UTF-8', "GB2312", "GBK", 'BIG5'));
     if ($encode != 'UTF-8') {
         $res = iconv('GBK', "UTF-8", $res);
@@ -291,7 +291,7 @@ function phpsendmail($mailcode, $email = '290847350@qq.com', $type = 0, $msg = f
     // $mail->SMTPDebug = 3; // Enable verbose debug output
 
     $mail->isSMTP(); // Set mailer to use SMTP
-    $mail->Host     = 'smtp.qq.com'; // Specify main and backup SMTP servers
+    $mail->Host = 'smtp.qq.com'; // Specify main and backup SMTP servers
     $mail->SMTPAuth = true; // Enable SMTP authentication
     $mail->Username = '290847350@qq.com'; // SMTP username
     $mail->Password = 'iqsghrmbzjnicajj'; // SMTP password
@@ -305,7 +305,7 @@ function phpsendmail($mailcode, $email = '290847350@qq.com', $type = 0, $msg = f
     $mail->Subject = '教育之窗'; // 邮箱标题
 
     $mail->Body
-                = <<<tang
+        = <<<tang
 <style>
 .mmsgLetter	{ width:580px;margin:0 auto;padding:10px;color:#333;background:#fff;border:0px solid #aaa;border:1px solid #aaa\9;border-radius:5px;-webkit-box-shadow:3px 3px 10px #999;-moz-box-shadow:3px 3px 10px #999;box-shadow:3px 3px 10px #999;font-family:Verdana, sans-serif; }
 .mmsgLetter a:link,.mmsgLetter a:visited{color:#407700; }
@@ -362,18 +362,18 @@ function oss_upload_form($key = '')
     // 获取配置项
     if ($key) {
         $files = $_FILES[$key];
-//    $file = $_FILES[$key]['tmp_name'];
+        //    $file = $_FILES[$key]['tmp_name'];
     } else {
         $files = current($_FILES);
     }
 
 
-    $file   = $files['tmp_name'];
+    $file = $files['tmp_name'];
     $bucket = 'ziqiangkeji';
 
     if (file_exists($file)) {
         // $type = strstr($file, '.');
-        $type      = strstr($files['name'], '.');
+        $type = strstr($files['name'], '.');
         $file_name = NOW_TIME . rand(1111, 9999) . $type;
         // 实例化oss类
         $config = array(
@@ -382,8 +382,8 @@ function oss_upload_form($key = '')
             'END_POINT' => 'http://oss-cn-shanghai.aliyuncs.com', // 阿里云oss endpoint
             'BUCKET' => 'ziqiangkeji'// bucken 名称
         );
-        $oss    = new \OSS\OssClient($config['KEY_ID'], $config['KEY_SECRET'], $config['END_POINT']);
-//        $oss = new_oss();
+        $oss = new \OSS\OssClient($config['KEY_ID'], $config['KEY_SECRET'], $config['END_POINT']);
+        //        $oss = new_oss();
 
         try {
             $oss->uploadFile($bucket, 'images/' . $file_name, $file);
@@ -417,7 +417,7 @@ function oss_upload_file($file)
 
     if (file_exists($file)) {
         // $type = strstr($file, '.');
-        $type      = strstr($file, '.');
+        $type = strstr($file, '.');
         $file_name = NOW_TIME . rand(1111, 9999) . $type;
         // 实例化oss类
         $oss = new_oss();
@@ -472,7 +472,7 @@ function checkSign($arr)
     if (!key_exists('sign', $arr)) {
         return false;
     }
-    $sign   = $arr['sign'];
+    $sign = $arr['sign'];
     $sign_t = createSign($arr);
     if ($sign === $sign_t) {
         return true;
@@ -531,7 +531,7 @@ function outExecl($data = null, $header = '')
 
 
     $objPHPExcel->getActiveSheet()->setTitle('小记者导出列表');
-//    $objPHPExcel->setActiveSheetIndex(0);
+    //    $objPHPExcel->setActiveSheetIndex(0);
     header('Content-Type: application/vnd.ms-excel');
     header('Content-Disposition: attachment;filename="' . $name . '.xls"');
     header('Cache-Control: max-age=0');
@@ -548,15 +548,15 @@ function excel_import($filename, $exts = 'xls')
 {
 
     //导入PHPExcel类库，因为PHPExcel没有用命名空间，只能inport导入
-//    import("Common.PHPExcel.PHPExcel" , '' , '.php');
+    //    import("Common.PHPExcel.PHPExcel" , '' , '.php');
     //创建PHPExcel对象，注意，不能少了\
     $PHPExcel = new \PHPExcel();
     //如果excel文件后缀名为.xls，导入这个类
     if ($exts == 'xls') {
-//        import("Common.PHPExcel.PHPExcel.Reader.Excel5" , '' , '.php');
+        //        import("Common.PHPExcel.PHPExcel.Reader.Excel5" , '' , '.php');
         $PHPReader = new \PHPExcel_Reader_Excel5();
     } else if ($exts == 'xlsx') {
-//        import("Common.PHPExcel.phpexcel.Reader.Excel2007" , '' , '.php');
+        //        import("Common.PHPExcel.phpexcel.Reader.Excel2007" , '' , '.php');
         $PHPReader = new \PHPExcel_Reader_Excel2007();
     }
     if (!file_exists($filename)) {
@@ -568,7 +568,7 @@ function excel_import($filename, $exts = 'xls')
     //获取表中的第一个工作表，如果要获取第二个，把0改为1，依次类推
     $currentSheet = $PHPExcel->getSheet(1);
     //获取总列数
-//    $allColumn = $currentSheet->getHighestColumn();
+    //    $allColumn = $currentSheet->getHighestColumn();
     $allColumn = 'N';
     //获取总行数
     $allRow = $currentSheet->getHighestRow();
@@ -578,7 +578,7 @@ function excel_import($filename, $exts = 'xls')
         $temp = [];
         for ($currentColumn = 'A'; $currentColumn <= $allColumn; $currentColumn++) {
             //数据坐标
-//            echo $allColumn;
+            //            echo $allColumn;
             $address = $currentColumn . $currentRow;
             //读取到的数据，保存到数组$arr中
             $cell = $currentSheet->getCell($address)->getValue();
@@ -611,23 +611,23 @@ function jisuanxiaoshu($money)
 
 function getPirewhere($ID, $member)
 {
-    $arr    = [];
+    $arr = [];
     $config = M('honorconfig')->where(['GoodsGrade' => 1])->find();
 
     // 获取直推人数
     $n = M('member')->where(['ReferenceMemberNumber' => $member])->count();
     //获取团队人数
-    $map               = [];
-    $map['Path']       = ['exp', ' regexp ' . '\'' . $ID . '\''];
+    $map = [];
+    $map['Path'] = ['exp', ' regexp ' . '\'' . $ID . '\''];
     $map['GoodsGrade'] = ['gt', 0];
-    $n1                = M('member')->where($map)->count();
-//    dblog($config);
-//    dblog($n1.'团队人数');
+    $n1 = M('member')->where($map)->count();
+    //    dblog($config);
+    //    dblog($n1.'团队人数');
     //获取团队业绩
-    $map                  = [];
-    $map['me.Path']       = ['exp', ' regexp ' . '\'' . $ID . '\''];
+    $map = [];
+    $map['me.Path'] = ['exp', ' regexp ' . '\'' . $ID . '\''];
     $map['me.GoodsGrade'] = ['gt', 0];
-    $m1                   = M('member me')
+    $m1 = M('member me')
         ->where($map)
         ->field(['g.Money'])
         ->join('stock_goodsgradeconfig g ON me.GoodsGrade=g.GoodsGrade')
@@ -729,7 +729,7 @@ function ReadDb()
     $dbname = C('DB_NAME');
 
     $tables = M()->query('SELECT TABLE_NAME,TABLE_COMMENT FROM information_schema.TABLES WHERE table_schema=' . '\'' . $dbname . '\'');
-    $txt    = '';
+    $txt = '';
     foreach ($tables as $key => $value) {
         $txt .= '*```(' . $value['TABLE_NAME'] . ')  注释(' . $value['TABLE_COMMENT'] . ')' . "\r\n";
 
@@ -750,16 +750,66 @@ function ReadDb()
 /**
  * 友好调试，默认中断
  */
-if(!function_exists('dd')){
-    function dd($data,$isexit=true)
+if (!function_exists('dd')) {
+    function dd($data, $isexit = true)
     {
         $str = '<div style="clear: both;"><pre>';
-        $str .= print_r($data,true);//以字符串方式输出
+        $str .= print_r($data, true);//以字符串方式输出
         $str .= '</pre></div>';
         echo $str;
-        if($isexit){
+        if ($isexit) {
             exit;
         }
 
+    }
+}
+
+function authcode($string, $operation, $key = '', $expiry = 0) {
+    $authkey = Ebh::app()->security['authkey'];
+    $ckey_length = 4; // 随机密钥长度 取值 0-32;
+    // 加入随机密钥，可以令密文无任何规律，即便是原文和密钥完全相同，加密结果也会每次不同，增大破解难度。
+    // 取值越大，密文变动规律越大，密文变化 = 16 的 $ckey_length 次方
+    // 当此值为 0 时，则不产生随机密钥
+
+    $key = md5($key ? $key : $authkey);
+    $keya = md5(substr($key, 0, 16));
+    $keyb = md5(substr($key, 16, 16));
+    $keyc = $ckey_length ? ($operation == 'DECODE' ? substr($string, 0, $ckey_length) : substr(md5(microtime()), -$ckey_length)) : '';
+
+    $cryptkey = $keya . md5($keya . $keyc);
+    $key_length = strlen($cryptkey);
+
+    $string = $operation == 'DECODE' ? base64_decode(substr($string, $ckey_length)) : sprintf('%010d', $expiry ? $expiry + time() : 0) . substr(md5($string . $keyb), 0, 16) . $string;
+    $string_length = strlen($string);
+    $result = '';
+    $box = range(0, 255);
+    $rndkey = array();
+    for ($i = 0; $i <= 255; $i++) {
+        $rndkey[$i] = ord($cryptkey[$i % $key_length]);
+    }
+
+    for ($j = $i = 0; $i < 256; $i++) {
+        $j = ($j + $box[$i] + $rndkey[$i]) % 256;
+        $tmp = $box[$i];
+        $box[$i] = $box[$j];
+        $box[$j] = $tmp;
+    }
+
+    for ($a = $j = $i = 0; $i < $string_length; $i++) {
+        $a = ($a + 1) % 256;
+        $j = ($j + $box[$a]) % 256;
+        $tmp = $box[$a];
+        $box[$a] = $box[$j];
+        $box[$j] = $tmp;
+        $result .= chr(ord($string[$i]) ^ ($box[($box[$a] + $box[$j]) % 256]));
+    }
+    if ($operation == 'DECODE') {
+        if ((substr($result, 0, 10) == 0 || substr($result, 0, 10) - time() > 0) && substr($result, 10, 16) == substr(md5(substr($result, 26) . $keyb), 0, 16)) {
+            return substr($result, 26);
+        } else {
+            return '';
+        }
+    } else {
+        return $keyc . str_replace('=', '', base64_encode($result));
     }
 }

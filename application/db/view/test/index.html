@@ -16,18 +16,18 @@
 
 <script>
     // 获取数据的url
-    var pageData={
+    var pageData = {
         url: "{:url('test/getlist')}",
         i: 1,
         height: 0,
         over: false
     }
-    var vm=new Vue({
+    var vm = new Vue({
         el: '.box',
         data: {
             city: ''
         },
-        created: function(){
+        created: function () {
             var self = this; // 等同于jquery的$.ajax
             var url = pageData.url;
             self.$http.get(url).then(function (response) {
@@ -40,63 +40,69 @@
 
     //获取滚动条当前的位置
     function getScrollTop() {
-        var scrollTop=0;
-        if(document.documentElement && document.documentElement.scrollTop){
-            scrollTop=document.documentElement.scrollTop;
-        }else if(document.body) {
-            scrollTop=document.body.scrollTop;
+        var scrollTop = 0;
+        if (document.documentElement && document.documentElement.scrollTop) {
+            scrollTop = document.documentElement.scrollTop;
+        } else if (document.body) {
+            scrollTop = document.body.scrollTop;
         }
         return scrollTop;
     }
+
     //获取当前可视范围的高度
     function getClientHeight() {
-        var clientHeight=0;
-        if(document.body.clientHeight && document.documentElement.clientHeight){
-            clientHeight=Math.min(document.body.clientHeight, document.documentElement.clientHeight);
-        }else{
-            clientHeight=Math.max(document.body.clientHeight, document.documentElement.clientHeight);
+        var clientHeight = 0;
+        if (document.body.clientHeight && document.documentElement.clientHeight) {
+            clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight);
+        } else {
+            clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
         }
         return clientHeight;
     }
+
     //获取文档完整的高度
     function getScrollHeight() {
         return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
     }
+
     // 添加 加载中样式
-    function addLoading(){
-        var loading=document.createElement('p');
-        loading.className='loading'
-        loading.innerHTML='加载中...';
+    function addLoading() {
+        var loading = document.createElement('p');
+        loading.className = 'loading'
+        loading.innerHTML = '加载中...';
         document.body.appendChild(loading);
     }
+
     // 删除 加载中样式
-    function removeLoading(){
-        var loading=document.querySelector('.loading');
+    function removeLoading() {
+        var loading = document.querySelector('.loading');
         loading.parentNode.removeChild(loading);
     }
+
     // 把加载中 改成 没有数据了
-    function loadingToOver(){
-        var loading=document.querySelector('.over');
-        loading.style.display='block';
+    function loadingToOver() {
+        var loading = document.querySelector('.over');
+        loading.style.display = 'block';
     }
+
     // 监听滚动事件
-    window.onscroll=function () {
+    window.onscroll = function () {
         if (pageData.over) {
             return false;
         }
-        if ( getScrollHeight()-(getScrollTop()+getClientHeight())<=50 ) {
+        if (getScrollHeight() - (getScrollTop() + getClientHeight()) <= 50) {
             // 页数+1
             pageData.i++
             // 显示加载
             addLoading();
             // 获取下一页的数据
-            vm.$http.get(pageData.url+'/p/:'+pageData.i).then(function(response){
+            vm.$http.get(pageData.url + '/p/:' + pageData.i).then(function (response) {
                 removeLoading();
-                if(response.data.length==0){
-                    pageData.over=true;
+                if (response.data.length == 0) {
+                    pageData.over = true;
                     loadingToOver();
-                }else{
-                    vm.city=vm.city.concat(response.data);
+                } else {
+                    vm.city = vm.city.concat(response.data);
                 }
             })
         }

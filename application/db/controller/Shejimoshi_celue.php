@@ -13,61 +13,71 @@ namespace app\db\controller;
 interface Calc
 {
     //定义处理方法
-    public function process($a,$b);
+    public function process($a, $b);
 }
+
 //加法运算
-class Jia implements Calc{
+class Jia implements Calc
+{
     public function process($a, $b)
     {
         // TODO: Implement process() method.
-        return $a+$b;
+        return $a + $b;
     }
 }
+
 //减法运算
-class Jian implements Calc{
+class Jian implements Calc
+{
     public function process($a, $b)
     {
         // TODO: Implement process() method.
-        return $a-$b;
+        return $a - $b;
     }
 }
 
 //乘法运算
-class Cheng implements Calc{
+class Cheng implements Calc
+{
     public function process($a, $b)
     {
         // TODO: Implement process() method.
-        return $a*$b;
+        return $a * $b;
     }
 }
 
 //除法运算
-class Chu implements Calc{
+class Chu implements Calc
+{
     public function process($a, $b)
     {
         // TODO: Implement process() method.
-        if(!$b==0){
-            return $a/$b;
-        }else{
+        if (!$b == 0) {
+            return $a / $b;
+        } else {
             return '除数不能为零';
         }
 
     }
 }
+
 //计算器类
-class Calclator{
+class Calclator
+{
     //保存计算类
-    protected  $calc = null;
-    public function  __construct($oper)
+    protected $calc = null;
+
+    public function __construct($oper)
     {
-        $this->calc  = new $oper();
+        $this->calc = new $oper();
     }
 
-    public function calc($a,$b){
-       return  $this->calc->process($a,$b);
+    public function calc($a, $b)
+    {
+        return $this->calc->process($a, $b);
     }
 
 }
 
 $calc = new Calclator('Jian');
-echo $calc->calc(10,0);
+echo $calc->calc(10, 0);

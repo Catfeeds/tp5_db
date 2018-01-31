@@ -17,7 +17,7 @@ class Index extends Controller
      */
     public function _empty($name)
     {
-        echo $name.'控制器不存在';
+        echo $name . '控制器不存在';
         //$this->index();
 
     }
@@ -34,7 +34,7 @@ class Index extends Controller
         $dbname = $dbname['database'];
 
         $seach = input('seach');
-//        debug('begin');
+        //        debug('begin');
         if ($seach) {
             $where = " AND (`TABLE_NAME` regexp  '" . $seach . "' OR `TABLE_COMMENT` regexp  '" . $seach . "' )";
             $tables1 = Db::query('SELECT  TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_schema=\'' . $dbname . '\' AND COLUMN_NAME REGEXP \'' . $seach . '\'');
@@ -60,8 +60,8 @@ class Index extends Controller
             $value['field'] = $arr;
 
         }
-//        debug('end');
-//        echo debug('begin','end').'s'; die;
+        //        debug('end');
+        //        echo debug('begin','end').'s'; die;
         $view = new View();
         $view->lists = $tables;
         $view->seach = $seach;
@@ -76,30 +76,30 @@ class Index extends Controller
         $dbname = config('database');
         $dbname = $dbname['database'];
         $search = input('search');
-        $type   = input('type',1);
+        $type = input('type', 1);
 
         if ($search) {
-            switch ($type){
+            switch ($type) {
                 case 2:
                     $where = " AND (`TABLE_NAME` regexp  '" . $search . "' OR `TABLE_COMMENT` regexp  '" . $search . "' )";
                     $tables = Db::query('SELECT  *  FROM INFORMATION_SCHEMA.COLUMNS WHERE table_schema=\'' . $dbname . '\' AND COLUMN_NAME REGEXP \'' . $search . '\'');
                     break;
                 case 1:
                     $where = " AND (`TABLE_NAME` regexp  '" . $search . "' OR `TABLE_COMMENT` regexp  '" . $search . "' )";
-                    $tables = Db::query('SELECT  * FROM information_schema.TABLES WHERE table_schema=\'' . $dbname   . '\''.$where);
+                    $tables = Db::query('SELECT  * FROM information_schema.TABLES WHERE table_schema=\'' . $dbname . '\'' . $where);
 
                     break;
                 default:
                     $tables = [];
             }
-            if(empty($tables)){
-                return json(['code'=>1]);
-            }else{
-                return json(['code'=>0,'data'=>$tables]);
+            if (empty($tables)) {
+                return json(['code' => 1]);
+            } else {
+                return json(['code' => 0, 'data' => $tables]);
             }
 
-        }else{
-            return json(['code'=>1]);
+        } else {
+            return json(['code' => 1]);
         }
     }
 
@@ -130,7 +130,8 @@ class Index extends Controller
      * @describe:序列化工具
      * @User:gl
      */
-    public function getSerialize(){
+    public function getSerialize()
+    {
         return $this->fetch('index/getserialize');
     }
 
@@ -138,36 +139,39 @@ class Index extends Controller
      * @describe:处理部分
      * @User:gl
      */
-    public function postData(){
+    public function postData()
+    {
         $txtContent = $_POST['txt'];
-        $type       = input('type');
-        if($type == 2)
-        $txtContent = str_replace('\\','',$txtContent);
+        $type = input('type');
+        if ($type == 2)
+            $txtContent = str_replace('\\', '', $txtContent);
         $ret = @unserialize($txtContent);
-        if(empty($ret)){
-            $ret = json_decode($txtContent,true);
+        if (empty($ret)) {
+            $ret = json_decode($txtContent, true);
         }
         $str = '<pre>';
-        $str .= $ret?print_r($ret,true):($type==2?'非正确格式序列化字符串':'非正确格式JSON字符');
+        $str .= $ret ? print_r($ret, true) : ($type == 2 ? '非正确格式序列化字符串' : '非正确格式JSON字符');
         $str .= '<pre>';
 
-        return json(['code'=>0,'msg'=>'','data'=>$str]);
+        return json(['code' => 0, 'msg' => '', 'data' => $str]);
     }
-    private function _getString($vars,$label = '', $return = false){
 
-            if (ini_get('html_errors')) {
-                $content = "<pre>\n";
-                if ($label != '') {
-                    $content .= "<strong>{$label} :</strong>\n";
-                }
-                $content .= htmlspecialchars(var_dump($vars, true));
-                $content .= "\n</pre>\n";
-            } else {
-                $content = $label . " :\n" . var_dump($vars, true);
+    private function _getString($vars, $label = '', $return = false)
+    {
+
+        if (ini_get('html_errors')) {
+            $content = "<pre>\n";
+            if ($label != '') {
+                $content .= "<strong>{$label} :</strong>\n";
             }
-             return $content;
-
+            $content .= htmlspecialchars(var_dump($vars, true));
+            $content .= "\n</pre>\n";
+        } else {
+            $content = $label . " :\n" . var_dump($vars, true);
         }
+        return $content;
+
+    }
 
 
 }

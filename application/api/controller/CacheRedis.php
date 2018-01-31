@@ -8,6 +8,7 @@
  */
 
 namespace app\api\controller;
+
 use think\cache\driver\Redis;
 
 class CacheRedis extends Redis
@@ -19,19 +20,22 @@ class CacheRedis extends Redis
     }
 
     //定义redis缓存hset方法
-    public function hset($hashname,$field,$data){
-        if(is_array($data)){
-            return $this->handler->hset($hashname,$field,serialize($data));
+    public function hset($hashname, $field, $data)
+    {
+        if (is_array($data)) {
+            return $this->handler->hset($hashname, $field, serialize($data));
         }
-        return $this->handler->hset($hashname,$field,$data);
+        return $this->handler->hset($hashname, $field, $data);
     }
+
     /**
      *填充hash表的值
-     *@param string $name hash表的名字
-     *@param array $arr hash表名对应的键值对 如 array('key1'=>'value1','key2'=>'value2') 相当于 hset($name,'key1','value1')和hset($name,'key2','value2')
+     * @param string $name hash表的名字
+     * @param array $arr hash表名对应的键值对 如 array('key1'=>'value1','key2'=>'value2') 相当于 hset($name,'key1','value1')和hset($name,'key2','value2')
      */
-    public function hMset($name,$arr) {
-        return $this->handler->hMset($name,$arr);
+    public function hMset($name, $arr)
+    {
+        return $this->handler->hMset($name, $arr);
     }
 
     /**
@@ -40,10 +44,11 @@ class CacheRedis extends Redis
      * @param bool $serialize
      * @return mixed
      */
-    public function hget($name,$key = null,$serialize=false){
-        if($key){
-            $row = $this->handler->hget($name,$key);
-            if($row && $serialize){
+    public function hget($name, $key = null, $serialize = false)
+    {
+        if ($key) {
+            $row = $this->handler->hget($name, $key);
+            if ($row && $serialize) {
                 $row = unserialize($row);
             }
             return $row;
@@ -54,13 +59,16 @@ class CacheRedis extends Redis
     /**
      *    delete hash opeation
      */
-    public function hdel($name,$key = null){
-        if($key){
-            return $this->handler->hdel($name,$key);
+    public function hdel($name, $key = null)
+    {
+        if ($key) {
+            return $this->handler->hdel($name, $key);
         }
         return $this->handler->del($name);
     }
-    public function del($name){
+
+    public function del($name)
+    {
         return $this->handler->del($name);
     }
 }
