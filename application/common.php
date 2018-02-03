@@ -813,3 +813,39 @@ function authcode($string, $operation, $key = '', $expiry = 0) {
         return $keyc . str_replace('=', '', base64_encode($result));
     }
 }
+
+if(!function_exists('getrandom')){
+    /**
+     * 生成随机大写字母字符串
+     * @param $length
+     * @return string
+     */
+    function getrandom($length){
+        $hash = '';
+        for ($i = 0; $i < $length; $i++) {
+            $hash .= chr(mt_rand(65,90));
+        }
+        return $hash;
+    }
+}
+
+/**
+ * json格式输出
+ * @param number $code 状态标识 0 成功 1 失败
+ * @param string $msg 输出消息
+ * @param array $data 数组参数数组
+ * @param string $exit 是否结束退出
+ */
+if(!function_exists('renderjson')){
+    function renderjson($code=0,$msg="",$data=array(),$exit=true){
+        $arr = array(
+            'code'=>(intval($code) ===0) ? 0 : intval($code),
+            'msg'=>$msg,
+            'data'=>$data
+        );
+        echo json_encode($arr,JSON_UNESCAPED_UNICODE);
+        if($exit){
+            exit();
+        }
+    }
+}
