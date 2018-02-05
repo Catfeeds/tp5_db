@@ -72,13 +72,13 @@ class Test extends Controller
     public function redis()
     {
         $options = array(
-            'host' => '192.168.0.24',
+            'host' => '127.0.0.1',
             'port' => 6379
         );
         $redis = new CacheRedis($options);
         $arr = array('id' => 1, 'score' => 98);
-        $redis->hset('study', 'zhangsan', $arr);
-        return ($redis->hget('study', 'zhangsan'));
+        $redis->hSet('study1', 'zhangsan', $arr);
+        var_dump($redis->hGet('study1', 'zhangsan'))  ;
     }
 
 

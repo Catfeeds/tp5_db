@@ -19,14 +19,6 @@ class CacheRedis extends Redis
         parent::__construct($options);
     }
 
-    //定义redis缓存hset方法
-    public function hset($hashname, $field, $data)
-    {
-        if (is_array($data)) {
-            return $this->handler->hset($hashname, $field, serialize($data));
-        }
-        return $this->handler->hset($hashname, $field, $data);
-    }
 
     /**
      *填充hash表的值
@@ -39,36 +31,103 @@ class CacheRedis extends Redis
     }
 
     /**
-     * @param $name
-     * @param null $key
-     * @param bool $serialize
-     * @return mixed
-     */
-    public function hget($name, $key = null, $serialize = false)
-    {
-        if ($key) {
-            $row = $this->handler->hget($name, $key);
-            if ($row && $serialize) {
-                $row = unserialize($row);
-            }
-            return $row;
-        }
-        return $this->handler->hgetAll($name);
-    }
-
-    /**
      *    delete hash opeation
      */
-    public function hdel($name, $key = null)
-    {
-        if ($key) {
-            return $this->handler->hdel($name, $key);
-        }
-        return $this->handler->del($name);
-    }
 
     public function del($name)
     {
         return $this->handler->del($name);
     }
+
+    public function delete($key) {
+        return $this->handler->delete($this->formatKey($key));
+    }
+
+    protected function unformatValue($value) {
+        return @unserialize($value);
+    }
+    protected function formatValue($value) {
+        return @serialize($value);
+    }
+    //这里可以定义前缀
+    protected function formatKey($key) {
+        return $key;
+    }
+
+    /**
+     * 直接返回redits实例
+     * @return Redis
+     */
+    public function getRedis(){
+        return $this->handler;
+    }
+
+    public function hIncrBy($name, $key, $num = 1){
+        return $this->handler->hIncrBy($this->formatKey($name), $key, $num);
+    }
+    /**
+     *    set hash opeation
+     */
+    public function hSet($name,$key,$value) {
+        return $this->handler->hset($this->formatKey($name),$key,$this->formatValue($value));
+    }
+
+    /**
+     *    get hash opeation
+     */
+    public function hGet($name,$key = null, $unserializeable = true) {
+        if($key){
+            $value = $this->handler->hget($this->formatKey($name),$key);
+        } else {
+            $value = $this->handler->hgetAll($this->formatKey($name));
+        }
+        if (empty($value)) {
+            return '';
+        }
+        if (empty($unserializeable)) {
+            return $value;
+        }
+        return $this->unformatValue($value);
+    }
+
+    /**
+     *    delete hash opeation
+     */
+    public function hDel($name,$key = null){
+        if($key){
+            return $this->handler->hdel($this->formatKey($name),$key);
+        }
+        return $this->handler->delete($this->formatKey($name));
+    }
+
+    /*******************************************************
+    队列操作开始 start 通过list模拟队列queue操作
+     ********************************************************/
+    /**
+     * 入列
+     * @param $queueName string 队列名称
+     * @param $value object 入列元素的值
+     */
+    public function qPush($queueName,$value) {
+        return $this->handler->rpush($this->formatKey($queueName),$this->formatValue($value));
+    }
+    /**
+     * 出列
+     * @param $queueNam
+     */
+    public function qPop($queueName) {
+        $value = $this->handler->lpop($this->formatKey($queueName));
+        if (!empty($value))
+            $value = $this->unformatValue($value);
+        return $value;
+    }
+    /**
+     * 获取队列长度
+     */
+    public function qLen($queueName) {
+        return $this->handler->llen($this->formatKey($queueName));
+    }
+    /*******************************************************
+    队列操作结束 end 
+     ********************************************************/
 }
