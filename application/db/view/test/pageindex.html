@@ -11,89 +11,74 @@
     {load file="__STATIC__/js/jquery-3.2.1.min.js"}
 </head>
 <body>
-<div id="pTable" style="width: 1200px;">
-    <table class="layui-table" id="layui_table_id" lay-filter="test">
-    </table>
-    <div id="laypage"></div>
-
-</div>
+<table class="layui-hide" id="test"></table>
+<!--<table class="layui-table" lay-data="{height:315, url:'/demo/table/user/', page:true, id:'test'}" lay-filter="test">-->
+    <!--<thead>-->
+    <!--<tr>-->
+        <!--<th lay-data="{field:'id', width:80, sort: true}">ID</th>-->
+        <!--<th lay-data="{field:'username', width:80}">用户名</th>-->
+        <!--<th lay-data="{field:'sex', width:80, sort: true}">性别</th>-->
+        <!--<th lay-data="{field:'city'}">城市</th>-->
+        <!--<th lay-data="{field:'sign'}">签名</th>-->
+        <!--<th lay-data="{field:'experience', sort: true}">积分</th>-->
+        <!--<th lay-data="{field:'score', sort: true}">评分</th>-->
+        <!--<th lay-data="{field:'classify'}">职业</th>-->
+        <!--<th lay-data="{field:'wealth', sort: true}">财富</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+<!--</table>-->
+<!--<div id="pages" class="text-center"></div>-->
 <script>
-    var limitcount = 10;
-    var curnum = 1;
 
-    //列表查询方法
-    function productsearch(productGroupId, start, limitsize) {
-        layui.use(['table', 'laypage', 'laydate'], function () {
-            var table = layui.table,
-                laydate = layui.laydate,
-                laypage = layui.laypage;
-            table.render({
-                elem: '#layui_table_id'
-                , url: "{:url('test/ajaxpage')}"
-                , where: {pagename: start, pagelimit: limitsize} //传参*/
-                , cols: [[
-                    {field: 'uid', title: 'ID', width: '170', sort: true}
-                    , {field: 'username', title: '名称', width: '450'}
-                    , {field: 'password', title: '状态', width: '100'}
-                    , {field: 'realname', title: '生效时间', width: '120', sort: true}
-                    , {field: 'lastloginip', title: '失效时间', width: '120', sort: true}
-                    , {field: 'ppassword', title: '成本', width: '100', sort: true}
-                    , {field: 'poperation', title: '操作', width: '100', fixed: 'right', toolbar: '#barDemo'}
-                ]]
-                , page: false
-                , height: 430
-                , done: function ({data: {$list}, count: {$count}}, curr, count) {
-                    //如果是异步请求数据方式，res即为你接口返回的信息。
-                    //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
-                    laypage.render({
-                        elem: 'laypage'
-                        , count: count
-                        , curr: curnum
-                        , limit: limitcount
-                        , layout: ['prev', 'page', 'next', 'skip', 'count', 'limit']
-                        , jump: function (obj, first) {
-                            if (!first) {
-                                curnum = obj.curr;
-                                limitcount = obj.limit;
-                                //console.log("curnum"+curnum);
-                                //console.log("limitcount"+limitcount);
-                                //layer.msg(curnum+"-"+limitcount);
-                                productsearch(productGroupId, curnum, limitcount);
-                            }
-                        }
-                    })
-                }
-            })
+    var table = layui.table;
+    table.render({
+        elem: '#test'
+        ,url:"{url:('test/ajaxpage')}"
+        ,page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+            layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+            ,curr: 1 //设定初始在第 5 页
+            ,groups: 5 //只显示 1 个连续页码
+            ,first: true //不显示首页
+            ,last: true //不显示尾页
 
-            //监听工具条
-            table.on('tool(test)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
-                var data = obj.data //获得当前行数据
-                    , layEvent = obj.event; //获得 lay-event 对应的值
-                if (layEvent === 'detail') {
-                    viewLableInfo(data.attrId);
-                    layer.msg(data.attrId);
-                } else if (layEvent === 'del') {
-                    layer.msg('删除');
-                } else if (layEvent === 'edit') {
-                    layer.msg('编辑操作');
-                }
-            });
-            //常规用法
-            laydate.render({
-                elem: '#createDate'
-            });
-            //常规用法
-            laydate.render({
-                elem: '#processingTime'
-            });
+        }
+        ,cols: [[
+            {field:'uid', width:80, title: 'ID', sort: true}
+            ,{field:'username', width:100, title: '用户名'}
+            ,{field:'sex', width:80, title: '性别', sort: true}
+            ,{field:'password', width:80, title: '城市'}
+            ,{field:'ppassword', title: '签名', minWidth: 150}
+            ,{field:'groupid', width:80, title: '积分', sort: true}
 
-        });
-    }
+        ]],
+        done: function(res, curr, count){
+            //如果是异步请求数据方式，res即为你接口返回的信息。
+            //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+            console.log(res);
 
-    var pId = '${pGBean.pgId }';
-    productsearch(pId, curnum, limitcount);
+            //得到当前页码
+            console.log(curr);
 
+            //得到数据总量
+            console.log(count);
+        }
+
+    });
+//    var laypage = layui.laypage;
+//    laypage.render({
+//        elem: 'pages',
+//        count: {count},
+//        limit: {limit},
+//        limits: [10, 15, 20],
+//        layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'],
+//        curr: {page},
+//        jump: function (obj, first) {
+//            console.log(obj);
+//            if (!first) {
+//                window.location.href = "{url:('test/pageindex')}?page=" + obj.curr + '&limit=' + obj.limit;
+//            }
+//        }
+//    });
 </script>
-
 </body>
 </html>

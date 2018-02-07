@@ -48,24 +48,34 @@ class Test extends Controller
     //分页数据模板
     public function pageindex()
     {
-        $count = $this->user->userconut();
-        $list = $this->user->ajaxlist(0, 10);
-        $list = json_encode($list);
-        $this->assign('count', $count);
-        $this->assign('list', $list);
+        //$page = input('page', 0);
+        //$limit = input('limit', 10);
+        //$count = $this->user->userconut();
+        //$list = $this->user->ajaxlist($page, $limit);
+        //$list = json_encode($list);
+        //$this->assign('count', $count);
+        //$this->assign('list', $list);
+        //$this->assign('page',$page);
+        //$this->assign('limit',$limit);
         return $this->fetch('test/pageindex');
     }
 
     //ajax请求数据
     public function ajaxpage()
     {
-        $page = $this->input->get('pagenum');
-        $limit = $this->input->get('pagelimit');
-        $limit = $limit ? $limit : 10;
-        $page = $page ? ($page - 1) * $limit : 0;
-        $user = new User();
-        $list = $user->ajaxlist($page, $limit);
-        echo json_encode($list);
+        $page = input('page', 1);
+        $limit = input('limit', 10);
+        $count = $this->user->userconut();
+        $list = $this->user->ajaxlist($page, $limit);
+        $data = array(
+            'code'=>0,
+            'msg'=>'ok',
+            'count'=>$count,
+            'data'=>$list
+        );
+        //trace(json_encode($data),'log');
+        //log_message($data);die;
+        echo json_encode($data);
     }
 
     //redis测试hash类型使用

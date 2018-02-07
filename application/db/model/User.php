@@ -25,7 +25,8 @@ class User extends Model
     //
     public function ajaxlist($page, $limit = 10)
     {
-        $list = DB::name('users')->where('status', 1)->limit($page, $limit)->select();
+        $offset = ($page-1)*$limit;
+        $list = DB::name('users')->where('status', 1)->limit($offset, $limit)->select();
         return $list;
     }
 

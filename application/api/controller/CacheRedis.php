@@ -27,7 +27,7 @@ class CacheRedis extends Redis
      */
     public function hMset($name, $arr)
     {
-        return $this->handler->hMset($name, $arr);
+        return $this->handler->hmset($name, $arr);
     }
 
     /**
@@ -55,7 +55,7 @@ class CacheRedis extends Redis
     }
 
     /**
-     * 直接返回redits实例
+     * 直接返回redis实例
      * @return Redis
      */
     public function getRedis(){
@@ -128,6 +128,6 @@ class CacheRedis extends Redis
         return $this->handler->llen($this->formatKey($queueName));
     }
     /*******************************************************
-    队列操作结束 end 
+    队列操作结束 end
      ********************************************************/
 }

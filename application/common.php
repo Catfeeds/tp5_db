@@ -764,7 +764,8 @@ if (!function_exists('dd')) {
     }
 }
 
-function authcode($string, $operation, $key = '', $expiry = 0) {
+function authcode($string, $operation, $key = '', $expiry = 0)
+{
     $authkey = Ebh::app()->security['authkey'];
     $ckey_length = 4; // 随机密钥长度 取值 0-32;
     // 加入随机密钥，可以令密文无任何规律，即便是原文和密钥完全相同，加密结果也会每次不同，增大破解难度。
@@ -814,16 +815,17 @@ function authcode($string, $operation, $key = '', $expiry = 0) {
     }
 }
 
-if(!function_exists('getrandom')){
+if (!function_exists('getrandom')) {
     /**
      * 生成随机大写字母字符串
      * @param $length
      * @return string
      */
-    function getrandom($length){
+    function getrandom($length)
+    {
         $hash = '';
         for ($i = 0; $i < $length; $i++) {
-            $hash .= chr(mt_rand(65,90));
+            $hash .= chr(mt_rand(65, 90));
         }
         return $hash;
     }
@@ -836,15 +838,16 @@ if(!function_exists('getrandom')){
  * @param array $data 数组参数数组
  * @param string $exit 是否结束退出
  */
-if(!function_exists('renderjson')){
-    function renderjson($code=0,$msg="",$data=array(),$exit=true){
+if (!function_exists('renderjson')) {
+    function renderjson($code = 0, $msg = "", $data = array(), $exit = true)
+    {
         $arr = array(
-            'code'=>(intval($code) ===0) ? 0 : intval($code),
-            'msg'=>$msg,
-            'data'=>$data
+            'code' => (intval($code) === 0) ? 0 : intval($code),
+            'msg' => $msg,
+            'data' => $data
         );
-        echo json_encode($arr,JSON_UNESCAPED_UNICODE);
-        if($exit){
+        echo json_encode($arr, JSON_UNESCAPED_UNICODE);
+        if ($exit) {
             exit();
         }
     }
@@ -855,76 +858,77 @@ if(!function_exists('renderjson')){
  * @param null $tags
  * @return mixed|string
  */
-function h($text, $tags = null) {
+function h($text, $tags = null)
+{
 
-    $text   =   trim($text);
+    $text = trim($text);
     //完全过滤注释
-    $text   =   preg_replace('/<!--?.*-->/','',$text);
+    $text = preg_replace('/<!--?.*-->/', '', $text);
     //完全过滤动态代码
-    $text   =   preg_replace('/<\?|\?'.'>/','',$text);
+    $text = preg_replace('/<\?|\?' . '>/', '', $text);
     //完全过滤js
-    $text   =   preg_replace('/<script?.*\/script>/','',$text);
-    $text   =   str_replace('[','&#091;',$text);
-    $text   =   str_replace(']','&#093;',$text);
-    $text   =   str_replace('|','&#124;',$text);
+    $text = preg_replace('/<script?.*\/script>/', '', $text);
+    $text = str_replace('[', '&#091;', $text);
+    $text = str_replace(']', '&#093;', $text);
+    $text = str_replace('|', '&#124;', $text);
     //过滤换行符
-    $text   =   preg_replace('/\r?\n/','',$text);
+    $text = preg_replace('/\r?\n/', '', $text);
     //br
-    $text   =   preg_replace('/<br(\s*\/)?'.'>/i','[br]',$text);
-    $text   =   preg_replace('/<p(\s*\/)?'.'>/i','[p]',$text);
-    $text   =   preg_replace('/(\[br\]\s*){10,}/i','[br]',$text);
-    $text   =   str_replace('font','{f{o{n{t{',$text);
-    $text   =   str_replace('decoration','{d{e{c{o{r{a{t{i{o{n{',$text);
-    $text   =   str_replace('<strong>','{s{t{r{o{n{g{',$text);
-    $text   =   str_replace('</strong>','}s{t{r{o{n{g{',$text);
-    $text   =   str_replace('background-color','{b{a{c{k{g{r{o{u{n{d{-{c{o{l{o{r',$text);
+    $text = preg_replace('/<br(\s*\/)?' . '>/i', '[br]', $text);
+    $text = preg_replace('/<p(\s*\/)?' . '>/i', '[p]', $text);
+    $text = preg_replace('/(\[br\]\s*){10,}/i', '[br]', $text);
+    $text = str_replace('font', '{f{o{n{t{', $text);
+    $text = str_replace('decoration', '{d{e{c{o{r{a{t{i{o{n{', $text);
+    $text = str_replace('<strong>', '{s{t{r{o{n{g{', $text);
+    $text = str_replace('</strong>', '}s{t{r{o{n{g{', $text);
+    $text = str_replace('background-color', '{b{a{c{k{g{r{o{u{n{d{-{c{o{l{o{r', $text);
 
     //过滤危险的属性，如：过滤on事件lang js
-    while(preg_match('/(<[^><]+)(on(?=[a-zA-Z])|lang|action|background|codebase|dynsrc|lowsrc)[^><]+/i',$text,$mat)){
-        $text=str_replace($mat[0],$mat[1],$text);
+    while (preg_match('/(<[^><]+)(on(?=[a-zA-Z])|lang|action|background|codebase|dynsrc|lowsrc)[^><]+/i', $text, $mat)) {
+        $text = str_replace($mat[0], $mat[1], $text);
     }
-    while(preg_match('/(<[^><]+)(window\.|javascript:|js:|about:|file:|document\.|vbs:|cookie)([^><]*)/i',$text,$mat)){
-        $text=str_replace($mat[0],$mat[1].$mat[3],$text);
+    while (preg_match('/(<[^><]+)(window\.|javascript:|js:|about:|file:|document\.|vbs:|cookie)([^><]*)/i', $text, $mat)) {
+        $text = str_replace($mat[0], $mat[1] . $mat[3], $text);
     }
-    if(empty($tags)) {
+    if (empty($tags)) {
         $tags = 'table|td|th|tr|i|b|u|strong|img|p|br|div|strong|em|ul|ol|li|dl|dd|dt|a|span|input|h1|h2|h3|h4|h5';
     }
     //允许的HTML标签
-    $text   =   preg_replace('/<('.$tags.')( [^><\[\]]*)?>/i','[\1\2]',$text);
-    $text = preg_replace('/<\/('.$tags.')>/Ui','[/\1]',$text);
+    $text = preg_replace('/<(' . $tags . ')( [^><\[\]]*)?>/i', '[\1\2]', $text);
+    $text = preg_replace('/<\/(' . $tags . ')>/Ui', '[/\1]', $text);
     //过滤多余html
-    $text   =   preg_replace('/<\/?(html|head|meta|link|base|basefont|body|bgsound|title|style|script|form|iframe|frame|frameset|applet|id|ilayer|layer|name|script|style|xml|pre)[^><]*>/i','',$text);
+    $text = preg_replace('/<\/?(html|head|meta|link|base|basefont|body|bgsound|title|style|script|form|iframe|frame|frameset|applet|id|ilayer|layer|name|script|style|xml|pre)[^><]*>/i', '', $text);
     //过滤合法的html标签
-    while(preg_match('/<([a-z]+)[^><\[\]]*>[^><]*<\/\1>/i',$text,$mat)){
-        $text=str_replace($mat[0],str_replace('>',']',str_replace('<','[',$mat[0])),$text);
+    while (preg_match('/<([a-z]+)[^><\[\]]*>[^><]*<\/\1>/i', $text, $mat)) {
+        $text = str_replace($mat[0], str_replace('>', ']', str_replace('<', '[', $mat[0])), $text);
     }
     //转换引号
-    while(preg_match('/(\[[^\[\]]*=\s*)(\"|\')([^\2=\[\]]+)\2([^\[\]]*\])/i',$text,$mat)){
-        $text=str_replace($mat[0],$mat[1].'|'.$mat[3].'|'.$mat[4],$text);
+    while (preg_match('/(\[[^\[\]]*=\s*)(\"|\')([^\2=\[\]]+)\2([^\[\]]*\])/i', $text, $mat)) {
+        $text = str_replace($mat[0], $mat[1] . '|' . $mat[3] . '|' . $mat[4], $text);
     }
     //过滤错误的单个引号
-    while(preg_match('/\[[^\[\]]*(\"|\')[^\[\]]*\]/i',$text,$mat)){
-        $text=str_replace($mat[0],str_replace($mat[1],'',$mat[0]),$text);
+    while (preg_match('/\[[^\[\]]*(\"|\')[^\[\]]*\]/i', $text, $mat)) {
+        $text = str_replace($mat[0], str_replace($mat[1], '', $mat[0]), $text);
     }
     //转换其它所有不合法的 < >
-    $text   =   str_replace('<','&lt;',$text);
-    $text   =   str_replace('>','&gt;',$text);
-    $text   =   str_replace('"','&quot;',$text);
+    $text = str_replace('<', '&lt;', $text);
+    $text = str_replace('>', '&gt;', $text);
+    $text = str_replace('"', '&quot;', $text);
     //反转换
-    $text   =   str_replace('[','<',$text);
-    $text   =   str_replace(']','>',$text);
-    $text   =   str_replace('&#091;','[',$text);
-    $text   =   str_replace('&#093;',']',$text);
-    $text   =   str_replace('|','"',$text);
+    $text = str_replace('[', '<', $text);
+    $text = str_replace(']', '>', $text);
+    $text = str_replace('&#091;', '[', $text);
+    $text = str_replace('&#093;', ']', $text);
+    $text = str_replace('|', '"', $text);
     //过滤多余空格
-    $text   =   str_replace('  ',' ',$text);
-    $text   =   str_replace('{f{o{n{t{','font',$text);
-    $text   =   str_replace('{s{t{r{o{n{g{','<strong>',$text);
-    $text   =   str_replace('}s{t{r{o{n{g{','</strong>',$text);
-    $text   =   str_replace('{d{e{c{o{r{a{t{i{o{n{','decoration',$text);
-    $text   =   str_replace('{b{a{c{k{g{r{o{u{n{d{-{c{o{l{o{r','background-color',$text);
+    $text = str_replace('  ', ' ', $text);
+    $text = str_replace('{f{o{n{t{', 'font', $text);
+    $text = str_replace('{s{t{r{o{n{g{', '<strong>', $text);
+    $text = str_replace('}s{t{r{o{n{g{', '</strong>', $text);
+    $text = str_replace('{d{e{c{o{r{a{t{i{o{n{', 'decoration', $text);
+    $text = str_replace('{b{a{c{k{g{r{o{u{n{d{-{c{o{l{o{r', 'background-color', $text);
     //剔除class标签属性
-    $text = preg_replace_callback('/<.*?(class\=([\'|\"])(.*?)(\2)).*?>/is', function($grp){
+    $text = preg_replace_callback('/<.*?(class\=([\'|\"])(.*?)(\2)).*?>/is', function ($grp) {
         return str_ireplace($grp[1], '', $grp[0]);
     }, $text);
     //抹去所有外链接
@@ -938,8 +942,9 @@ function h($text, $tags = null) {
  * @param array $allow_urls
  * @return mixed
  */
-function replace_Links(&$body, $allow_urls=array()){
-    if(empty($allow_urls)){
+function replace_Links(&$body, $allow_urls = array())
+{
+    if (empty($allow_urls)) {
         $allow_urls = array(
             'ebh.net',
             'ebanhui.com',
@@ -952,17 +957,18 @@ function replace_Links(&$body, $allow_urls=array()){
     $host_rule = str_replace('/', "\\/", $host_rule);
     $arr = '';
     preg_match_all("#<a([^>]*)>(.*)<\/a>#iU", $body, $arr);
-    if( is_array($arr[0]) ){
+    if (is_array($arr[0])) {
         $rparr = array();
         $tgarr = array();
-        foreach($arr[0] as $i=>$v){
-            if( $host_rule != '' && preg_match('#'.$host_rule.'#i', $arr[1][$i]) ){
+        foreach ($arr[0] as $i => $v) {
+            if ($host_rule != '' && preg_match('#' . $host_rule . '#i', $arr[1][$i])) {
                 continue;
             } else {
                 $rparr[] = $v;
                 $tgarr[] = $arr[2][$i];
             }
-        }if( !empty($rparr) ){
+        }
+        if (!empty($rparr)) {
             $body = str_replace($rparr, $tgarr, $body);
         }
     }
@@ -970,3 +976,26 @@ function replace_Links(&$body, $allow_urls=array()){
     return $body;
 }
 
+/**
+ * 打印调试信息
+ */
+if (!function_exists('log_message')) {
+
+    function log_message($msg, $level = 'error')
+    {
+        if(empty($msg)){return false;}
+        if (is_array($msg)) {
+            $msg = json_encode($msg, JSON_UNESCAPED_UNICODE);
+        }
+        $date = date('Y-m-d H:i:s');
+        $title = $level . ' - ' . "$date -->\n";
+        $content = $title . $msg . "\n\n";
+        $savepath = LOG_PATH;
+        $filename = $savepath . date('Y-m-d') . '.log';
+        $fp = fopen($filename, 'a');
+        flock($fp, LOCK_EX);
+        fwrite($fp, $content);
+        flock($fp, LOCK_UN);
+        fclose($fp);
+    }
+}
