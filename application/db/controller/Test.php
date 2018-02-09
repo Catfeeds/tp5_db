@@ -91,5 +91,21 @@ class Test extends Controller
         var_dump($redis->hGet('study1', 'zhangsan'))  ;
     }
 
+    /**
+     * ajax上传文件
+     */
+    public function ajaxupload(){
+        if(request()->isAjax()){
+            if(!file_exists('123.zip')) {
+                move_uploaded_file($_FILES['part']['tmp_name'],'123.zip');
+            } else {
+                file_put_contents('123.zip',file_get_contents($_FILES['part']['tmp_name']),FILE_APPEND);
+            }
+            echo 'ok';
+        }else{
+
+            return $this->fetch('test/ajaxupload');
+        }
+        }
 
 }

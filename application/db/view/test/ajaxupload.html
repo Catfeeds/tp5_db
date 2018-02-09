@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>html5大文件切割上传</h1>
+<div id="progress"></div>
+<input name="mov" type="file" />
+<input id="btn" type="button" value="点我" />
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#btn').click(function() {
+            sendfile();
+        });
+    })
+
+    function sendfile() {
+        const LENGTH = 1024 * 1024;
+        var sta = 0;
+        var end = sta + LENGTH;
+        var blob = null;
+        var fd = null;
+
+        /*
+            xhr 对象
+        */
+        var xhr = null;
+
+        var mov = document.getElementsByName('mov')[0].files[0];
+        //console.log(mov);return;
+
+        var totalsize = mov.size;
+        var percent = 0;
+
+        // while(sta < totalsize) {
+        timer = setInterval(function(){
+            if (sta>totalsize) {
+                clearInterval(timer);
+            };
+            blob = mov.slice(sta,end);
+            fd = new FormData();
+            fd.append('part',blob);
+
+            xhr = new XMLHttpRequest();
+            xhr.open('POST',"{:url('test/ajaxupload')}",false);
+
+            xhr.send(fd);
+
+            sta = end;
+            end = sta + LENGTH;
+
+            percent = 100 * end / totalsize;
+            if(percent > 100) {
+                percent = 100;
+            }
+            // document.getElementById('bar').style.width = percent + '%';
+            $('#bar').width(percent+'%');
+            $('#bar').html(parseInt(percent)+'%');
+        },1)
+
+        // }
+
+    }
+
+
+</script>
+</body>
+</html>
