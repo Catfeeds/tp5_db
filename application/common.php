@@ -1217,3 +1217,213 @@ function do_post($url, $data , $retJson = true ,$setHeader = false){
     }
     return $ret;
 }
+/**
+ * 判断是否手机浏览器
+ * @return int
+ */
+function is_mobile()
+{
+    $check = false;
+    // returns true if one of the specified mobile browsers is detected
+    // 如果监测到是指定的浏览器之一则返回true
+
+    $regex_match = "/(nokia|iphone|android|motorola|^mot\-|softbank|foma|docomo|kddi|up\.browser|up\.link|";
+
+    $regex_match .= "htc|dopod|blazer|netfront|helio|hosin|huawei|novarra|CoolPad|webos|techfaith|palmsource|";
+
+    $regex_match .= "blackberry|alcatel|amoi|ktouch|nexian|samsung|^sam\-|s[cg]h|^lge|ericsson|philips|sagem|wellcom|bunjalloo|maui|";
+
+    $regex_match .= "symbian|smartphone|midp|wap|phone|windows ce|iemobile|^spice|^bird|^zte\-|longcos|pantech|gionee|^sie\-|portalmmm|";
+
+    $regex_match .= "jig\s browser|hiptop|^ucweb|^benq|haier|^lct|opera\s*mobi|opera\*mini|320x320|240x320|176x220";
+
+    $regex_match .= ")/i";
+
+    // preg_match()方法功能为匹配字符，既第二个参数所含字符是否包含第一个参数所含字符，包含则返回1既true
+    if (!empty($_SERVER['HTTP_USER_AGENT'])) {
+        $check = preg_match($regex_match, strtolower($_SERVER['HTTP_USER_AGENT']));
+    }
+    return $check;
+}
+/**
+ * 获取客户端IP地址
+ * @return string IP_ADDRESS
+ */
+function getip() {
+    //if ($ip_address !== FALSE)
+    //    return $ip_address;
+    $ip_address = '';
+    if (!empty($_SERVER["HTTP_CLIENT_IP"]))
+        $ip_address = $_SERVER["HTTP_CLIENT_IP"];
+    else if (!empty($_SERVER["HTTP_X_FORWARDED_FOR"]))
+        $ip_address = $_SERVER["HTTP_X_FORWARDED_FOR"];
+    else if (!empty($_SERVER["REMOTE_ADDR"]))
+        $ip_address = $_SERVER["REMOTE_ADDR"];
+    else
+        $ip_address = "127.0.0.1";
+    $ip_address = preg_match('/[\d\.]{7,15}/', $ip_address, $matches) ? $matches[0] : '';
+    return $ip_address;
+}
+
+/**
+ * 获取客户端浏览器user_agent信息
+ * @return string 返回user_agent信息
+ */
+function user_agent() {
+    $user_agent = '';
+    $user_agent = (!isset($_SERVER['HTTP_USER_AGENT'])) ? FALSE : $_SERVER['HTTP_USER_AGENT'];
+    return $user_agent;
+}
+
+/**
+ *获取客户端信息
+ */
+function getClient() {
+    $userAgent = user_agent();
+    if(empty($userAgent))
+        return FALSE;
+    $userAgent = strtolower($userAgent);
+    //处理系统信息
+    $sys = 'other';
+    $sysversion = '';
+    $vendor = '';
+    if(strpos($userAgent,'ipad') !== FALSE) {
+        $sys = 'iPad';
+        if(preg_match('/cpu os ([\d_]+)/',$userAgent,$matchs)){
+            $sysversion = $matchs[1];
+        }
+    } else if(strpos($userAgent,'iphone') !== FALSE) {
+        $sys = 'iPhone';
+        if(preg_match('/iphone os ([\d_]+)/',$userAgent,$matchs)){
+            $sysversion = $matchs[1];
+        }
+    } else if(strpos($userAgent,'android') !== FALSE) {
+        $sys = 'Android';
+        if(preg_match('/android ([\d.]+)/',$userAgent,$matchs)){
+            $sysversion = $matchs[1];
+        }
+    } else if(strpos($userAgent,'linux') !== FALSE) {
+        $sys = 'Linux';
+    } else if(strpos($userAgent,'windows mobile') !== FALSE || strpos($userAgent,'windows ce') !== FALSE ) {
+        $sys = 'Windows Mobile';
+    } else if(strpos($userAgent,'windows') !== FALSE) {	//windows 则设置版本
+        if(strpos($userAgent,'windows nt 5.0') !== FALSE || strpos($userAgent,'windows 2000') !== FALSE) {
+            $sys = 'Win2000';
+        } else if(strpos($userAgent,'windows nt 5.1') !== FALSE || strpos($userAgent,'windows xp') !== FALSE) {
+            $sys = 'WinXP';
+        } else if(strpos($userAgent,'windows nt 5.2') !== FALSE || strpos($userAgent,'windows 2003') !== FALSE) {
+            $sys = 'Win2003';
+        } else if(strpos($userAgent,'windows nt 6.0') !== FALSE || strpos($userAgent,'windows Vista') !== FALSE) {
+            $sys = 'WinVista';
+        } else if(strpos($userAgent,'windows nt 6.1') !== FALSE || strpos($userAgent,'windows 7') !== FALSE) {
+            $sys = 'Win7';
+        } else if(strpos($userAgent,'windows nt 6.2') !== FALSE || strpos($userAgent,'windows 8') !== FALSE) {
+            $sys = 'Win8';
+        } else if(strpos($userAgent,'windows nt 6.3') !== FALSE || strpos($userAgent,'windows 8.1') !== FALSE) {
+            $sys = 'Win8.1';
+        } else if(strpos($userAgent,'windows nt 10') !== FALSE || strpos($userAgent,'windows 10') !== FALSE) {
+            $sys = 'Win10';
+        }
+    } else if(strpos($userAgent,'mac') !== FALSE) {
+        $sys = 'Mac';
+    } else if(strpos($userAgent,'X11') !== FALSE) {
+        $sys = 'Unix';
+    }
+    //处理浏览器厂家
+    if(strpos($userAgent,'ebhbrowser') !== FALSE) {
+        $vendor = '直播客户端';
+    } else if(strpos($userAgent,'micromessenger') !== FALSE) {
+        $vendor = '微信';
+    } else if(strpos($userAgent,'maxthon') !== FALSE) {
+        $vendor = '遨游';
+    } else if(strpos($userAgent,'qqbrowser') !== FALSE) {
+        $vendor = 'QQ';
+    } else if(strpos($userAgent,'metasr') !== FALSE) {
+        $vendor = '搜狗';
+    } else if(strpos($userAgent,'lbbrowser') !== FALSE) {
+        $vendor = '猎豹';
+    } else if(strpos($userAgent,'opr') !== FALSE || strpos($userAgent,'opera') !== FALSE) {
+        $vendor = '欧朋';
+    } else if(strpos($userAgent,'edge') !== FALSE) {
+        $vendor = 'Edge';
+    } else if(strpos($userAgent,'bidubrowser') !== FALSE) {
+        $vendor = '百度';
+    } else if(strpos($userAgent,'juzibrowser') !== FALSE) {
+        $vendor = '桔子';
+    } else if(strpos($userAgent,'theworld') !== FALSE) {
+        $vendor = '世界之窗';
+    } else if(strpos($userAgent,'firefox') !== FALSE) {
+        $vendor = '火狐';
+    } else if(strpos($userAgent,'ubrowser') !== FALSE) {
+        $vendor = 'UC';
+    } else if(strpos($userAgent,'chrome') !== FALSE) {
+        $vendor = '谷歌';
+    }//chrome放在最后
+    //处理浏览器和版本信息
+    $browser = '';
+    $broversion = 0;
+    if(preg_match('/ebhbrowser\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'ebhBrowser';
+    } else if(preg_match('/bidubrowser\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'BIDUBrowser';
+    } else if(preg_match('/juzibrowser\/([\d.]+)/',$userAgent,$matchs)) {//没有版本,ie
+        $broversion = $matchs[1];
+        $browser = 'juzibrowser';
+    } else if(preg_match('/lbbrowser\/([\d.]+)/',$userAgent,$matchs)) {//没有版本,chrome
+        $broversion = $matchs[1];
+        $browser = 'lbbrowser';
+    } else if(preg_match('/ubrowser\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'ubrowser';
+    } else if(preg_match('/theworld ([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'theworld';
+    } else if(preg_match('/micromessenger\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'micromessenger';
+    } else if(preg_match('/edge\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'Edge';
+    } else if(preg_match('/maxthon\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'maxthon';
+    } else if(preg_match('/qqbrowser\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'qqbrowser';
+    } else if(preg_match('/metasr ([\d.]+)/',$userAgent,$matchs)) {//版本与关于里不太符合,1.0
+        $broversion = $matchs[1];
+        $browser = 'metasr';
+    } else if(preg_match('/trident\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = intval($matchs[1]);
+        $browser = 'IE';
+        $broversion = $broversion + 4;
+    } else if(preg_match('/rv:([\d.]+)\) like gecko/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'IE';
+    } else if(preg_match('/msie ([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'IE';
+    } else if(preg_match('/firefox\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'Firefox';
+    } else if(preg_match('/opera.([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'Opera';
+    } else if(preg_match('/opr\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'Opera';
+    } else if(preg_match('/chrome\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'Chrome';
+    } else if(preg_match('/safari\/([\d.]+)/',$userAgent,$matchs)) {
+        $broversion = $matchs[1];
+        $browser = 'Safari';
+    }
+    $ip = getip();
+
+    $client = array('system'=>$sys,'systemversion'=>$sysversion,'browser'=>$browser,'broversion'=>$broversion,'vendor'=>$vendor,'ip'=>$ip);
+    return $client;
+}
+
