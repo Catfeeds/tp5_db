@@ -1044,3 +1044,176 @@ if (!function_exists('log_message')) {
         fclose($fp);
     }
 }
+/**
+ * 创建token
+ * @return string
+ */
+function createToken(){
+    if(!isset($_SESSION)){
+        session_start();
+    }
+    $token = uniqid(mt_rand(0,1000000));
+    $_SESSION['token'] = $token;
+    return $token;
+}
+
+/**
+ * 校验token
+ * @param null $token
+ * @return bool
+ */
+function checkToken($token=null){
+    if(!isset($_SESSION)){
+        session_start();
+    }
+    if(is_null($token))return false;
+    if(isset($_SESSION['token'])&&$_SESSION['token']==$token){
+        unset($_SESSION['token']);
+        return true;
+    }else{
+        return false;
+    }
+}
+//编码转换
+function myiconv($str) {
+    global $_SC;
+    if(EBH::app()->output['charset']!='utf-8'){
+        if(is_array($str)){
+            foreach($str as $key=>$value){
+                $str[$key] = myiconv($value);
+            }
+        }else{
+            $encode = mb_detect_encoding($str, array('UTF-8','EUC-CN'));
+            if ($_SC['db']['dbtype']=='mssql' && $encode != 'EUC-CN') {
+                $str = iconv('UTF-8', 'GBK', $str);
+            }
+        }
+    }
+    return $str;
+}
+
+//传入分类列表，处理出树形结构函数
+function getTree($arr = array(),$upid=0,$index=0){
+    $tree = array();
+    foreach ($arr as $value) {
+
+        if($value['upid']==$upid){
+            $value['name'] = str_repeat('┣━', $index).$value['name'];
+            $tree[] = $value;
+            $tree = array_merge($tree,getTree($arr,$value['catid'],$index+1));
+        }
+    }
+    return $tree;
+}
+
+/**
+ * 验证是不是微信浏览器
+ * 访问
+ * @return boolean
+ */
+function is_weixin1(){
+    if(!empty($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) ){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+/*
+ * 生成缩略图
+ * param $imagepath:图片文件物理路径
+ * param $size:要生成的缩略图尺寸,width_height格式，如160_120
+ * param $quality: 图片缩略后的质量，默认75，如果想高质量，可以设置为100.
+ * return : 缩略图路径，文件名上加上size，如给定 D:/2012/1.jpg 缩略图路径即为 D:/2012/1_160_120.jpg
+ */
+function thumb($imagepath, $size, $quality = 75) {
+    if (!is_file($imagepath)) {
+        return '';
+    }
+    list($src_w, $src_h, $src_info) = getimagesize($imagepath);
+    list($size_x, $size_y) = explode('_', $size);
+    $filename = explode('.', $imagepath);
+    $thumbpath = $filename[0] . '_' . $size . '.' . $filename[1];
+    $proportion = $size_x / $size_y;
+    $nproportion = $src_w / $src_h;
+    $src_nw = $src_w;
+    $src_nh = $src_h;
+    if ($src_nw > $size_x || $src_nh > $size_y) {
+        if ($nproportion > $proportion) {
+            $src_nw = $size_x;
+            $src_nh = $src_h / $src_w * $size_x;
+        } else {
+            $src_nw = $src_w / $src_h * $size_y;
+            $src_nh = $size_y;
+        }
+    } else {
+        return '';
+    }
+    switch ($src_info) {
+        case 2:
+            $createtype = 'imagecreatefromjpeg';
+            $headertype = 'imagejpeg';
+            break;
+        case 1:
+            $createtype = 'imagecreatefromgif';
+            $headertype = 'imagegif';
+            break;
+        case 3:
+            $createtype = 'imagecreatefrompng';
+            $headertype = 'imagepng';
+            break;
+        default:
+            $createtype = 'imagecreatefromjpeg';
+            $headertype = 'imagejpeg';
+            break;
+    }
+    $im = $createtype($imagepath);
+    $im_p = imagecreatetruecolor($src_nw, $src_nh);
+    if($createtype == 'imagecreatefrompng'){
+        imagesavealpha($im_p,true);
+        imagealphablending($im_p,false);
+        imagesavealpha($im_p,true);
+    }
+    imagecopyresampled($im_p, $im, 0, 0, 0, 0, $src_nw, $src_nh, $src_w, $src_h);
+    if($headertype == 'imagejpeg')
+        $headertype($im_p, $thumbpath, $quality);
+    else
+        $headertype($im_p, $thumbpath);
+    return $thumbpath;
+}
+
+/**
+ * curl模拟post请求
+ * @param $url
+ * @param $data
+ * @param bool $retJson
+ * @param bool $setHeader
+ * @return mixed
+ */
+function do_post($url, $data , $retJson = true ,$setHeader = false){
+    $auth = Ebh::app()->getInput()->cookie('auth');
+    $uri = Ebh::app()->getUri();
+    $domain = $uri->uri_domain();
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    if ($setHeader) {
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($data))
+        );
+    }
+    if(!empty($_SERVER['HTTP_USER_AGENT'])){
+        curl_setopt($ch, CURLOPT_USERAGENT,$_SERVER['HTTP_USER_AGENT']);
+    }
+    curl_setopt($ch, CURLOPT_POST, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, FALSE);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_COOKIE, 'ebh_auth='.urlencode($auth).';ebh_domain='.$domain);
+    $ret = curl_exec($ch);
+    curl_close($ch);
+    if($retJson == false){
+        $ret = json_decode($ret);
+    }
+    return $ret;
+}
