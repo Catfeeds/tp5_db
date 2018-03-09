@@ -84,18 +84,15 @@ function dblog($msg = '', $url = false)
 {
     $data['url'] = $url ? $url : url();
     $data['msg'] = is_string($msg) ? $msg : json_encode($msg, JSON_UNESCAPED_UNICODE);
-
     db('log')->insert($data);
 }
 
 /**
  * 无限极分类
- *
  * @param        $classify_old 需分类数组
  * @param string $id 唯一id名称
  * @param string $pname 父id键名称
  * @param int $pid 父id，默认0为顶级父id
- *
  * @return array|bool
  */
 
@@ -134,17 +131,11 @@ function toClass($classify_o, $id = 'id', $pname = 'pid', $pid = 0)
  */
 function sendMessage($phone, $content, $template)
 {
-
     $uid = 'yiyunhao';//ftds
     $content = urlencode($content);
-
     $pwd = 'e76309e0c6ff4dd045589a2891a790e9';//e76309e0c6ff4dd045589a2891a790e9 ..2347a648f7d0d1329c5bd793a3c12384
-    //&template=377804
     $url = "http://api.sms.cn/sms/?ac=send&uid={$uid}&pwd={$pwd}&mobile={$phone}&content={$content}&template={$template}";
-    //echo $url;
-
     $r = doPost($url);
-
     return $r;
 }
 
@@ -162,29 +153,16 @@ function doGet($url)
 {
     //初始化
     $ch = curl_init();
-
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 0);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     //执行并获取HTML文档内容
     $output = curl_exec($ch);
-
-
     //释放curl句柄
     curl_close($ch);
-
     //打印获得的数据
     return $output;
 }
-
-/**
- * 获取IP地址
- */
-function get_ip()
-{
-    return $_SERVER['REMOTE_ADDR'];
-}
-
 /***
  * 去除输入框中的前后空
  *
@@ -195,7 +173,6 @@ function dislodge($data)
 {
     foreach ($data as &$value) {
         if (!is_array($value)) {
-
             $value = trim($value);
         }
     }
@@ -217,7 +194,6 @@ function doPost($url, $body = [], $header = array(), $type = "POST")
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
     //将curl_exec()获取的信息以文件流的形式返回，而不是直接输出。
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
     //2)设置提交方式
     switch ($type) {
         case "GET":
@@ -232,7 +208,6 @@ function doPost($url, $body = [], $header = array(), $type = "POST")
         case "DELETE":
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
             break;
-
     }
     //3)设备请求体
     if (count($body) > 0) {
@@ -251,22 +226,15 @@ function doPost($url, $body = [], $header = array(), $type = "POST")
     $encode = mb_detect_encoding($res, array("ASCII", 'UTF-8', "GB2312", "GBK", 'BIG5'));
     if ($encode != 'UTF-8') {
         $res = iconv('GBK', "UTF-8", $res);
-
     }
-
     //$res = mb_detect_encoding($res,'UTF-8',$encode);
-
     $result = json_decode($res, true);
-
-
     //4.关闭curl资源，并且释放系统资源
     curl_close($ch);
     if (empty($result))
         return $res;
     else
         return $result;
-
-
 }
 
 /* 生产验证码
@@ -282,14 +250,12 @@ function randnum($len = 4)
     return $str;
 }
 
-
 /* phpmail发送邮件 */
 function phpsendmail($mailcode, $email = '290847350@qq.com', $type = 0, $msg = false)
 {
     vendor('PHPMailer.PHPMailerAutoload');
     $mail = new PHPMailer();
     // $mail->SMTPDebug = 3; // Enable verbose debug output
-
     $mail->isSMTP(); // Set mailer to use SMTP
     $mail->Host = 'smtp.qq.com'; // Specify main and backup SMTP servers
     $mail->SMTPAuth = true; // Enable SMTP authentication
@@ -299,11 +265,8 @@ function phpsendmail($mailcode, $email = '290847350@qq.com', $type = 0, $msg = f
     $mail->Port = 25; // TCP port to connect to
     $mail->setFrom('290847350@qq.com', '教育之窗'); //
     $mail->addAddress($email, '尊敬的客户'); // 收件人邮箱 // Add a recipient
-
     $mail->isHTML(true); // Set email format to HTML
-
     $mail->Subject = '教育之窗'; // 邮箱标题
-
     $mail->Body
         = <<<tang
 <style>
@@ -334,7 +297,6 @@ tang;
     $mail->Body = sprintf($mail->Body, $type, $email, $email, $email, $mailcode);
     if ($msg) {
         $mail->Body = '自动处理订单错误以下是错误的内容：请手工修改：' . $msg;
-
     }
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -347,13 +309,9 @@ tang;
 
 /* 阿里云oss上传文件 */
 //include('/data/source/Alioos/alioss.php');
-
 /**
  * 上传文件到oss并删除本地文件
- *
- * @param string $path
- *            文件路径
- *
+ * @param string $path 文件路径
  * @return bollear 是否上传
  */
 function oss_upload_form($key = '')
@@ -366,11 +324,8 @@ function oss_upload_form($key = '')
     } else {
         $files = current($_FILES);
     }
-
-
     $file = $files['tmp_name'];
     $bucket = 'ziqiangkeji';
-
     if (file_exists($file)) {
         // $type = strstr($file, '.');
         $type = strstr($files['name'], '.');
@@ -383,11 +338,8 @@ function oss_upload_form($key = '')
             'BUCKET' => 'ziqiangkeji'// bucken 名称
         );
         $oss = new \OSS\OssClient($config['KEY_ID'], $config['KEY_SECRET'], $config['END_POINT']);
-        //        $oss = new_oss();
-
         try {
             $oss->uploadFile($bucket, 'images/' . $file_name, $file);
-
             unlink($file);
             $oss_path = 'http://ziqiangkeji.oss-cn-shanghai.aliyuncs.com/images/';//oss图片前缀
             return $oss_path . $file_name;
@@ -406,7 +358,6 @@ function oss_upload_form($key = '')
 /***
  * 上传oss文件
  * @param $file
- *
  * @return string
  */
 
@@ -414,17 +365,14 @@ function oss_upload_file($file)
 {
     // 获取配置项
     $bucket = 'sbswz';
-
     if (file_exists($file)) {
         // $type = strstr($file, '.');
         $type = strstr($file, '.');
         $file_name = NOW_TIME . rand(1111, 9999) . $type;
         // 实例化oss类
         $oss = new_oss();
-
         try {
             $oss->uploadFile($bucket, 'jy_img/' . $file_name, $file);
-
             unlink($file);
             return $file_name;
             // 上传成功，自己编码
@@ -443,11 +391,9 @@ function oss_upload_file($file)
 function get_config($arr = array())
 {
     $CONFIG = M('config')->where('is_del=0')->select();
-
     foreach ($CONFIG as $key => $value) {
         $arr[$value['key']] = $value['value'];
     }
-
     return $arr;
 }
 
@@ -489,7 +435,6 @@ function checkSign($arr)
  */
 function outExecl($data = null, $header = '')
 {
-
     $objPHPExcel = new PHPExcel();
     /*以下是一些设置 ，什么作者  标题啊之类的*/
     $objPHPExcel->getProperties()->setCreator("转弯的阳光")
@@ -507,28 +452,22 @@ function outExecl($data = null, $header = '')
             $objPHPExcel->setActiveSheetIndex(0)
                 //Excel的第A列，uid是你查出数组的键值，下面以此类推
                 ->setCellValue($k . '1', $value);
-
             $k++;
-
         }
     }
-
     $num = isset($header) ? 1 : 0;
     foreach ($data as $key => $v) {
         $num++;
         $k = 'A';
         foreach ($v as $vv) {
-
             $objPHPExcel->setActiveSheetIndex(0)
                 //Excel的第A列，uid是你查出数组的键值，下面以此类推
                 ->setCellValue($k . $num, $vv)
                 ->getColumnDimension($k)->setwidth(20);
             $objPHPExcel->getActiveSheet()->getStyle($k . $num)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
             $k++;
-
         }
     }
-
 
     $objPHPExcel->getActiveSheet()->setTitle('小记者导出列表');
     //    $objPHPExcel->setActiveSheetIndex(0);
@@ -538,15 +477,11 @@ function outExecl($data = null, $header = '')
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
     $objWriter->save('php://output');
     exit;
-
-
 }
-
 
 //excel导入数据方法
 function excel_import($filename, $exts = 'xls')
 {
-
     //导入PHPExcel类库，因为PHPExcel没有用命名空间，只能inport导入
     //    import("Common.PHPExcel.PHPExcel" , '' , '.php');
     //创建PHPExcel对象，注意，不能少了\
@@ -562,7 +497,6 @@ function excel_import($filename, $exts = 'xls')
     if (!file_exists($filename)) {
         return ['errMsg' => '文件不存在！'];
     }
-
     //载入文件
     $PHPExcel = $PHPReader->load($filename);
     //获取表中的第一个工作表，如果要获取第二个，把0改为1，依次类推
@@ -578,12 +512,9 @@ function excel_import($filename, $exts = 'xls')
         $temp = [];
         for ($currentColumn = 'A'; $currentColumn <= $allColumn; $currentColumn++) {
             //数据坐标
-            //            echo $allColumn;
             $address = $currentColumn . $currentRow;
             //读取到的数据，保存到数组$arr中
             $cell = $currentSheet->getCell($address)->getValue();
-
-            //$cell = $data[$currentRow][$currentColumn];
             if ($cell instanceof PHPExcel_RichText) {
                 $cell = $cell->__toString();
             }
@@ -591,7 +522,6 @@ function excel_import($filename, $exts = 'xls')
         }
         $data[] = $temp;
     }
-
     return $data;
 }
 
@@ -613,7 +543,6 @@ function getPirewhere($ID, $member)
 {
     $arr = [];
     $config = M('honorconfig')->where(['GoodsGrade' => 1])->find();
-
     // 获取直推人数
     $n = M('member')->where(['ReferenceMemberNumber' => $member])->count();
     //获取团队人数
@@ -621,8 +550,6 @@ function getPirewhere($ID, $member)
     $map['Path'] = ['exp', ' regexp ' . '\'' . $ID . '\''];
     $map['GoodsGrade'] = ['gt', 0];
     $n1 = M('member')->where($map)->count();
-    //    dblog($config);
-    //    dblog($n1.'团队人数');
     //获取团队业绩
     $map = [];
     $map['me.Path'] = ['exp', ' regexp ' . '\'' . $ID . '\''];
@@ -632,14 +559,11 @@ function getPirewhere($ID, $member)
         ->field(['g.Money'])
         ->join('stock_goodsgradeconfig g ON me.GoodsGrade=g.GoodsGrade')
         ->sum('g.Money');
-
     if ($n < $config['Person1']) {
         $arr['PushNumber'] = 1;
-
     } else {
         $arr['PushNumber'] = 0;
     }
-
     if ($n1 < $config['person2']) {
         $arr['TeamNumber'] = 1;
     } else {
@@ -651,7 +575,6 @@ function getPirewhere($ID, $member)
         $arr['TeamEarnings'] = 0;
     }
     return $arr;
-
 }
 
 /***
@@ -665,7 +588,6 @@ function getGrade($Grade)
         case 0:
             $s = '未认购';
             break;
-
         case 1:
             $s = '✯合伙人';
             break;
@@ -686,8 +608,6 @@ function getGrade($Grade)
             break;
         default:
             $s = '未知合伙人';
-
-
     }
     return $s;
 }
@@ -727,12 +647,10 @@ function ReadDb()
 {
     //要查询的数据库
     $dbname = C('DB_NAME');
-
     $tables = M()->query('SELECT TABLE_NAME,TABLE_COMMENT FROM information_schema.TABLES WHERE table_schema=' . '\'' . $dbname . '\'');
     $txt = '';
     foreach ($tables as $key => $value) {
         $txt .= '*```(' . $value['TABLE_NAME'] . ')  注释(' . $value['TABLE_COMMENT'] . ')' . "\r\n";
-
         $arr = M()->query('SELECT * FROM INFORMATION_SCHEMA.Columns WHERE table_name=' . '\'' . $value['TABLE_NAME'] . '\' AND table_schema=' . '\'' . $dbname . '\'');
         foreach ($arr as $v) {
             $txt .= '                                      ' . $v['COLUMN_NAME'] . '(' . $v['COLUMN_TYPE'] . ')      默认值:' . $v['COLUMN_DEFAULT'] . '   注释:' . $v['COLUMN_COMMENT'] . "\r\n";
@@ -742,10 +660,10 @@ function ReadDb()
         // dump($tablesmsg);
         $txt .= '*******************************************************************************' . "\r\n";
     }
-
     file_put_contents('./Updown/dbdate.txt', $txt);
     echo '数据库读取完成';
 }
+
 /**
  * 友好调试，默认中断
  */
@@ -781,34 +699,13 @@ if (!function_exists('dd')) {
     }
 }
 /**
- * 获取用户真实ip
+ * 字符串加密
+ * @param $string
+ * @param $operation
+ * @param string $key
+ * @param int $expiry
+ * @return bool|string
  */
-if (!function_exists('getIp')) {
-    function getIP()
-    {
-        static $realip;
-        if (isset($_SERVER)) {
-            if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
-                $realip = $_SERVER["HTTP_X_FORWARDED_FOR"];
-            } else if (isset($_SERVER["HTTP_CLIENT_IP"])) {
-                $realip = $_SERVER["HTTP_CLIENT_IP"];
-            } else {
-                $realip = $_SERVER["REMOTE_ADDR"];
-            }
-        } else {
-            if (getenv("HTTP_X_FORWARDED_FOR")) {
-                $realip = getenv("HTTP_X_FORWARDED_FOR");
-            } else if (getenv("HTTP_CLIENT_IP")) {
-                $realip = getenv("HTTP_CLIENT_IP");
-            } else {
-                $realip = getenv("REMOTE_ADDR");
-            }
-        }
-        return $realip;
-    }
-}
-
-
 function authcode($string, $operation, $key = '', $expiry = 0)
 {
     $authkey = Ebh::app()->security['authkey'];
@@ -816,15 +713,12 @@ function authcode($string, $operation, $key = '', $expiry = 0)
     // 加入随机密钥，可以令密文无任何规律，即便是原文和密钥完全相同，加密结果也会每次不同，增大破解难度。
     // 取值越大，密文变动规律越大，密文变化 = 16 的 $ckey_length 次方
     // 当此值为 0 时，则不产生随机密钥
-
     $key = md5($key ? $key : $authkey);
     $keya = md5(substr($key, 0, 16));
     $keyb = md5(substr($key, 16, 16));
     $keyc = $ckey_length ? ($operation == 'DECODE' ? substr($string, 0, $ckey_length) : substr(md5(microtime()), -$ckey_length)) : '';
-
     $cryptkey = $keya . md5($keya . $keyc);
     $key_length = strlen($cryptkey);
-
     $string = $operation == 'DECODE' ? base64_decode(substr($string, $ckey_length)) : sprintf('%010d', $expiry ? $expiry + time() : 0) . substr(md5($string . $keyb), 0, 16) . $string;
     $string_length = strlen($string);
     $result = '';
@@ -833,14 +727,12 @@ function authcode($string, $operation, $key = '', $expiry = 0)
     for ($i = 0; $i <= 255; $i++) {
         $rndkey[$i] = ord($cryptkey[$i % $key_length]);
     }
-
     for ($j = $i = 0; $i < 256; $i++) {
         $j = ($j + $box[$i] + $rndkey[$i]) % 256;
         $tmp = $box[$i];
         $box[$i] = $box[$j];
         $box[$j] = $tmp;
     }
-
     for ($a = $j = $i = 0; $i < $string_length; $i++) {
         $a = ($a + 1) % 256;
         $j = ($j + $box[$a]) % 256;
@@ -859,13 +751,12 @@ function authcode($string, $operation, $key = '', $expiry = 0)
         return $keyc . str_replace('=', '', base64_encode($result));
     }
 }
-
+/**
+ * 生成随机大写字母字符串
+ * @param $length
+ * @return string
+ */
 if (!function_exists('getrandom')) {
-    /**
-     * 生成随机大写字母字符串
-     * @param $length
-     * @return string
-     */
     function getrandom($length)
     {
         $hash = '';
@@ -905,7 +796,6 @@ if (!function_exists('renderjson')) {
  */
 function h($text, $tags = null)
 {
-
     $text = trim($text);
     //完全过滤注释
     $text = preg_replace('/<!--?.*-->/', '', $text);
@@ -927,7 +817,6 @@ function h($text, $tags = null)
     $text = str_replace('<strong>', '{s{t{r{o{n{g{', $text);
     $text = str_replace('</strong>', '}s{t{r{o{n{g{', $text);
     $text = str_replace('background-color', '{b{a{c{k{g{r{o{u{n{d{-{c{o{l{o{r', $text);
-
     //过滤危险的属性，如：过滤on事件lang js
     while (preg_match('/(<[^><]+)(on(?=[a-zA-Z])|lang|action|background|codebase|dynsrc|lowsrc)[^><]+/i', $text, $mat)) {
         $text = str_replace($mat[0], $mat[1], $text);
@@ -1025,10 +914,11 @@ function replace_Links(&$body, $allow_urls = array())
  * 打印调试信息
  */
 if (!function_exists('log_message')) {
-
     function log_message($msg, $level = 'error')
     {
-        if(empty($msg)){return false;}
+        if (empty($msg)) {
+            return false;
+        }
         if (is_array($msg)) {
             $msg = json_encode($msg, JSON_UNESCAPED_UNICODE);
         }
@@ -1048,11 +938,12 @@ if (!function_exists('log_message')) {
  * 创建token
  * @return string
  */
-function createToken(){
-    if(!isset($_SESSION)){
+function createToken()
+{
+    if (!isset($_SESSION)) {
         session_start();
     }
-    $token = uniqid(mt_rand(0,1000000));
+    $token = uniqid(mt_rand(0, 1000000));
     $_SESSION['token'] = $token;
     return $token;
 }
@@ -1062,29 +953,32 @@ function createToken(){
  * @param null $token
  * @return bool
  */
-function checkToken($token=null){
-    if(!isset($_SESSION)){
+function checkToken($token = null)
+{
+    if (!isset($_SESSION)) {
         session_start();
     }
-    if(is_null($token))return false;
-    if(isset($_SESSION['token'])&&$_SESSION['token']==$token){
+    if (is_null($token)) return false;
+    if (isset($_SESSION['token']) && $_SESSION['token'] == $token) {
         unset($_SESSION['token']);
         return true;
-    }else{
+    } else {
         return false;
     }
 }
+
 //编码转换
-function myiconv($str) {
+function myiconv($str)
+{
     global $_SC;
-    if(EBH::app()->output['charset']!='utf-8'){
-        if(is_array($str)){
-            foreach($str as $key=>$value){
+    if (EBH::app()->output['charset'] != 'utf-8') {
+        if (is_array($str)) {
+            foreach ($str as $key => $value) {
                 $str[$key] = myiconv($value);
             }
-        }else{
-            $encode = mb_detect_encoding($str, array('UTF-8','EUC-CN'));
-            if ($_SC['db']['dbtype']=='mssql' && $encode != 'EUC-CN') {
+        } else {
+            $encode = mb_detect_encoding($str, array('UTF-8', 'EUC-CN'));
+            if ($_SC['db']['dbtype'] == 'mssql' && $encode != 'EUC-CN') {
                 $str = iconv('UTF-8', 'GBK', $str);
             }
         }
@@ -1093,14 +987,14 @@ function myiconv($str) {
 }
 
 //传入分类列表，处理出树形结构函数
-function getTree($arr = array(),$upid=0,$index=0){
+function getTree($arr = array(), $upid = 0, $index = 0)
+{
     $tree = array();
     foreach ($arr as $value) {
-
-        if($value['upid']==$upid){
-            $value['name'] = str_repeat('┣━', $index).$value['name'];
+        if ($value['upid'] == $upid) {
+            $value['name'] = str_repeat('┣━', $index) . $value['name'];
             $tree[] = $value;
-            $tree = array_merge($tree,getTree($arr,$value['catid'],$index+1));
+            $tree = array_merge($tree, getTree($arr, $value['catid'], $index + 1));
         }
     }
     return $tree;
@@ -1111,10 +1005,11 @@ function getTree($arr = array(),$upid=0,$index=0){
  * 访问
  * @return boolean
  */
-function is_weixin1(){
-    if(!empty($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) ){
+function is_weixin1()
+{
+    if (!empty($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false)) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
@@ -1126,7 +1021,8 @@ function is_weixin1(){
  * param $quality: 图片缩略后的质量，默认75，如果想高质量，可以设置为100.
  * return : 缩略图路径，文件名上加上size，如给定 D:/2012/1.jpg 缩略图路径即为 D:/2012/1_160_120.jpg
  */
-function thumb($imagepath, $size, $quality = 75) {
+function thumb($imagepath, $size, $quality = 75)
+{
     if (!is_file($imagepath)) {
         return '';
     }
@@ -1169,13 +1065,13 @@ function thumb($imagepath, $size, $quality = 75) {
     }
     $im = $createtype($imagepath);
     $im_p = imagecreatetruecolor($src_nw, $src_nh);
-    if($createtype == 'imagecreatefrompng'){
-        imagesavealpha($im_p,true);
-        imagealphablending($im_p,false);
-        imagesavealpha($im_p,true);
+    if ($createtype == 'imagecreatefrompng') {
+        imagesavealpha($im_p, true);
+        imagealphablending($im_p, false);
+        imagesavealpha($im_p, true);
     }
     imagecopyresampled($im_p, $im, 0, 0, 0, 0, $src_nw, $src_nh, $src_w, $src_h);
-    if($headertype == 'imagejpeg')
+    if ($headertype == 'imagejpeg')
         $headertype($im_p, $thumbpath, $quality);
     else
         $headertype($im_p, $thumbpath);
@@ -1190,7 +1086,8 @@ function thumb($imagepath, $size, $quality = 75) {
  * @param bool $setHeader
  * @return mixed
  */
-function do_post($url, $data , $retJson = true ,$setHeader = false){
+function do_post($url, $data, $retJson = true, $setHeader = false)
+{
     $auth = Ebh::app()->getInput()->cookie('auth');
     $uri = Ebh::app()->getUri();
     $domain = $uri->uri_domain();
@@ -1202,21 +1099,22 @@ function do_post($url, $data , $retJson = true ,$setHeader = false){
                 'Content-Length: ' . strlen($data))
         );
     }
-    if(!empty($_SERVER['HTTP_USER_AGENT'])){
-        curl_setopt($ch, CURLOPT_USERAGENT,$_SERVER['HTTP_USER_AGENT']);
+    if (!empty($_SERVER['HTTP_USER_AGENT'])) {
+        curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
     }
     curl_setopt($ch, CURLOPT_POST, TRUE);
     curl_setopt($ch, CURLOPT_HEADER, FALSE);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
     curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_COOKIE, 'ebh_auth='.urlencode($auth).';ebh_domain='.$domain);
+    curl_setopt($ch, CURLOPT_COOKIE, 'ebh_auth=' . urlencode($auth) . ';ebh_domain=' . $domain);
     $ret = curl_exec($ch);
     curl_close($ch);
-    if($retJson == false){
+    if ($retJson == false) {
         $ret = json_decode($ret);
     }
     return $ret;
 }
+
 /**
  * 判断是否手机浏览器
  * @return int
@@ -1226,32 +1124,25 @@ function is_mobile()
     $check = false;
     // returns true if one of the specified mobile browsers is detected
     // 如果监测到是指定的浏览器之一则返回true
-
     $regex_match = "/(nokia|iphone|android|motorola|^mot\-|softbank|foma|docomo|kddi|up\.browser|up\.link|";
-
     $regex_match .= "htc|dopod|blazer|netfront|helio|hosin|huawei|novarra|CoolPad|webos|techfaith|palmsource|";
-
     $regex_match .= "blackberry|alcatel|amoi|ktouch|nexian|samsung|^sam\-|s[cg]h|^lge|ericsson|philips|sagem|wellcom|bunjalloo|maui|";
-
     $regex_match .= "symbian|smartphone|midp|wap|phone|windows ce|iemobile|^spice|^bird|^zte\-|longcos|pantech|gionee|^sie\-|portalmmm|";
-
     $regex_match .= "jig\s browser|hiptop|^ucweb|^benq|haier|^lct|opera\s*mobi|opera\*mini|320x320|240x320|176x220";
-
     $regex_match .= ")/i";
-
     // preg_match()方法功能为匹配字符，既第二个参数所含字符是否包含第一个参数所含字符，包含则返回1既true
     if (!empty($_SERVER['HTTP_USER_AGENT'])) {
         $check = preg_match($regex_match, strtolower($_SERVER['HTTP_USER_AGENT']));
     }
     return $check;
 }
+
 /**
  * 获取客户端IP地址
  * @return string IP_ADDRESS
  */
-function getip() {
-    //if ($ip_address !== FALSE)
-    //    return $ip_address;
+function getip()
+{
     $ip_address = '';
     if (!empty($_SERVER["HTTP_CLIENT_IP"]))
         $ip_address = $_SERVER["HTTP_CLIENT_IP"];
@@ -1269,7 +1160,8 @@ function getip() {
  * 获取客户端浏览器user_agent信息
  * @return string 返回user_agent信息
  */
-function user_agent() {
+function user_agent()
+{
     $user_agent = '';
     $user_agent = (!isset($_SERVER['HTTP_USER_AGENT'])) ? FALSE : $_SERVER['HTTP_USER_AGENT'];
     return $user_agent;
@@ -1278,164 +1170,165 @@ function user_agent() {
 /**
  *获取客户端信息
  */
-function getClient() {
+function getClient()
+{
     $userAgent = user_agent();
-    if(empty($userAgent))
+    if (empty($userAgent))
         return FALSE;
     $userAgent = strtolower($userAgent);
     //处理系统信息
     $sys = 'other';
     $sysversion = '';
     $vendor = '';
-    if(strpos($userAgent,'ipad') !== FALSE) {
+    if (strpos($userAgent, 'ipad') !== FALSE) {
         $sys = 'iPad';
-        if(preg_match('/cpu os ([\d_]+)/',$userAgent,$matchs)){
+        if (preg_match('/cpu os ([\d_]+)/', $userAgent, $matchs)) {
             $sysversion = $matchs[1];
         }
-    } else if(strpos($userAgent,'iphone') !== FALSE) {
+    } else if (strpos($userAgent, 'iphone') !== FALSE) {
         $sys = 'iPhone';
-        if(preg_match('/iphone os ([\d_]+)/',$userAgent,$matchs)){
+        if (preg_match('/iphone os ([\d_]+)/', $userAgent, $matchs)) {
             $sysversion = $matchs[1];
         }
-    } else if(strpos($userAgent,'android') !== FALSE) {
+    } else if (strpos($userAgent, 'android') !== FALSE) {
         $sys = 'Android';
-        if(preg_match('/android ([\d.]+)/',$userAgent,$matchs)){
+        if (preg_match('/android ([\d.]+)/', $userAgent, $matchs)) {
             $sysversion = $matchs[1];
         }
-    } else if(strpos($userAgent,'linux') !== FALSE) {
+    } else if (strpos($userAgent, 'linux') !== FALSE) {
         $sys = 'Linux';
-    } else if(strpos($userAgent,'windows mobile') !== FALSE || strpos($userAgent,'windows ce') !== FALSE ) {
+    } else if (strpos($userAgent, 'windows mobile') !== FALSE || strpos($userAgent, 'windows ce') !== FALSE) {
         $sys = 'Windows Mobile';
-    } else if(strpos($userAgent,'windows') !== FALSE) {	//windows 则设置版本
-        if(strpos($userAgent,'windows nt 5.0') !== FALSE || strpos($userAgent,'windows 2000') !== FALSE) {
+    } else if (strpos($userAgent, 'windows') !== FALSE) {    //windows 则设置版本
+        if (strpos($userAgent, 'windows nt 5.0') !== FALSE || strpos($userAgent, 'windows 2000') !== FALSE) {
             $sys = 'Win2000';
-        } else if(strpos($userAgent,'windows nt 5.1') !== FALSE || strpos($userAgent,'windows xp') !== FALSE) {
+        } else if (strpos($userAgent, 'windows nt 5.1') !== FALSE || strpos($userAgent, 'windows xp') !== FALSE) {
             $sys = 'WinXP';
-        } else if(strpos($userAgent,'windows nt 5.2') !== FALSE || strpos($userAgent,'windows 2003') !== FALSE) {
+        } else if (strpos($userAgent, 'windows nt 5.2') !== FALSE || strpos($userAgent, 'windows 2003') !== FALSE) {
             $sys = 'Win2003';
-        } else if(strpos($userAgent,'windows nt 6.0') !== FALSE || strpos($userAgent,'windows Vista') !== FALSE) {
+        } else if (strpos($userAgent, 'windows nt 6.0') !== FALSE || strpos($userAgent, 'windows Vista') !== FALSE) {
             $sys = 'WinVista';
-        } else if(strpos($userAgent,'windows nt 6.1') !== FALSE || strpos($userAgent,'windows 7') !== FALSE) {
+        } else if (strpos($userAgent, 'windows nt 6.1') !== FALSE || strpos($userAgent, 'windows 7') !== FALSE) {
             $sys = 'Win7';
-        } else if(strpos($userAgent,'windows nt 6.2') !== FALSE || strpos($userAgent,'windows 8') !== FALSE) {
+        } else if (strpos($userAgent, 'windows nt 6.2') !== FALSE || strpos($userAgent, 'windows 8') !== FALSE) {
             $sys = 'Win8';
-        } else if(strpos($userAgent,'windows nt 6.3') !== FALSE || strpos($userAgent,'windows 8.1') !== FALSE) {
+        } else if (strpos($userAgent, 'windows nt 6.3') !== FALSE || strpos($userAgent, 'windows 8.1') !== FALSE) {
             $sys = 'Win8.1';
-        } else if(strpos($userAgent,'windows nt 10') !== FALSE || strpos($userAgent,'windows 10') !== FALSE) {
+        } else if (strpos($userAgent, 'windows nt 10') !== FALSE || strpos($userAgent, 'windows 10') !== FALSE) {
             $sys = 'Win10';
         }
-    } else if(strpos($userAgent,'mac') !== FALSE) {
+    } else if (strpos($userAgent, 'mac') !== FALSE) {
         $sys = 'Mac';
-    } else if(strpos($userAgent,'X11') !== FALSE) {
+    } else if (strpos($userAgent, 'X11') !== FALSE) {
         $sys = 'Unix';
     }
     //处理浏览器厂家
-    if(strpos($userAgent,'ebhbrowser') !== FALSE) {
+    if (strpos($userAgent, 'ebhbrowser') !== FALSE) {
         $vendor = '直播客户端';
-    } else if(strpos($userAgent,'micromessenger') !== FALSE) {
+    } else if (strpos($userAgent, 'micromessenger') !== FALSE) {
         $vendor = '微信';
-    } else if(strpos($userAgent,'maxthon') !== FALSE) {
+    } else if (strpos($userAgent, 'maxthon') !== FALSE) {
         $vendor = '遨游';
-    } else if(strpos($userAgent,'qqbrowser') !== FALSE) {
+    } else if (strpos($userAgent, 'qqbrowser') !== FALSE) {
         $vendor = 'QQ';
-    } else if(strpos($userAgent,'metasr') !== FALSE) {
+    } else if (strpos($userAgent, 'metasr') !== FALSE) {
         $vendor = '搜狗';
-    } else if(strpos($userAgent,'lbbrowser') !== FALSE) {
+    } else if (strpos($userAgent, 'lbbrowser') !== FALSE) {
         $vendor = '猎豹';
-    } else if(strpos($userAgent,'opr') !== FALSE || strpos($userAgent,'opera') !== FALSE) {
+    } else if (strpos($userAgent, 'opr') !== FALSE || strpos($userAgent, 'opera') !== FALSE) {
         $vendor = '欧朋';
-    } else if(strpos($userAgent,'edge') !== FALSE) {
+    } else if (strpos($userAgent, 'edge') !== FALSE) {
         $vendor = 'Edge';
-    } else if(strpos($userAgent,'bidubrowser') !== FALSE) {
+    } else if (strpos($userAgent, 'bidubrowser') !== FALSE) {
         $vendor = '百度';
-    } else if(strpos($userAgent,'juzibrowser') !== FALSE) {
+    } else if (strpos($userAgent, 'juzibrowser') !== FALSE) {
         $vendor = '桔子';
-    } else if(strpos($userAgent,'theworld') !== FALSE) {
+    } else if (strpos($userAgent, 'theworld') !== FALSE) {
         $vendor = '世界之窗';
-    } else if(strpos($userAgent,'firefox') !== FALSE) {
+    } else if (strpos($userAgent, 'firefox') !== FALSE) {
         $vendor = '火狐';
-    } else if(strpos($userAgent,'ubrowser') !== FALSE) {
+    } else if (strpos($userAgent, 'ubrowser') !== FALSE) {
         $vendor = 'UC';
-    } else if(strpos($userAgent,'chrome') !== FALSE) {
+    } else if (strpos($userAgent, 'chrome') !== FALSE) {
         $vendor = '谷歌';
     }//chrome放在最后
     //处理浏览器和版本信息
     $browser = '';
     $broversion = 0;
-    if(preg_match('/ebhbrowser\/([\d.]+)/',$userAgent,$matchs)) {
+    if (preg_match('/ebhbrowser\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'ebhBrowser';
-    } else if(preg_match('/bidubrowser\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/bidubrowser\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'BIDUBrowser';
-    } else if(preg_match('/juzibrowser\/([\d.]+)/',$userAgent,$matchs)) {//没有版本,ie
+    } else if (preg_match('/juzibrowser\/([\d.]+)/', $userAgent, $matchs)) {//没有版本,ie
         $broversion = $matchs[1];
         $browser = 'juzibrowser';
-    } else if(preg_match('/lbbrowser\/([\d.]+)/',$userAgent,$matchs)) {//没有版本,chrome
+    } else if (preg_match('/lbbrowser\/([\d.]+)/', $userAgent, $matchs)) {//没有版本,chrome
         $broversion = $matchs[1];
         $browser = 'lbbrowser';
-    } else if(preg_match('/ubrowser\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/ubrowser\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'ubrowser';
-    } else if(preg_match('/theworld ([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/theworld ([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'theworld';
-    } else if(preg_match('/micromessenger\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/micromessenger\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'micromessenger';
-    } else if(preg_match('/edge\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/edge\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'Edge';
-    } else if(preg_match('/maxthon\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/maxthon\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'maxthon';
-    } else if(preg_match('/qqbrowser\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/qqbrowser\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'qqbrowser';
-    } else if(preg_match('/metasr ([\d.]+)/',$userAgent,$matchs)) {//版本与关于里不太符合,1.0
+    } else if (preg_match('/metasr ([\d.]+)/', $userAgent, $matchs)) {//版本与关于里不太符合,1.0
         $broversion = $matchs[1];
         $browser = 'metasr';
-    } else if(preg_match('/trident\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/trident\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = intval($matchs[1]);
         $browser = 'IE';
         $broversion = $broversion + 4;
-    } else if(preg_match('/rv:([\d.]+)\) like gecko/',$userAgent,$matchs)) {
+    } else if (preg_match('/rv:([\d.]+)\) like gecko/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'IE';
-    } else if(preg_match('/msie ([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/msie ([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'IE';
-    } else if(preg_match('/firefox\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/firefox\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'Firefox';
-    } else if(preg_match('/opera.([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/opera.([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'Opera';
-    } else if(preg_match('/opr\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/opr\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'Opera';
-    } else if(preg_match('/chrome\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/chrome\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'Chrome';
-    } else if(preg_match('/safari\/([\d.]+)/',$userAgent,$matchs)) {
+    } else if (preg_match('/safari\/([\d.]+)/', $userAgent, $matchs)) {
         $broversion = $matchs[1];
         $browser = 'Safari';
     }
     $ip = getip();
 
-    $client = array('system'=>$sys,'systemversion'=>$sysversion,'browser'=>$browser,'broversion'=>$broversion,'vendor'=>$vendor,'ip'=>$ip);
+    $client = array('system' => $sys, 'systemversion' => $sysversion, 'browser' => $browser, 'broversion' => $broversion, 'vendor' => $vendor, 'ip' => $ip);
     return $client;
 }
-
 /**
  * 隐藏名字第二个字(中英文) 如：张*丰
  * @param $name
  * @return string
  */
-function hidename($name){
+function hidename($name)
+{
     $strlen = mb_strlen($name, 'utf-8');
     $firstStr = mb_substr($name, 0, 1, 'utf-8');
     $lastStr = mb_substr($name, 2, $strlen - 2, 'utf-8');
-    $name = $firstStr.'*'.$lastStr;
+    $name = $firstStr . '*' . $lastStr;
     return $name;
 }
