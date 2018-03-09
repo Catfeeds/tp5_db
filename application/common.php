@@ -1427,3 +1427,15 @@ function getClient() {
     return $client;
 }
 
+/**
+ * 隐藏名字第二个字(中英文) 如：张*丰
+ * @param $name
+ * @return string
+ */
+function hidename($name){
+    $strlen = mb_strlen($name, 'utf-8');
+    $firstStr = mb_substr($name, 0, 1, 'utf-8');
+    $lastStr = mb_substr($name, 2, $strlen - 2, 'utf-8');
+    $name = $firstStr.'*'.$lastStr;
+    return $name;
+}
