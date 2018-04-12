@@ -131,7 +131,7 @@ class Index extends Controller
      * @User:gl
      */
     public function getSerialize()
-    {
+    {   //abcd();die;
         return $this->fetch('index/getserialize');
     }
 
@@ -147,6 +147,9 @@ class Index extends Controller
             $txtContent = str_replace('\\', '', $txtContent);
         $ret = @unserialize($txtContent);
         if (empty($ret)) {
+            $ret = json_decode($txtContent, true);
+        }
+        if($type == 3){
             $ret = json_decode($txtContent, true);
         }
         $str = '<pre>';
