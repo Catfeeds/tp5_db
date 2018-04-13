@@ -130,4 +130,62 @@ class CacheRedis extends Redis
     /*******************************************************
     队列操作结束 end
      ********************************************************/
+    /**
+     * 获取队列中的元素
+     * @Author:tzq
+     * @Date:2018.3.6
+     * @param $queueName string 要获取的键名,不包含前缀
+     * @param int $start  int   获取开始位置 默认为0
+     * @param int $end    int   要获取的结束位置 默认全部获取
+     * @return array
+     */
+    public function lRange($queueName,$start=0,$end=-1){
+        $res =  $this->handler->lRange($this->formatKey($queueName),$start,$end);
+        if($res){
+            foreach ($res as $index => &$re) {
+                $re = $this->unformatValue($re);
+            }
+        }
+        return $res;
+    }
+
+    /**
+     * 通过下标获取redis列表中的值
+     * @Author:tzq
+     * @Date:2018.3.6
+     * @param $key string  键名
+     * @param int $index   下标值
+     * @return string
+     */
+    public function lIndex($key,$index = 0){
+        return $this->unformatValue($this->handler->lIndex($this->formatKey($key),$index));
+    }
+
+    /**
+     * 通过下标设置redis的值
+     * @Author:tzq
+     * @Date:2018.3.6
+     * @param $key  string 不含前缀的key
+     * @param $index int   redis下标
+     * @param $value string 要设置的值
+     * @return void
+     */
+    public function lSet($key,$index,$value){
+        $this->handler->lSet($this->formatKey($key),$index,$this->formatValue($value));
+    }
+
+    /**
+     * 按指定值删除redis元素
+     * @Author:tzq
+     * @Date:2018.3.6
+     * @param $key  string 不含前缀的key
+     * @param $value  string 要删除的值
+     * @param int $count  count > 0 : 从表头开始向表尾搜索，移除与 VALUE 相等的元素，数量为 COUNT 。
+     * count < 0 : 从表尾开始向表头搜索，移除与 VALUE 相等的元素，数量为 COUNT 的绝对值。
+     * count = 0 : 移除表中所有与 VALUE 相等的值。
+     * @return int  返回被删除的行数
+     */
+    public function lRem($key,$value,$count=0){
+        return $this->handler->lRem($this->formatKey($key),$this->formatValue($value),$count);
+    }
 }

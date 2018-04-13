@@ -132,6 +132,7 @@ class Index extends Controller
      */
     public function getSerialize()
     {   //abcd();die;
+        // renderjson(200,'SUCCESS',['name'=>'zhangsan','sex'=>'nan']);
         return $this->fetch('index/getserialize');
     }
 
