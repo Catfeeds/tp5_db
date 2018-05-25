@@ -41,7 +41,7 @@ class Test extends Controller
 
     //加载测试视图
     public function testlist()
-    {
+    {   //log_message(6454545);//新的日志输出方式 改动版
         return $this->fetch('test/testlist');
     }
 

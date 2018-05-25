@@ -9,6 +9,7 @@
 
 namespace app\db\model;
 
+use function foo\func;
 use think\Model;
 use think\DB;
 
@@ -19,6 +20,28 @@ class User extends Model
     {
 
         $list = DB::table('ebh_users')->field('uid,username')->limit($page, $limit)->select();
+        $list = DB::table('ebh_users')->field('uid,username')->limit($page, $limit)->count();
+        $list = DB::table('ebh_takes')
+            ->alias('t')
+            ->join('ebh_classrooms cr','cr.crid=t.crid','left')
+            ->field(['cr.crid','cr.crname','cr.domain','sum(t.total) as total2','count(1) times'])
+            ->where(['state'=>1,'del'=>['<>',1]])
+            ->group('crid')
+            ->order('total2 desc')
+            ->select();
+        
+        //--------------------------------
+        $list = db('takes')//使用助手函数 不用加前缀
+            ->alias('t')
+            ->join('ebh_classrooms cr','cr.crid=t.crid','left')
+            ->field(['cr.crid','cr.crname','cr.domain','sum(t.total) as total2','count(1) times'])
+            ->where(['state'=>1,'del'=>['<>',1]])
+            ->group('crid')
+            ->order('total2 desc')
+            ->select();
+        //---------------原生写法
+        $list = DB::query('SELECT `cr`.`crid`,`cr`.`crname`,`cr`.`domain`,sum(t.total) as total2,count(1) times FROM `ebh_takes` `t` LEFT JOIN `ebh_classrooms` `cr` ON `cr`.`crid`=`t`.`crid` WHERE  `state` = 1  AND `del` <> 1 GROUP BY crid ORDER BY total2 desc');
+        log_message(DB::table('ebh_users')->getLastSql());
         return $list;
     }
 

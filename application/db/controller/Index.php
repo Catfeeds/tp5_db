@@ -17,7 +17,7 @@ class Index extends Controller
      */
     public function _empty($name)
     {
-        echo $name . '控制器不存在';
+        echo $name . '方法不存在';
         //$this->index();
 
     }
