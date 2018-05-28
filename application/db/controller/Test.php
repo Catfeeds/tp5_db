@@ -12,6 +12,7 @@ namespace app\db\controller;
 use think\Controller;
 use app\db\model\User;
 use app\api\controller\CacheRedis;
+use think\Config;
 
 class Test extends Controller
 {
@@ -23,6 +24,14 @@ class Test extends Controller
         $this->user = new User();
     }
 
+    /**
+     * @description 获取指定的配置
+     */
+    public function test(){
+        // dump(Config::get('database_foo'));
+        $bank = config('bank');//获取其他配置 配置文件在 application/extra/
+        dump($bank);
+    }
     public function index()
     {
         return $this->fetch('test/index');

@@ -25,7 +25,8 @@ return [
     //'postData'=>'@db/index/postData',
     '/'=>'@db/test/testlist',//默认
     'xlh'=>'@db/index/getSerialize',
-    'redis'=>'@db/test/redis'
+    'redis'=>'@db/test/redis',
+    'test'=>'@db/test/test'
     //'vue'=>'@db/test/index',
     ////'getlist'=>'@db/test/getlist',
     ////'getlist/:p'=>'@db/test/getlist',
