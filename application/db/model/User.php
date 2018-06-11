@@ -16,10 +16,11 @@ use think\DB;
 class User extends Model
 {
     //用户列表
-    public function userlist($page = 1, $pagesize = 50)
+    public function userlist($param)
     {
-        $limit = (max(0, ($page - 1) * $pagesize)) . ", {$pagesize}";
-        $list0 = DB::table('ebh_users')->field('uid,username,realname')->order('uid desc')->limit($limit)->select();
+        $limit = (max(0, ($param['page'] - 1) *$param['pagesize'])) . ", {$param['pagesize']}";
+        $wherearr['status'] = isset($param['status']) ? (int)$param['status'] :1;
+        $list0 = DB::table('ebh_users')->field('uid,username,realname')->where($wherearr)->order('uid desc')->limit($limit)->select();
         log_message(DB::table('ebh_users')->getLastSql());
         $list = DB::table('ebh_users')->field('uid,username')->limit($limit)->count();
         $list = DB::table('ebh_takes')

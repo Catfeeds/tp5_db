@@ -171,9 +171,10 @@ class Test extends Controller
      * @description 获取列表
      */
     private function getlist2(){
-        $page = input('page',2,'int');//默认值 参数验证
+        $param['page'] = input('page',2,'int');//默认值 参数验证
+        $param['pagesize'] = input('pagesize',50,'int');//默认值 参数验证
         $user = new User();
-        $list = $user->userlist($page, 50);
+        $list = $user->userlist($param);
         renderjson(200,'success',$list);
     }
 
