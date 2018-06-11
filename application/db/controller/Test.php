@@ -12,6 +12,7 @@ namespace app\db\controller;
 use think\Controller;
 use app\db\model\User;
 use app\api\controller\CacheRedis;
+use think\Loader;
 use think\Config;
 use think\Request;
 class Test extends Controller
@@ -183,7 +184,13 @@ class Test extends Controller
      */
     private function add()
     {
-
+        $data = request()->param();
+        $validate = Loader::validate('Users');
+        if(false=== $validate->scene('add')->check($data)){
+            $error = $validate->getError();
+            renderjson(200,'error',$error);
+            dump($validate->getError());
+        }
     }
 
     /**
@@ -191,6 +198,12 @@ class Test extends Controller
      */
     private function update()
     {
+        $data = request()->param();
+        $validate = Loader::validate('Users');
+        if(false=== $validate->scene('edit')->check($data)){
+            $error = $validate->getError();
+            renderjson(200,'error',$error);
+        }
     }
 
     /**
@@ -198,7 +211,12 @@ class Test extends Controller
      */
     private function delete()
     {
-
+        $data = request()->param();
+        $validate = Loader::validate('Users');
+        if(false=== $validate->scene('del')->check($data)){
+            $error = $validate->getError();
+            renderjson(200,'error',$error);
+        }
     }
 
 }
