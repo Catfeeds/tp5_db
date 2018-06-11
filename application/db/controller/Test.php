@@ -13,7 +13,7 @@ use think\Controller;
 use app\db\model\User;
 use app\api\controller\CacheRedis;
 use think\Config;
-
+use think\Request;
 class Test extends Controller
 {
     protected $user;
@@ -28,6 +28,7 @@ class Test extends Controller
      * @description 获取指定的配置
      */
     public function test(){
+        echo '<script>alert(1)</script>';die;
         // dump(Config::get('database_foo'));
         $bank = config('bank');//获取其他配置 配置文件在 application/extra/
         dump($bank);
@@ -103,18 +104,100 @@ class Test extends Controller
     /**
      * ajax上传文件
      */
-    public function ajaxupload(){
-        if(request()->isAjax()){
-            if(!file_exists('123.zip')) {
-                move_uploaded_file($_FILES['part']['tmp_name'],'123.zip');
+    public function ajaxupload()
+    {
+        if (request()->isAjax()) {
+            if (!file_exists('123.zip')) {
+                move_uploaded_file($_FILES['part']['tmp_name'], '123.zip');
             } else {
-                file_put_contents('123.zip',file_get_contents($_FILES['part']['tmp_name']),FILE_APPEND);
+                file_put_contents('123.zip', file_get_contents($_FILES['part']['tmp_name']), FILE_APPEND);
             }
             echo 'ok';
-        }else{
+        } else {
 
             return $this->fetch('test/ajaxupload');
         }
+    }
+
+    /**
+     * @description 路由测试
+     */
+    public function test2()
+    {
+        $request = Request::instance()->param();//获取任意类型的所有参数
+        $request = request()->param();//获取任意类型的所有参数
+        // $request = Request::instance()->get();//只获取get类型的参数 其他类型同理
+        $ip = Request::instance()->ip();//获取请求ip
+        $type = Request::instance()->method();//获取请求ip
+        $request = input('param.');
+        $request2 = input('get.');
+        $request3 = input('post.');
+
+        // echo request()->domain();//获取请求域名
+        if (request()->isPost()) {
+            echo '这是post请求';
+            die;//判断是否是POST请求  isPut isGet isDelete isHeader ..
         }
+        // echo $ip;die;
+        echo $type;
+        die;
+        $id = input('id', '0', 'int');
+        echo json_encode($request3, JSON_UNESCAPED_UNICODE);
+    }
+
+    /**
+     * @description 请求测试
+     */
+    public function test3()
+    {
+        $method = request()->method();
+        switch($method){
+            case 'GET':
+                $this->getlist2();
+                break;
+            case 'POST':
+                $this->add();
+                break;
+            case 'PUT':
+                $this->update();
+                break;
+            case 'DELETE':
+                $this->delete();
+                break;
+        }
+    }
+
+    /**
+     * @description 获取列表
+     */
+    private function getlist2(){
+        $page = input('page',2,'int');//默认值 参数验证
+        $user = new User();
+        $list = $user->userlist($page, 50);
+        renderjson(200,'success',$list);
+    }
+
+    /**
+     * @description 添加数据
+     */
+    private function add()
+    {
+
+    }
+
+    /**
+     * @description 修改数据
+     */
+    private function update()
+    {
+    }
+
+    /**
+     * @description 删除数据
+     */
+    private function delete()
+    {
+
+    }
 
 }

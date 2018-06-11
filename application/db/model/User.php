@@ -16,11 +16,12 @@ use think\DB;
 class User extends Model
 {
     //用户列表
-    public function userlist($page = 0, $limit = 50)
+    public function userlist($page = 1, $pagesize = 50)
     {
-
-        $list = DB::table('ebh_users')->field('uid,username')->limit($page, $limit)->select();
-        $list = DB::table('ebh_users')->field('uid,username')->limit($page, $limit)->count();
+        $limit = (max(0, ($page - 1) * $pagesize)) . ", {$pagesize}";
+        $list0 = DB::table('ebh_users')->field('uid,username,realname')->order('uid desc')->limit($limit)->select();
+        log_message(DB::table('ebh_users')->getLastSql());
+        $list = DB::table('ebh_users')->field('uid,username')->limit($limit)->count();
         $list = DB::table('ebh_takes')
             ->alias('t')
             ->join('ebh_classrooms cr','cr.crid=t.crid','left')
@@ -41,10 +42,10 @@ class User extends Model
             ->select();
         //---------------原生写法
         $list = DB::query('SELECT `cr`.`crid`,`cr`.`crname`,`cr`.`domain`,sum(t.total) as total2,count(1) times FROM `ebh_takes` `t` LEFT JOIN `ebh_classrooms` `cr` ON `cr`.`crid`=`t`.`crid` WHERE  `state` = 1  AND `del` <> 1 GROUP BY crid ORDER BY total2 desc');
-        log_message(DB::table('ebh_users')->getLastSql());
+        // log_message(DB::table('ebh_users')->getLastSql());
         // 读取其他的数据库
         $list = DB::connect('database_foo')->table('shop_fees')->select();//获取其他的数据库数据 配置文件在 application/extra/
-        return $list;
+        return $list0;
     }
 
     //
