@@ -7,11 +7,12 @@
  * Description:
  */
 
-namespace app\db\controller;
+namespace app\db\controller\test;
 
-use think\Controller;
+
 use app\db\model\User;
 use app\api\controller\CacheRedis;
+use think\Controller;
 use think\Loader;
 use think\Config;
 use think\Request;
@@ -206,6 +207,7 @@ class Test extends Controller
     private function update()
     {
         $data = request()->param();
+        // $result = $this->validate($data,'Users.edit',[],true);//批量验证
         $result = $this->validate($data,'Users.edit');
         if (true !== $result) {
             renderjson(200, 'error', $result);

@@ -70,7 +70,7 @@ return [
     // 操作方法后缀
     'action_suffix' => '',
     // 自动搜索控制器
-    'controller_auto_search' => false,
+    'controller_auto_search' => true,//比如多层级控制器 db\test\Test
     //关闭缓存
     'tmpl_cache_on' => false,
     // +----------------------------------------------------------------------
