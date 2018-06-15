@@ -48,4 +48,4 @@ Route::post('hello','db/test/test2');//传参
 // Route::any('any','db/test/test3');//传参
 Route::any('any','db/test.Test/test3');//带目录的控制器 传参
 Route::any('get/:id','db/test.Test/test4');
-Route::any('jwt','db/test.Jwt/testjwt');
+Route::any('jwt','db/test.Myjwt/testjwt');

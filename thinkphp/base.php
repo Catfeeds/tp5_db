@@ -61,3 +61,10 @@ if (is_file(ROOT_PATH . '.env')) {
 
 // 加载惯例配置文件
 \think\Config::set(include THINK_PATH . 'convention' . EXT);
+
+// 注册vendor命名空间
+\think\Loader::addNamespace('vendor',VENDOR_PATH);
+
+// 注册extend命名空间
+\think\Loader::addNamespace('extend',EXTEND_PATH);
+

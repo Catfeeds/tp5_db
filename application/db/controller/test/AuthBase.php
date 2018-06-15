@@ -12,14 +12,15 @@ namespace app\db\controller\test;
 use think\Controller;
 use think\Config;
 use app\db\model\User;
+use extend\jwt\Jwt;
 class AuthBase extends Controller
 {
     protected $userinfo;
     public function _initialize(){
         parent::_initialize();
-        import('jwt.Jwt', EXTEND_PATH);
+        // import('jwt.Jwt', EXTEND_PATH);
         $authorization = getHeader('authorization');
-        $jwt = (new \Jwt(Config::get('jwt')['key']))->decode($authorization);
+        $jwt = (new Jwt(Config::get('jwt')['key']))->decode($authorization);
         if(!$jwt){
             renderjson(403,'fail','用户登录授权失败');
         }

@@ -19,6 +19,7 @@ use think\Config;
 use think\Request;
 use app\db\validate\Users;
 use think\Log;
+use extend\jwt\Jwt;
 class Test extends Controller
 {
     protected $user;
@@ -240,12 +241,16 @@ class Test extends Controller
     public function test4(){
         // $jwt = config('jwt')['key'];
         // dump($jwt);die;
+        // $class = new \Jwt();
+       $jwt= (new Jwt(config('jwt')['key']))->encode(['uid'=>123]);
+       echo $jwt;die;
         $request = request()->param();
         $data = [
             'uid'=>$request['id']
         ];
         (new Users())->scene('get')->goCheck($data);//自定义传参 默认会传递 ['id'=>21] 这样与验证规则不符
     }
+
 
 
 }
