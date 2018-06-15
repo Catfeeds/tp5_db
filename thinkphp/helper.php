@@ -250,6 +250,7 @@ if (!function_exists('vendor')) {
      */
     function vendor($class, $ext = EXT)
     {
+        var_dump(Loader::import($class, VENDOR_PATH, $ext));die;
         return Loader::import($class, VENDOR_PATH, $ext);
     }
 }

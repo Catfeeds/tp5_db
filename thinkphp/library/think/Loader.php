@@ -308,6 +308,8 @@ class Loader
         static $_file = [];
         $key          = $class . $baseUrl;
         $class        = str_replace(['.', '#'], [DS, '.'], $class);
+        // log_message('第三方类'.$class.'地址'.$baseUrl);
+        // log_message('key'.$_file[$key]);
         if (isset($_file[$key])) {
             return true;
         }

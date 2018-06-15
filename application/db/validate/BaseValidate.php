@@ -1,7 +1,7 @@
 <?php
 /**
  * @Class: BaseValidate.php
- * @Description: 控制器
+ * @Description: 基类验证器
  * @Author: gl
  * @Date: 2018/6/15
  */
@@ -14,11 +14,11 @@ use think\Request;
 
 class BaseValidate extends Validate
 {
-    public function goCheck($data=null)
+    public function goCheck($data = null)
     {
-        if(null !==$data ){
+        if (null !== $data) {
             $params = $data;
-        }else{
+        } else {
             $request = Request::instance();
             $params = $request->param();
         }
@@ -26,7 +26,7 @@ class BaseValidate extends Validate
         if ($result) {
             return true;
         } else {
-            renderjson(400,'fail',$this->getError());
+            renderjson(400, 'fail', $this->getError());
         }
     }
 }

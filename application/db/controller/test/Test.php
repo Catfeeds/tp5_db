@@ -13,11 +13,12 @@ namespace app\db\controller\test;
 use app\db\model\User;
 use app\api\controller\CacheRedis;
 use think\Controller;
+use Think\Exception;
 use think\Loader;
 use think\Config;
 use think\Request;
 use app\db\validate\Users;
-
+use think\Log;
 class Test extends Controller
 {
     protected $user;
@@ -237,11 +238,14 @@ class Test extends Controller
      * @description
      */
     public function test4(){
+        // $jwt = config('jwt')['key'];
+        // dump($jwt);die;
         $request = request()->param();
         $data = [
             'uid'=>$request['id']
         ];
         (new Users())->scene('get')->goCheck($data);//自定义传参 默认会传递 ['id'=>21] 这样与验证规则不符
     }
+
 
 }

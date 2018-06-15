@@ -56,6 +56,7 @@ class Log
         $class        = false !== strpos($type, '\\') ? $type : '\\think\\log\\driver\\' . ucwords($type);
         self::$config = $config;
         unset($config['type']);
+        var_dump($class);
         if (class_exists($class)) {
             self::$driver = new $class($config);
         } else {

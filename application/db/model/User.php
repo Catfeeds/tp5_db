@@ -21,7 +21,7 @@ class User extends Model
         $limit = (max(0, ($param['page'] - 1) *$param['pagesize'])) . ", {$param['pagesize']}";
         $wherearr['status'] = isset($param['status']) ? (int)$param['status'] :1;
         $list0 = DB::table('ebh_users')->field('uid,username,realname')->where($wherearr)->order('uid desc')->limit($limit)->select();
-        log_message(DB::table('ebh_users')->getLastSql());
+        // log_message(DB::table('ebh_users')->getLastSql());
         $list = DB::table('ebh_users')->field('uid,username')->limit($limit)->count();
         $list = DB::table('ebh_takes')
             ->alias('t')
@@ -68,6 +68,20 @@ class User extends Model
             return $count;
         }
 
+    }
+
+    /**
+     * @description 根据uid获取用户信息
+     * @param $uid
+     */
+    public function getUserByUid($uid)
+    {
+        $user = DB::name('users')->find($uid);
+        if(null != $user){
+            return $user;
+        }else{
+            return false;
+        }
     }
 
 }

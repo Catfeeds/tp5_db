@@ -1332,3 +1332,31 @@ function hidename($name)
     $name = $firstStr . '*' . $lastStr;
     return $name;
 }
+/**
+ * 获取指定请求头
+ * @param $key
+ * @return bool
+ */
+function getHeader($key){
+    $allHeaders = getallheaders();
+    if(isset($allHeaders[ucfirst(strtolower($key))])){
+        return $allHeaders[ucfirst(strtolower($key))];
+    }
+    return false;
+}
+
+//获取header头信息,兼容nginx
+if (!function_exists('getallheaders'))
+{
+    function getallheaders()
+    {
+        foreach ($_SERVER as $name => $value)
+        {
+            if (substr($name, 0, 5) == 'HTTP_')
+            {
+                $headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value;
+            }
+        }
+        return $headers;
+    }
+}
