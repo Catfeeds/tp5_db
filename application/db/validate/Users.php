@@ -6,14 +6,13 @@
  * @Date: 2018/6/11
  */
 namespace app\db\validate;
-use think\Validate;
-use think\Db;
+use app\db\validate\BaseValidate;
 
-class Users extends Validate
+class Users extends BaseValidate
 {
     // 验证规则
     protected $rule = [
-        'uid' => 'require|number',
+        'uid' => 'require|number|gt:0',
         'username' => 'require|min:4|max:16|checkTrue|unique:users',
         'realname' => 'require|min:4|max:8|checkTrue',
         'groupid' => 'require|number',
@@ -23,6 +22,7 @@ class Users extends Validate
     protected $message = [
         'uid.require' => 'uid必填',
         'uid.number' => 'uid必须是数字',
+        'uid.gt' => 'uid必须大于0',
         'username.require' => '用户名不能为空',
         'username.min' => '用户名长度至少为3个字符',
         'username.max' => '用户名长度最多为16个字符',
@@ -45,6 +45,7 @@ class Users extends Validate
     }
     //验证场景
     protected $scene = [
+        'get' => ['uid'],
         'add'  => ['username', 'realname', 'groupid','status'],
         'edit' => ['uid','username', 'realname', 'groupid','status'],
         'del'  => ['uid'],

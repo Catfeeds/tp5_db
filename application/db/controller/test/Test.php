@@ -16,6 +16,7 @@ use think\Controller;
 use think\Loader;
 use think\Config;
 use think\Request;
+use app\db\validate\Users;
 
 class Test extends Controller
 {
@@ -186,19 +187,20 @@ class Test extends Controller
      */
     private function add()
     {
-        $data = request()->param();
+        // $data = request()->param();
         // $validate = Loader::validate('Users');
         // if (false === $validate->scene('add')->check($data)) {
         //     $error = $validate->getError();
         //     renderjson(200, 'error', $error);
         //     dump($validate->getError());
         // }
-        $result = $this->validate($data,'Users.add');
-        if (true !== $result) {
-            renderjson(200, 'error', $result);
-        }else{
-            //执行添加
-        }
+        // $result = $this->validate($data,'Users.add');
+        // if (true !== $result) {
+        //     renderjson(200, 'error', $result);
+        // }else{
+        //     //执行添加
+        // }
+        (new Users())->scene('add')->goCheck();//不通过 自动输出错误信息 并终止代码
     }
 
     /**
@@ -206,14 +208,15 @@ class Test extends Controller
      */
     private function update()
     {
-        $data = request()->param();
-        // $result = $this->validate($data,'Users.edit',[],true);//批量验证
-        $result = $this->validate($data,'Users.edit');
-        if (true !== $result) {
-            renderjson(200, 'error', $result);
-        }else{
-            //执行修改
-        }
+        // $data = request()->param();
+        // // $result = $this->validate($data,'Users.edit',[],true);//批量验证
+        // $result = $this->validate($data,'Users.edit');
+        (new Users())->scene('edit')->goCheck();
+        // if (true !== $result) {
+        //     renderjson(200, 'error', $result);
+        // }else{
+        //     //执行修改
+        // }
     }
 
     /**
@@ -221,12 +224,24 @@ class Test extends Controller
      */
     private function delete()
     {
-        $data = request()->param();
-        $validate = Loader::validate('Users');
-        if (false === $validate->scene('del')->check($data)) {
-            $error = $validate->getError();
-            renderjson(200, 'error', $error);
-        }
+        // $data = request()->param();
+        // $validate = Loader::validate('Users');
+        // if (false === $validate->scene('del')->check($data)) {
+        //     $error = $validate->getError();
+        //     renderjson(200, 'error', $error);
+        // }
+        (new Users())->scene('del')->goCheck();
+    }
+
+    /**
+     * @description
+     */
+    public function test4(){
+        $request = request()->param();
+        $data = [
+            'uid'=>$request['id']
+        ];
+        (new Users())->scene('get')->goCheck($data);//自定义传参 默认会传递 ['id'=>21] 这样与验证规则不符
     }
 
 }
