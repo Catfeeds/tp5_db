@@ -10,6 +10,7 @@
 namespace app\db\model;
 
 use function foo\func;
+// use Think\Exception;
 use think\Model;
 use think\DB;
 
@@ -84,4 +85,20 @@ class User extends Model
         }
     }
 
+    /**
+     * @description 测试全局异常处理
+     * @param $id
+     */
+    public function getUserById($id)
+    {
+        try{
+            1/1;
+            1/0;
+        }catch (Exception $e){
+            throw $e;
+        }
+        return 'this is banner info';
+        die;
+        return 0;
+    }
 }

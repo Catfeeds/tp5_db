@@ -20,6 +20,8 @@ use think\Request;
 use app\db\validate\Users;
 use think\Log;
 use extend\jwt\Jwt;
+use app\lib\exception\UserMissException;
+
 class Test extends Controller
 {
     protected $user;
@@ -251,6 +253,15 @@ class Test extends Controller
         (new Users())->scene('get')->goCheck($data);//自定义传参 默认会传递 ['id'=>21] 这样与验证规则不符
     }
 
-
+    // 异常测试
+    public function testException()
+    {
+        // log_message(1111);
+        $userInfo = $this->user->getUserById(12);
+        if(!$userInfo){
+            throw new UserMissException();
+        }
+        return $userInfo;
+    }
 
 }

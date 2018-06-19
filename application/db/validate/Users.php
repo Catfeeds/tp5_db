@@ -8,6 +8,7 @@
 namespace app\db\validate;
 use app\db\validate\BaseValidate;
 
+
 class Users extends BaseValidate
 {
     // 验证规则
@@ -16,7 +17,8 @@ class Users extends BaseValidate
         'username' => 'require|min:4|max:16|checkTrue|unique:users',
         'realname' => 'require|min:4|max:8|checkTrue',
         'groupid' => 'require|number',
-        'status' => 'require|number'
+        'status' => 'require|number',
+        'id'=>'require|isNumber'
     ];
     // 错误消息
     protected $message = [
@@ -43,6 +45,7 @@ class Users extends BaseValidate
             return $field.'格式错误'.$data[$field];
         }
     }
+
     //验证场景
     protected $scene = [
         'get' => ['uid'],
