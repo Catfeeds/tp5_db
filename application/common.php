@@ -922,9 +922,10 @@ if (!function_exists('log_message')) {
         if (is_array($msg)) {
             $msg = json_encode($msg, JSON_UNESCAPED_UNICODE);
         }
+        $cutline = '---------------------------------------------------------------';
         $date = date('Y-m-d H:i:s');
         $title = $level . ' - ' . "$date -->\n";
-        $content = $title . $msg . "\n\n";
+        $content = $cutline."\n".$title . $msg . "\n";
         $savepath = LOG_PATH;
         $filename = $savepath . date('Y-m-d') . '.log';
         $fp = fopen($filename, 'a');

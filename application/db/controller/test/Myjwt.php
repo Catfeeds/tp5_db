@@ -11,6 +11,7 @@ namespace app\db\controller\test;
 use extend\jwt\Jwt;
 use app\db\controller\test\AuthBase;
 use think\Controller;
+use app\db\validate\Users;
 
 class Myjwt extends AuthBase
 {
@@ -47,7 +48,8 @@ class Myjwt extends AuthBase
      */
     private function checkJwt()
     {
-        var_dump($this->userinfo);
+        (new Users())->scene('test')->goCheck();
+        // var_dump($this->userinfo);
         // Log::write('dfdfdf');
     }
     // -----------------------------jwt 测试结束----------------------------
