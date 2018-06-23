@@ -283,7 +283,7 @@ class Test extends Controller
         $user = User::getUserList($param);
         // $user = User::getUserByUid2($id);
         return json($user,201,'success',200);//重写的json方法 第一个code是数据加入的code信息 第二个code 是请求返回状态值
-        // renderjson(200,'success',$user);
+        // renderjson(200,'success',$user);；
     }
 
 }
