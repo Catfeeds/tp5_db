@@ -18,3 +18,8 @@ define('LOG_PATH',__DIR__.'/../logs/');
 define('APP_DEBUG',false);
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
+\think\Log::init([
+    'type' => 'File',
+    'path' => LOG_PATH,
+    'level' => ['sql'],
+]);
