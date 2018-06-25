@@ -457,9 +457,9 @@ if (!function_exists('json')) {
      * @param array   $options 参数
      * @return \think\response\Json
      */
-    function json($data = [], $code = 200, $header = [], $options = [])
+    function json($data = [], $echoCode=200, $msg='success',$code = 200, $header = [], $options = [])
     {
-        return Response::create($data, 'json', $code, $header, $options);
+        return Response::create(['code'=>$echoCode,'msg'=>$msg,'data'=>$data], 'json', $code, $header, $options);
     }
 }
 

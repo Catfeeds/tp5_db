@@ -8,7 +8,7 @@
 
 namespace app\lib\exception;
 
-use Exception;//这里需要注意 应该继承 PHP自带的异常类Exception 而不是框架自带的异常类
+// use Exception;//这里需要注意 应该继承 PHP自带的异常类Exception 而不是框架自带的异常类
 // use think\Exception;
 use think\LOG;
 use think\exception\Handle;
@@ -19,7 +19,7 @@ class ExceptionHandler extends Handle
     private $code;
     private $msg;
     private $errorCode;
-    public function render(Exception $e)
+    public function render(\Exception $e)
     {
         if($e instanceof BaseException){
         //    如果是自定义的异常

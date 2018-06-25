@@ -10,8 +10,9 @@
 namespace app\db\controller\test;
 
 
-use app\db\model\User;
+use app\db\model\Users as User;
 use app\api\controller\CacheRedis;
+use function renderjson;
 use think\Controller;
 use Think\Exception;
 use think\Loader;
@@ -21,6 +22,7 @@ use app\db\validate\Users;
 use think\Log;
 use extend\jwt\Jwt;
 use app\lib\exception\UserMissException;
+use function var_export;
 
 class Test extends Controller
 {
@@ -183,7 +185,12 @@ class Test extends Controller
         $param['pagesize'] = input('pagesize', 50, 'int');//默认值 参数验证
         $user = new User();
         $list = $user->userlist($param);
+        // $list = $user->with('roomuser')->get(1);
         renderjson(200, 'success', $list);
+        // log_message(var_export(json($list),true));
+        // return json($list);//有问题 返回不了数据
+
+
     }
 
     /**
@@ -262,6 +269,21 @@ class Test extends Controller
             throw new UserMissException();
         }
         return $userInfo;
+    }
+
+    /**
+     * @description 关联模型测试
+     * @param $id
+     */
+    public function orm($id){
+        $request = Request::instance()->param();
+        $param['status'] = isset($request['status']) ? (int)$request['status'] : 1;
+        $param['sex'] = isset($request['sex']) ? (int)$request['sex'] : 0;
+        $param['q'] = isset($request['q']) ? (int)$request['q'] : 't';
+        $user = User::getUserList($param);
+        // $user = User::getUserByUid2($id);
+        return json($user,201,'success',200);//重写的json方法 第一个code是数据加入的code信息 第二个code 是请求返回状态值
+        // renderjson(200,'success',$user);
     }
 
 }

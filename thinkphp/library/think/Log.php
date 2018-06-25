@@ -56,7 +56,6 @@ class Log
         $class        = false !== strpos($type, '\\') ? $type : '\\think\\log\\driver\\' . ucwords($type);
         self::$config = $config;
         unset($config['type']);
-        var_dump($class);
         if (class_exists($class)) {
             self::$driver = new $class($config);
         } else {
@@ -64,6 +63,7 @@ class Log
         }
         // 记录初始化信息
         App::$debug && Log::record('[ LOG ] INIT ' . $type, 'info');
+
     }
 
     /**
