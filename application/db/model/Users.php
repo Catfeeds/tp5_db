@@ -17,13 +17,17 @@ use function var_dump;
 
 class Users extends Model
 {
+    // protected $hidden = [];
+    // protected $hidden = ['ppassword','paypassword'];
+    protected $hidden = [];
+    protected $visible = ['uid','username','realname','password','item'];
     //用户列表
     public function userlist($param)
     {
         $limit = (max(0, ($param['page'] - 1) *$param['pagesize'])) . ", {$param['pagesize']}";
         $wherearr['status'] = isset($param['status']) ? (int)$param['status'] :1;
         $list0 = Db::table('ebh_users')->field('uid,username,realname')->where($wherearr)->order('uid desc')->limit($limit)->select();
-        // log_message(Db::table('ebh_users')->getLastSql());
+        log_message(Db::table('ebh_users')->getLastSql());
         $list = Db::table('ebh_users')->field('uid,username')->limit($limit)->count();
         $list = Db::table('ebh_takes')
             ->alias('t')
@@ -109,6 +113,7 @@ class Users extends Model
     public function item()
     {
         return $this->hasMany('roomusers', 'uid', 'uid');
+        // return $this->belongsTo('roomusers', 'Roomusers.roominfo', 'uid');
     }
     // 一对一 一个用户和绑定信息
     public static function getUserByUid2($uid)
@@ -130,8 +135,8 @@ class Users extends Model
             $where['realname|username'] = ['like', '%'.$param['q'].'%'];
         }
         // var_dump($where);die;
-        // $user = self::with('item')->field('uid,username,realname')->where($where)->order('uid desc')->limit(10)->select();
-        $user = Db::name('users')->field('uid,username,realname')->where($where)->order('uid desc')->limit(10)->select();
+        $user = self::with('item')->limit(10)->select();
+        // $user = Db::name('users')->field('uid,username,realname')->where($where)->order('uid desc')->limit(10)->select();
         return $user;
     }
 }
