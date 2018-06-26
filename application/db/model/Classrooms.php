@@ -14,6 +14,6 @@ use Think\Model;
 class Classrooms extends Model
 {
     protected $hidden=[];
-    protected $visible=[];
+    protected $visible=['crid','crname','domain','fulldomain','cface'];
 
 }

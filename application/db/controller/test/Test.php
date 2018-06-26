@@ -281,6 +281,7 @@ class Test extends Controller
         $param['sex'] = isset($request['sex']) ? (int)$request['sex'] : 0;
         $param['q'] = isset($request['q']) ? (int)$request['q'] : 't';
         $user = User::getUserList($param);
+        // echo (new User)->Ceshi;die;// 获取不存在的属性
         // $user = User::getUserByUid2($id);
         return json($user,201,'success',200);//重写的json方法 第一个code是数据加入的code信息 第二个code 是请求返回状态值
         // renderjson(200,'success',$user);

@@ -135,8 +135,13 @@ class Users extends Model
             $where['realname|username'] = ['like', '%'.$param['q'].'%'];
         }
         // var_dump($where);die;
-        $user = self::with('item')->limit(10)->select();
+        // $user = self::with('item')->limit(10)->select();
+        $user = self::with(['item','item.roominfo'])->limit(10)->select();
         // $user = Db::name('users')->field('uid,username,realname')->where($where)->order('uid desc')->limit(10)->select();
         return $user;
+    }
+    // 修改器的使用 设置不存在的属性
+    public  function getCeshiAttr($value,$data){
+        return '我是测试不存在的属性的';
     }
 }
