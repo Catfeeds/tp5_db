@@ -31,7 +31,7 @@ return [
     // 扩展函数文件
     'extra_file_list' => [THINK_PATH . 'helper' . EXT, APP_PATH . 'helper2' . EXT],//加入新的助手函数文件helper2
     // 默认输出类型
-    'default_return_type' => 'json',
+    'default_return_type' => 'html',
     // 默认AJAX 数据返回格式,可选json xml ...
     'default_ajax_return' => 'json',
     // 默认JSONP格式返回的处理方法

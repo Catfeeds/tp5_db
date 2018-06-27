@@ -7,11 +7,12 @@
  * Description:
  */
 
-namespace app\db\controller\test;
+namespace app\db\controller\v1;
 
 
 use app\db\model\Users as User;
 use app\api\controller\CacheRedis;
+use function redirect;
 use function renderjson;
 use think\Controller;
 use Think\Exception;
@@ -66,6 +67,7 @@ class Test extends Controller
     public function testlist()
     {   //log_message(6454545);//新的日志输出方式 改动版
         return $this->fetch('test/testlist');
+
     }
 
     //分页数据模板
@@ -251,11 +253,11 @@ class Test extends Controller
         // $jwt = config('jwt')['key'];
         // dump($jwt);die;
         // $class = new \Jwt();
-       $jwt= (new Jwt(config('jwt')['key']))->encode(['uid'=>123]);
-       echo $jwt;die;
+        $jwt = (new Jwt(config('jwt')['key']))->encode(['uid' => 123]);
+        echo $jwt;die;
         $request = request()->param();
         $data = [
-            'uid'=>$request['id']
+            'uid' => $request['id']
         ];
         (new Users())->scene('get')->goCheck($data);//自定义传参 默认会传递 ['id'=>21] 这样与验证规则不符
     }
@@ -279,11 +281,16 @@ class Test extends Controller
         $request = Request::instance()->param();
         $param['status'] = isset($request['status']) ? (int)$request['status'] : 1;
         $param['sex'] = isset($request['sex']) ? (int)$request['sex'] : 0;
-        $param['q'] = isset($request['q']) ? (int)$request['q'] : 't';
+        $param['q'] = isset($request['q']) ? trim($request['q']) : 't';
         $user = User::getUserList($param);
         // echo (new User)->Ceshi;die;// 获取不存在的属性
         // $user = User::getUserByUid2($id);
-        return json($user,201,'success',200);//重写的json方法 第一个code是数据加入的code信息 第二个code 是请求返回状态值
+        // if($user){
+        //    return redirect('db/index/redirect2')->remember();//记住当前的URL重定向
+        // }
+        //重写的json方法 第一个code是数据加入的code信息 第二个code 是请求返回状态值
+        return json($user,201,'success',200);
+        // return xml($user,200);
         // renderjson(200,'success',$user);
     }
 

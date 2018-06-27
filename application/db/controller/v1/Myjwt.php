@@ -6,10 +6,10 @@
  * @Date: 2018/6/15
  */
 
-namespace app\db\controller\test;
+namespace app\db\controller\v1;
 // 注意 如果想通过命名空间使用第三方类库 记得在 thinkphp\base 中 注册 对应的第三方类库的命名空间 同时
 use extend\jwt\Jwt;
-use app\db\controller\test\AuthBase;
+use app\db\controller\v1\AuthBase;
 use think\Controller;
 use app\db\validate\Users;
 

@@ -243,3 +243,44 @@
 [ sql ] [ SQL ] SELECT * FROM `ebh_roomusers` WHERE  `uid` IN (1,2,3,4,5,6,7,8,9,10) [ RunTime:0.001023s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_classrooms` [ RunTime:0.001203s ]
 [ sql ] [ SQL ] SELECT * FROM `ebh_classrooms` WHERE  `crid` IN (10622) [ RunTime:0.000869s ]
+---------------------------------------------------------------
+[ 2018-06-26T17:49:15+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/orm/11177
+[ info ] gl.xlh.net/api/v1/orm/11177 [运行时间：0.117202s][吞吐率：8.53req/s] [内存消耗：692.90kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000451s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001008s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_users` LIMIT 10 [ RunTime:0.000744s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_roomusers` [ RunTime:0.000918s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_roomusers` WHERE  `uid` IN (1,2,3,4,5,6,7,8,9,10) [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_roomusers` WHERE  `uid` IN (1,2,3,4,5,6,7,8,9,10) [ RunTime:0.000957s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_classrooms` [ RunTime:0.001334s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_classrooms` WHERE  `crid` IN (10622) [ RunTime:0.000947s ]
+---------------------------------------------------------------
+[ 2018-06-26T17:54:00+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/orm/11177
+[ info ] gl.xlh.net/api/v1/orm/11177 [运行时间：0.060526s][吞吐率：16.52req/s] [内存消耗：520.36kb] [文件加载：58]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000409s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.000895s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname` FROM `ebh_users` LIMIT 1 [ RunTime:0.000406s ]
+---------------------------------------------------------------
+[ 2018-06-26T17:54:23+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/orm/11177
+[ info ] gl.xlh.net/api/v1/orm/11177 [运行时间：0.078069s][吞吐率：12.81req/s] [内存消耗：491.29kb] [文件加载：58]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001300s ]
+[ sql ] [ SQL ] SELECT `username` FROM `ebh_users` LIMIT 1 [ RunTime:0.019330s ]
+---------------------------------------------------------------
+[ 2018-06-26T17:54:38+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/orm/11177
+[ info ] gl.xlh.net/api/v1/orm/11177 [运行时间：0.065164s][吞吐率：15.35req/s] [内存消耗：491.17kb] [文件加载：58]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001194s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001048s ]
+[ sql ] [ SQL ] SELECT `uid` FROM `ebh_users` LIMIT 1 [ RunTime:0.000531s ]
+---------------------------------------------------------------
+[ 2018-06-26T17:54:49+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/orm/11177
+[ info ] gl.xlh.net/api/v1/orm/11177 [运行时间：0.076822s][吞吐率：13.02req/s] [内存消耗：491.23kb] [文件加载：58]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000787s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001059s ]
+[ sql ] [ SQL ] SELECT `status` FROM `ebh_users` LIMIT 1 [ RunTime:0.000631s ]
+---------------------------------------------------------------
+[ 2018-06-26T17:55:02+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/orm/11177
+[ info ] gl.xlh.net/api/v1/orm/11177 [运行时间：0.052411s][吞吐率：19.08req/s] [内存消耗：491.29kb] [文件加载：58]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000914s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SELECT `face` FROM `ebh_users` LIMIT 1 [ RunTime:0.000467s ]

@@ -6,7 +6,7 @@
  * @Date: 2018/6/15
  */
 
-namespace app\db\controller\test;
+namespace app\db\controller\v1;
 
 
 use think\Controller;

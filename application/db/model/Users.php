@@ -137,7 +137,7 @@ class Users extends Model
         // var_dump($where);die;
         // $user = self::query('select uid,username,realname,status,sex from ebh_users limit 10');// 原生sql
         // $user = self::with('item')->limit(10)->select();
-        $user = self::with(['item','item.roominfo'])->limit(10)->select();// 关联模型嵌套
+        $user = self::with(['item', 'item.roominfo'])->limit(10)->select();// 关联模型嵌套
         // $user = Db::name('users')->field('uid,username,realname')->where($where)->order('uid desc')->limit(10)->select();
         return $user;
     }
