@@ -924,8 +924,10 @@ if (!function_exists('log_message')) {
         }
         $cutline = '---------------------------------------------------------------';
         $date = date('Y-m-d H:i:s');
-        $title = $level . ' - ' . "$date -->\n";
-        $content = $cutline."\n".$title . $msg . "\n";
+        // $title = $level . ' - ' . "$date -->\n";
+        $title = $level . ' - ' . "$date -->".PHP_EOL;
+        // $content = $cutline."\n".$title . $msg . "\n";
+        $content = $cutline.PHP_EOL.$title . $msg . PHP_EOL;
         $savepath = LOG_PATH;
         $filename = $savepath . date('Y-m-d') . '.log';
         $fp = fopen($filename, 'a');
