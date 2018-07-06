@@ -12,8 +12,7 @@ namespace app\db\controller\v1;
 
 use app\db\model\Users as User;
 use app\api\controller\CacheRedis;
-use function redirect;
-use function renderjson;
+
 use think\Controller;
 use Think\Exception;
 use think\Loader;
@@ -23,7 +22,7 @@ use app\db\validate\Users;
 use think\Log;
 use extend\jwt\Jwt;
 use app\lib\exception\UserMissException;
-use function var_export;
+
 
 class Test extends Controller
 {
@@ -292,6 +291,25 @@ class Test extends Controller
         return json($user,201,'success',200);
         // return xml($user,200);
         // renderjson(200,'success',$user);
+    }
+
+    /**
+     * @description  tp5 cache使用
+     * @return mixed
+     */
+    public function basetest(){
+        $key='123456';
+        $value = md5('fdsgfdsgdfgtg');
+        // echo config('database.hostname');die;
+        // $boolean = cache($key,$value,config('setting.token_expire'));
+        $bool = false;
+        while(!$bool){
+            $res = cache($key,$value,config('setting.token_expire'));
+            $bool = &$res;
+        }
+        // echo token();die;
+        // return cache($key);
+        return json($key,400,'sss');
     }
 
 }

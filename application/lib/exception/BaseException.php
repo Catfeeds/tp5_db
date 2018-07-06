@@ -6,7 +6,6 @@
  * @Date: 2018/6/19
  */
 namespace app\lib\exception;
-use function array_key_exists;
 use think\Exception;
 
 class BaseException extends Exception

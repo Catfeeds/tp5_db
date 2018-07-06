@@ -16,5 +16,6 @@ class Test extends Controller
      */
     public function orm($id){
         return 'This is V2 Version';
+        $this->success();
     }
 }

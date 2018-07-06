@@ -29,7 +29,7 @@ class BaseValidate extends Validate
             $params = $request->param();
         }
         $result = $this->batch()->check($params);//批量验证
-        $result = $this->check($params);
+        // $result = $this->check($params);
         if ($result) {
             return true;
         } else {

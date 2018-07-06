@@ -46,9 +46,12 @@ Route::get('/','db/test/testlist');//等价上面
 Route::get('xlh','db/index/getSerialize');
 Route::post('hello','db/test/test2');//传参
 // Route::any('any','db/test/test3');//传参
+Route::any('test','db/v1.Test/basetest');
 Route::any('api/v1/any','db/test.Test/test3');//带目录的控制器 传参
 Route::any('get/:id','db/test.Test/test4');
 Route::any('jwt','db/v1.Myjwt/testjwt');// api接口访问验证
 Route::any('exc','db/test.Test/testException');// 异常处理测试
 // Route::get('api/v1/orm/:id','db/v1.Test/orm');// 关联模型测试
 Route::get('api/:version/orm/:id','db/:version.Test/orm');// 版本自由切换
+Route::post('api/:version/user/token','db/:version.Token/getToken');// 版本自由切换
+
