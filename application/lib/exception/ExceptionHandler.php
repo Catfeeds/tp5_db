@@ -44,14 +44,14 @@ class ExceptionHandler extends Handle
             'errorCode' => $this->errorCode,
             'request_url' => $request->url(),
         ];
-        return json($result,$this->code);
+        return json($result,$this->code,'fail');
     }
 
     /**
      * @description 在全局异常处理中加入日志
      * @param Exception $e
      */
-    private function recordErrorLog(Exception $e)
+    private function recordErrorLog(\Exception $e)
     {
         LOG::init([
             'type' => 'File',

@@ -95,7 +95,7 @@ if (!function_exists('lang')) {
 if (!function_exists('config')) {
     /**
      * 获取和设置配置参数
-     * @param string|array  $name 参数名
+     * @param string|array  $name 参数名 如：cook.type  database.hostname
      * @param mixed         $value 参数值
      * @param string        $range 作用域
      * @return mixed
@@ -250,7 +250,7 @@ if (!function_exists('vendor')) {
      */
     function vendor($class, $ext = EXT)
     {
-        var_dump(Loader::import($class, VENDOR_PATH, $ext));die;
+        // var_dump(Loader::import($class, VENDOR_PATH, $ext));die;
         return Loader::import($class, VENDOR_PATH, $ext);
     }
 }
@@ -347,7 +347,7 @@ if (!function_exists('cache')) {
      * 缓存管理
      * @param mixed     $name 缓存名称，如果为数组表示进行缓存设置
      * @param mixed     $value 缓存值
-     * @param mixed     $options 缓存参数
+     * @param mixed     $options 缓存参数 过期时间等
      * @param string    $tag 缓存标签
      * @return mixed
      */
@@ -452,14 +452,15 @@ if (!function_exists('json')) {
     /**
      * 获取\think\response\Json对象实例
      * @param mixed   $data 返回的数据
-     * @param integer $code 状态码
+     * @param integer $httpCode http响应状态码
+     * @param integer $echoCode 自定义输出的状态码
      * @param array   $header 头部
      * @param array   $options 参数
      * @return \think\response\Json
      */
-    function json($data = [], $echoCode=200, $msg='success',$code = 200, $header = [], $options = [])
+    function json($data = [], $echoCode=200, $msg='success',$httpCode = 200, $header = [], $options = [])
     {
-        return Response::create(['code'=>$echoCode,'msg'=>$msg,'data'=>$data], 'json', $code, $header, $options);
+        return Response::create(['code'=>$echoCode,'msg'=>$msg,'data'=>$data], 'json', $httpCode, $header, $options);
     }
 }
 

@@ -44,10 +44,10 @@ class CacheRedis extends Redis
     }
 
     protected function unformatValue($value) {
-        return @unserialize($value);
+        return unserialize($value);
     }
     protected function formatValue($value) {
-        return @serialize($value);
+        return serialize($value);
     }
     //这里可以定义前缀
     protected function formatKey($key) {

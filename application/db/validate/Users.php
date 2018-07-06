@@ -18,7 +18,8 @@ class Users extends BaseValidate
         'realname' => 'require|min:4|max:8|checkTrue',
         'groupid' => 'require|number',
         'status' => 'require|number',
-        'id'=>'require|isNumber'
+        'id' => 'require|isNumber',
+        'ids' => 'require|checkNumber'
     ];
     // 错误消息
     protected $message = [
@@ -36,6 +37,7 @@ class Users extends BaseValidate
         'groupid.number' => '分组必须为数字',
         'status.require' => '状态不能为空',
         'status.number' => '状态必须为数字',
+        'ids'=> 'ids必须是以逗号隔开正整数拼接的字符串'
     ];
     //验证用户名或真实姓名
     protected function checkTrue($value,$rule,$data,$field){
@@ -46,6 +48,24 @@ class Users extends BaseValidate
         }
     }
 
+    /**
+     * @description 使用父类的方法循环检查传入的ids字符串是否合法
+     * @param $value
+     * @return bool
+     */
+    protected function checkNumber($value){
+        $idsArr = explode(',',$value);
+        if($idsArr){
+            foreach($idsArr as $id){
+               if(!$this->positive_integer($id)){
+                   return false;
+                   break;
+               }
+            }
+        }else{
+            return false;
+        }
+    }
     //验证场景
     protected $scene = [
         'get' => ['uid'],

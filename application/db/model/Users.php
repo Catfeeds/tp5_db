@@ -20,7 +20,7 @@ class Users extends Model
     // protected $hidden = [];
     // protected $hidden = ['ppassword','paypassword'];
     protected $hidden = [];
-    protected $visible = ['uid','username','realname','password','item'];
+    protected $visible = ['uid','username','realname','password','item','groups'];
     //用户列表
     public function userlist($param)
     {
@@ -115,6 +115,12 @@ class Users extends Model
         return $this->hasMany('roomusers', 'uid', 'uid');
         // return $this->belongsTo('roomusers', 'Roomusers.roominfo', 'uid');
     }
+
+    public function groups()
+    {
+        return $this->belongsTo('groups', 'groupid', 'groupid');
+        // return $this->belongsTo('roomusers', 'Roomusers.roominfo', 'uid');
+    }
     // 一对一 一个用户和绑定信息
     public static function getUserByUid2($uid)
     {
@@ -135,8 +141,18 @@ class Users extends Model
             $where['realname|username'] = ['like', '%'.$param['q'].'%'];
         }
         // var_dump($where);die;
-        $user = self::with('item')->limit(10)->select();
+        // $user = self::query('select uid,username,realname,status,sex from ebh_users limit 10');// 原生sql
+        // $user = self::with('item')->limit(10)->select();
+        // $user = self::with(['item', 'item.roominfo'])->limit(10)->select();// 关联模型嵌套
+        $user = self::with(['item','groups', 'item.roominfo'])->limit(10)->select();// 关联模型嵌套
+        // $count = self::with(['item','groups', 'item.roominfo'])->count();// 关联模型嵌套
+        // $count2 = self::count();// 关联模型嵌套 等同于上面的统计 实际上只统计了当前模型
+        // $user = self::with('item,groups')->limit(10)->select();// 关联模型嵌套
         // $user = Db::name('users')->field('uid,username,realname')->where($where)->order('uid desc')->limit(10)->select();
         return $user;
+    }
+    // 修改器的使用 设置不存在的属性
+    public  function getCeshiAttr($value,$data){
+        return '我是测试不存在的属性的';
     }
 }

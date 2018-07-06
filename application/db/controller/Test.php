@@ -10,7 +10,7 @@
 namespace app\db\controller;
 
 use think\Controller;
-use app\db\model\User;
+use app\db\model\Users as User;
 use app\api\controller\CacheRedis;
 use think\Loader;
 use think\Config;

@@ -179,6 +179,34 @@ function dislodge($data)
     return $data;
 }
 
+/**
+ * @description curl_get请求
+ * @param       $url
+ * @param array $data
+ * @param int   $httpCode
+ * @return mixed
+ */
+function curl_get($url, $data = [], &$httpCode = 0){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    //不做证书校验,部署在Linux环境下请改为true
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);//超时时间
+    $result = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    return $result;
+}
+
+/**
+ * @description curl_post请求
+ * @param        $url
+ * @param array  $body
+ * @param array  $header
+ * @param string $type
+ * @return mixed|null|string|string[]
+ */
 function doPost($url, $body = [], $header = array(), $type = "POST")
 {
     //1.创建一个curl资源
@@ -924,8 +952,10 @@ if (!function_exists('log_message')) {
         }
         $cutline = '---------------------------------------------------------------';
         $date = date('Y-m-d H:i:s');
-        $title = $level . ' - ' . "$date -->\n";
-        $content = $cutline."\n".$title . $msg . "\n";
+        // $title = $level . ' - ' . "$date -->\n";
+        $title = $level . ' - ' . "$date -->".PHP_EOL;
+        // $content = $cutline."\n".$title . $msg . "\n";
+        $content = $cutline.PHP_EOL.$title . $msg . PHP_EOL;
         $savepath = LOG_PATH;
         $filename = $savepath . date('Y-m-d') . '.log';
         $fp = fopen($filename, 'a');
@@ -1359,5 +1389,19 @@ if (!function_exists('getallheaders'))
             }
         }
         return $headers;
+    }
+}
+/**
+ * 创建指定长度的随机字符串
+ */
+if(!function_exists('getRandChar')){
+    function getRandChar($length=32){
+        $sourceStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz';
+        $count = strlen($sourceStr)-1;
+        $randStr = '';
+        for($i=0;$i<$length;$i++){
+            $randStr .=  $sourceStr[mt_rand(0,$count)];
+        }
+        return $randStr;
     }
 }

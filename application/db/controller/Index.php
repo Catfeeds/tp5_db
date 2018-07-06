@@ -4,6 +4,7 @@ namespace app\db\controller;
 
 use app\model\Demo;
 use function MongoDB\BSON\toJSON;
+use function redirect;
 use think\Controller;
 use think\View;
 use think\Db;
@@ -175,6 +176,12 @@ class Index extends Controller
         }
         return $content;
 
+    }
+
+    public function redirect2(){
+
+        // return (redirect()->restore());//跳转到上次记住的URL
+       return redirect()->restore();//跳转到上次记住的URL
     }
 
 
