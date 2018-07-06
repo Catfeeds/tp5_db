@@ -66,13 +66,13 @@ class UserToken extends Token
             $tokenArr['uid'] = $result['uid'];
         }
         $key = self::grantToken();
-        $value = md5(json_encode($tokenArr));
+        $value = json_encode($tokenArr);
         $bool = false;
         while(!$bool){
             $res = cache($key,$value,config('setting.token_expire'));
             $bool = &$res;
         }
-        return json($value,200,'cuccess');//返回token
+        return json($key,200,'cuccess');//返回token
     }
 
 }

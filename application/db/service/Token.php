@@ -15,6 +15,6 @@ class Token
        $randChars = getRandChar();
        $timestamp = SYSTIME;
        $token_salt = config('setting.token_salt');
-       return $randChars.$timestamp.$token_salt;
+       return md5($randChars.$timestamp.$token_salt);
    }
 }
