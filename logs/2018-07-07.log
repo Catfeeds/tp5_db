@@ -1,0 +1,26 @@
+---------------------------------------------------------------
+[ 2018-07-07T15:02:30+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/orm/11177
+[ info ] gl.xlh.net/api/v1/orm/11177 [运行时间：0.338449s][吞吐率：2.95req/s] [内存消耗：795.24kb] [文件加载：68]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000917s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.002798s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_users` LIMIT 10 [ RunTime:0.016482s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_roomusers` [ RunTime:0.001110s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_roomusers` WHERE  `uid` IN (1,2,3,4,5,6,7,8,9,10) [ RunTime:0.033656s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_groups` [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_groups` WHERE  `groupid` IN (5,6) [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_roomusers` WHERE  `uid` IN (1,2,3,4,5,6,7,8,9,10) [ RunTime:0.001073s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_classrooms` [ RunTime:0.001714s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_classrooms` WHERE  `crid` IN (10622) [ RunTime:0.019346s ]
+---------------------------------------------------------------
+[ 2018-07-07T15:03:59+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/orm/11177
+[ info ] gl.xlh.net/api/v1/orm/11177 [运行时间：0.189105s][吞吐率：5.29req/s] [内存消耗：728.80kb] [文件加载：68]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000535s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_users` LIMIT 10 [ RunTime:0.001084s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_roomusers` [ RunTime:0.001043s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_roomusers` WHERE  `uid` IN (1,2,3,4,5,6,7,8,9,10) [ RunTime:0.037254s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_groups` [ RunTime:0.002081s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_groups` WHERE  `groupid` IN (5,6) [ RunTime:0.000599s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_roomusers` WHERE  `uid` IN (1,2,3,4,5,6,7,8,9,10) [ RunTime:0.001120s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_classrooms` [ RunTime:0.002442s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_classrooms` WHERE  `crid` IN (10622) [ RunTime:0.000801s ]

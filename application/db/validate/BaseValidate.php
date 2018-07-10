@@ -82,4 +82,19 @@ class BaseValidate extends Validate
 
     }
 
+    /**
+     * @description 返回仅在验证规则中的数据
+     * @param $data
+     * @return array
+     */
+    public function getDataByRule($data){
+        $newDate = [];
+        foreach($data as $key=>$value){
+            if(isset($data[$this->rule[$key]])){
+                $newDate[$key] = $value;
+            }
+        }
+        return $newDate;
+    }
+
 }

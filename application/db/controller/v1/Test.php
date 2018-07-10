@@ -13,13 +13,16 @@ namespace app\db\controller\v1;
 use app\db\model\Users as User;
 use app\api\controller\CacheRedis;
 
-use think\Controller;
-use Think\Exception;
-use think\Loader;
-use think\Config;
-use think\Request;
+// use think\Controller;
+// use think\Exception;
+// use think\Loader;
+// use think\Config;
+// use think\Request;
+// use think\Log;
+use app\db\validate\IdIsInt;
+use think\{Controller,Exception,Loader,Config,Request,Log};//php 7 支持此种模式
 use app\db\validate\Users;
-use think\Log;
+
 use extend\jwt\Jwt;
 use app\lib\exception\UserMissException;
 
@@ -252,6 +255,7 @@ class Test extends Controller
         // $jwt = config('jwt')['key'];
         // dump($jwt);die;
         // $class = new \Jwt();
+        (new IdIsInt())->goCheck();
         $jwt = (new Jwt(config('jwt')['key']))->encode(['uid' => 123]);
         echo $jwt;die;
         $request = request()->param();
@@ -260,7 +264,9 @@ class Test extends Controller
         ];
         (new Users())->scene('get')->goCheck($data);//自定义传参 默认会传递 ['id'=>21] 这样与验证规则不符
     }
-
+    public function test5(){
+        echo '路由规则验证';
+    }
     // 异常测试
     public function testException()
     {

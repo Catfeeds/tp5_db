@@ -12,7 +12,6 @@ namespace app\db\service;
 
 use app\db\model\Users;
 use app\lib\exception\WxException;
-use function json_encode;
 use Think\Exception;
 
 class UserToken extends Token

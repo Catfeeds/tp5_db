@@ -200,6 +200,48 @@ function curl_get($url, $data = [], &$httpCode = 0){
 }
 
 /**
+ * @description curl 请求 可以是get 或post
+ * @param     $url
+ * @param     $data
+ * @param int $timeout
+ * @return mixed
+ */
+function curl_request($url,$data,$timeout = 3000){
+    $headers = array();
+    $ch = curl_init();
+    //         $headers[] = 'CLIENT-IP:'.getip();
+    //         if(!empty($_SERVER['X-FORWARDED-FOR'])){
+    //             $headers[] = 'X-FORWARDED-FOR:'.$_SERVER['X-FORWARDED-FOR'];
+    //         }else{
+    //             $headers[] = 'X-FORWARDED-FOR:'.getip();
+    //         }
+    //加上代理头
+    $user_agent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36";
+    if(!empty($_SERVER['HTTP_USER_AGENT'])){
+        $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    }
+    //加上客户端ip
+    $data['client_ip'] = getip();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_USERAGENT,$user_agent);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, $timeout);
+    if (!empty($data)) {
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    }
+    $rs = curl_exec($ch);
+    //log_message(var_export($rs,true));
+    curl_close($ch);
+
+    return $rs;
+}
+
+
+/**
  * @description curl_post请求
  * @param        $url
  * @param array  $body

@@ -43,15 +43,25 @@ use think\Route;
 // 请求类型 GET POST PUT DELETE * 默认为* 表示任意类型
 // Route::rule('/','db/test/testlist','GET');
 Route::get('/','db/test/testlist');//等价上面
+// Route::get('/','worker/worker/index');
 Route::get('xlh','db/index/getSerialize');
 Route::post('hello','db/test/test2');//传参
 // Route::any('any','db/test/test3');//传参
 Route::any('test','db/v1.Test/basetest');
 Route::any('api/v1/any','db/test.Test/test3');//带目录的控制器 传参
-Route::any('get/:id','db/test.Test/test4');
+
+Route::any('get/list','db/v1.Test/test5',['method'=>'post|put|get']);
+// Route::any('get/:id','db/v1.Test/test4',[],['id'=>'\d+']);
+Route::any('get/:id','db/v1.Test/test4');
+
 Route::any('jwt','db/v1.Myjwt/testjwt');// api接口访问验证
 Route::any('exc','db/test.Test/testException');// 异常处理测试
 // Route::get('api/v1/orm/:id','db/v1.Test/orm');// 关联模型测试
-Route::get('api/:version/orm/:id','db/:version.Test/orm');// 版本自由切换
-Route::post('api/:version/user/token','db/:version.Token/getToken');// 版本自由切换
-
+// Route::get('api/:version/orm/:id','db/:version.Test/orm');// 版本自由切换
+// Route::post('api/:version/user/token','db/:version.Token/getToken');// 版本自由切换
+Route::get('work','worker/worker');
+//路由分组
+Route::group('api/:version',function(){
+    Route::get('/orm/:id','db/:version.Test/orm');
+    Route::get('/user/token','db/:version.Token/createToken');
+});

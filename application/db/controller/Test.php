@@ -63,15 +63,15 @@ class Test extends Controller
     //分页数据模板
     public function pageindex()
     {
-        //$page = input('page', 0);
-        //$limit = input('limit', 10);
-        //$count = $this->user->userconut();
-        //$list = $this->user->ajaxlist($page, $limit);
-        //$list = json_encode($list);
-        //$this->assign('count', $count);
-        //$this->assign('list', $list);
-        //$this->assign('page',$page);
-        //$this->assign('limit',$limit);
+        // $page = input('page', 0);
+        // $limit = input('limit', 10);
+        // $count = $this->user->userconut();
+        // $list = $this->user->ajaxlist($page, $limit);
+        // $list = json_encode($list);
+        // $this->assign('count', $count);
+        // $this->assign('list', $list);
+        // $this->assign('page',$page);
+        // $this->assign('limit',$limit);
         return $this->fetch('test/pageindex');
     }
 
