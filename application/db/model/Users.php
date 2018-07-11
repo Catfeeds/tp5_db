@@ -62,7 +62,11 @@ class Users extends Model
         $list = Db::name('users')->where('status', 1)->limit($offset, $limit)->select();
         return $list;
     }
+    public function getpage(){
 
+        $list = Db('users')->field(['uid','username','realname','dateline','lastloginip'])->where('status','=','1')->order('uid desc')->paginate(10);
+        return $list;
+    }
     public function userconut()
     {
         //$list = Db::name('users')->where('status',1)->select();

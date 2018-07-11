@@ -236,7 +236,8 @@ return [
 
     //分页配置
     'paginate' => [
-        'type' => 'bootstrap',
+        // 'type' => 'bootstrap',//默认
+        'type' => 'extend\page\page',//自定义的分页类
         'var_page' => 'page',
         'list_rows' => 15,
     ],

@@ -72,6 +72,14 @@ class Test extends Controller
 
     }
 
+    /**
+     * @description  分页
+     */
+    public function page(){
+        $user = new User();
+        $list = $user->getpage();
+        return $this->fetch('test/page',['userlist'=>$list]);
+    }
     //分页数据模板
     public function pageindex()
     {
