@@ -63,5 +63,6 @@ Route::get('work','worker/worker');
 //路由分组
 Route::group('api/:version',function(){
     Route::get('/orm/:id','db/:version.Test/orm');
+    Route::get('/test/page','db/:version.Test/page');//分页
     Route::get('/user/token','db/:version.Token/createToken');
 });

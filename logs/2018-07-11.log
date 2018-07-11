@@ -621,3 +621,73 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.000870s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.146852s ]
 [ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 530,10 [ RunTime:0.000841s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:21:45+08:00 ] 192.168.0.85 192.168.0.213 GET /index.php/db/v1/test/page?page=54
+[ info ] gl.xlh.net/index.php/db/v1/test/page?page=54 [运行时间：0.236346s][吞吐率：4.23req/s] [内存消耗：582.08kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000649s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.002359s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.153625s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 530,10 [ RunTime:0.000906s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:22:15+08:00 ] 192.168.0.85 192.168.0.213 GET /index.php/db/v1/test/page
+[ info ] gl.xlh.net/index.php/db/v1/test/page [运行时间：0.236492s][吞吐率：4.23req/s] [内存消耗：581.45kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000797s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001383s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.160395s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 0,10 [ RunTime:0.000584s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:22:19+08:00 ] 192.168.0.85 192.168.0.213 GET /index.php/db/v1/test/page?page=2
+[ info ] gl.xlh.net/index.php/db/v1/test/page?page=2 [运行时间：0.214229s][吞吐率：4.67req/s] [内存消耗：581.39kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000619s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.000917s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.137493s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 10,10 [ RunTime:0.001224s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:22:20+08:00 ] 192.168.0.85 192.168.0.213 GET /index.php/db/v1/test/page?page=4
+[ info ] gl.xlh.net/index.php/db/v1/test/page?page=4 [运行时间：0.217558s][吞吐率：4.60req/s] [内存消耗：581.40kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002183s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001368s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.142410s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 30,10 [ RunTime:0.000565s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:22:36+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/test/page
+[ info ] gl.xlh.net/api/v1/test/page [运行时间：0.235014s][吞吐率：4.26req/s] [内存消耗：582.91kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000530s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.000919s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.163466s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 0,10 [ RunTime:0.001002s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:22:39+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/test/page?page=2
+[ info ] gl.xlh.net/api/v1/test/page?page=2 [运行时间：0.235268s][吞吐率：4.25req/s] [内存消耗：583.10kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002914s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.002093s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.144132s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 10,10 [ RunTime:0.000480s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:22:45+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/test/page?page=3
+[ info ] gl.xlh.net/api/v1/test/page?page=3 [运行时间：0.237504s][吞吐率：4.21req/s] [内存消耗：583.11kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000658s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001032s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.156318s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 20,10 [ RunTime:0.000623s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:22:47+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/test/page?page=4
+[ info ] gl.xlh.net/api/v1/test/page?page=4 [运行时间：0.253149s][吞吐率：3.95req/s] [内存消耗：583.11kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000750s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001422s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.177037s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 30,10 [ RunTime:0.000522s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:22:48+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/test/page?page=5
+[ info ] gl.xlh.net/api/v1/test/page?page=5 [运行时间：0.242370s][吞吐率：4.13req/s] [内存消耗：583.09kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000479s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.002925s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.168544s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 40,10 [ RunTime:0.000530s ]
+---------------------------------------------------------------
+[ 2018-07-11T17:22:49+08:00 ] 192.168.0.85 192.168.0.213 GET /api/v1/test/page?page=6
+[ info ] gl.xlh.net/api/v1/test/page?page=6 [运行时间：0.226664s][吞吐率：4.41req/s] [内存消耗：583.38kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000692s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001543s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ebh_users` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.160244s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`realname`,`dateline`,`lastloginip` FROM `ebh_users` WHERE  `status` = 1 ORDER BY uid desc LIMIT 50,10 [ RunTime:0.000641s ]
