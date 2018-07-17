@@ -229,7 +229,7 @@ class Page extends Paginator
                 display:block;
                 float:left;
                 margin-right:5px;
-                padding:2px 8px;
+                padding:2px 10px;
                 height:24px;
                 border:1px #cccccc solid;
                 background:#fff;

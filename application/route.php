@@ -66,3 +66,5 @@ Route::group('api/:version',function(){
     Route::get('/test/page','db/:version.Test/page');//分页
     Route::get('/user/token','db/:version.Token/createToken');
 });
+
+Route::get('before','db/v1.Before/second');
