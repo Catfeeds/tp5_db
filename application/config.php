@@ -241,4 +241,20 @@ return [
         'var_page' => 'page',
         'list_rows' => 15,
     ],
+
+    //验证码配置
+    // onclick="javascript:this.src=this.src+'?time='+Math.random()"
+    //直接写在验证码的img标签里面，不用写函数了。
+    'captcha' => [
+        // 'codeSet' => 'ASDFGHJKLPUYTREWQXCVBNM123456789asdfghjkmnbvcxqwertyp',  //验证码字符集合
+        'length' => 4, // 验证码位数
+        'reset' => true, //验证后重置
+        'imageW' => 150, //图片宽度
+        'imageH' => 50, //图片高度
+        "useImgBg" => false, //使用背景图片
+        "fontSize" => 20, //验证码字体大小(px)
+        "useCurve" => false, //是否画混淆曲线
+        "useNoise" => true, //是否添加杂点
+        "expire" => 600,//验证码过期时间（s）
+    ],
 ];

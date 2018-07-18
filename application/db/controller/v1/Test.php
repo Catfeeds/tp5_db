@@ -20,7 +20,9 @@ use app\api\controller\CacheRedis;
 // use think\Request;
 // use think\Log;
 use app\db\validate\IdIsInt;
-use think\{Controller,Exception,Loader,Config,Request,Log};//php 7 支持此种模式
+use think\{
+    Controller, Exception, Loader, Config, Request, Log, Verify
+};//php 7 支持此种模式
 use app\db\validate\Users;
 
 use extend\jwt\Jwt;
@@ -326,4 +328,23 @@ class Test extends Controller
         return json($key,400,'sss');
     }
 
+    /**
+     * @description 获取验证码 并保存到session中
+     */
+    public function getCaptcha(){
+        $capConfig = config('captcha');
+        $Verify = new Verify($capConfig);
+        $Verify->entry("admin_login");
+        exit();
+    }
+
+    /**
+     * @description 校验验证码
+     */
+    public function chechCaptcha(){
+        $verify = new Verify();
+        if (!$verify->check($code, "admin_login")) {
+           echo '验证码错误';
+        }
+    }
 }

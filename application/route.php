@@ -42,8 +42,8 @@ use think\Route;
 // Route::rule('路由表达式','路由地址','请求类型','路由参数(数组)','请求参数(数组)');//格式
 // 请求类型 GET POST PUT DELETE * 默认为* 表示任意类型
 // Route::rule('/','db/test/testlist','GET');
-Route::get('/','db/test/testlist');//等价上面
-// Route::get('/','worker/worker/index');
+// Route::get('/','db/test/testlist');//等价上面
+Route::get('/','worker/worker/index');
 Route::get('xlh','db/index/getSerialize');
 Route::post('hello','db/test/test2');//传参
 // Route::any('any','db/test/test3');//传参
@@ -67,4 +67,5 @@ Route::group('api/:version',function(){
     Route::get('/user/token','db/:version.Token/createToken');
 });
 
-Route::get('before','db/v1.Before/second');
+Route::get('before','db/v1.Before/second');//控制器前置操作
+Route::get('captcha','db/v1.Test/getCaptcha');//验证码
