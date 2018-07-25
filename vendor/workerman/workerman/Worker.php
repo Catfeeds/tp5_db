@@ -2024,6 +2024,7 @@ class Worker
 
         // Get autoload root path.
         $backtrace                = debug_backtrace();
+        // var_dump($backtrace);die;
         $this->_autoloadRootPath = dirname($backtrace[0]['file']);
 
         // Context for socket.

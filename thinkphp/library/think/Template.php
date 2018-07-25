@@ -12,6 +12,7 @@
 namespace think;
 
 use think\exception\TemplateNotFoundException;
+use function var_export;
 
 /**
  * ThinkPHP分离出来的模板引擎

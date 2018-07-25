@@ -27,9 +27,9 @@ if (function_exists('opcache_reset')) {
 }
 
 // For onError callback.
-define('WORKERMAN_CONNECT_FAIL', 1);
+defined('WORKERMAN_CONNECT_FAIL') or define('WORKERMAN_CONNECT_FAIL', 1);
 // For onError callback.
-define('WORKERMAN_SEND_FAIL', 2);
+defined('WORKERMAN_SEND_FAIL') or define('WORKERMAN_SEND_FAIL', 2);
 
 // Define OS Type
 define('OS_TYPE_LINUX', 'linux');

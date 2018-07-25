@@ -58,3 +58,300 @@ Stack trace:
 #15 D:\WWW\thinkphp5\thinkphp\start.php(18): think\App::run()
 #16 D:\WWW\thinkphp5\service.php(13): require('D:\\WWW\\thinkphp...')
 #17 {main}
+2018-07-25 11:13:16 pid:1995 Workerman[server.php] start in DEBUG mode
+2018-07-25 11:21:12 pid:1995 Workerman[server.php] stopping ...
+2018-07-25 11:21:12 pid:1995 Workerman[server.php] has been stopped
+2018-07-25 13:53:31 pid:2423 Workerman[server.php] start in DEBUG mode
+2018-07-25 13:54:23 pid:2423 Workerman[server.php] stopping ...
+2018-07-25 13:54:23 pid:2423 Workerman[server.php] has been stopped
+2018-07-25 13:54:25 pid:2425 Workerman[server.php] start in DEBUG mode
+2018-07-25 13:55:29 pid:2425 Workerman[server.php] stopping ...
+2018-07-25 13:55:29 pid:2425 Workerman[server.php] has been stopped
+2018-07-25 14:07:13 pid:2475 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:08:21 pid:2475 Workerman[server.php] stopping ...
+2018-07-25 14:08:21 pid:2475 Workerman[server.php] has been stopped
+2018-07-25 14:08:42 pid:2484 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:13:07 pid:2484 Workerman[server.php] stopping ...
+2018-07-25 14:13:07 pid:2484 Workerman[server.php] has been stopped
+2018-07-25 14:13:09 pid:2496 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:13:51 pid:2496 Workerman[server.php] stopping ...
+2018-07-25 14:13:51 pid:2496 Workerman[server.php] has been stopped
+2018-07-25 14:13:53 pid:2497 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:14:17 pid:2497 Workerman[server.php] stopping ...
+2018-07-25 14:14:17 pid:2497 Workerman[server.php] has been stopped
+2018-07-25 14:14:39 pid:2506 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:14:55 pid:2506 Workerman[server.php] stopping ...
+2018-07-25 14:14:55 pid:2506 Workerman[server.php] has been stopped
+2018-07-25 14:14:57 pid:2507 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:16:04 pid:2507 Workerman[server.php] stopping ...
+2018-07-25 14:16:04 pid:2507 Workerman[server.php] has been stopped
+2018-07-25 14:24:59 pid:2552 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:26:13 pid:2552 Workerman[server.php] stopping ...
+2018-07-25 14:26:13 pid:2552 Workerman[server.php] has been stopped
+2018-07-25 14:26:14 pid:2555 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:27:21 pid:2555 Workerman[server.php] stopping ...
+2018-07-25 14:27:21 pid:2555 Workerman[server.php] has been stopped
+2018-07-25 14:27:22 pid:2557 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:28:25 pid:2557 Workerman[server.php] stopping ...
+2018-07-25 14:28:25 pid:2557 Workerman[server.php] has been stopped
+2018-07-25 14:31:32 pid:2584 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:34:10 pid:2584 Workerman[server.php] stopping ...
+2018-07-25 14:34:10 pid:2584 Workerman[server.php] has been stopped
+2018-07-25 14:40:05 pid:2620 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:40:33 pid:2620 Workerman[server.php] stopping ...
+2018-07-25 14:40:33 pid:2620 Workerman[server.php] has been stopped
+2018-07-25 14:40:37 pid:2630 Workerman[server.php] reload 
+2018-07-25 14:40:37 pid:2630 Workerman[server.php] not run
+2018-07-25 14:41:17 pid:2631 Workerman[server.php] start in DEBUG mode
+2018-07-25 14:43:15 pid:2631 Workerman[server.php] stopping ...
+2018-07-25 14:43:15 pid:2631 Workerman[server.php] has been stopped
+2018-07-25 14:59:45 pid:2698 Workerman[server.php] start in DEBUG mode
+2018-07-25 15:00:15 pid:2698 Workerman[server.php] stopping ...
+2018-07-25 15:00:15 pid:2698 Workerman[server.php] has been stopped
+2018-07-25 15:00:17 pid:2707 Workerman[server.php] start in DEBUG mode
+2018-07-25 15:04:25 pid:2707 Workerman[server.php] stopping ...
+2018-07-25 15:04:25 pid:2707 Workerman[server.php] has been stopped
+2018-07-25 15:06:49 pid:2746 Workerman[server.php] start in DEBUG mode
+2018-07-25 15:07:08 pid:2746 Workerman[server.php] stopping ...
+2018-07-25 15:07:08 pid:2746 Workerman[server.php] has been stopped
+2018-07-25 15:07:09 pid:2751 Workerman[server.php] start in DEBUG mode
+2018-07-25 15:09:03 pid:2751 Workerman[server.php] stopping ...
+2018-07-25 15:09:03 pid:2751 Workerman[server.php] has been stopped
+2018-07-25 15:09:04 pid:2756 Workerman[server.php] start in DEBUG mode
+2018-07-25 15:18:25 pid:2756 Workerman[server.php] stopping ...
+2018-07-25 15:18:25 pid:2756 Workerman[server.php] has been stopped
+2018-07-25 15:18:52 pid:2783 Workerman[server.php] start in DEBUG mode
+2018-07-25 15:19:14 pid:2783 Workerman[server.php] stopping ...
+2018-07-25 15:19:14 pid:2783 Workerman[server.php] has been stopped
+2018-07-25 15:19:15 pid:2788 Workerman[server.php] start in DEBUG mode
+2018-07-25 15:19:21 pid:2790 exception 'think\exception\ErrorException' with message 'Array to string conversion' in /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php:29
+Stack trace:
+#0 /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php(29): think\Error::appError(8, 'Array to string...', '/mnt/hgfs/mytes...', 29, Array)
+#1 [internal function]: app\worker\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Connection/TcpConnection.php(629): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(2232): Workerman\Events\Select->loop()
+#6 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1356): Workerman\Worker->run()
+#7 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1188): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1162): Workerman\Worker::forkWorkersForLinux()
+#9 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /mnt/hgfs/mytest/gl_xlh/vendor/topthink/think-worker/src/Server.php(49): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(215): ReflectionClass->newInstanceArgs(Array)
+#13 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/Loader.php(422): think\App::invokeClass('app\worker\cont...')
+#14 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(386): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(295): think\App::module(Array, Array, NULL)
+#16 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(123): think\App::exec(Array, Array)
+#17 /mnt/hgfs/mytest/gl_xlh/thinkphp/start.php(18): think\App::run()
+#18 /mnt/hgfs/mytest/gl_xlh/public/server.php(14): require('/mnt/hgfs/mytes...')
+#19 {main}
+2018-07-25 15:19:21 pid:2790 Worker[2790] process terminated
+2018-07-25 15:19:21 pid:2789 exception 'think\exception\ErrorException' with message 'Array to string conversion' in /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php:29
+Stack trace:
+#0 /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php(29): think\Error::appError(8, 'Array to string...', '/mnt/hgfs/mytes...', 29, Array)
+#1 [internal function]: app\worker\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Connection/TcpConnection.php(629): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(2232): Workerman\Events\Select->loop()
+#6 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1356): Workerman\Worker->run()
+#7 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1188): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1162): Workerman\Worker::forkWorkersForLinux()
+#9 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /mnt/hgfs/mytest/gl_xlh/vendor/topthink/think-worker/src/Server.php(49): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(215): ReflectionClass->newInstanceArgs(Array)
+#13 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/Loader.php(422): think\App::invokeClass('app\worker\cont...')
+#14 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(386): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(295): think\App::module(Array, Array, NULL)
+#16 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(123): think\App::exec(Array, Array)
+#17 /mnt/hgfs/mytest/gl_xlh/thinkphp/start.php(18): think\App::run()
+#18 /mnt/hgfs/mytest/gl_xlh/public/server.php(14): require('/mnt/hgfs/mytes...')
+#19 {main}
+2018-07-25 15:19:21 pid:2789 Worker[2789] process terminated
+2018-07-25 15:19:21 pid:2788 worker[none:2790] exit with status 64000
+2018-07-25 15:19:21 pid:2788 worker[none:2789] exit with status 64000
+2018-07-25 15:19:21 pid:2792 exception 'think\exception\ErrorException' with message 'Array to string conversion' in /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php:29
+Stack trace:
+#0 /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php(29): think\Error::appError(8, 'Array to string...', '/mnt/hgfs/mytes...', 29, Array)
+#1 [internal function]: app\worker\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Connection/TcpConnection.php(629): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(2232): Workerman\Events\Select->loop()
+#6 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1356): Workerman\Worker->run()
+#7 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1188): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1162): Workerman\Worker::forkWorkersForLinux()
+#9 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /mnt/hgfs/mytest/gl_xlh/vendor/topthink/think-worker/src/Server.php(49): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(215): ReflectionClass->newInstanceArgs(Array)
+#13 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/Loader.php(422): think\App::invokeClass('app\worker\cont...')
+#14 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(386): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(295): think\App::module(Array, Array, NULL)
+#16 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(123): think\App::exec(Array, Array)
+#17 /mnt/hgfs/mytest/gl_xlh/thinkphp/start.php(18): think\App::run()
+#18 /mnt/hgfs/mytest/gl_xlh/public/server.php(14): require('/mnt/hgfs/mytes...')
+#19 {main}
+2018-07-25 15:19:21 pid:2792 Worker[2792] process terminated
+2018-07-25 15:19:21 pid:2788 worker[none:2792] exit with status 64000
+2018-07-25 15:19:21 pid:2794 exception 'think\exception\ErrorException' with message 'Array to string conversion' in /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php:29
+Stack trace:
+#0 /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php(29): think\Error::appError(8, 'Array to string...', '/mnt/hgfs/mytes...', 29, Array)
+#1 [internal function]: app\worker\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Connection/TcpConnection.php(629): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#4 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(2232): Workerman\Events\Select->loop()
+#6 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1356): Workerman\Worker->run()
+#7 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1188): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1162): Workerman\Worker::forkWorkersForLinux()
+#9 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1490): Workerman\Worker::forkWorkers()
+#10 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1439): Workerman\Worker::monitorWorkersForLinux()
+#11 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#12 /mnt/hgfs/mytest/gl_xlh/vendor/topthink/think-worker/src/Server.php(49): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(215): ReflectionClass->newInstanceArgs(Array)
+#15 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/Loader.php(422): think\App::invokeClass('app\worker\cont...')
+#16 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(386): think\Loader::controller('worker', 'controller', false, 'Error')
+#17 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(295): think\App::module(Array, Array, NULL)
+#18 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(123): think\App::exec(Array, Array)
+#19 /mnt/hgfs/mytest/gl_xlh/thinkphp/start.php(18): think\App::run()
+#20 /mnt/hgfs/mytest/gl_xlh/public/server.php(14): require('/mnt/hgfs/mytes...')
+#21 {main}
+2018-07-25 15:19:21 pid:2794 Worker[2794] process terminated
+2018-07-25 15:19:21 pid:2788 worker[none:2794] exit with status 64000
+2018-07-25 15:19:22 pid:2791 exception 'think\exception\ErrorException' with message 'Array to string conversion' in /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php:29
+Stack trace:
+#0 /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php(29): think\Error::appError(8, 'Array to string...', '/mnt/hgfs/mytes...', 29, Array)
+#1 [internal function]: app\worker\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Connection/TcpConnection.php(629): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(2232): Workerman\Events\Select->loop()
+#6 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1356): Workerman\Worker->run()
+#7 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1188): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1162): Workerman\Worker::forkWorkersForLinux()
+#9 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /mnt/hgfs/mytest/gl_xlh/vendor/topthink/think-worker/src/Server.php(49): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(215): ReflectionClass->newInstanceArgs(Array)
+#13 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/Loader.php(422): think\App::invokeClass('app\worker\cont...')
+#14 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(386): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(295): think\App::module(Array, Array, NULL)
+#16 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(123): think\App::exec(Array, Array)
+#17 /mnt/hgfs/mytest/gl_xlh/thinkphp/start.php(18): think\App::run()
+#18 /mnt/hgfs/mytest/gl_xlh/public/server.php(14): require('/mnt/hgfs/mytes...')
+#19 {main}
+2018-07-25 15:19:22 pid:2791 Worker[2791] process terminated
+2018-07-25 15:19:22 pid:2788 worker[none:2791] exit with status 64000
+2018-07-25 15:19:29 pid:2796 exception 'think\exception\ErrorException' with message 'Array to string conversion' in /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php:29
+Stack trace:
+#0 /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php(29): think\Error::appError(8, 'Array to string...', '/mnt/hgfs/mytes...', 29, Array)
+#1 [internal function]: app\worker\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Connection/TcpConnection.php(629): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #69)
+#4 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(2232): Workerman\Events\Select->loop()
+#6 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1356): Workerman\Worker->run()
+#7 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1188): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1162): Workerman\Worker::forkWorkersForLinux()
+#9 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1490): Workerman\Worker::forkWorkers()
+#10 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1439): Workerman\Worker::monitorWorkersForLinux()
+#11 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#12 /mnt/hgfs/mytest/gl_xlh/vendor/topthink/think-worker/src/Server.php(49): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(215): ReflectionClass->newInstanceArgs(Array)
+#15 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/Loader.php(422): think\App::invokeClass('app\worker\cont...')
+#16 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(386): think\Loader::controller('worker', 'controller', false, 'Error')
+#17 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(295): think\App::module(Array, Array, NULL)
+#18 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(123): think\App::exec(Array, Array)
+#19 /mnt/hgfs/mytest/gl_xlh/thinkphp/start.php(18): think\App::run()
+#20 /mnt/hgfs/mytest/gl_xlh/public/server.php(14): require('/mnt/hgfs/mytes...')
+#21 {main}
+2018-07-25 15:19:29 pid:2796 Worker[2796] process terminated
+2018-07-25 15:19:29 pid:2788 worker[none:2796] exit with status 64000
+2018-07-25 15:19:48 pid:2788 Workerman[server.php] stopping ...
+2018-07-25 15:19:48 pid:2788 Workerman[server.php] has been stopped
+2018-07-25 15:19:49 pid:2799 Workerman[server.php] start in DEBUG mode
+2018-07-25 15:19:55 pid:2800 exception 'think\exception\ErrorException' with message 'Array to string conversion' in /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php:29
+Stack trace:
+#0 /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php(29): think\Error::appError(8, 'Array to string...', '/mnt/hgfs/mytes...', 29, Array)
+#1 [internal function]: app\worker\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Connection/TcpConnection.php(629): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(2232): Workerman\Events\Select->loop()
+#6 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1356): Workerman\Worker->run()
+#7 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1188): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1162): Workerman\Worker::forkWorkersForLinux()
+#9 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /mnt/hgfs/mytest/gl_xlh/vendor/topthink/think-worker/src/Server.php(49): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(215): ReflectionClass->newInstanceArgs(Array)
+#13 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/Loader.php(422): think\App::invokeClass('app\worker\cont...')
+#14 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(386): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(295): think\App::module(Array, Array, NULL)
+#16 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(123): think\App::exec(Array, Array)
+#17 /mnt/hgfs/mytest/gl_xlh/thinkphp/start.php(18): think\App::run()
+#18 /mnt/hgfs/mytest/gl_xlh/public/server.php(14): require('/mnt/hgfs/mytes...')
+#19 {main}
+2018-07-25 15:19:55 pid:2800 Worker[2800] process terminated
+2018-07-25 15:19:55 pid:2799 worker[none:2800] exit with status 64000
+2018-07-25 15:19:55 pid:2802 exception 'think\exception\ErrorException' with message 'Array to string conversion' in /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php:29
+Stack trace:
+#0 /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php(29): think\Error::appError(8, 'Array to string...', '/mnt/hgfs/mytes...', 29, Array)
+#1 [internal function]: app\worker\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Connection/TcpConnection.php(629): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(2232): Workerman\Events\Select->loop()
+#6 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1356): Workerman\Worker->run()
+#7 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1188): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1162): Workerman\Worker::forkWorkersForLinux()
+#9 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#10 /mnt/hgfs/mytest/gl_xlh/vendor/topthink/think-worker/src/Server.php(49): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(215): ReflectionClass->newInstanceArgs(Array)
+#13 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/Loader.php(422): think\App::invokeClass('app\worker\cont...')
+#14 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(386): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(295): think\App::module(Array, Array, NULL)
+#16 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(123): think\App::exec(Array, Array)
+#17 /mnt/hgfs/mytest/gl_xlh/thinkphp/start.php(18): think\App::run()
+#18 /mnt/hgfs/mytest/gl_xlh/public/server.php(14): require('/mnt/hgfs/mytes...')
+#19 {main}
+2018-07-25 15:19:55 pid:2802 Worker[2802] process terminated
+2018-07-25 15:19:55 pid:2799 worker[none:2802] exit with status 64000
+2018-07-25 15:20:22 pid:2805 exception 'think\exception\ErrorException' with message 'Array to string conversion' in /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php:29
+Stack trace:
+#0 /mnt/hgfs/mytest/gl_xlh/application/worker/controller/Worker.php(29): think\Error::appError(8, 'Array to string...', '/mnt/hgfs/mytes...', 29, Array)
+#1 [internal function]: app\worker\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), Array)
+#2 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Connection/TcpConnection.php(629): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#4 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman-for-win/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(2232): Workerman\Events\Select->loop()
+#6 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1356): Workerman\Worker->run()
+#7 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1188): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1162): Workerman\Worker::forkWorkersForLinux()
+#9 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1490): Workerman\Worker::forkWorkers()
+#10 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(1439): Workerman\Worker::monitorWorkersForLinux()
+#11 /mnt/hgfs/mytest/gl_xlh/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#12 /mnt/hgfs/mytest/gl_xlh/vendor/topthink/think-worker/src/Server.php(49): Workerman\Worker::runAll()
+#13 [internal function]: think\worker\Server->__construct()
+#14 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(215): ReflectionClass->newInstanceArgs(Array)
+#15 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/Loader.php(422): think\App::invokeClass('app\worker\cont...')
+#16 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(386): think\Loader::controller('worker', 'controller', false, 'Error')
+#17 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(295): think\App::module(Array, Array, NULL)
+#18 /mnt/hgfs/mytest/gl_xlh/thinkphp/library/think/App.php(123): think\App::exec(Array, Array)
+#19 /mnt/hgfs/mytest/gl_xlh/thinkphp/start.php(18): think\App::run()
+#20 /mnt/hgfs/mytest/gl_xlh/public/server.php(14): require('/mnt/hgfs/mytes...')
+#21 {main}
+2018-07-25 15:20:22 pid:2805 Worker[2805] process terminated
+2018-07-25 15:20:22 pid:2799 worker[none:2805] exit with status 64000
+2018-07-25 15:20:50 pid:2799 Workerman[server.php] stopping ...
+2018-07-25 15:20:50 pid:2799 Workerman[server.php] has been stopped
+2018-07-25 15:20:50 pid:2815 Workerman[server.php] start in DEBUG mode
+2018-07-25 15:21:28 pid:2815 Workerman[server.php] stopping ...
+2018-07-25 15:21:28 pid:2815 Workerman[server.php] has been stopped
+2018-07-25 15:30:28 pid:2838 Workerman[server.php] start in DEBUG mode

@@ -13,13 +13,12 @@ namespace app\db\model;
 use think\Model;
 use think\Db;
 use app\db\model\Roomusers;
-use function var_dump;
 
 class Users extends Model
 {
     // protected $hidden = [];
     // protected $hidden = ['ppassword','paypassword'];
-    protected $hidden = [];
+    protected $hidden = ['lastloginip','dateline'];
     protected $visible = ['uid','username','realname','password','item','groups'];
     //用户列表
     public function userlist($param)

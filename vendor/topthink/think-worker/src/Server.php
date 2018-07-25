@@ -10,7 +10,8 @@
 // +----------------------------------------------------------------------
 
 namespace think\worker;
-
+require VENDOR_PATH.'workerman/workerman/Autoloader.php';
+// \Workerman\Autoloader::setRootPath(__DIR__);
 use Workerman\Worker;
 
 /**

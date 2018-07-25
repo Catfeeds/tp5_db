@@ -20,15 +20,16 @@ class BaseValidate extends Validate
      * @return bool
      * @throws ParameterException
      */
+    protected $params = null;
     public function goCheck($data = null)
     {
         if (null !== $data) {
-            $params = $data;
+            $this->params = $data;
         } else {
             $request = Request::instance();
-            $params = $request->param();
+           $this->params = $request->param();
         }
-        $result = $this->batch()->check($params);//批量验证
+        $result = $this->batch()->check($this->params);//批量验证
         // $result = $this->check($params);
         if ($result) {
             return true;
@@ -83,11 +84,26 @@ class BaseValidate extends Validate
     }
 
     /**
+     * @description 验证是否是字符串
+     * @param $value
+     * @return bool
+     * @throws ParameterException
+     */
+    public function isstring($value){
+        if('' == $value || !is_string($value)){
+            throw new ParameterException([
+                'code'=>400,'msg'=>'参数格式不正常'
+            ]);
+        }
+        return true;
+    }
+    /**
      * @description 返回仅在验证规则中的数据
      * @param $data
      * @return array
      */
-    public function getDataByRule($data){
+    public function getDataByRule(){
+        $data = $this->params;
         $newDate = [];
         foreach($data as $key=>$value){
             if(isset($data[$this->rule[$key]])){

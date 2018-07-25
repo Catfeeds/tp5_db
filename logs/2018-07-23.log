@@ -1,0 +1,118 @@
+---------------------------------------------------------------
+[ 2018-07-23T09:23:48+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.179700s][吞吐率：5.56req/s] [内存消耗：626.45kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001333s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.003085s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532309028 , 1532309028) [ RunTime:0.013394s ]
+---------------------------------------------------------------
+[ 2018-07-23T09:30:25+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.062113s][吞吐率：16.10req/s] [内存消耗：529.05kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000798s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.001613s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532309425 , 1532309425) [ RunTime:0.001924s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.000846s ]
+---------------------------------------------------------------
+[ 2018-07-23T09:30:38+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.058189s][吞吐率：17.19req/s] [内存消耗：579.53kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000513s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.000730s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532309438 , 1532309438) [ RunTime:0.001621s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.000482s ]
+---------------------------------------------------------------
+[ 2018-07-23T09:33:01+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.062021s][吞吐率：16.12req/s] [内存消耗：579.61kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001578s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.001119s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532309581 , 1532309581) [ RunTime:0.001988s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 6 LIMIT 1 [ RunTime:0.000898s ]
+---------------------------------------------------------------
+[ 2018-07-23T09:55:52+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.068223s][吞吐率：14.66req/s] [内存消耗：529.15kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000401s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.000870s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532310952 , 1532310952) [ RunTime:0.003038s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 9 LIMIT 1 [ RunTime:0.000486s ]
+---------------------------------------------------------------
+[ 2018-07-23T09:57:48+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.063349s][吞吐率：15.79req/s] [内存消耗：528.96kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000519s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.000889s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532311068 , 1532311068) [ RunTime:0.001672s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 10 LIMIT 1 [ RunTime:0.000480s ]
+---------------------------------------------------------------
+[ 2018-07-23T09:58:28+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.058279s][吞吐率：17.16req/s] [内存消耗：528.98kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000516s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.000767s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532311108 , 1532311108) [ RunTime:0.001303s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000446s ]
+---------------------------------------------------------------
+[ 2018-07-23T09:58:52+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.064125s][吞吐率：15.59req/s] [内存消耗：528.96kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000653s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.000822s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532311132 , 1532311132) [ RunTime:0.001689s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 12 LIMIT 1 [ RunTime:0.000551s ]
+---------------------------------------------------------------
+[ 2018-07-23T10:04:19+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.071028s][吞吐率：14.08req/s] [内存消耗：529.05kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000413s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.000890s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532311459 , 1532311459) [ RunTime:0.001908s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 13 LIMIT 1 [ RunTime:0.000535s ]
+---------------------------------------------------------------
+[ 2018-07-23T10:04:32+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.175702s][吞吐率：5.69req/s] [内存消耗：790.77kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000524s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.001144s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532311472 , 1532311472) [ RunTime:0.001967s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000730s ]
+---------------------------------------------------------------
+[ 2018-07-23T10:06:11+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.068805s][吞吐率：14.53req/s] [内存消耗：593.09kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000826s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.000895s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532311571 , 1532311571) [ RunTime:0.002009s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 15 LIMIT 1 [ RunTime:0.000727s ]
+---------------------------------------------------------------
+[ 2018-07-23T10:11:56+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.073507s][吞吐率：13.60req/s] [内存消耗：527.91kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005359s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.001394s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('张三' , '{\"id\":\"1\",\"name\":\"zhangsan\"}' , 1532311916 , 1532311916) [ RunTime:0.001781s ]
+[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` = 16 LIMIT 1 [ RunTime:0.000635s ]
+---------------------------------------------------------------
+[ 2018-07-23T10:35:02+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.058681s][吞吐率：17.04req/s] [内存消耗：491.84kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000592s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.001118s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('李四' , 'lisi' , 1532313302 , 1532313302) [ RunTime:0.000523s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('王五' , 'wangwu' , 1532313302 , 1532313302) [ RunTime:0.000468s ]
+---------------------------------------------------------------
+[ 2018-07-23T11:26:33+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.082370s][吞吐率：12.14req/s] [内存消耗：575.65kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000703s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.001078s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('李四' , 'lisi' , 1532316393 , 1532316393) [ RunTime:0.000546s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('王五' , 'wangwu' , 1532316393 , 1532316393) [ RunTime:0.000407s ]
+---------------------------------------------------------------
+[ 2018-07-23T11:26:33+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.093228s][吞吐率：10.73req/s] [内存消耗：540.20kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000513s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.001005s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('李四' , 'lisi' , 1532316393 , 1532316393) [ RunTime:0.000657s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('王五' , 'wangwu' , 1532316393 , 1532316393) [ RunTime:0.003779s ]
+---------------------------------------------------------------
+[ 2018-07-23T11:28:56+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.069754s][吞吐率：14.34req/s] [内存消耗：498.88kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000667s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.003949s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('李四' , 'lisi' , 1532316536 , 1532316536) [ RunTime:0.000704s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('王五' , 'wangwu' , 1532316536 , 1532316536) [ RunTime:0.000448s ]
+---------------------------------------------------------------
+[ 2018-07-23T11:29:06+08:00 ] 192.168.0.85 192.168.0.213 GET /auto
+[ info ] gl.xlh.net/auto [运行时间：0.067061s][吞吐率：14.91req/s] [内存消耗：498.60kb] [文件加载：64]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000489s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.000845s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('李四' , 'lisi' , 1532316546 , 1532316546) [ RunTime:0.000570s ]
+[ sql ] [ SQL ] INSERT INTO `ebh_test` (`name` , `value` , `dateline` , `updatetime`) VALUES ('王五' , 'wangwu' , 1532316546 , 1532316546) [ RunTime:0.000345s ]

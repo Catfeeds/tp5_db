@@ -69,3 +69,6 @@ Route::group('api/:version',function(){
 
 Route::get('before','db/v1.Before/second');//控制器前置操作
 Route::get('captcha','db/v1.Test/getCaptcha');//验证码
+Route::get('sql','db/v1.Test/testSql');//测试sql
+Route::get('auto','db/v1.Test/addData');//测试自动写入时间戳
+Route::get('ws','worker/Index/index');//websocket测试

@@ -15,7 +15,7 @@
 //测试
 define('APP_PATH', __DIR__ . '/../application/');
 define('LOG_PATH',__DIR__.'/../logs/');
-define('APP_DEBUG',false);
+define('APP_DEBUG',true);
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
 \think\Log::init([

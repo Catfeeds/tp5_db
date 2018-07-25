@@ -13,6 +13,7 @@ use think\Model;
 
 class BaseModel extends Model
 {
+    //添加图像前缀
     protected function getImgPrefix($value,$data){
         $imgUrl = $value;
         if(false===strpos($value,'//')){

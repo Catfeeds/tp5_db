@@ -20,7 +20,7 @@ require_once __DIR__.'/Lib/Constants.php';
  * 自动加载类
  * @author walkor<walkor@workerman.net>
  */
-class Autoloader
+class Autoloader1
 {
     // 应用的初始化目录，作为加载类文件的参考目录
     protected static $_appInitPath = '';

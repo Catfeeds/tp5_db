@@ -1,16 +1,15 @@
 <?php
 
-namespace app\index\controller;
+namespace app\worker\controller;
 
 use think\Controller;
-use think\Session;
 
 class Index extends Controller
 {
 
     public function index()
     {
-
-         return $this->fetch();
+        // return view('index/index');
+        return $this->fetch();//等价上面
     }
 }

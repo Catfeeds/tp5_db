@@ -1,16 +1,16 @@
 <?php
 
 namespace app\worker\controller;
-
 use think\worker\Server;
 
 class Worker extends Server
 {
-    protected $socket = 'http://0.0.0.0:2346';
+
+    // protected $socket = 'http://0.0.0.0:2346';
+    protected $socket = 'websocket://0.0.0.0:2000';
     public function index(){
         parent::__construct();
     }
-
 
     /**
      * 收到信息
@@ -18,9 +18,9 @@ class Worker extends Server
      * @param $data
      * 命令行运行 php server.php 即可
      */
-    public function onMessage($connection, $data)
+    public  function onMessage($connection, $data)
     {
-        $connection->send('你好 workman!');
+        $connection->send('你好 workerman!');
     }
 
     /**
@@ -60,4 +60,18 @@ class Worker extends Server
     {
 
     }
+    // public function start(){
+    //     self::runAll();
+    // }
+
 }
+
+/** 上面的类暂时还不知道怎么使用 目前链接使用下面的方式 入门测试
+ * 切换到 public目录 执行 php server.php start 浏览器输入对应网址加端口即可
+ */
+// $worker = new WS('http://gl.xlh.net:2346');
+// $worker->count = 4;
+// $worker->onMessage = function($connection,$data){
+//     $connection->send('你好 my workerman!');
+// };
+// WS::runAll();

@@ -1,0 +1,102 @@
+---------------------------------------------------------------
+error - 2018-07-20 17:31:20 -->
+配置array (
+  'view_path' => '/mnt/hgfs/mytest/gl_xlh/public/../application/db/view/',
+  'view_base' => '',
+  'view_suffix' => 'html',
+  'view_depr' => '/',
+  'cache_suffix' => 'php',
+  'tpl_deny_func_list' => 'echo,exit',
+  'tpl_deny_php' => false,
+  'tpl_begin' => '{',
+  'tpl_end' => '}',
+  'strip_space' => false,
+  'tpl_cache' => false,
+  'compile_type' => 'file',
+  'cache_prefix' => '',
+  'cache_time' => 0,
+  'layout_on' => false,
+  'layout_name' => 'layout',
+  'layout_item' => '{__CONTENT__}',
+  'taglib_begin' => '{',
+  'taglib_end' => '}',
+  'taglib_load' => true,
+  'taglib_build_in' => 'cx',
+  'taglib_pre_load' => '',
+  'display_cache' => false,
+  'cache_id' => '',
+  'tpl_replace_string' => 
+  array (
+  ),
+  'tpl_var_identify' => 'array',
+  'cache_path' => '/mnt/hgfs/mytest/gl_xlh/runtime/temp/',
+)
+---------------------------------------------------------------
+error - 2018-07-20 17:31:20 -->
+缓存配置
+---------------------------------------------------------------
+error - 2018-07-20 17:33:17 -->
+配置array (
+  'view_path' => '/mnt/hgfs/mytest/gl_xlh/public/../application/db/view/',
+  'view_base' => '',
+  'view_suffix' => 'html',
+  'view_depr' => '/',
+  'cache_suffix' => 'php',
+  'tpl_deny_func_list' => 'echo,exit',
+  'tpl_deny_php' => false,
+  'tpl_begin' => '{',
+  'tpl_end' => '}',
+  'strip_space' => false,
+  'tpl_cache' => false,
+  'compile_type' => 'file',
+  'cache_prefix' => '',
+  'cache_time' => 0,
+  'layout_on' => false,
+  'layout_name' => 'layout',
+  'layout_item' => '{__CONTENT__}',
+  'taglib_begin' => '{',
+  'taglib_end' => '}',
+  'taglib_load' => true,
+  'taglib_build_in' => 'cx',
+  'taglib_pre_load' => '',
+  'display_cache' => false,
+  'cache_id' => '',
+  'tpl_replace_string' => 
+  array (
+  ),
+  'tpl_var_identify' => 'array',
+  'cache_path' => '/mnt/hgfs/mytest/gl_xlh/runtime/temp/',
+)
+---------------------------------------------------------------
+error - 2018-07-20 17:48:28 -->
+配置array (
+  'view_path' => '/mnt/hgfs/mytest/gl_xlh/public/../application/db/view/',
+  'view_base' => '',
+  'view_suffix' => 'html',
+  'view_depr' => '/',
+  'cache_suffix' => 'php',
+  'tpl_deny_func_list' => 'echo,exit',
+  'tpl_deny_php' => false,
+  'tpl_begin' => '{',
+  'tpl_end' => '}',
+  'strip_space' => false,
+  'tpl_cache' => true,
+  'compile_type' => 'file',
+  'cache_prefix' => '',
+  'cache_time' => 0,
+  'layout_on' => false,
+  'layout_name' => 'layout',
+  'layout_item' => '{__CONTENT__}',
+  'taglib_begin' => '{',
+  'taglib_end' => '}',
+  'taglib_load' => true,
+  'taglib_build_in' => 'cx',
+  'taglib_pre_load' => '',
+  'display_cache' => false,
+  'cache_id' => '',
+  'tpl_replace_string' => 
+  array (
+  ),
+  'tpl_var_identify' => 'array',
+  'cache_path' => '/mnt/hgfs/mytest/gl_xlh/runtime/temp/',
+)

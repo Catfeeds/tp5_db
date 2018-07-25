@@ -24,9 +24,11 @@ use think\{
     Controller, Exception, Loader, Config, Request, Log, Verify
 };//php 7 支持此种模式
 use app\db\validate\Users;
-
+use app\db\model\Test as TestModel;
 use extend\jwt\Jwt;
+use app\db\validate\Test as TestValidate;
 use app\lib\exception\UserMissException;
+use function var_dump;
 
 
 class Test extends Controller
@@ -80,6 +82,8 @@ class Test extends Controller
     public function page(){
         $user = new User();
         $list = $user->getpage();
+        // $list = $user->where('status','=',1)->order('uid desc')->paginate(10); //等价上面 使用模型
+        // return json($list);
         return $this->fetch('test/page',['userlist'=>$list]);
     }
     //分页数据模板
@@ -346,5 +350,58 @@ class Test extends Controller
         if (!$verify->check($code, "admin_login")) {
            echo '验证码错误';
         }
+    }
+
+    /**
+     * @description
+     * @return string|\think\response\Json
+     * @throws \think\exception\DbException
+     */
+    public function testSql(){
+        // $list = User::all([1,2,3]);
+        // $list = User::where('uid','=','12')->find();
+        // $list = TestModel::where('id',1)->find();
+        $list = db('test')->cache(true,10)->select([1,2]);//将查询结果缓存起来 10秒过期 不设置永久
+        db('test')->update(['id'=>1,'name'=>'我被改变了']);
+        return json($list);
+    }
+
+    /**
+     * @description 添加数据 验证时间戳自动插入 输出自动转换
+     * @return string|\think\response\Json
+     */
+    public function addData(){
+        $testModel = new TestModel();
+        //------------单条数据插入--------------
+        // $testModel->name = '张三';
+        // $testModel->value = '{"id":"1","name":"zhangsan"}';
+        // $testModel->save();
+        // $id = $testModel->id;//生成的主键id
+        // $info = $testModel::find($id);
+        //--------------单条插入结束------------
+
+        //多条插入
+        $data = [
+            ['name'=>'李四','value'=>'hehela'],
+            ['name'=>'王五','value'=>'wangwu']
+        ];
+        (new TestValidate())->goCheck(['users'=>$data]);
+        $result = $testModel->saveAll($data);
+        return json($result);
+    }
+
+    /**
+     * @description 增删改查示例操作
+     * @return string|\think\response\Json
+     */
+    public function getTestData(){
+        $list = TestModel::limit(10)->select();
+        // $res = TestModel::destroy([6,7,8]);//批量删除
+        // $res = TestModel::destroy('6,7,8');//批量删除
+        // $res = TestModel::update(['name'=>'呵呵哒2','id'=>1]);//更新方法1
+        // $res = (new TestModel())->save(['name'=>'呵呵哒2'],['id'=>2]);//更新方法2
+        // $res = (new TestModel())->isUpdate(true)->save(['name'=>'呵呵哒4','id'=>4]);//更新方法3
+        $res = (new TestModel())->where(['id'=>2])->update(['name'=>'呵呵哒3']);//更新方法4
+        return json($res);
     }
 }

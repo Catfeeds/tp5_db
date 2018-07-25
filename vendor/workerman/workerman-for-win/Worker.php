@@ -11,7 +11,7 @@
  * @link http://www.workerman.net/
  * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace Workerman;
+namespace Workerman2;
 
 require_once __DIR__ . '/Lib/Constants.php';
 
