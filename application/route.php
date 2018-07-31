@@ -42,9 +42,13 @@ use think\Route;
 // Route::rule('路由表达式','路由地址','请求类型','路由参数(数组)','请求参数(数组)');//格式
 // 请求类型 GET POST PUT DELETE * 默认为* 表示任意类型
 // Route::rule('/','db/test/testlist','GET');
-// Route::get('/','db/test/testlist');//等价上面
-Route::get('/','worker/worker/index');
-Route::get('xlh','db/index/getSerialize');
+Route::get('/','db/test/testlist');//等价上面
+Route::any('dir','db/v1.Dir/getDir');// 调用shell命令 递归创建目录
+// Route::get('/','worker/worker/index');
+// Route::get('xlh','db/index/getSerialize');
+Route::any('xlh','db/index/getSerialize');
+// Route::post('post','db/index/getSerialize');
+
 Route::post('hello','db/test/test2');//传参
 // Route::any('any','db/test/test3');//传参
 Route::any('test','db/v1.Test/basetest');
@@ -66,9 +70,10 @@ Route::group('api/:version',function(){
     Route::get('/test/page','db/:version.Test/page');//分页
     Route::get('/user/token','db/:version.Token/createToken');
 });
-
+Route::get('testdata','db/v1.Test/getTestData');//数据增删改查操作
 Route::get('before','db/v1.Before/second');//控制器前置操作
 Route::get('captcha','db/v1.Test/getCaptcha');//验证码
 Route::get('sql','db/v1.Test/testSql');//测试sql
 Route::get('auto','db/v1.Test/addData');//测试自动写入时间戳
 Route::get('ws','worker/Index/index');//websocket测试
+Route::get('block','db/v1.Block/test');//区块链测试

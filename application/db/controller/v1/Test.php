@@ -10,6 +10,7 @@
 namespace app\db\controller\v1;
 
 
+use function action;
 use app\db\model\Users as User;
 use app\api\controller\CacheRedis;
 
@@ -28,7 +29,6 @@ use app\db\model\Test as TestModel;
 use extend\jwt\Jwt;
 use app\db\validate\Test as TestValidate;
 use app\lib\exception\UserMissException;
-use function var_dump;
 
 
 class Test extends Controller
@@ -84,6 +84,7 @@ class Test extends Controller
         $list = $user->getpage();
         // $list = $user->where('status','=',1)->order('uid desc')->paginate(10); //等价上面 使用模型
         // return json($list);
+
         return $this->fetch('test/page',['userlist'=>$list]);
     }
     //分页数据模板
@@ -160,7 +161,7 @@ class Test extends Controller
         $request2 = input('get.');
         $request3 = input('post.');
 
-        // echo request()->domain();//获取请求域名
+        echo request()->domain();//获取请求域名
         if (request()->isPost()) {
             echo '这是post请求';
             die;//判断是否是POST请求  isPut isGet isDelete isHeader ..
@@ -394,14 +395,22 @@ class Test extends Controller
      * @description 增删改查示例操作
      * @return string|\think\response\Json
      */
-    public function getTestData(){
-        $list = TestModel::limit(10)->select();
+    public function getTestData(TestModel $testModel){
+        // var_dump($testModel);die;//获取TestModel 实例
+        // $list = TestModel::limit(10)->select();
+        $list = (new TestModel())->limit(10)->select();
         // $res = TestModel::destroy([6,7,8]);//批量删除
         // $res = TestModel::destroy('6,7,8');//批量删除
         // $res = TestModel::update(['name'=>'呵呵哒2','id'=>1]);//更新方法1
         // $res = (new TestModel())->save(['name'=>'呵呵哒2'],['id'=>2]);//更新方法2
         // $res = (new TestModel())->isUpdate(true)->save(['name'=>'呵呵哒4','id'=>4]);//更新方法3
-        $res = (new TestModel())->where(['id'=>2])->update(['name'=>'呵呵哒3']);//更新方法4
-        return json($res);
+        // $res = (new TestModel())->where(['id'=>2])->lock(true)->update(['name'=>'呵呵哒3']);//更新方法4(加锁)
+        // $res = (new TestModel())->where('id','=','3')->setInc('total',-7);//total字段自加 (也会成功 下同)
+        // $res = (new TestModel())->where('id','=','3')->setDec('total',3);//total字段自减
+        // $res = action('worker/Index/test',['id'=>2]);//跨模块调用
+        // return json($list);
+        $json = json($list);
+        $arr=json_decode($json->getContent(),true);//将json对象转为数组 注意：不加getContent()会报错的
+        var_dump($arr);
     }
 }

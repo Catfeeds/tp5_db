@@ -134,6 +134,24 @@ class Index extends Controller
     public function getSerialize()
     {   //abcd();die;
         // renderjson(200,'SUCCESS',['name'=>'zhangsan','sex'=>'nan']);
+        if($_POST){
+            $txtContent = $_POST['txt'];
+            $type = input('type');
+            if ($type == 2)
+                $txtContent = str_replace('\\', '', $txtContent);
+            $ret = @unserialize($txtContent);
+            if (empty($ret)) {
+                $ret = json_decode($txtContent, true);
+            }
+            if($type == 3){
+                $ret = json_decode($txtContent, true);
+            }
+            $str = '<pre>';
+            $str .= $ret ? print_r($ret, true) : ($type == 2 ? '非正确格式序列化字符串' : '非正确格式JSON字符');
+            $str .= '<pre>';
+
+            return json($str,'success',0);
+        }
         return $this->fetch('index/getserialize');
     }
 

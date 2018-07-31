@@ -14,6 +14,8 @@ class Error
     {
 
         //根据当前控制器名来判断要执行那个城市的操作
+        $name = $request->controller();
+        return $name.'控制器不存在';
 
     }
 

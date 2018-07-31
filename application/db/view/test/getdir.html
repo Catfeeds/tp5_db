@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动生成目录</title>
+</head>
+<link rel="stylesheet" href="/static/layui/css/layui.css">
+<script src="/static/layui/layui.js"></script>
+
+<style>
+    .inbox{
+        margin: 10px auto;
+        width: 80%;
+        height: 60px;
+        border: 1px solid #1f6377;
+        border-radius:5px;
+        /*overflow-x: scroll;*/
+        overflow-y: scroll;
+        text-align: left;
+        text-indent: 5px;
+        line-height: 15px;
+        padding: 5px;
+        color: #000;
+    }
+    .bgbox{
+        width: 80%;
+        margin: 5px auto;
+        height: 200px;
+        text-align: center;
+    }
+    body{
+        background: #fff;
+    }
+</style>
+<body>
+<div class="bgbox">
+    <div class="inbox" contenteditable="true" title="请输入要生成的目录字符串">
+    </div>
+    <form action="" class="llayui-form layui-form-pane"></form>
+    <span class="layui-btn layui-btn-success" style="margin: 20px auto" id="search">生成目录</span>
+    <span class="layui-btn layui-btn-danger" style="margin: 20px auto" id="clear">清空</span>
+    </form>
+    <h3>返回结果：</h3>
+    <div class="inbox" style="text-align: left;height: 100px;" id="ret">
+
+    </div>
+</div>
+<script>
+
+    layui.config({
+        base:'/static/layui/lay/modules/'
+    }).use(['layer','form'],function () {
+        var $ = layui.jquery;
+        $.extend({
+            layer:layui.layer,
+            from :layui.form
+        });
+        $('#search').on('click',function () {
+
+            var txt = $('.inbox')[0].textContent;
+            txt = txt.trim();
+            if(txt.length == 0 ){
+                $.layer.alert('要创建的目录字符串不能为空!',{icon:2});
+                return ;
+            }
+            $.layer.load();
+            $('#ret')[0].innerHTML= '';
+//             var type= $('select[name="type"]').val();
+            var type= $('input[type="radio"]:checked').val();
+            var data = {d:txt};
+            $.ajax({
+                url:'dir',
+                type:'POST',
+                dataType:'json',
+                data:data,
+                success:function (r) {
+                    closeAll();
+                    if(typeof r.code == undefined){
+                        $.layer.alert('解析错误',{icon:2});
+                    }
+                    if(r.code==0){
+                        $('#ret')[0].innerHTML= "目录创建成功,目录地址 G:\mytest\MYDIR";
+                    }
+                },
+                error:function () {
+                    closeAll();
+                }
+            })
+        });
+        function closeAll() {
+            $.layer.closeAll();
+        }
+        //清空按钮
+        $('#clear').on('click',function () {
+            $('.inbox')[0].textContent = '';
+        });
+        //加载完成获取焦点
+        $(function () {
+            //console.log($('div[contenteditable]'));
+            $('div[contenteditable]')[0].focus();
+        })
+    })
+</script>
+</body>
+</html>
