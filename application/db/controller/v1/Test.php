@@ -29,7 +29,7 @@ use app\db\model\Test as TestModel;
 use extend\jwt\Jwt;
 use app\db\validate\Test as TestValidate;
 use app\lib\exception\UserMissException;
-
+use app\db\service\Test as Testservice;
 
 class Test extends Controller
 {
@@ -346,7 +346,7 @@ class Test extends Controller
     /**
      * @description 校验验证码
      */
-    public function chechCaptcha(){
+    public function chechCaptcha($code){
         $verify = new Verify();
         if (!$verify->check($code, "admin_login")) {
            echo '验证码错误';
@@ -412,5 +412,31 @@ class Test extends Controller
         $json = json($list);
         $arr=json_decode($json->getContent(),true);//将json对象转为数组 注意：不加getContent()会报错的
         var_dump($arr);
+    }
+
+    /**
+     * @description 事务测试
+     * @return string|\think\response\Json
+     * @throws \think\exception\PDOException
+     */
+    public function testTrans(){
+        $res = (new Testservice())->testTrans();
+        return json($res);
+    }
+
+    /**
+     * @description 修改器的使用 设置不存在的字段
+     * @return string|\think\response\Json
+     * @throws \think\exception\DbException
+     */
+    public function modifier(){
+        $testModel = new TestModel();
+        // $res = $testModel::find(3);
+        $res = $testModel::all();
+        foreach($res as $val){
+            $val['hehe'] = $val->real_name;
+        }
+        // $res['hehe'] = $res->real_name;
+        return json($res);
     }
 }

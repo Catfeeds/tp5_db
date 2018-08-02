@@ -1,7 +1,0 @@
----------------------------------------------------------------
-[ 2018-07-25T15:30:37+08:00 ] 192.168.0.85 192.168.0.213 GET /sql
-[ info ] gl.xlh.net/sql [运行时间：0.283359s][吞吐率：3.53req/s] [内存消耗：603.75kb] [文件加载：63]
-[ sql ] [ DB ] CONNECT:[ UseTime:0.015305s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_test` [ RunTime:0.059239s ]
-[ sql ] [ SQL ] SELECT * FROM `ebh_test` WHERE  `id` IN (1,2) [ RunTime:0.002232s ]
-[ sql ] [ SQL ] UPDATE `ebh_test`  SET `name`='我被改变了'  WHERE  `id` = 1 [ RunTime:0.027237s ]

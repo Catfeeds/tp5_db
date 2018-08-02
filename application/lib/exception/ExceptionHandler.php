@@ -44,7 +44,7 @@ class ExceptionHandler extends Handle
             'errorCode' => $this->errorCode,
             'request_url' => $request->url(),
         ];
-        return json($result,$this->code,'fail');
+        return json($result,'fail',$this->code);
     }
 
     /**

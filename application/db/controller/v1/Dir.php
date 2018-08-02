@@ -10,7 +10,6 @@
 namespace app\db\controller\v1;
 
 
-use function json_encode;
 use think\Controller;
 
 class Dir extends Controller
@@ -33,6 +32,7 @@ class Dir extends Controller
             return json("目录创建成功,目录地址 G:\mytest\MYDIR",'success',0);
         } else {
             return $this->fetch('test/getdir');
+            // return $this->fetch('/index');
         }
     }
 }

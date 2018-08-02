@@ -20,7 +20,7 @@ class Worker extends Server
      */
     public  function onMessage($connection, $data)
     {
-        $connection->send('你好 workerman!');
+        $connection->send('你好 workerman!'.$data);
     }
 
     /**
@@ -60,18 +60,6 @@ class Worker extends Server
     {
 
     }
-    // public function start(){
-    //     self::runAll();
-    // }
+
 
 }
-
-/** 上面的类暂时还不知道怎么使用 目前链接使用下面的方式 入门测试
- * 切换到 public目录 执行 php server.php start 浏览器输入对应网址加端口即可
- */
-// $worker = new WS('http://gl.xlh.net:2346');
-// $worker->count = 4;
-// $worker->onMessage = function($connection,$data){
-//     $connection->send('你好 my workerman!');
-// };
-// WS::runAll();

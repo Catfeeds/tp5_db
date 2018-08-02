@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+error - 2018-08-01 10:28:21 -->
+事务提交失败:SQLSTATE[22003]: Numeric value out of range: 1690 BIGINT UNSIGNED value is out of range in '(`ebh2`.`ebh_test`.`total` - 3)'
+---------------------------------------------------------------
+error - 2018-08-01 10:28:27 -->
+事务提交失败:SQLSTATE[22003]: Numeric value out of range: 1690 BIGINT UNSIGNED value is out of range in '(`ebh2`.`ebh_test`.`total` - 3)'
+---------------------------------------------------------------
+error - 2018-08-01 10:30:24 -->
+事务提交失败:SQLSTATE[22003]: Numeric value out of range: 1690 BIGINT UNSIGNED value is out of range in '(`ebh2`.`ebh_test`.`total` - 3)'
+---------------------------------------------------------------
+error - 2018-08-01 14:05:40 -->
+事务提交失败:SQLSTATE[22003]: Numeric value out of range: 1690 BIGINT UNSIGNED value is out of range in '(`ebh2`.`ebh_test`.`total` - 3)'

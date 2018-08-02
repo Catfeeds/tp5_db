@@ -43,11 +43,11 @@ use think\Route;
 // 请求类型 GET POST PUT DELETE * 默认为* 表示任意类型
 // Route::rule('/','db/test/testlist','GET');
 Route::get('/','db/test/testlist');//等价上面
-Route::any('dir','db/v1.Dir/getDir');// 调用shell命令 递归创建目录
-// Route::get('/','worker/worker/index');
-// Route::get('xlh','db/index/getSerialize');
-Route::any('xlh','db/index/getSerialize');
-// Route::post('post','db/index/getSerialize');
+Route::any('dir','db/v1.Dir/getDir',['method'=>'get|post']);// 调用shell命令 递归创建目录
+Route::any('xlh','db/index/getSerialize',['method'=>'get|post']);
+Route::any('layuiindex','db/v1.Test/pageindex');
+Route::any('layui','db/v1.Test/ajaxpage',['method'=>'get|post']);
+
 
 Route::post('hello','db/test/test2');//传参
 // Route::any('any','db/test/test3');//传参
@@ -77,3 +77,5 @@ Route::get('sql','db/v1.Test/testSql');//测试sql
 Route::get('auto','db/v1.Test/addData');//测试自动写入时间戳
 Route::get('ws','worker/Index/index');//websocket测试
 Route::get('block','db/v1.Block/test');//区块链测试
+Route::get('trans','db/v1.Test/testTrans');//事务测试
+Route::get('xgq','db/v1.Test/modifier');//修改器的使用

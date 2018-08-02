@@ -13,13 +13,15 @@ use think\Controller;
 use think\Config;
 use app\db\model\User;
 use extend\jwt\Jwt;
+use think\Request;
 class AuthBase extends Controller
 {
     protected $userinfo;
     public function _initialize(){
         parent::_initialize();
         // import('jwt.Jwt', EXTEND_PATH);
-        $authorization = getHeader('authorization');
+        $authorization = getHeader('authorization');//或下面的方式
+        $authorization = Request::instance()->header('authorization');
         $jwt = (new Jwt(Config::get('jwt')['key']))->decode($authorization);
         if(!$jwt){
             renderjson(403,'fail','用户登录授权失败');

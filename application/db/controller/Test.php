@@ -9,12 +9,14 @@
 
 namespace app\db\controller;
 
+use function log_message;
 use think\Controller;
 use app\db\model\Users as User;
 use app\api\controller\CacheRedis;
 use think\Loader;
 use think\Config;
 use think\Request;
+use function var_export;
 
 class Test extends Controller
 {
@@ -87,7 +89,8 @@ class Test extends Controller
         );
         //trace(json_encode($data),'log');
         //log_message($data);die;
-        echo json_encode($data);
+        return json($data);
+        // echo json_encode($data);
     }
 
     //redis测试hash类型使用

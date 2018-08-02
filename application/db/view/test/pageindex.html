@@ -11,44 +11,52 @@
     {load file="__STATIC__/js/jquery-3.2.1.min.js"}
 </head>
 <body>
-<table class="layui-hide" id="test"></table>
-<!--<table class="layui-table" lay-data="{height:315, url:'/demo/table/user/', page:true, id:'test'}" lay-filter="test">-->
-    <!--<thead>-->
-    <!--<tr>-->
-        <!--<th lay-data="{field:'id', width:80, sort: true}">ID</th>-->
-        <!--<th lay-data="{field:'username', width:80}">用户名</th>-->
-        <!--<th lay-data="{field:'sex', width:80, sort: true}">性别</th>-->
-        <!--<th lay-data="{field:'city'}">城市</th>-->
-        <!--<th lay-data="{field:'sign'}">签名</th>-->
-        <!--<th lay-data="{field:'experience', sort: true}">积分</th>-->
-        <!--<th lay-data="{field:'score', sort: true}">评分</th>-->
-        <!--<th lay-data="{field:'classify'}">职业</th>-->
-        <!--<th lay-data="{field:'wealth', sort: true}">财富</th>-->
-    <!--</tr>-->
-    <!--</thead>-->
-<!--</table>-->
-<!--<div id="pages" class="text-center"></div>-->
+<table class="layui-hide" id="test" lay-filter="demo"></table>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+<script type="text/html" id="switchTpl">
+    <!-- 这里的 checked 的状态只是演示 -->
+    <input type="checkbox" name="sex" value="{{d.id}}" lay-skin="switch" lay-text="女|男" lay-filter="sexDemo" {{ d.id == 10003 ? 'checked' : '' }}>
+</script>
+
+<script type="text/html" id="checkboxTpl">
+    <!-- 这里的 checked 的状态只是演示 -->
+    <input type="checkbox" name="lock" value="{{d.id}}" title="锁定" lay-filter="lockDemo" {{ d.id == 10006 ? 'checked' : '' }}>
+</script>
 <script>
 
     var table = layui.table;
+    var form = layui.form;
+    var page=1;
+    var limit =10;
     table.render({
         elem: '#test'
-        ,url:"{url:('test/ajaxpage')}"
+        // ,url:"{:url('v1.test/ajaxpage')}"//方法1
+        ,url:"layui"//方法2 使用路由
+        ,cellMinWidth: 80
         ,page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
-            layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+            layout: ['prev', 'page', 'next', 'skip','limit', 'count' ] //自定义分页布局
             ,curr: 1 //设定初始在第 5 页
             ,groups: 5 //只显示 1 个连续页码
-            ,first: true //不显示首页
-            ,last: true //不显示尾页
+            // ,first: false //不显示首页
+            // ,last: false //不显示尾页
 
         }
         ,cols: [[
-            {field:'uid', width:80, title: 'ID', sort: true}
-            ,{field:'username', width:100, title: '用户名'}
-            ,{field:'sex', width:80, title: '性别', sort: true}
-            ,{field:'password', width:80, title: '城市'}
-            ,{field:'ppassword', title: '签名', minWidth: 150}
+            {type:'numbers'}
+            ,{type:'checkbox'}
+            ,{field:'uid', width:80, title: 'ID', sort: true}
+            ,{field:'username', minWidth:150, title: '用户名'}
+            ,{field:'sex', width:80, title: '性别', templet: '#switchTpl', unresize: true}
+            ,{field:'ppassword', minWidth:80, title: '支付密码'}
+            ,{field:'password', title: '密码', minWidth: 100,event: 'setSign', style:'cursor: pointer'}
             ,{field:'groupid', width:80, title: '积分', sort: true}
+            ,{field:'lock', title:'是否锁定', width:110, templet: '#checkboxTpl', unresize: true}
+            ,{field:'poperation', width:150, title: '操作', fixed: 'right', toolbar: '#barDemo'}
+
 
         ]],
         done: function(res, curr, count){
@@ -64,6 +72,37 @@
         }
 
     });
+    //监听工具条
+    table.on('tool(demo)', function(obj){
+        var data = obj.data;
+        if(obj.event === 'detail'){
+            layer.msg('ID：'+ data.id + ' 的查看操作');
+        } else if(obj.event === 'del'){
+            layer.confirm('真的删除行么', function(index){
+                obj.del();
+                layer.close(index);
+            });
+        } else if(obj.event === 'edit'){
+            layer.alert('编辑行：<br>'+ JSON.stringify(data))
+        }else if(obj.event === 'setSign'){
+            layer.prompt({
+                formType: 2
+                ,title: '修改 ID 为 ['+ data.uid +'] 的用户密码'
+                ,value: data.password
+            }, function(value, index){
+                console.log(value);
+                layer.close(index);
+
+                //这里一般是发送修改的Ajax请求
+
+                //同步更新表格和缓存对应的值
+                obj.update({
+                    password: value
+                });
+            });
+        }
+    });
+
 //    var laypage = layui.laypage;
 //    laypage.render({
 //        elem: 'pages',
@@ -79,6 +118,14 @@
 //            }
 //        }
 //    });
+    //监听性别操作
+    form.on('switch(sexDemo)', function(obj){
+        layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
+    });
+    //监听锁定操作
+    form.on('checkbox(lockDemo)', function(obj){
+        layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
+    });
 </script>
 </body>
 </html>
