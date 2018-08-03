@@ -21,6 +21,8 @@ use app\api\controller\CacheRedis;
 // use think\Request;
 // use think\Log;
 use app\db\validate\IdIsInt;
+use function json_encode;
+use function return_json;
 use think\{
     Controller, Exception, Loader, Config, Request, Log, Verify
 };//php 7 支持此种模式
@@ -79,14 +81,16 @@ class Test extends Controller
     /**
      * @description  分页
      */
-    public function page(){
+    public function page()
+    {
         $user = new User();
         $list = $user->getpage();
         // $list = $user->where('status','=',1)->order('uid desc')->paginate(10); //等价上面 使用模型
         // return json($list);
 
-        return $this->fetch('test/page',['userlist'=>$list]);
+        return $this->fetch('test/page', ['userlist' => $list]);
     }
+
     //分页数据模板
     public function pageindex()
     {
@@ -266,28 +270,33 @@ class Test extends Controller
     /**
      * @description
      */
-    public function test4(){
+    public function test4()
+    {
         // $jwt = config('jwt')['key'];
         // dump($jwt);die;
         // $class = new \Jwt();
         (new IdIsInt())->goCheck();
         $jwt = (new Jwt(config('jwt')['key']))->encode(['uid' => 123]);
-        echo $jwt;die;
+        echo $jwt;
+        die;
         $request = request()->param();
         $data = [
             'uid' => $request['id']
         ];
         (new Users())->scene('get')->goCheck($data);//自定义传参 默认会传递 ['id'=>21] 这样与验证规则不符
     }
-    public function test5(){
+
+    public function test5()
+    {
         echo '路由规则验证';
     }
+
     // 异常测试
     public function testException()
     {
         // log_message(1111);
         $userInfo = $this->user->getUserById(12);
-        if(!$userInfo){
+        if (!$userInfo) {
             throw new UserMissException();
         }
         return $userInfo;
@@ -297,7 +306,8 @@ class Test extends Controller
      * @description 关联模型测试
      * @param $id
      */
-    public function orm($id){
+    public function orm($id)
+    {
         $request = Request::instance()->param();
         $param['status'] = isset($request['status']) ? (int)$request['status'] : 1;
         $param['sex'] = isset($request['sex']) ? (int)$request['sex'] : 0;
@@ -309,7 +319,7 @@ class Test extends Controller
         //    return redirect('db/index/redirect2')->remember();//记住当前的URL重定向
         // }
         //重写的json方法 第一个code是数据加入的code信息 第二个code 是请求返回状态值
-        return json($user,201,'success',200);
+        return json($user, 201, 'success', 200);
         // return xml($user,200);
         // renderjson(200,'success',$user);
     }
@@ -318,25 +328,27 @@ class Test extends Controller
      * @description  tp5 cache使用
      * @return mixed
      */
-    public function basetest(){
-        $key='123456';
+    public function basetest()
+    {
+        $key = '123456';
         $value = md5('fdsgfdsgdfgtg');
         // echo config('database.hostname');die;
         // $boolean = cache($key,$value,config('setting.token_expire'));
         $bool = false;
-        while(!$bool){
-            $res = cache($key,$value,config('setting.token_expire'));
+        while (!$bool) {
+            $res = cache($key, $value, config('setting.token_expire'));
             $bool = &$res;
         }
         // echo token();die;
         // return cache($key);
-        return json($key,400,'sss');
+        return json($key, 400, 'sss');
     }
 
     /**
      * @description 获取验证码 并保存到session中
      */
-    public function getCaptcha(){
+    public function getCaptcha()
+    {
         $capConfig = config('captcha');
         $Verify = new Verify($capConfig);
         $Verify->entry("admin_login");
@@ -346,10 +358,11 @@ class Test extends Controller
     /**
      * @description 校验验证码
      */
-    public function chechCaptcha($code){
+    public function chechCaptcha($code)
+    {
         $verify = new Verify();
         if (!$verify->check($code, "admin_login")) {
-           echo '验证码错误';
+            echo '验证码错误';
         }
     }
 
@@ -358,12 +371,13 @@ class Test extends Controller
      * @return string|\think\response\Json
      * @throws \think\exception\DbException
      */
-    public function testSql(){
+    public function testSql()
+    {
         // $list = User::all([1,2,3]);
         // $list = User::where('uid','=','12')->find();
         // $list = TestModel::where('id',1)->find();
-        $list = db('test')->cache(true,10)->select([1,2]);//将查询结果缓存起来 10秒过期 不设置永久
-        db('test')->update(['id'=>1,'name'=>'我被改变了']);
+        $list = db('test')->cache(true, 10)->select([1, 2]);//将查询结果缓存起来 10秒过期 不设置永久
+        db('test')->update(['id' => 1, 'name' => '我被改变了']);
         return json($list);
     }
 
@@ -371,7 +385,8 @@ class Test extends Controller
      * @description 添加数据 验证时间戳自动插入 输出自动转换
      * @return string|\think\response\Json
      */
-    public function addData(){
+    public function addData()
+    {
         $testModel = new TestModel();
         //------------单条数据插入--------------
         // $testModel->name = '张三';
@@ -383,10 +398,9 @@ class Test extends Controller
 
         //多条插入
         $data = [
-            ['name'=>'李四','value'=>'hehela'],
-            ['name'=>'王五','value'=>'wangwu']
+            ['name' => '李四', 'value' => 'hehela'], ['name' => '王五', 'value' => 'wangwu']
         ];
-        (new TestValidate())->goCheck(['users'=>$data]);
+        (new TestValidate())->goCheck(['users' => $data]);
         $result = $testModel->saveAll($data);
         return json($result);
     }
@@ -395,7 +409,8 @@ class Test extends Controller
      * @description 增删改查示例操作
      * @return string|\think\response\Json
      */
-    public function getTestData(TestModel $testModel){
+    public function getTestData(TestModel $testModel)
+    {
         // var_dump($testModel);die;//获取TestModel 实例
         // $list = TestModel::limit(10)->select();
         $list = (new TestModel())->limit(10)->select();
@@ -410,7 +425,7 @@ class Test extends Controller
         // $res = action('worker/Index/test',['id'=>2]);//跨模块调用
         // return json($list);
         $json = json($list);
-        $arr=json_decode($json->getContent(),true);//将json对象转为数组 注意：不加getContent()会报错的
+        $arr = json_decode($json->getContent(), true);//将json对象转为数组 注意：不加getContent()会报错的
         var_dump($arr);
     }
 
@@ -419,7 +434,8 @@ class Test extends Controller
      * @return string|\think\response\Json
      * @throws \think\exception\PDOException
      */
-    public function testTrans(){
+    public function testTrans()
+    {
         $res = (new Testservice())->testTrans();
         return json($res);
     }
@@ -429,14 +445,58 @@ class Test extends Controller
      * @return string|\think\response\Json
      * @throws \think\exception\DbException
      */
-    public function modifier(){
+    public function modifier()
+    {
         $testModel = new TestModel();
         // $res = $testModel::find(3);
         $res = $testModel::all();
-        foreach($res as $val){
+        foreach ($res as $val) {
             $val['hehe'] = $val->real_name;
         }
         // $res['hehe'] = $res->real_name;
         return json($res);
     }
+
+    /**
+     * @description layui组件 ajax编辑用户姓名
+     * @return string|\think\response\Json
+     */
+    public function edituser()
+    {
+        (new Users())->scene('editrealname')->goCheck();
+        $res = (new User())->where(['uid' => input('put.uid')])->update(['realname' => input('put.realname')]);
+        $code = $res ? 1 : 0;
+        $data = $res ? '更新成功' : '更新失败';
+        return json($data, 'success', $code);
+
+    }
+    /**
+     * @description layui组件 ajax使用开关锁定用户
+     * @return string|\think\response\Json
+     */
+    public function lockuser()
+    {
+        (new Users())->scene('lock')->goCheck();
+        $res = (new User())->where(['uid' => input('put.uid')])->update(['status' => input('put.status')]);
+        $code = $res ? 1 : 0;
+        $data = $res ? '更新成功' : '更新失败';
+        return json($data, 'success', $code);
+
+    }
+    /**
+     * @description layui组件 ajax删除用户
+     * @return string|\think\response\Json
+     */
+    public function deluser()
+    {
+        // (new Users())->scene('del')->goCheck();
+        // log_message('uids:'.input('delete.uids'));die;
+        // $uids = rtrim(input('delete.uids'),',');
+        $uids = input('delete.uids');
+        $res = User::destroy($uids);
+        $code = $res ? 1 : 0;
+        $data = $res ? '删除成功' : '删除失败';
+        return json($data, 'success', $code);
+    }
+
 }

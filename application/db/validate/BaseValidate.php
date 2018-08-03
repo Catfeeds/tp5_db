@@ -102,8 +102,16 @@ class BaseValidate extends Validate
      * @param $data
      * @return array
      */
-    public function getDataByRule(){
-        $data = $this->params;
+    public function getDataByRule($requestData=null){
+        if($requestData==null){
+            $data = $this->params;
+        }else{
+            $data = $requestData;
+        }
+        if(!$data){
+            throw new ParameterException();
+        }
+
         $newDate = [];
         foreach($data as $key=>$value){
             if(isset($data[$this->rule[$key]])){

@@ -15,7 +15,7 @@ class Users extends BaseValidate
     protected $rule = [
         'uid' => 'require|number|gt:0',
         'username' => 'require|min:4|max:16|checkTrue|unique:users',
-        'realname' => 'require|min:4|max:8|checkTrue',
+        'realname' => 'require|min:2|max:8',
         'groupid' => 'require|number',
         'status' => 'require|number',
         'id' => 'require|isNumber',
@@ -71,6 +71,8 @@ class Users extends BaseValidate
         'get' => ['uid'],
         'add'  => ['username', 'realname', 'groupid','status'],
         'edit' => ['uid','username', 'realname', 'groupid','status'],
+        'editrealname' => ['uid','realname'],
+        'lock' => ['uid','status'],
         'del'  => ['uid'],
     ];
 }

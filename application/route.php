@@ -46,8 +46,12 @@ Route::get('/','db/test/testlist');//等价上面
 Route::any('dir','db/v1.Dir/getDir',['method'=>'get|post']);// 调用shell命令 递归创建目录
 Route::any('xlh','db/index/getSerialize',['method'=>'get|post']);
 Route::any('layuiindex','db/v1.Test/pageindex');
-Route::any('layui','db/v1.Test/ajaxpage',['method'=>'get|post']);
 
+//layui 组件操作
+Route::any('layui','db/v1.Test/ajaxpage',['method'=>'get|post']);
+Route::put('realname','db/v1.Test/edituser');
+Route::put('lock','db/v1.Test/lockuser');
+Route::delete('user','db/v1.Test/deluser');
 
 Route::post('hello','db/test/test2');//传参
 // Route::any('any','db/test/test3');//传参

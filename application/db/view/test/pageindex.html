@@ -11,25 +11,46 @@
     {load file="__STATIC__/js/jquery-3.2.1.min.js"}
 </head>
 <body>
-<table class="layui-hide" id="test" lay-filter="demo"></table>
+<div style="margin-bottom: 5px;">
+
+    <!--&lt;!&ndash; 示例-970 &ndash;&gt;-->
+    <!--<ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="3820120620"></ins>-->
+
+</div>
+
+<div class="layui-btn-group demoTable">
+    <button class="layui-btn" data-type="getCheckData">批量删除</button>
+    <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>
+    <button class="layui-btn" data-type="isAll">验证是否全选</button>
+</div>
+<table class="layui-hide" id="test" lay-filter="demo" lay-even="" lay-skin="row"></table>
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <!--<input type="checkbox"  name="status" value="{{d.status}}" title="锁定" lay-filter="lockDemo" {{ d.status == 0 ? 'checked' : '' }}>-->
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">详情</a>
+    <a class="layui-btn layui-btn-xs"  lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
+<script type="text/html" id="usernameTpl">
+    <a href="user/{{d.uid}}" class="layui-table-link" target="_blank">{{ d.username }}</a>
+</script>
 <script type="text/html" id="switchTpl">
-    <!-- 这里的 checked 的状态只是演示 -->
-    <input type="checkbox" name="sex" value="{{d.id}}" lay-skin="switch" lay-text="女|男" lay-filter="sexDemo" {{ d.id == 10003 ? 'checked' : '' }}>
+    <!--<input type="checkbox" name="sex" value="{{d.sex}}" lay-skin="switch" lay-text="女|男" lay-filter="sexDemo" {{ d.sex == 0 ? 'checked' : '' }}>-->
+    {{#  if(d.sex === 1){ }}
+    <span style="color: #F581B1;">女</span>
+    {{#  } else { }}
+    男
+    {{#  } }}
 </script>
 
 <script type="text/html" id="checkboxTpl">
-    <!-- 这里的 checked 的状态只是演示 -->
-    <input type="checkbox" name="lock" value="{{d.id}}" title="锁定" lay-filter="lockDemo" {{ d.id == 10006 ? 'checked' : '' }}>
+    <input type="checkbox"  name="status" value="{{d.status}}" title="锁定" lay-filter="lockDemo" {{ d.status == 0 ? 'checked' : '' }}>
 </script>
 <script>
 
     var table = layui.table;
     var form = layui.form;
+    var tableData=null;
+    var checkedArr=[];
     var page=1;
     var limit =10;
     table.render({
@@ -38,7 +59,7 @@
         ,url:"layui"//方法2 使用路由
         ,cellMinWidth: 80
         ,page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
-            layout: ['prev', 'page', 'next', 'skip','limit', 'count' ] //自定义分页布局
+            layout: ['prev', 'page', 'next', 'skip','limit', 'count'] //自定义分页布局
             ,curr: 1 //设定初始在第 5 页
             ,groups: 5 //只显示 1 个连续页码
             // ,first: false //不显示首页
@@ -46,29 +67,27 @@
 
         }
         ,cols: [[
-            {type:'numbers'}
-            ,{type:'checkbox'}
+            // {type:'numbers'},
+            {type:'checkbox'}
             ,{field:'uid', width:80, title: 'ID', sort: true}
-            ,{field:'username', minWidth:150, title: '用户名'}
+            ,{field:'username', minWidth:150, title: '用户名',templet: '#usernameTpl'}
             ,{field:'sex', width:80, title: '性别', templet: '#switchTpl', unresize: true}
-            ,{field:'ppassword', minWidth:80, title: '支付密码'}
-            ,{field:'password', title: '密码', minWidth: 100,event: 'setSign', style:'cursor: pointer'}
+            ,{field:'realname', title: '真实姓名', minWidth: 100,event: 'setSign', style:'cursor: pointer'}
             ,{field:'groupid', width:80, title: '积分', sort: true}
-            ,{field:'lock', title:'是否锁定', width:110, templet: '#checkboxTpl', unresize: true}
-            ,{field:'poperation', width:150, title: '操作', fixed: 'right', toolbar: '#barDemo'}
-
+            ,{field:'status', title:'是否锁定', width:110, templet: '#checkboxTpl', unresize: true}
+            ,{field:'poperation', width:200, title: '操作', fixed: 'right', toolbar: '#barDemo'}
 
         ]],
         done: function(res, curr, count){
             //如果是异步请求数据方式，res即为你接口返回的信息。
             //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
-            console.log(res);
-
+            // console.log(res.data);
+            tableData = res.data;
             //得到当前页码
-            console.log(curr);
+            // console.log(curr);
 
             //得到数据总量
-            console.log(count);
+            // console.log(count);
         }
 
     });
@@ -76,56 +95,203 @@
     table.on('tool(demo)', function(obj){
         var data = obj.data;
         if(obj.event === 'detail'){
-            layer.msg('ID：'+ data.id + ' 的查看操作');
+            layer.msg('ID：'+ data.uid + ' 的查看操作');
         } else if(obj.event === 'del'){
-            layer.confirm('真的删除行么', function(index){
-                obj.del();
+            layer.confirm('真的要删除吗?', function(index){
+                $.ajax({
+                    type:'DELETE',
+                    url:'user',
+                    data:{uids:data.uid},
+                    success:function(res){
+                        if(res.code==1){
+                            layer.msg('删除成功');
+                            obj.del();
+                        }
+                    }
+                });
                 layer.close(index);
+
             });
         } else if(obj.event === 'edit'){
-            layer.alert('编辑行：<br>'+ JSON.stringify(data))
+            layer.open({
+                type: 1,
+                closeBtn: true,
+                // shift: 7,
+                maxmin: true,
+                shadeClose: true,
+                area : ['60%', '60%'],
+                // btn: ['提交', '重置', '取消'],
+                content: '<form class="layui-form" action="" lay-filter="example">' +
+                '<div class="layui-form-item">' +
+                "    <label class=\"layui-form-label\">输入框</label>\n" +
+                "    <div class=\"layui-input-block\">\n" +
+                "      <input type=\"text\" name=\"username\" lay-verify=\"title\" autocomplete=\"off\" placeholder=\"请输入标题\" class=\"layui-input\">\n" +
+                "    </div>\n" +
+                "  </div>\n" +
+                "  <div class=\"layui-form-item\">\n" +
+                "    <label class=\"layui-form-label\">密码框</label>\n" +
+                "    <div class=\"layui-input-block\">\n" +
+                "      <input type=\"password\" name=\"password\" placeholder=\"请输入密码\" autocomplete=\"off\" class=\"layui-input\">\n" +
+                "    </div>\n" +
+                "  </div>\n" +
+                "  <div class=\"layui-form-item\">\n" +
+                "    <label class=\"layui-form-label\">开关</label>\n" +
+                "    <div class=\"layui-input-block\">\n" +
+                "      <input type=\"checkbox\" name=\"close\" lay-skin=\"switch\" lay-text=\"ON|OFF\">\n" +
+                "    </div>\n" +
+                "  </div>\n" +
+                "  \n" +
+                "  <div class=\"layui-form-item\">\n" +
+                "    <label class=\"layui-form-label\">单选框</label>\n" +
+                "    <div class=\"layui-input-block\">\n" +
+                "      <input type=\"radio\" name=\"sex\" value=\"男\" title=\"男\" checked=\"\">\n" +
+                "      <input type=\"radio\" name=\"sex\" value=\"女\" title=\"女\">\n" +
+                "    </div>\n" +
+                "  </div>\n" +
+                "  <div class=\"layui-form-item layui-form-text\">\n" +
+                "    <label class=\"layui-form-label\">文本域</label>\n" +
+                "    <div class=\"layui-input-block\">\n" +
+                "      <textarea placeholder=\"请输入内容\" class=\"layui-textarea\" name=\"desc\"></textarea>\n" +
+                "    </div>\n" +
+                "  </div>\n" +
+                " \n" +
+                "  <div class=\"layui-form-item\">\n" +
+                "    <div class=\"layui-input-block\">\n" +
+                "      <button class=\"layui-btn\" lay-submit=\"\" lay-filter=\"demo1\">立即提交</button>\n" +
+                "    </div>\n" +
+                "  </div>\n" +
+                "</form>\n"
+
+            });
+            layer.full(index);
+            // layer.alert('编辑行：<br>'+ JSON.stringify(data))
         }else if(obj.event === 'setSign'){
             layer.prompt({
-                formType: 2
-                ,title: '修改 ID 为 ['+ data.uid +'] 的用户密码'
-                ,value: data.password
+                formType: 3
+                ,title: '修改 UID 为 ['+ data.uid +'] 的真实姓名'
+                ,value: data.realname
             }, function(value, index){
-                console.log(value);
-                layer.close(index);
-
-                //这里一般是发送修改的Ajax请求
-
+               $.ajax({
+                   type:'PUT',
+                   url:'realname',
+                   data:{uid:data.uid,realname:value},
+                   success:function(res){
+                       if(res.code==1){
+                           layer.msg('更新成功',{time:1000});//1秒后自动关闭
+                       }else{
+                           layer.msg('更新失败');
+                       }
+                   }
+               });
+                layer.closeAll();
                 //同步更新表格和缓存对应的值
                 obj.update({
-                    password: value
+                    realname: value
                 });
             });
         }
-    });
+        if (obj.checked){
+            checkedArr.push(obj.data.LAY_TABLE_INDEX);
+        }
+        else{
+            delete checkedArr[obj.data.LAY_TABLE_INDEX];
+        }
 
-//    var laypage = layui.laypage;
-//    laypage.render({
-//        elem: 'pages',
-//        count: {count},
-//        limit: {limit},
-//        limits: [10, 15, 20],
-//        layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'],
-//        curr: {page},
-//        jump: function (obj, first) {
-//            console.log(obj);
-//            if (!first) {
-//                window.location.href = "{url:('test/pageindex')}?page=" + obj.curr + '&limit=' + obj.limit;
-//            }
-//        }
-//    });
+    });
     //监听性别操作
     form.on('switch(sexDemo)', function(obj){
         layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
     });
     //监听锁定操作
     form.on('checkbox(lockDemo)', function(obj){
-        layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
+        // console.log(this.uuid);
+        // 获取当前控件
+        var selectIfKey=obj.othis;
+        // 获取当前所在行
+        var parentTr = selectIfKey.parents("tr");
+        // 获取当前所在行的索引
+        var parentTrIndex = parentTr.attr("data-index");
+        // console.log(tableData[parentTrIndex].status);
+        var username = tableData[parentTrIndex].username;
+        var uid = tableData[parentTrIndex].uid;
+        var status=null;
+        var msg = '';
+        console.log(uid);
+        status = obj.elem.checked == true ? 0 : 1;
+        msg = obj.elem.checked == true ? ' 已锁定' : ' 已解锁';
+        $.ajax({
+            type:'PUT',
+            url:'lock',
+            data:{uid:uid,status:status},
+            success:function(res){
+                if(res.code==1){
+                    if(status==0){
+                        tableData[parentTrIndex].status = "0";
+                    }else{
+                        tableData[parentTrIndex].status = "1";
+                    }
+                }
+            }
+        });
+        // layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);//原始
+        layer.tips('用户:'+username + msg, obj.othis);
     });
+
+
+    var $ = layui.$, active = {
+        getCheckData: function(){ //获取选中数据
+            var checkStatus = table.checkStatus('test');
+             var data = checkStatus.data;
+            console.log(checkedArr);
+           var delList = [];
+            data.forEach(function (obj, i) {
+                delList.push(obj.uid);
+            });
+            // uids = JSON.stringify(uids);
+            if(delList){
+                layer.confirm('真的要删除吗?', function(index){
+                    $.ajax({
+                        type:'DELETE',
+                        url:'user',
+                        data:"uids="+delList,
+                        success:function(res){
+                            if (res.code == 1) {
+                                layer.msg('删除成功');
+                                table.reload('test', {});//方法1
+                                // $.each(checkedArr, function(k){
+                                //     $(".layui-table-view .layui-table tbody  tr[data-index="+checkedArr[k]+"]").remove();
+                                // });//方法2 需要设置checkedArr变量
+                            } else {
+                                layer.msg('删除失败');
+                            }
+                        },
+                        error: function () {
+                            layer.msg('系统错误');
+                        }
+                    });
+                    layer.close(index);
+            });
+            console.log(delList);
+            // // layer.alert(JSON.stringify(data));
+        }
+        }
+        ,getCheckLength: function(){ //获取选中数目
+            var checkStatus = table.checkStatus('test')
+                ,data = checkStatus.data;
+            layer.msg('选中了：'+ data.length + ' 个');
+        }
+        ,isAll: function(){ //验证是否全选
+            var checkStatus = table.checkStatus('test');
+            layer.msg(checkStatus.isAll ? '全选': '未全选')
+        }
+
+    };
+
+    $('.demoTable .layui-btn').on('click', function(){
+        var type = $(this).data('type');
+        active[type] ? active[type].call(this) : '';
+    });
+
 </script>
 </body>
 </html>

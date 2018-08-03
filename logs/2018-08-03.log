@@ -1,0 +1,260 @@
+---------------------------------------------------------------
+[ 2018-08-03T16:49:06+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.200268s][吞吐率：4.99req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000789s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.145360s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.000812s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000686s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:49:10+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=2&limit=10
+[ info ] gl.xlh.net/layui?page=2&limit=10 [运行时间：0.232667s][吞吐率：4.30req/s] [内存消耗：559.18kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000867s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.151275s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.003168s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 10,10 [ RunTime:0.001238s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:51:50+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.218940s][吞吐率：4.57req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000850s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.168355s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001212s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.001075s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:52:12+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.187974s][吞吐率：5.32req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000817s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.145944s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001249s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000622s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:52:46+08:00 ] 192.168.0.85 192.168.0.213 PUT /lock
+[ info ] gl.xlh.net/lock [运行时间：0.081926s][吞吐率：12.21req/s] [内存消耗：569.61kb] [文件加载：65]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000619s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001701s ]
+[ sql ] [ SQL ] UPDATE `ebh_users`  SET `status`=1  WHERE  `uid` = 7 [ RunTime:0.001950s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:52:58+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.219097s][吞吐率：4.56req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000764s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.164570s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001770s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000739s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:53:03+08:00 ] 192.168.0.85 192.168.0.213 PUT /lock
+[ info ] gl.xlh.net/lock [运行时间：0.067592s][吞吐率：14.79req/s] [内存消耗：569.61kb] [文件加载：65]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000714s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001240s ]
+[ sql ] [ SQL ] UPDATE `ebh_users`  SET `status`=0  WHERE  `uid` = 7 [ RunTime:0.002217s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:53:05+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.180093s][吞吐率：5.55req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000694s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.135316s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.000826s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000644s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:53:49+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.217552s][吞吐率：4.60req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001860s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.160747s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001072s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000734s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:54:01+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.225082s][吞吐率：4.44req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000942s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.169830s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001292s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000788s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:12:59+08:00 ] 192.168.0.85 192.168.0.213 PUT /realname
+[ info ] gl.xlh.net/realname [运行时间：0.077575s][吞吐率：12.89req/s] [内存消耗：569.79kb] [文件加载：65]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000682s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001361s ]
+[ sql ] [ SQL ] UPDATE `ebh_users`  SET `realname`='童宇涛1'  WHERE  `uid` = 1 [ RunTime:0.002779s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:13:34+08:00 ] 192.168.0.85 192.168.0.213 PUT /realname
+[ info ] gl.xlh.net/realname [运行时间：0.112424s][吞吐率：8.89req/s] [内存消耗：569.79kb] [文件加载：65]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000617s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001946s ]
+[ sql ] [ SQL ] UPDATE `ebh_users`  SET `realname`='童宇涛'  WHERE  `uid` = 1 [ RunTime:0.040931s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:18:13+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.224653s][吞吐率：4.45req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000447s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.165858s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.000981s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000816s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:18:16+08:00 ] 192.168.0.85 192.168.0.213 PUT /realname
+[ info ] gl.xlh.net/realname [运行时间：0.080786s][吞吐率：12.38req/s] [内存消耗：569.79kb] [文件加载：65]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000561s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001452s ]
+[ sql ] [ SQL ] UPDATE `ebh_users`  SET `realname`='童宇涛1'  WHERE  `uid` = 1 [ RunTime:0.003431s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:18:24+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.190549s][吞吐率：5.25req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000373s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.144904s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.000945s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000515s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:18:26+08:00 ] 192.168.0.85 192.168.0.213 PUT /realname
+[ info ] gl.xlh.net/realname [运行时间：0.102127s][吞吐率：9.79req/s] [内存消耗：569.79kb] [文件加载：65]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000487s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ebh_users` [ RunTime:0.001090s ]
+[ sql ] [ SQL ] UPDATE `ebh_users`  SET `realname`='童宇涛'  WHERE  `uid` = 1 [ RunTime:0.001757s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:38:32+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.253402s][吞吐率：3.95req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000922s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.203863s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001033s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000655s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:39:01+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.270078s][吞吐率：3.70req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004608s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.208056s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.002436s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000776s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:44:02+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.301009s][吞吐率：3.32req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001230s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.212395s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001443s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.001177s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:44:26+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.429448s][吞吐率：2.33req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005323s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.285149s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001638s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000696s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:45:57+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.235111s][吞吐率：4.25req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003619s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.173490s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001120s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000663s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:46:14+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.302383s][吞吐率：3.31req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048226s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.190732s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001190s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000946s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:46:24+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.187562s][吞吐率：5.33req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000615s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.141461s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.000945s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000665s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:46:36+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.186415s][吞吐率：5.36req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000634s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.144490s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001169s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000664s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:46:46+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.216858s][吞吐率：4.61req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000417s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.171481s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.000936s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000646s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:46:53+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.239437s][吞吐率：4.18req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000510s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.153969s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001221s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.001024s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:47:35+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.201690s][吞吐率：4.96req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004230s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.153481s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.000956s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000562s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:50:24+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.231383s][吞吐率：4.32req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001589s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.176154s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.002221s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000856s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:51:54+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.185106s][吞吐率：5.40req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000557s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.146863s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001044s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000527s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:52:19+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.185322s][吞吐率：5.40req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000539s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.142657s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001690s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000547s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:52:38+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.227183s][吞吐率：4.40req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000520s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.172470s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001345s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000807s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:52:57+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.244496s][吞吐率：4.09req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001952s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.198342s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.002296s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000894s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:53:05+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.257680s][吞吐率：3.88req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000528s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.186108s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001495s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000864s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:56:07+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.231912s][吞吐率：4.31req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001478s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.173532s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.002770s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.001232s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:56:21+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.271253s][吞吐率：3.69req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007398s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.207777s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001998s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000807s ]
+---------------------------------------------------------------
+[ 2018-08-03T17:59:30+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.229053s][吞吐率：4.37req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000604s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.156169s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000525s ]
+---------------------------------------------------------------
+[ 2018-08-03T18:00:11+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.234191s][吞吐率：4.27req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000489s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.180717s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001467s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000759s ]
+---------------------------------------------------------------
+[ 2018-08-03T18:00:51+08:00 ] 192.168.0.85 192.168.0.213 GET /layui?page=1&limit=10
+[ info ] gl.xlh.net/layui?page=1&limit=10 [运行时间：0.210350s][吞吐率：4.75req/s] [内存消耗：557.94kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000654s ] mysql:dbname=ebh2;host=192.168.0.85;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) count from `ebh_users` where `status`='1' [ RunTime:0.161165s ]
+[ sql ] [ SQL ] '1'HOW COLUMNS FROM `ebh_users` [ RunTime:0.001117s ]
+[ sql ] [ SQL ] '1'ELECT * FROM `ebh_users` LIMIT 0,10 [ RunTime:0.000877s ]
