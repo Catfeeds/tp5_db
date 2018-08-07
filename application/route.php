@@ -49,7 +49,8 @@ Route::any('layuiindex','db/v1.Test/pageindex');
 
 //layui 组件操作
 Route::any('layui','db/v1.Test/ajaxpage',['method'=>'get|post']);
-Route::put('realname','db/v1.Test/edituser');
+Route::put('realname','db/v1.Test/editrealname');
+Route::put('edit','db/v1.Test/edituser');
 Route::put('lock','db/v1.Test/lockuser');
 Route::delete('user','db/v1.Test/deluser');
 

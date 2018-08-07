@@ -55,10 +55,21 @@ class Users extends Model
     }
 
     //
-    public function ajaxlist($page, $limit = 10)
+    public function ajaxlist($param)
     {
-        $offset = ($page-1)*$limit;
-        $list = Db::name('users')->limit($offset, $limit)->select();
+       if($param['pagesize']){
+           $pagesize = (int)$param['pagesize'];
+       }
+        if($param['page']){
+            $page = (int)$param['page'];
+        }
+        $offset = max(0,($page-1))* $pagesize;
+       $where = [];
+        if ($param['q']) {
+            $where['realname|username'] = ['like', '%' . $param['q'] . '%'];
+        }
+        $list = Db::name('users')->field('uid,username,realname,sex,balance,status')->where($where)->cache(true)->limit($offset, $pagesize)->select();
+        // log_message($list);
         return $list;
     }
     public function getpage(){
@@ -66,17 +77,20 @@ class Users extends Model
         $list = Db('users')->field(['uid','username','realname','dateline','lastloginip'])->where('status','=','1')->order('uid desc')->paginate(10);
         return $list;
     }
-    public function userconut()
+    public function usercount($param)
     {
-        //$list = Db::name('users')->where('status',1)->select();
-        //$count = count($list);
-        //上面的查询方法太耗内存
-        $list = Db::query('SELECT COUNT(*) count from `ebh_users` where `status`=?', [1]);
-        $count = $list[0]['count'];
-        if ($count) {
-            return $count;
+        $where = [];
+        if($param['q']){
+            $where['realname|username'] = ['like', '%'.$param['q'].'%'];
         }
-
+        $count = Db::name('users')->cache(true)->where($where)->count();
+        // $list = Db::query('SELECT COUNT(*) count from `ebh_users` where `status`=?', [1]);
+        // $count = $list[0]['count'];
+        // log_message($list);
+        // if ($count) {
+        //     return $count;
+        // }
+        return $count;
     }
 
     /**

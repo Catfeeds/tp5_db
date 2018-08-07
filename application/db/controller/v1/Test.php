@@ -22,6 +22,7 @@ use app\api\controller\CacheRedis;
 // use think\Log;
 use app\db\validate\IdIsInt;
 use function json_encode;
+use function log_message;
 use function return_json;
 use think\{
     Controller, Exception, Loader, Config, Request, Log, Verify
@@ -109,15 +110,16 @@ class Test extends Controller
     //ajax请求数据
     public function ajaxpage()
     {
-        $page = input('page', 1);
-        $limit = input('limit', 10);
-        $count = $this->user->userconut();
-        $list = $this->user->ajaxlist($page, $limit);
+        $param['page'] = input('page', 1);
+        $param['pagesize'] = input('limit', 10);
+        $param['q'] = input('username');
+        $count = $this->user->usercount($param);
+        $list = $this->user->ajaxlist($param);
         $data = array(
             'code' => 0, 'msg' => 'ok', 'count' => $count, 'data' => $list
         );
-        //trace(json_encode($data),'log');
-        //log_message($data);die;
+        // trace(json_encode($data),'log');
+        // return json($data);
         echo json_encode($data);
     }
 
@@ -461,10 +463,25 @@ class Test extends Controller
      * @description layui组件 ajax编辑用户姓名
      * @return string|\think\response\Json
      */
-    public function edituser()
+    public function editrealname()
     {
         (new Users())->scene('editrealname')->goCheck();
         $res = (new User())->where(['uid' => input('put.uid')])->update(['realname' => input('put.realname')]);
+        $code = $res ? 1 : 0;
+        $data = $res ? '更新成功' : '更新失败';
+        return json($data, 'success', $code);
+
+    }
+    /**
+     * @description layui组件 ajax编辑用户
+     * @return string|\think\response\Json
+     */
+    public function edituser()
+    {
+        log_message(input('put.'));
+        (new Users())->scene('edituser')->goCheck();
+
+        $res = (new User())->where(['uid' => input('put.uid')])->update(['sex'=>input('put.sex'),'balance'=>input('put.balance'),'realname'=>input('put.realname')]);
         $code = $res ? 1 : 0;
         $data = $res ? '更新成功' : '更新失败';
         return json($data, 'success', $code);

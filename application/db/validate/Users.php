@@ -19,6 +19,8 @@ class Users extends BaseValidate
         'groupid' => 'require|number',
         'status' => 'require|number',
         'id' => 'require|isNumber',
+        'sex' => 'require|in:0,1',
+        'balance' => 'require|float',
         'ids' => 'require|checkNumber'
     ];
     // 错误消息
@@ -37,6 +39,8 @@ class Users extends BaseValidate
         'groupid.number' => '分组必须为数字',
         'status.require' => '状态不能为空',
         'status.number' => '状态必须为数字',
+        'sex' => '性别参数有误',
+        'balance' => '账户余额参数有误',
         'ids'=> 'ids必须是以逗号隔开正整数拼接的字符串'
     ];
     //验证用户名或真实姓名
@@ -72,6 +76,7 @@ class Users extends BaseValidate
         'add'  => ['username', 'realname', 'groupid','status'],
         'edit' => ['uid','username', 'realname', 'groupid','status'],
         'editrealname' => ['uid','realname'],
+        'edituser' => ['uid','sex','balance','realname'],
         'lock' => ['uid','status'],
         'del'  => ['uid'],
     ];

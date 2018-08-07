@@ -21,5 +21,6 @@ require __DIR__ . '/../thinkphp/start.php';
 \think\Log::init([
     'type' => 'File',
     'path' => LOG_PATH,
+    // 'level' => ['sql'],
     'level' => ['sql'],
 ]);
